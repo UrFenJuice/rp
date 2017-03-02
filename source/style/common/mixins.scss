@@ -1,0 +1,45 @@
+.clearfix {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+$primary-font: Montserrat-Regular;
+
+$second-font: Montserrat-Bold;
+
+$third-font: NotoSerif-Regular;
+
+$primary-font-color: #000000;
+
+$second-font-color: #c2c5d3;
+
+$profile-font-color: #c3c5d0;
+
+$content-menu-font-color: #8b8e98;
+
+$background-content-color: #f4f5f9;
+
+$blue-text: #2365c8;
+
+$green-text: #2ec28c;
+
+$red-text: #e94f4f;
+
+$white-text: #ffffff;
+
+$green-element: #2dc888;
+
+$logotype-color: #2365c8;
+
+$border-color: #e0e2e9;
+
+$left-menu-color: #010101;
+
+$size: 1px;
+/*mixins*/

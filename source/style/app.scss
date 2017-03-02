@@ -1,0 +1,106 @@
+@import '../../bower_components/singularity/stylesheets/_singularitygs';
+
+@import '../../bower_components/breakpoint-sass/stylesheets/_breakpoint';
+
+@import 'common/fonts';
+
+@import 'common/sprite';
+
+@import 'common/mixins';
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+	display: block;
+}
+body {
+	font: 100% $primary-font, sans-serif;
+	line-height:1;
+	-moz-osx-font-smoothing:grayscale;
+	-webkit-font-smoothing:antialiased;
+	overflow: hidden;
+}
+ul {
+	padding: 0;
+	margin: 0;
+	& li {
+		list-style: none; 
+	}
+}
+.container {
+	/*debug*/
+	//@include sgs-change('debug', true);
+	//@include add-grid(4);
+	//@include background-grid($color: blue);
+	/*!debug*/
+	
+	@include breakpoint(320px) {
+		width: 100%;
+		margin: 0 auto;
+		position: relative;
+	}
+}
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+.middle .container {
+	display: flex;
+}
+.content {
+	width: 87.5625vw;
+	height: 93.277vh;
+	background-color: $background-content-color;
+	overflow: hidden !important;
+}
+.content.scroll-content {
+	@include breakpoint(320px) {
+		padding: 3vh 3.333vw 4vh 3.333vw!important;
+	}
+	@include breakpoint(2000px) {
+		padding: 3.3333vh 3.333vw 4vh 3.333vw!important;
+	}
+}
+.link_show_me {
+	position: fixed;
+    top: 50%;
+    background-color: #fff;
+    color: $second-font-color;
+    transform: rotate(-90deg);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    & .icon_show_me {
+	    transform: rotate(90deg);
+    	@include sprite(compas);
+    }
+    @include breakpoint(320px) {
+    	font-size: 9.79px;
+	    padding: 16px 17px;
+        right: -84px;
+        & .icon_show_me {
+        	margin-right: 10px;
+    	}
+    }
+    @include breakpoint(2600px) {
+    	font-size: 23px;
+    	padding: 45px 44px;
+    	right: -205px;
+    	& .icon_show_me {
+        	margin-right: 20px;
+    	}
+    }
+}
+
+@import 'common/header';
+
+@import 'common/left_menu';
+
+@import 'common/prop_menu';
+
+@import 'properties/props';
+
+@import 'common/scroll';

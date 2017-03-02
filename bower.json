@@ -1,0 +1,14 @@
+{
+  "name": "loftschool-builder",
+  "version": "1.0.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "jquery": "3.1.1",
+    "singularity": "^1.7.1",
+    "breakpoint-sass": "^2.7.1"
+  }
+}

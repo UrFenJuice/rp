@@ -1,0 +1,7 @@
+.prop__menu_block
+	ul.prop__menu
+		each item, id in prop_menu_items
+			li.prop__menu_item
+				a(href="#", id="bg_"+id).prop__menu_item-link
+						i(class="prop__menu_item-link_icon_"+id).prop__menu_item-link_icon
+						.prop__menu_item-link_name= item

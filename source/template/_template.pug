@@ -1,0 +1,51 @@
+block variables
+
+- var menu_items = ["Properties", "Listings", "Archive"]
+
+- var main_menu_items = { dashboard: 'dashboard', properties: 'PROPERTIES', tenants: 'TENANTS', applications: 'APPLICATIONS', messages: 'MESSAGES', reports: 'REPORTS & FINANCES', maintenance: 'MAINTENANTCE', rules: 'RULES'}
+
+- var prop_menu_items = { add_property: 'Add Property', receive_payments: 'Receive Payment(s)', search: 'Search', view_all: 'View All'}
+
+mixin use(name)
+    svg.my_svg(role="img", id=name, preserveAspectRatio="xMinYMax")
+        use(xlink:href=svg+"#"+name)
+
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        title #{title}
+        meta(content="" name="author")
+        meta(content="" name="description")
+        meta(content="" name="keywords")
+        meta(content="width=device-width, initial-scale=1" name="viewport")
+        meta(content="ie=edge" http-equiv="x-ua-compatible")
+
+        //- favicon block start
+        //- favicon block end
+
+        link(rel='stylesheet' href='assets/css/foundation.css')
+        link(rel='stylesheet' href='assets/css/app.css')
+
+        <!--[if lt IE 9]>
+        script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
+        <![endif]-->
+
+    body
+        include common/header
+        //header
+
+        .middle
+            .container
+                include common/left_menu
+                //left_menu
+
+                main.content
+                    block content
+                    //content
+                a(href="", title="Show me how to use this page").link_show_me
+                    i.icon_show_me
+                    | Show me how to use this page
+
+        script(src='assets/js/foundation.js' defer)
+        script(src='assets/js/app.js' defer)

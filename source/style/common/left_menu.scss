@@ -1,0 +1,161 @@
+.left__menu_item-link_icon_dashboard {
+	@include sprite(dashboard);
+}
+.left__menu_item-link_icon_properties {
+	@include sprite(properties);
+}
+.left__menu_item-link_icon_tenants {
+	@include sprite(tenants);
+}
+.left__menu_item-link_icon_applications {
+	@include sprite(applications);
+}
+.left__menu_item-link_icon_messages {
+	@include sprite(messages);
+}
+.left__menu_item-link_icon_reports {
+	@include sprite(reports);
+}
+.left__menu_item-link_icon_maintenance {
+	@include sprite(maintenance);
+}
+.left__menu_item-link_icon_rules {
+	@include sprite(rules);
+}
+/*!left menu icons*/
+.left__menu_item-link_icon {
+	@include breakpoint(320px) {
+		margin: 0 auto 10px auto;
+	}
+	@include breakpoint(2000px) {
+		margin: 0 auto 20px auto;
+	}
+	
+}
+.left-sidebar {
+	width: 12.4375vw;
+	overflow: hidden;
+	flex: 1 0 12.4375vw;
+	@include breakpoint(320px) {
+		height: 94.237vh;
+	}
+	@include breakpoint(2000px) {
+		height: 93.277vh;
+	}
+}
+.left__menu {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.left__menu_item {
+	position: relative;
+}
+.left__menu_item-link {
+	color: $left-menu-color;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 2.89vh 0;
+	display: block;
+	&:after {
+		transition: background-color 1s;
+	}
+	&:hover,
+	&.active {
+		transition: background-color 1s;
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			height: 100%;
+			@include breakpoint(320px) {
+				width: 3px;
+			}
+			@include breakpoint(2000px) {
+				width: 10px;
+			}
+		}
+	}
+	@include breakpoint(320px) {
+		font-size: 11px;
+	}
+	@include breakpoint(2000px) {
+		font-size: 0.78125vw;
+	}
+}
+#bg_dashboard {
+	&:hover,
+	&.active{
+		background-color: rgba(255, 180, 63, 0.1);
+		&:after {
+			background-color: #ffb43f;
+		}
+	}
+}
+#bg_properties {
+	&:hover,
+	&.active{
+		background-color: rgba(0, 172, 193, 0.1);
+		&:after {
+			background-color: #00acc1;
+		}
+	}
+}
+#bg_tenants {
+	&:hover,
+	&.active{
+		background-color: rgba(30, 136, 229, 0.1);
+		&:after {
+			background-color: #1e88e5;
+		}
+	}
+}
+#bg_applications {
+	&:hover,
+	&.active{
+		background-color: rgba(124, 179, 66, 0.1);
+		&:after {
+			background-color: #7cb342;
+		}
+	}
+}
+#bg_messages {
+	&:hover,
+	&.active{
+		background-color: rgba(253, 216, 53, 0.1);
+		&:after {
+			background-color: #fdd835;
+		}
+	}
+}
+#bg_reports {
+	&:hover,
+	&.active{
+		background-color: rgba(244, 81, 30, 0.1);
+		&:after {
+			background-color: #f4511e;
+		}
+	}
+}
+#bg_maintenance {
+	&:hover,
+	&.active{
+		background-color: rgba(84, 110, 122, 0.1);
+		&:after {
+			background-color: #546e7a;
+		}
+	}
+}
+#bg_rules {
+	&:hover,
+	&.active{
+		background-color: rgba(142, 36, 170, 0.1);
+		&:after {
+			background-color: #8e24aa;
+		}
+	}
+}
+/*!left_menu*/

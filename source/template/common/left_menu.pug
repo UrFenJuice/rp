@@ -1,0 +1,8 @@
+aside.left-sidebar
+	ul.left__menu
+		each item, id in main_menu_items
+			li.left__menu_item
+				//add class 'active' for activate menu item
+				a(href="#", id="bg_"+id).left__menu_item-link
+					i(class="left__menu_item-link_icon_"+id).left__menu_item-link_icon
+					.left__menu_item-link_name= item

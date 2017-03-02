@@ -1,0 +1,42 @@
+.content > .scroll-element,
+.content > .scroll-element div
+{
+    border: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 10;
+}
+.content > .scroll-element div {
+    display: block;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+.content > .scroll-element.scroll-x {
+    bottom: 2px;
+    height: 8px;
+    left: 0;
+    width: 100%;
+}
+.content > .scroll-element.scroll-y {
+    height: 100%;
+    right: 2px;
+    top: 0;
+    width: 8px;
+}
+.content > .scroll-element .scroll-element_outer {
+    overflow: hidden;
+}
+.content > .scroll-element .scroll-element_track { background-color: #e0e0e0; }
+.content > .scroll-element .scroll-bar { background-color: $logotype-color; }
+.content > .scroll-element:hover .scroll-bar { background-color: $logotype-color; }
+.content > .scroll-element.scroll-draggable .scroll-bar { background-color: $logotype-color; }
+
+.content > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_track { left: -12px; }
+.content > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_track { top: -12px; }
+
+.content > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_size { left: -12px; }
+.content > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size { top: -12px; }
+/*!scroll*/

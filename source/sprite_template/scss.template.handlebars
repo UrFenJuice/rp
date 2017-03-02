@@ -1,0 +1,25 @@
+@mixin sprite($filename) {
+    display: block;
+    @media (min-width: 320px) {
+      {{#sprites}}
+      @if $filename == {{name}} {
+        background-image: url({{{escaped_image}}});
+        background-position: calc({{px.offset_x}}/2) calc({{px.offset_y}}/2);
+        height: calc({{px.height}}/2);
+        width: calc({{px.width}}/2);
+        background-size: calc({{px.total_width}}/2);
+      }
+      {{/sprites}}
+    }
+    @media (min-width: 2100px) {
+      {{#sprites}}
+      @if $filename == {{name}} {
+        background-image: url({{{escaped_image}}});
+        background-position: {{px.offset_x}} {{px.offset_y}};
+        height: {{px.height}};
+        width: {{px.width}};
+        background-size: {{px.total_width}};
+      }
+      {{/sprites}}
+    }
+}

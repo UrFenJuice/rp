@@ -1,0 +1,26 @@
+header.header
+	.container
+		.header__logo
+			a(href="/").header__logo_link
+				img(src="assets/img/logo.png", alt="logotype")
+				span.company__name
+					| RentPayments
+		.header__menu
+			ul.header__menu_block
+				each item in menu_items
+					li.header__menu_block_item
+						//add class 'active' for activate menu item
+						a(href="#").header__menu_block_item-link= item
+		.header__user
+			.header__user_login
+				a(href="#").header__user_login_link
+					.header__user_avatar
+						img(src="assets/img/avatar.png", alt="avatar")
+					.header__user_login_name
+						| Roody van nistel
+			.header__user_menu
+				a(href="#").header__user_menu_link
+					| user_menu
+			.header__user_settings
+				a(href="#").header__user_settings_link
+					| settings

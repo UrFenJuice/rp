@@ -1,0 +1,176 @@
+.header .container{
+	display: flex;
+	justify-content: space-between;
+}
+.header__logo {
+	width: 12.4375vw;
+	background-color: $logotype-color;
+}
+.header__logo_link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	color: $white-text;
+	text-decoration: none;
+	font-family: $second-font;
+	@include breakpoint(320px) {
+		height: 5.763vh;
+		font-size: 12px;
+		& img {
+			max-width: 17px;
+		}
+	}
+	@include breakpoint(2000px) {
+		height: 6.723vh;
+		font-size: 0.9375vw;
+		& img {
+			max-width: 41px;
+		}
+	}
+}
+.company__name {
+	@include breakpoint(320px) {
+		padding-left: 8px;
+		letter-spacing: -0.7px;
+	}
+	@include breakpoint(2000px) {
+		padding-left: 23px;
+		letter-spacing: -1.5px;
+	}
+}
+.header__menu {
+	flex: 1 1 40vw;
+	padding-left: 3.375vw;
+	border-bottom: 1px solid $border-color;
+	overflow: hidden;
+}
+.header__menu_block {
+	display: flex;
+	justify-content: flex-start;
+	height: 100%;
+	align-items: center;
+}
+.header__menu_block_item {
+	height: 100%;
+	display: flex;
+    align-items: center;
+	&:nth-last-child(1) {
+		margin-right: 0;
+	}
+	@include breakpoint(320px) {
+		margin-right: 5.2vw;
+	}
+	@include breakpoint(2000px) {
+		margin-right: 3.75vw;
+	}
+}
+.header__menu_block_item {
+	position: relative;
+}
+.header__menu_block_item-link {
+	color: $second-font-color;
+	text-decoration: none;
+	//margin: auto;
+	&:after {
+		transition: border-bottom-color 1s;
+	}
+	&:hover,
+	&.active {
+		color: $primary-font-color;
+		&:after {
+			content: '';
+			display: block;
+			bottom: 0;
+			position: absolute;
+			width: 100%;
+			border-bottom: 3px solid $green-element;
+		}
+	}
+	@include breakpoint(320px) {
+		font-size: 14px;
+	}
+	@include breakpoint(2000px) {
+		font-size: 0.90625vw;
+	}
+}
+.header__user {
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid $border-color;
+	& .header__user_menu_link,
+	& .header__user_settings_link{
+		font-size: 0;
+	}
+	& .header__user_login_name {
+		text-transform: uppercase;
+		color: $profile-font-color;
+		@include breakpoint(320px) {
+			font-size: 10.94px;
+		}
+		@include breakpoint(2000px) {
+			font-size: 0.71875vw;
+		}
+	}
+	& > div {
+		border-left: 1px solid $border-color;
+		height: 100%;
+		display: flex;
+	}
+}
+.header__user_avatar {
+	border-radius: 50%;
+	overflow: hidden;
+	& img {
+		height: auto;
+	}
+	@include breakpoint(320px) {
+		width: 30px;
+		height: 30px;
+		& img {
+			max-width: 30px;
+		}
+	}
+	@include breakpoint(2000px) {
+		width: 64px;
+		height: 64px;
+		& img {
+			max-width: 64px;
+		}
+	}
+}
+.header__user_login_link {
+	display: flex;
+	align-items: center;
+	@include breakpoint(320px) {
+		margin: auto 27px;
+		& div:nth-child(1) {
+			margin-right: 10px;
+		}
+	}
+	@include breakpoint(2000px) {
+		margin: auto 60px;
+		& div:nth-child(1) {
+			margin-right: 20px;
+		}
+	}
+}
+.header__user_menu_link {
+	@include sprite(equal);
+	@include breakpoint(320px) {
+	    margin: auto 17px;
+	}
+	@include breakpoint(2000px) {
+	    margin: auto 40px;
+	}
+}
+.header__user_settings_link {
+	@include sprite(gear);
+	@include breakpoint(320px) {
+	    margin: auto 17px;
+	}
+	@include breakpoint(2000px) {
+	    margin: auto 36px;
+	}
+}
+/*!header*/

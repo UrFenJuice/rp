@@ -1,0 +1,57 @@
+.prop__menu {
+	@include breakpoint(320px) {
+		margin-bottom: 31px;
+	}
+	@include breakpoint(2000px) {
+		margin-bottom: 60px;
+	}
+}
+.prop__menu,
+.prop__menu_item-link {
+	display: flex;
+    align-items: center;
+}
+.prop__menu_item {
+	@include breakpoint(320px) {
+	    margin-right: 45px;
+	}
+	@include breakpoint(2000px) {
+		margin-right: 89px;
+	}
+}
+.prop__menu_item-link {
+	color: $content-menu-font-color;
+	transition: 1s;
+	opacity: 0.5;
+	&:hover,
+	&.active {
+		opacity: 1;
+	}
+	@include breakpoint(320px) {
+		font-size: 12.75px;
+	}
+	@include breakpoint(2000px) {
+		font-size: 0.75vw;
+	}
+}
+.prop__menu_item-link_icon {
+	@include breakpoint(320px) {
+		margin-right: 9px;
+	}
+	@include breakpoint(2000px) {
+		margin-right: 15px;
+	}   
+}
+.prop__menu_item-link_icon_add_property {
+	@include sprite(add_property);
+}
+.prop__menu_item-link_icon_receive_payments {
+	@include sprite(receive_payments);
+}
+.prop__menu_item-link_icon_search {
+	@include sprite(search);
+}
+.prop__menu_item-link_icon_view_all {
+	@include sprite(view_all);
+}
+/*!prop_menu*/
