@@ -61,11 +61,11 @@
 	text-transform: uppercase;
 	display: block;
 	&:after {
-		transition: background-color 1s;
+		transition: background-color 0.3s;
 	}
 	&:hover,
 	&.active {
-		transition: background-color 1s;
+		transition: background-color 0.3s;
 		&:after {
 			content: '';
 			display: block;

@@ -24,6 +24,9 @@
 		margin-right: 60px;
 		margin-bottom: 75px;
 	}
+	@include breakpoint(3300px) {
+		margin-right: 30px;
+	}
 }
 .properties__block_list-item_image {
 	position: relative;
@@ -428,7 +431,7 @@
     visibility: hidden;
     opacity: 0;
     z-index: 9;
-    transition: visibility 0s, opacity 0.5s linear;
+    transition: visibility 0s, opacity 0.3s linear;
 	& a {
 		color: #000;
 		@include breakpoint(320px) {
