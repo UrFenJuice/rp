@@ -51,11 +51,14 @@ a {
 	display: flex;
 }
 .content {
-	width: 87.5625vw;
 	background-color: $background-content-color;
 	overflow: hidden !important;
 	@include breakpoint(320px) {
 		height: 94.237vh;
+		width: 83vw;
+	}
+	@include breakpoint(1170px) {
+		width: 87.5625vw;
 	}
 	@include breakpoint(2000px) {
 		height: 93.277vh;
@@ -63,6 +66,9 @@ a {
 }
 .content.scroll-content {
 	@include breakpoint(320px) {
+		padding: 3vh 3.333vw 4vh 4vw!important;
+	}
+	@include breakpoint(1170px) {
 		padding: 3vh 3.333vw 4vh 3.333vw!important;
 	}
 	@include breakpoint(2000px) {

@@ -33,11 +33,14 @@
 	
 }
 .left-sidebar {
-	width: 12.4375vw;
 	overflow: hidden;
 	flex: 1 0 12.4375vw;
 	@include breakpoint(320px) {
 		height: 94.237vh;
+		width: 17vw;
+	}
+	@include breakpoint(1170px) {
+		width: 12.4375vw;
 	}
 	@include breakpoint(2000px) {
 		height: 93.277vh;
@@ -56,7 +59,6 @@
 	color: $left-menu-color;
 	text-align: center;
 	text-transform: uppercase;
-	padding: 2.89vh 0;
 	display: block;
 	&:after {
 		transition: background-color 1s;
@@ -81,9 +83,14 @@
 	}
 	@include breakpoint(320px) {
 		font-size: 11px;
+		padding: 2.89vh 0;
 	}
 	@include breakpoint(2000px) {
 		font-size: 0.78125vw;
+		padding: 2vh 0;
+	}
+	@include breakpoint(2600px) {
+		padding: 2.89vh 0;
 	}
 }
 #bg_dashboard {

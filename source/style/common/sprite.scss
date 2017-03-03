@@ -219,7 +219,7 @@
         background-size: calc(64px/2);
       }
     }
-    @media (min-width: 2100px) {
+    @media (min-width: 2600px) {
       @if $filename == add_property {
         background-image: url(/assets/img/sprite.png);
         background-position: 0px -203px;
