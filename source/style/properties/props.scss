@@ -7,15 +7,15 @@
     margin: 0;
 }
 .properties__block_list-item {
-	flex: 1 1 1060px;
+	flex: 0 1 auto;
 	background-color: #fff;
 	@include breakpoint(320px) {
-		max-width: 453px;
+		width: 453px;
 		margin-right: 28px;
 		margin-bottom: 33px;
 	}
 	@include breakpoint(2600px) {
-		max-width: 1060px;
+		width: 1060px;
 		margin-right: 60px;
 		margin-bottom: 75px;
 	}
@@ -89,10 +89,12 @@
 		& .main__address {
 			font-size: 17.12px;
 			padding-left: 1px;
+			display: inline-block;
 		}
 		& .sub__address {
 			font-size: 10.7px;
 			padding: 4px 0;
+			display: inline-block;
 		}
 	}
 	@include breakpoint(2600px) {
@@ -248,13 +250,18 @@
 		position: absolute;
 		right: 0;
 		top: 50%;
-		margin-top: -4.5px;
 	}
 	@include breakpoint(320px) {
 		font-size: 11.13px;
+		&:after {
+			margin-top: -2.75px;
+		}
 	}
 	@include breakpoint(2600px) {
 		font-size: 26px;
+		&:after {
+			margin-top: -4.5px;
+		}
 	}
 }
 .properties__block_list-item_info-footer_advertise {

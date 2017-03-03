@@ -52,7 +52,6 @@
 	align-items: center;
 }
 .header__menu_block_item {
-	height: 100%;
 	display: flex;
     align-items: center;
 	&:nth-last-child(1) {
@@ -60,9 +59,11 @@
 	}
 	@include breakpoint(320px) {
 		margin-right: 5.2vw;
+	    height: 5.763vh;
 	}
 	@include breakpoint(2000px) {
 		margin-right: 3.75vw;
+	    height: 6.723vh;
 	}
 }
 .header__menu_block_item {
@@ -114,8 +115,13 @@
 	}
 	& > div {
 		border-left: 1px solid $border-color;
-		height: 100%;
 		display: flex;
+		@include breakpoint(320px) {
+			height: 5.763vh;
+		}
+		@include breakpoint(2000px) {
+		    height: 6.723vh;
+		}
 	}
 }
 .header__user_avatar {
