@@ -5,8 +5,8 @@
       @if $filename == {{name}} {
         background-image: url({{{escaped_image}}});
         background-position: calc({{px.offset_x}}/2) calc({{px.offset_y}}/2);
-        height: calc({{px.height}}/2);
-        width: calc({{px.width}}/2);
+        height: calc({{px.height}}/1.95);
+        width: calc({{px.width}}/1.95);
         background-size: calc({{px.total_width}}/2);
       }
       {{/sprites}}

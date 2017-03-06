@@ -64,7 +64,7 @@ a {
 		height: 93.277vh;
 	}
 }
-.content.scroll-content {
+.main_content {
 	@include breakpoint(320px) {
 		padding: 3vh 3.333vw 4vh 4vw!important;
 	}
@@ -115,3 +115,5 @@ a {
 @import 'properties/props';
 
 @import 'common/scroll';
+
+@import 'common/preloader';

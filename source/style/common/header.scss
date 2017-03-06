@@ -87,10 +87,7 @@
 .header__menu_block_item-link {
 	color: $second-font-color;
 	text-decoration: none;
-	//margin: auto;
-	&:after {
-		transition: border-bottom-color 1s;
-	}
+	transition: color 0.3s;
 	&:hover,
 	&.active {
 		color: $primary-font-color;

@@ -8,8 +8,8 @@ module.exports = function() {
 	    cssFormat: 'css',
 	    imgPath: '/assets/img/sprite.png',
 	    cssTemplate: './source/sprite_template/scss.template.handlebars',
-	    padding : 10,
-	    algorithm: 'top-down'
+	    padding : 1,
+	    algorithm: 'diagonal'
 	  }));
 	  return spriteData.img.pipe($.gulp.dest($.config.root + '/assets/img')),
 	  		 spriteData.css.pipe($.gulp.dest('./source/style/common'));
