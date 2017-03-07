@@ -1,455 +1,469 @@
 @mixin sprite($filename) {
     display: block;
     @media (min-width: 320px) {
+      @if $filename == Untitled-1 {
+        background-image: url(/assets/img/sprite.png);
+        background-position: calc(-607px/2) calc(-582px/2);
+        height: calc(36px/1.95);
+        width: calc(35px/1.95);
+        background-size: calc(1422px/2);
+      }
       @if $filename == add_property {
         background-image: url(/assets/img/sprite.png);
-        background-position: -230px/2 -209px/2;
-        height: 32px/2;
-        width: 32px/2;
-        background-size: 1370px/2;
+        background-position: calc(-534px/2) calc(-514px/2);
+        height: calc(34px/1.95);
+        width: calc(34px/1.95);
+        background-size: calc(1422px/2);
       }
       @if $filename == add_tenants {
         background-image: url(/assets/img/sprite.png);
-        background-position: -199px/2 -176px/2;
-        height: 32px/2;
-        width: 30px/2;
-        background-size: 1370px/2;
+        background-position: calc(-467px/2) calc(-444px/2);
+        height: calc(34px/1.95);
+        width: calc(32px/1.95);
+        background-size: calc(1422px/2);
       }
       @if $filename == advertise_prop {
         background-image: url(/assets/img/sprite.png);
-        background-position: -563px/2 -537px/2;
-        height: 34px/2;
-        width: 33px/2;
-        background-size: 1370px/2;
+        background-position: calc(-500px/2) calc(-479px/2);
+        height: calc(34px/1.95);
+        width: calc(33px/1.95);
+        background-size: calc(1422px/2);
       }
       @if $filename == applications {
         background-image: url(/assets/img/sprite.png);
-        background-position: -1241px/2 -1158px/2;
-        height: 64px/2;
-        width: 64px/2;
-        background-size: 1370px/2;
+        background-position: calc(-1293px/2) calc(-1211px/2);
+        height: calc(64px/1.95);
+        width: calc(64px/1.95);
+        background-size: calc(1422px/2);
       }
       @if $filename == arrow_down {
         background-image: url(/assets/img/sprite.png);
-        background-position: 0px/2 0px/2;
-        height: 9px/2;
-        width: 16px/2;
-        background-size: 1370px/2;
+        background-position: calc(0px/2) calc(0px/2);
+        height: calc(11px/1.95);
+        width: calc(18px/1.95);
+        background-size: calc(1422px/2);
       }
       @if $filename == calendar {
         background-image: url(/assets/img/sprite.png);
-        background-position: -17px/2 -10px/2;
-        height: 24px/2;
-        width: 24px/2;
-        background-size: 1370px/2;
+        background-position: calc(-19px/2) calc(-12px/2);
+        height: calc(26px/1.95);
+        width: calc(26px/1.95);
+        background-size: calc(1422px/2);
       }
       @if $filename == compas {
         background-image: url(/assets/img/sprite.png);
-        background-position: -527px/2 -506px/2;
-        height: 30px/2;
-        width: 35px/2;
-        background-size: 1370px/2;
+        background-position: calc(-569px/2) calc(-549px/2);
+        height: calc(32px/1.95);
+        width: calc(37px/1.95);
+        background-size: calc(1422px/2);
       }
       @if $filename == dashboard {
         background-image: url(/assets/img/sprite.png);
-        background-position: -1119px/2 -1032px/2;
-        height: 60px/2;
-        width: 60px/2;
-        background-size: 1370px/2;
+        background-position: calc(-1171px/2) calc(-1085px/2);
+        height: calc(60px/1.95);
+        width: calc(60px/1.95);
+        background-size: calc(1422px/2);
       }
       @if $filename == delete_sm {
         background-image: url(/assets/img/sprite.png);
-        background-position: -75px/2 -56px/2;
-        height: 32px/2;
-        width: 24px/2;
-        background-size: 1370px/2;
+        background-position: calc(-112px/2) calc(-85px/2);
+        height: calc(32px/1.95);
+        width: calc(24px/1.95);
+        background-size: calc(1422px/2);
       }
       @if $filename == edit_sm {
         background-image: url(/assets/img/sprite.png);
-        background-position: -263px/2 -242px/2;
-        height: 32px/2;
-        width: 32px/2;
-        background-size: 1370px/2;
+        background-position: calc(-434px/2) calc(-411px/2);
+        height: calc(32px/1.95);
+        width: calc(32px/1.95);
+        background-size: calc(1422px/2);
       }
       @if $filename == equal {
         background-image: url(/assets/img/sprite.png);
-        background-position: -597px/2 -572px/2;
-        height: 35px/2;
-        width: 43px/2;
-        background-size: 1370px/2;
+        background-position: calc(-643px/2) calc(-619px/2);
+        height: calc(35px/1.95);
+        width: calc(43px/1.95);
+        background-size: calc(1422px/2);
       }
       @if $filename == gear {
         background-image: url(/assets/img/sprite.png);
-        background-position: -641px/2 -608px/2;
-        height: 49px/2;
-        width: 49px/2;
-        background-size: 1370px/2;
+        background-position: calc(-687px/2) calc(-655px/2);
+        height: calc(49px/1.95);
+        width: calc(49px/1.95);
+        background-size: calc(1422px/2);
       }
       @if $filename == gear_sm {
         background-image: url(/assets/img/sprite.png);
-        background-position: -362px/2 -341px/2;
-        height: 32px/2;
-        width: 32px/2;
-        background-size: 1370px/2;
+        background-position: calc(-335px/2) calc(-312px/2);
+        height: calc(32px/1.95);
+        width: calc(32px/1.95);
+        background-size: calc(1422px/2);
       }
       @if $filename == in_arrears {
         background-image: url(/assets/img/sprite.png);
-        background-position: -756px/2 -703px/2;
-        height: 55px/2;
-        width: 55px/2;
-        background-size: 1370px/2;
+        background-position: calc(-802px/2) calc(-750px/2);
+        height: calc(57px/1.95);
+        width: calc(57px/1.95);
+        background-size: calc(1422px/2);
       }
       @if $filename == last_inspection {
         background-image: url(/assets/img/sprite.png);
-        background-position: -428px/2 -407px/2;
-        height: 32px/2;
-        width: 32px/2;
-        background-size: 1370px/2;
+        background-position: calc(-401px/2) calc(-378px/2);
+        height: calc(32px/1.95);
+        width: calc(32px/1.95);
+        background-size: calc(1422px/2);
       }
       @if $filename == latest_payment {
         background-image: url(/assets/img/sprite.png);
-        background-position: -461px/2 -440px/2;
-        height: 32px/2;
-        width: 32px/2;
-        background-size: 1370px/2;
+        background-position: calc(-236px/2) calc(-213px/2);
+        height: calc(32px/1.95);
+        width: calc(32px/1.95);
+        background-size: calc(1422px/2);
       }
       @if $filename == maintenance {
         background-image: url(/assets/img/sprite.png);
-        background-position: -1306px/2 -1223px/2;
-        height: 64px/2;
-        width: 64px/2;
-        background-size: 1370px/2;
+        background-position: calc(-1358px/2) calc(-1276px/2);
+        height: calc(64px/1.95);
+        width: calc(64px/1.95);
+        background-size: calc(1422px/2);
       }
       @if $filename == messages {
         background-image: url(/assets/img/sprite.png);
-        background-position: -924px/2 -871px/2;
-        height: 52px/2;
-        width: 64px/2;
-        background-size: 1370px/2;
+        background-position: calc(-976px/2) calc(-924px/2);
+        height: calc(52px/1.95);
+        width: calc(64px/1.95);
+        background-size: calc(1422px/2);
       }
       @if $filename == properties {
         background-image: url(/assets/img/sprite.png);
-        background-position: -989px/2 -924px/2;
-        height: 52px/2;
-        width: 64px/2;
-        background-size: 1370px/2;
+        background-position: calc(-1041px/2) calc(-977px/2);
+        height: calc(52px/1.95);
+        width: calc(64px/1.95);
+        background-size: calc(1422px/2);
       }
       @if $filename == property_vacant {
         background-image: url(/assets/img/sprite.png);
-        background-position: -868px/2 -815px/2;
-        height: 55px/2;
-        width: 55px/2;
-        background-size: 1370px/2;
+        background-position: calc(-918px/2) calc(-866px/2);
+        height: calc(57px/1.95);
+        width: calc(57px/1.95);
+        background-size: calc(1422px/2);
       }
       @if $filename == receive_payments {
         background-image: url(/assets/img/sprite.png);
-        background-position: -100px/2 -89px/2;
-        height: 24px/2;
-        width: 32px/2;
-        background-size: 1370px/2;
+        background-position: calc(-79px/2) calc(-60px/2);
+        height: calc(24px/1.95);
+        width: calc(32px/1.95);
+        background-size: calc(1422px/2);
       }
       @if $filename == remind {
         background-image: url(/assets/img/sprite.png);
-        background-position: -166px/2 -145px/2;
-        height: 30px/2;
-        width: 32px/2;
-        background-size: 1370px/2;
+        background-position: calc(-170px/2) calc(-149px/2);
+        height: calc(30px/1.95);
+        width: calc(32px/1.95);
+        background-size: calc(1422px/2);
       }
       @if $filename == rent {
         background-image: url(/assets/img/sprite.png);
-        background-position: -133px/2 -114px/2;
-        height: 30px/2;
-        width: 32px/2;
-        background-size: 1370px/2;
+        background-position: calc(-137px/2) calc(-118px/2);
+        height: calc(30px/1.95);
+        width: calc(32px/1.95);
+        background-size: calc(1422px/2);
       }
       @if $filename == reports {
         background-image: url(/assets/img/sprite.png);
-        background-position: -1054px/2 -977px/2;
-        height: 54px/2;
-        width: 64px/2;
-        background-size: 1370px/2;
+        background-position: calc(-1106px/2) calc(-1030px/2);
+        height: calc(54px/1.95);
+        width: calc(64px/1.95);
+        background-size: calc(1422px/2);
       }
       @if $filename == rules {
         background-image: url(/assets/img/sprite.png);
-        background-position: -1180px/2 -1093px/2;
-        height: 64px/2;
-        width: 60px/2;
-        background-size: 1370px/2;
+        background-position: calc(-1232px/2) calc(-1146px/2);
+        height: calc(64px/1.95);
+        width: calc(60px/1.95);
+        background-size: calc(1422px/2);
       }
       @if $filename == search {
         background-image: url(/assets/img/sprite.png);
-        background-position: -395px/2 -374px/2;
-        height: 32px/2;
-        width: 32px/2;
-        background-size: 1370px/2;
+        background-position: calc(-269px/2) calc(-246px/2);
+        height: calc(32px/1.95);
+        width: calc(32px/1.95);
+        background-size: calc(1422px/2);
       }
       @if $filename == tenant {
         background-image: url(/assets/img/sprite.png);
-        background-position: -329px/2 -308px/2;
-        height: 32px/2;
-        width: 32px/2;
-        background-size: 1370px/2;
+        background-position: calc(-368px/2) calc(-345px/2);
+        height: calc(32px/1.95);
+        width: calc(32px/1.95);
+        background-size: calc(1422px/2);
       }
       @if $filename == tenants {
         background-image: url(/assets/img/sprite.png);
-        background-position: -691px/2 -658px/2;
-        height: 44px/2;
-        width: 64px/2;
-        background-size: 1370px/2;
+        background-position: calc(-737px/2) calc(-705px/2);
+        height: calc(44px/1.95);
+        width: calc(64px/1.95);
+        background-size: calc(1422px/2);
       }
       @if $filename == up_to_date {
         background-image: url(/assets/img/sprite.png);
-        background-position: -812px/2 -759px/2;
-        height: 55px/2;
-        width: 55px/2;
-        background-size: 1370px/2;
+        background-position: calc(-860px/2) calc(-808px/2);
+        height: calc(57px/1.95);
+        width: calc(57px/1.95);
+        background-size: calc(1422px/2);
       }
       @if $filename == view_all {
         background-image: url(/assets/img/sprite.png);
-        background-position: -296px/2 -275px/2;
-        height: 32px/2;
-        width: 32px/2;
-        background-size: 1370px/2;
+        background-position: calc(-302px/2) calc(-279px/2);
+        height: calc(32px/1.95);
+        width: calc(32px/1.95);
+        background-size: calc(1422px/2);
       }
       @if $filename == view_applicants {
         background-image: url(/assets/img/sprite.png);
-        background-position: -42px/2 -35px/2;
-        height: 20px/2;
-        width: 32px/2;
-        background-size: 1370px/2;
+        background-position: calc(-46px/2) calc(-39px/2);
+        height: calc(20px/1.95);
+        width: calc(32px/1.95);
+        background-size: calc(1422px/2);
       }
       @if $filename == view_listing {
         background-image: url(/assets/img/sprite.png);
-        background-position: -494px/2 -473px/2;
-        height: 32px/2;
-        width: 32px/2;
-        background-size: 1370px/2;
+        background-position: calc(-203px/2) calc(-180px/2);
+        height: calc(32px/1.95);
+        width: calc(32px/1.95);
+        background-size: calc(1422px/2);
       }
     }
     @media (min-width: 2600px) {
+      @if $filename == Untitled-1 {
+        background-image: url(/assets/img/sprite.png);
+        background-position: -607px -582px;
+        height: 36px;
+        width: 35px;
+        background-size: 1422px;
+      }
       @if $filename == add_property {
         background-image: url(/assets/img/sprite.png);
-        background-position: -230px -209px;
-        height: 32px;
-        width: 32px;
-        background-size: 1370px;
+        background-position: -534px -514px;
+        height: 34px;
+        width: 34px;
+        background-size: 1422px;
       }
       @if $filename == add_tenants {
         background-image: url(/assets/img/sprite.png);
-        background-position: -199px -176px;
-        height: 32px;
-        width: 30px;
-        background-size: 1370px;
+        background-position: -467px -444px;
+        height: 34px;
+        width: 32px;
+        background-size: 1422px;
       }
       @if $filename == advertise_prop {
         background-image: url(/assets/img/sprite.png);
-        background-position: -563px -537px;
+        background-position: -500px -479px;
         height: 34px;
         width: 33px;
-        background-size: 1370px;
+        background-size: 1422px;
       }
       @if $filename == applications {
         background-image: url(/assets/img/sprite.png);
-        background-position: -1241px -1158px;
+        background-position: -1293px -1211px;
         height: 64px;
         width: 64px;
-        background-size: 1370px;
+        background-size: 1422px;
       }
       @if $filename == arrow_down {
         background-image: url(/assets/img/sprite.png);
         background-position: 0px 0px;
-        height: 9px;
-        width: 16px;
-        background-size: 1370px;
+        height: 11px;
+        width: 18px;
+        background-size: 1422px;
       }
       @if $filename == calendar {
         background-image: url(/assets/img/sprite.png);
-        background-position: -17px -10px;
-        height: 24px;
-        width: 24px;
-        background-size: 1370px;
+        background-position: -19px -12px;
+        height: 26px;
+        width: 26px;
+        background-size: 1422px;
       }
       @if $filename == compas {
         background-image: url(/assets/img/sprite.png);
-        background-position: -527px -506px;
-        height: 30px;
-        width: 35px;
-        background-size: 1370px;
+        background-position: -569px -549px;
+        height: 32px;
+        width: 37px;
+        background-size: 1422px;
       }
       @if $filename == dashboard {
         background-image: url(/assets/img/sprite.png);
-        background-position: -1119px -1032px;
+        background-position: -1171px -1085px;
         height: 60px;
         width: 60px;
-        background-size: 1370px;
+        background-size: 1422px;
       }
       @if $filename == delete_sm {
         background-image: url(/assets/img/sprite.png);
-        background-position: -75px -56px;
+        background-position: -112px -85px;
         height: 32px;
         width: 24px;
-        background-size: 1370px;
+        background-size: 1422px;
       }
       @if $filename == edit_sm {
         background-image: url(/assets/img/sprite.png);
-        background-position: -263px -242px;
+        background-position: -434px -411px;
         height: 32px;
         width: 32px;
-        background-size: 1370px;
+        background-size: 1422px;
       }
       @if $filename == equal {
         background-image: url(/assets/img/sprite.png);
-        background-position: -597px -572px;
+        background-position: -643px -619px;
         height: 35px;
         width: 43px;
-        background-size: 1370px;
+        background-size: 1422px;
       }
       @if $filename == gear {
         background-image: url(/assets/img/sprite.png);
-        background-position: -641px -608px;
+        background-position: -687px -655px;
         height: 49px;
         width: 49px;
-        background-size: 1370px;
+        background-size: 1422px;
       }
       @if $filename == gear_sm {
         background-image: url(/assets/img/sprite.png);
-        background-position: -362px -341px;
+        background-position: -335px -312px;
         height: 32px;
         width: 32px;
-        background-size: 1370px;
+        background-size: 1422px;
       }
       @if $filename == in_arrears {
         background-image: url(/assets/img/sprite.png);
-        background-position: -756px -703px;
-        height: 55px;
-        width: 55px;
-        background-size: 1370px;
+        background-position: -802px -750px;
+        height: 57px;
+        width: 57px;
+        background-size: 1422px;
       }
       @if $filename == last_inspection {
         background-image: url(/assets/img/sprite.png);
-        background-position: -428px -407px;
+        background-position: -401px -378px;
         height: 32px;
         width: 32px;
-        background-size: 1370px;
+        background-size: 1422px;
       }
       @if $filename == latest_payment {
         background-image: url(/assets/img/sprite.png);
-        background-position: -461px -440px;
+        background-position: -236px -213px;
         height: 32px;
         width: 32px;
-        background-size: 1370px;
+        background-size: 1422px;
       }
       @if $filename == maintenance {
         background-image: url(/assets/img/sprite.png);
-        background-position: -1306px -1223px;
+        background-position: -1358px -1276px;
         height: 64px;
         width: 64px;
-        background-size: 1370px;
+        background-size: 1422px;
       }
       @if $filename == messages {
         background-image: url(/assets/img/sprite.png);
-        background-position: -924px -871px;
+        background-position: -976px -924px;
         height: 52px;
         width: 64px;
-        background-size: 1370px;
+        background-size: 1422px;
       }
       @if $filename == properties {
         background-image: url(/assets/img/sprite.png);
-        background-position: -989px -924px;
+        background-position: -1041px -977px;
         height: 52px;
         width: 64px;
-        background-size: 1370px;
+        background-size: 1422px;
       }
       @if $filename == property_vacant {
         background-image: url(/assets/img/sprite.png);
-        background-position: -868px -815px;
-        height: 55px;
-        width: 55px;
-        background-size: 1370px;
+        background-position: -918px -866px;
+        height: 57px;
+        width: 57px;
+        background-size: 1422px;
       }
       @if $filename == receive_payments {
         background-image: url(/assets/img/sprite.png);
-        background-position: -100px -89px;
+        background-position: -79px -60px;
         height: 24px;
         width: 32px;
-        background-size: 1370px;
+        background-size: 1422px;
       }
       @if $filename == remind {
         background-image: url(/assets/img/sprite.png);
-        background-position: -166px -145px;
+        background-position: -170px -149px;
         height: 30px;
         width: 32px;
-        background-size: 1370px;
+        background-size: 1422px;
       }
       @if $filename == rent {
         background-image: url(/assets/img/sprite.png);
-        background-position: -133px -114px;
+        background-position: -137px -118px;
         height: 30px;
         width: 32px;
-        background-size: 1370px;
+        background-size: 1422px;
       }
       @if $filename == reports {
         background-image: url(/assets/img/sprite.png);
-        background-position: -1054px -977px;
+        background-position: -1106px -1030px;
         height: 54px;
         width: 64px;
-        background-size: 1370px;
+        background-size: 1422px;
       }
       @if $filename == rules {
         background-image: url(/assets/img/sprite.png);
-        background-position: -1180px -1093px;
+        background-position: -1232px -1146px;
         height: 64px;
         width: 60px;
-        background-size: 1370px;
+        background-size: 1422px;
       }
       @if $filename == search {
         background-image: url(/assets/img/sprite.png);
-        background-position: -395px -374px;
+        background-position: -269px -246px;
         height: 32px;
         width: 32px;
-        background-size: 1370px;
+        background-size: 1422px;
       }
       @if $filename == tenant {
         background-image: url(/assets/img/sprite.png);
-        background-position: -329px -308px;
+        background-position: -368px -345px;
         height: 32px;
         width: 32px;
-        background-size: 1370px;
+        background-size: 1422px;
       }
       @if $filename == tenants {
         background-image: url(/assets/img/sprite.png);
-        background-position: -691px -658px;
+        background-position: -737px -705px;
         height: 44px;
         width: 64px;
-        background-size: 1370px;
+        background-size: 1422px;
       }
       @if $filename == up_to_date {
         background-image: url(/assets/img/sprite.png);
-        background-position: -812px -759px;
-        height: 55px;
-        width: 55px;
-        background-size: 1370px;
+        background-position: -860px -808px;
+        height: 57px;
+        width: 57px;
+        background-size: 1422px;
       }
       @if $filename == view_all {
         background-image: url(/assets/img/sprite.png);
-        background-position: -296px -275px;
+        background-position: -302px -279px;
         height: 32px;
         width: 32px;
-        background-size: 1370px;
+        background-size: 1422px;
       }
       @if $filename == view_applicants {
         background-image: url(/assets/img/sprite.png);
-        background-position: -42px -35px;
+        background-position: -46px -39px;
         height: 20px;
         width: 32px;
-        background-size: 1370px;
+        background-size: 1422px;
       }
       @if $filename == view_listing {
         background-image: url(/assets/img/sprite.png);
-        background-position: -494px -473px;
+        background-position: -203px -180px;
         height: 32px;
         width: 32px;
-        background-size: 1370px;
+        background-size: 1422px;
       }
     }
 }
