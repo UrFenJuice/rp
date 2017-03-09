@@ -4,21 +4,22 @@
       {{#sprites}}
       @if $filename == {{name}} {
         background-image: url({{{escaped_image}}});
-        background-position: calc({{px.offset_x}}/2) calc({{px.offset_y}}/2);
-        height: calc({{px.height}}/1.95);
-        width:  calc({{px.width}}/1.95);
-        background-size: calc({{px.total_width}}/2);
+        background-position: {{px.offset_x}} {{px.offset_y}};
+        background-size: {{px.total_width}};
+        width: {{px.width}};
+        height: {{px.height}};
       }
       {{/sprites}}
     }
     @media (min-width: 2600px) {
       {{#sprites}}
       @if $filename == {{name}} {
-        background-image: url({{{escaped_image}}});
-        background-position: {{px.offset_x}} {{px.offset_y}};
-        height: {{px.height}};
-        width: {{px.width}};
-        background-size: {{px.total_width}};
+        background-image: url(/assets/img/sprite2x.png);
+        background-position-x: {{px.offset_x}} / 2px * 4px;
+        background-position-y: {{px.offset_y}} / 2px * 4px;
+        background-size: {{px.total_width}} / 2px * 4px;
+        width: {{px.width}} / 2px * 4px;
+        height: {{px.height}} / 2px * 4px;
       }
       {{/sprites}}
     }
