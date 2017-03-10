@@ -6,6 +6,8 @@ block variables
 
 - var prop_menu_items = { add_property: 'Add Property', receive_payments: 'Receive Payment(s)', search: 'Search', view_all: 'View All'}
 
+- var svg = "assets/img/sprite.svg" 
+
 mixin use(name)
     svg.my_svg(role="img", id=name, preserveAspectRatio="xMinYMax")
         use(xlink:href=svg+"#"+name)
