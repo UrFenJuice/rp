@@ -139,29 +139,31 @@
 	align-items: center;
 	&.status__up-to-date {
 		color: $green-text;
-		& .properties__block_list-item_info-status_icon {
-			@include sprite(up_to_date);
-		}
+		fill: $green-text;
 	}
 	&.status__in-arrears {
 		color: $red-text;
-		& .properties__block_list-item_info-status_icon {
-			@include sprite(in_arrears);
-		}
+		fill: $red-text;
 	}
 	&.status__property-vacant {
 		color: $logotype-color;
-		& .properties__block_list-item_info-status_icon {
-			@include sprite(property_vacant);
-		}
+		fill: $logotype-color;
 	}
 	@include breakpoint(320px) {
 		font-size: 9.85px;
 		margin-right: 25px;
+		& .my_svg {
+			width: 24px;
+			height: 24px;
+		}
 	}
 	@include breakpoint(2600px) {
 		font-size: 23px;
 		margin-right: 60px;
+		& .my_svg {
+			width: 55px;
+			height: 55px;
+		}
 	}
 }
 .properties__block_list-item_info-status_icon {
@@ -175,13 +177,23 @@
 .properties__block_list-item_info-status_link {
 	text-transform: uppercase;
 	text-decoration: underline;
+	& .my_svg {
+		@include breakpoint(320px) {
+			width: 14px;
+			height: 14px;
+		}
+		@include breakpoint(2600px) {
+			width: 32px;
+			height: 32px;
+		}
+	}
 	& .add_tenants {
 		color: $logotype-color;
 		display: flex;
 		align-items: center;
 		text-decoration: underline;
 		.properties__block_list-item_info-status_link-icon {
-			@include sprite(add_tenants);
+			fill: $blue-text;
 		}
 	}
 	& .send_reminder {
@@ -190,7 +202,7 @@
 		align-items: center;
 		text-decoration: underline;
 		.properties__block_list-item_info-status_link-icon {
-			@include sprite(remind);
+			fill: $red-text;
 		}
 	}
 	@include breakpoint(320px) {
@@ -247,41 +259,41 @@
 	align-items: center;
 	position: relative;
 	& i {
+		fill: #cccfd9;
 		@include breakpoint(320px) {
 			margin-right: 7px;
+			& .my_svg {
+				width: 14px;
+				height: 14px;
+			}
 		}
 		@include breakpoint(2600px) {
 			margin-right: 20px;
+			& .my_svg {
+				width: 32px;
+				height: 32px;
+			}
 		}
 	}
-	& .bg_rent {
-		@include sprite(rent);
-	}
-	& .bg_last_pay {
-		@include sprite(latest_payment);
-	}
-	& .bg_tenant{
-		@include sprite(tenant);
-	}
-	& .bg_last_inspection {
-		@include sprite(last_inspection);
-	}
-	&:after {
-		content: '';
-		@include sprite(arrow_down);
+	& #arrow_down {
+		fill: #CCCFD9;
 		position: absolute;
 		right: 0;
 		top: 50%;
 	}
 	@include breakpoint(320px) {
 		font-size: 11.13px;
-		&:after {
-			margin-top: -2.75px;
+		& #arrow_down {
+			width: 13px;
+			height: 7px;
+			margin-top: -3.5px;
 		}
 	}
 	@include breakpoint(2600px) {
 		font-size: 26px;
-		&:after {
+		& #arrow_down {
+			width: 16px;
+			height: 9px;
 			margin-top: -4.5px;
 		}
 	}
@@ -311,19 +323,25 @@
 	display: flex;
 	align-items: center;
 	margin-right: 25px;
-	& .icon_advertise {
-		@include sprite(advertise_prop);
-	}
 	@include breakpoint(320px) {
 		font-size: 11.56px;
 		& .icon_advertise {
 			margin-right: 10px;
+		}
+		& .my_svg {
+			width: 14px;
+			height: 14px;
+			transform: rotate(-15deg);
 		}
 	}
 	@include breakpoint(2600px) {
 		font-size: 27px;
 		& .icon_advertise {
 			margin-right: 20px;
+		}
+		& .my_svg {
+			width: 34px;
+			height: 34px;
 		}
 	}
 }
@@ -361,7 +379,6 @@
 		& span {
 			font-size: 11.56px;
 			margin-right: 30px;
-			//margin: 27px 0 0px 0px;
 		}
 		& a {
 			font-size: 12px;
@@ -408,11 +425,18 @@
 		text-transform: uppercase;
 		display: flex;
 		align-items: center;
-		& .icon__listing {
-			@include sprite(view_listing);
+		fill: #c2c5d3;
+		@include breakpoint(320px) {
+			& .my_svg {
+				width: 14px;
+				height: 14px;
+			}
 		}
-		& .icon__applicants {
-			@include sprite(view_applicants);
+		@include breakpoint(2600px) {
+			& .my_svg {
+				width: 32px;
+				height: 32px;
+			}
 		}
 	}
 }
@@ -482,13 +506,20 @@
 	display: flex;
 	align-items: center;
 	& i {
+		fill: #cccfd9;
 		@include breakpoint(320px) {
 			margin-right: 10px;
-			min-width: 16px;
+			& .my_svg {
+				width: 16px;
+				height: 16px;
+			}
 		}
 		@include breakpoint(2600) {
 			margin-right: 20px;
-			min-width: 32px;
+			& .my_svg {
+				width: 32px;
+				height: 32px;
+			}
 		}
 	}
 	@include breakpoint(320px) {
@@ -500,15 +531,6 @@
 	&:nth-last-child(1) {
 		margin-bottom: 0;
 	}
-}
-.show_more-small_menu-item-gear_sm {
-	@include sprite(gear_sm);
-}
-.show_more-small_menu-item-edit_sm {
-	@include sprite(edit_sm);
-}
-.show_more-small_menu-item-delete_sm {
-	@include sprite(delete_sm);
 }
 .tooltip {
 	position: absolute;
@@ -536,11 +558,8 @@
     	border: 10px solid transparent;	
     	border-top: 10px solid #fff;
 	    position: absolute;
-    	bottom: -75%;
+    	bottom: -65%;
     	right: 29%;
     }
-}
-.bg_tooltip_date {
-	@include sprite(calendar);
 }
 /*!props*/

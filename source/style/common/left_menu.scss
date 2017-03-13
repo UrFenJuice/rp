@@ -1,38 +1,45 @@
 .left__menu_item-link_icon_dashboard {
-	@include sprite(dashboard);
+	fill: rgba(255, 180, 63, 1);
 }
 .left__menu_item-link_icon_properties {
-	@include sprite(properties);
+	fill: rgba(0, 172, 193, 1);
 }
 .left__menu_item-link_icon_tenants {
-	@include sprite(tenants);
+	fill: rgba(30, 136, 229, 1);
 }
 .left__menu_item-link_icon_applications {
-	@include sprite(applications);
+	fill: rgba(124, 179, 66, 1);
 }
 .left__menu_item-link_icon_messages {
-	@include sprite(messages);
+	fill: rgba(253, 216, 53, 1);
 }
 .left__menu_item-link_icon_reports {
-	@include sprite(reports);
+	fill: rgba(244, 81, 30, 1);
 }
 .left__menu_item-link_icon_maintenance {
-	@include sprite(maintenance);
+	fill: rgba(84, 110, 122, 1);
 }
 .left__menu_item-link_icon_rules {
-	@include sprite(rules);
+	fill: rgba(142, 36, 170, 1);
 }
 /*!left menu icons*/
 .left__menu_item-link_icon {
 	@include breakpoint(320px) {
 		margin: 0 auto 10px auto;
+	    display: inline-block;
+		& .my_svg {
+			width: 27px;
+			height: 27px;
+		}
 	}
 	@include breakpoint(2000px) {
 		margin: 0 auto 20px auto;
 	}
-	.my_svg {
-		width: 32px;
-		height: 32px;
+	@include breakpoint(2600px) {
+		& .my_svg {
+			width: 64px;
+			height: 64px;
+		}
 	}
 }
 .left-sidebar {
@@ -93,7 +100,7 @@
 		padding: 2vh 0;
 	}
 	@include breakpoint(2600px) {
-		padding: 2.89vh 0;
+		padding: 2.65vh 0;
 	}
 }
 #bg_dashboard {

@@ -30,6 +30,7 @@
   "dependencies": {
     "flexibility": "^2.0.1",
     "jquery.scrollbar": "^0.2.11",
-    "normalize.css": "^4.1.1"
+    "normalize.css": "^4.1.1",
+    "svg4everybody": "^2.1.7"
   }
 }

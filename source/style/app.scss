@@ -84,16 +84,18 @@ a {
     text-transform: uppercase;
     display: flex;
     align-items: center;
-    & .icon_show_me {
-	    transform: rotate(90deg);
-    	@include sprite(compas);
-    }
     @include breakpoint(320px) {
     	font-size: 9.79px;
 	    padding: 16px 17px;
         right: -84px;
         & .icon_show_me {
         	margin-right: 10px;
+    	}
+    	& .my_svg {
+    		transform: translate(30) rotate(45 50 50);
+    		fill: #c2c5d3;
+    		width: 15px;
+    		height: 15px;
     	}
     }
     @include breakpoint(2600px) {
@@ -102,6 +104,10 @@ a {
     	right: -205px;
     	& .icon_show_me {
         	margin-right: 20px;
+    	}
+    	& .my_svg {
+    		width: 35px;
+    		height: 35px;
     	}
     }
 }

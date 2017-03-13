@@ -1,8 +1,7 @@
 (function() {
-	'use strict';
-	jQuery('.content, .left-sidebar').scrollbar();
-	flexibility(document.documentElement);
-
+    'use strict';
+    jQuery('.content, .left-sidebar').scrollbar();
+    svg4everybody();
 })();
 
 function e(e, t) {

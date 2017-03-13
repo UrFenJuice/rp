@@ -181,21 +181,41 @@
 	}
 }
 .header__user_menu_link {
-	@include sprite(equal);
+	fill: #e3e5ee;
 	@include breakpoint(320px) {
 	    margin: auto 17px;
+	    & #equal {
+			width: 20px;
+			height: 20px;
+	    }
 	}
 	@include breakpoint(2000px) {
 	    margin: auto 40px;
 	}
+	@include breakpoint(2600px) {
+		& #equal {
+			width: 43px;
+			height: 43px;
+	    }
+	}
 }
 .header__user_settings_link {
-	@include sprite(gear);
+	fill: #e3e5ee;
 	@include breakpoint(320px) {
 	    margin: auto 17px;
+	    & #gear {
+			width: 23px;
+			height: 23px;
+	    }
 	}
 	@include breakpoint(2000px) {
 	    margin: auto 36px;
+	}
+	@include breakpoint(2600px) {
+		& #gear {
+			width: 49px;
+			height: 49px;
+	    }
 	}
 }
 /*!header*/
