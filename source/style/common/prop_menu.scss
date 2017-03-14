@@ -1,9 +1,9 @@
 .prop__menu {
 	@include breakpoint(320px) {
-		margin-bottom: 31px;
+		margin-bottom: 3vh;
 	}
 	@include breakpoint(2000px) {
-		margin-bottom: 60px;
+		margin-bottom: 3.3333vh;
 	}
 }
 .prop__menu,

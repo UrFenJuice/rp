@@ -18,7 +18,9 @@
 	align-content: center;
 	color: $white-text;
 	text-decoration: none;
-	font-family: $second-font;
+	& b {
+		font-family: $second-font;
+	}
 	@include breakpoint(320px) {
 		height: 5.763vh;
 		font-size: 12px;
@@ -33,9 +35,13 @@
 			max-width: 41px;
 		}
 	}
+	@media screen and (min-device-aspect-ratio: 21/9) {
+		height: 3vmax;
+	}
 }
 .company__name {
 	@include breakpoint(320px) {
+		text-transform: uppercase;
 		padding-left: 8px;
 		letter-spacing: -0.7px;
 	}
@@ -77,11 +83,14 @@
 	    height: 5.763vh;
 	}
 	@include breakpoint(1170px) {
-		margin-right: 5.2vw;
+		margin-right: 5vw;
 	}
 	@include breakpoint(2000px) {
-		margin-right: 4.1vw;
+		margin-right: 3.9vw;
 	    height: 6.723vh;
+	}
+	@media screen and (min-device-aspect-ratio: 21/9) {
+		height: 3vmax;
 	}
 }
 .header__menu_block_item-link {
@@ -134,6 +143,9 @@
 		@include breakpoint(2000px) {
 		    height: 6.723vh;
 		}
+		@media screen and (min-device-aspect-ratio: 21/9) {
+			height: 3vmax;
+		}
 	}
 }
 .header__user_avatar {
@@ -183,7 +195,7 @@
 .header__user_menu_link {
 	fill: #e3e5ee;
 	@include breakpoint(320px) {
-	    margin: auto 17px;
+	    margin: auto 18px;
 	    & #equal {
 			width: 20px;
 			height: 20px;
@@ -191,11 +203,15 @@
 	}
 	@include breakpoint(2000px) {
 	    margin: auto 40px;
+	    & #equal {
+			width: 1.34vw;
+			height: 1.34vw;
+	    }
 	}
 	@include breakpoint(2600px) {
 		& #equal {
-			width: 43px;
-			height: 43px;
+			width: 1.34vw;
+			height: 1.34vw;
 	    }
 	}
 }
@@ -210,11 +226,15 @@
 	}
 	@include breakpoint(2000px) {
 	    margin: auto 36px;
+	    & #gear {
+			width: 1.53vw;
+			height: 1.53vw;
+	    }
 	}
 	@include breakpoint(2600px) {
 		& #gear {
-			width: 49px;
-			height: 49px;
+			width: 1.53vw;
+			height: 1.53vw;
 	    }
 	}
 }

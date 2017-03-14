@@ -52,7 +52,7 @@ a {
 }
 .content {
 	background-color: $background-content-color;
-	overflow: hidden !important;
+	overflow: auto;
 	@include breakpoint(320px) {
 		height: 94.237vh;
 		width: 83vw;

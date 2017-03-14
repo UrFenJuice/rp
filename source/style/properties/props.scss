@@ -127,10 +127,10 @@
 	display: flex;
 	align-items: center;
 	@include breakpoint(320px) {
-		margin: 15px 0px 25px;
+		margin: 15px 0px 27px;
 	}
 	@include breakpoint(2600px) {
-		margin: 42px 6px 61px;
+		margin: 42px 6px 55px;
 	}
 }
 .properties__block_list-item_info-status_board {
@@ -314,7 +314,7 @@
 		justify-content: space-between;
 	}
 	@include breakpoint(2600px) {
-		margin-bottom: 37px;
+		margin-bottom: 47px;
 	}
 }
 .properties__block_list-item_info-footer_advertise-link {

@@ -1,9 +1,14 @@
-(function() {
-    'use strict';
+//(function() {
+//    'use strict';
     jQuery('.content, .left-sidebar').scrollbar();
-    svg4everybody();
-})();
-
+    //svg4everybody();
+//})();
+jQuery(function($){
+    $(document).ready(function(){
+        svg4everybody();
+        jQuery('.content, .left-sidebar').scrollbar();
+    });
+})
 function e(e, t) {
     var o = Math.ceil(t / e * 100);
     o >= 100 && (o = 100, a.fadeOut()), r.text(o + "%")
