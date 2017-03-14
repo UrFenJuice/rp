@@ -7,6 +7,14 @@
 }
 
 @font-face {
+	font-family: 'Montserrat-Medium';
+	src: url('/assets/fonts/Montserrat-Medium/Montserrat-Medium.eot');
+	src: local('☺'), url('/assets/fonts/Montserrat-Medium/Montserrat-Medium.woff') format('woff'), url('/assets/fonts/Montserrat-Medium/Montserrat-Medium.ttf') format('truetype'), url('/assets/fonts/Montserrat-Medium/Montserrat-Medium.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
 	font-family: 'Montserrat-Bold';
 	src: url('/assets/fonts/Montserrat-Bold/Montserrat-Bold.eot');
 	src: local('☺'), url('/assets/fonts/Montserrat-Bold/Montserrat-Bold.woff') format('woff'), url('/assets/fonts/Montserrat-Bold/Montserrat-Bold.ttf') format('truetype'), url('/assets/fonts/Montserrat-Bold/Montserrat-Bold.svg') format('svg');
