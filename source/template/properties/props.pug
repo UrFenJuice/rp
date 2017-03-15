@@ -9,19 +9,19 @@
 						li.show_more-small_menu-item
 							i.show_more-small_menu-item-gear_sm
 								+use("gear")
-							a(href="")
+							a(href="#")
 								| Settings
 						li.show_more-small_menu-item
 							i.show_more-small_menu-item-edit_sm
 								+use("edit_sm")
-							a(href="")
+							a(href="#")
 								| Edit
 						li.show_more-small_menu-item
 							i.show_more-small_menu-item-delete_sm
 								+use("delete_sm")
-							a(href="")
+							a(href="#")
 								| Delete
-				a(href="", title="VIEW DETAILS").details
+				a(href="#", title="VIEW DETAILS").details
 					| VIEW DETAILS
 			.properties__block_list-item_info
 				.properties__block_list-item_info-address
@@ -37,55 +37,81 @@
 				.properties__block_list-item_info-footer
 					ul.properties__block_list-item_info-lists
 						li.properties__block_list-item_info-lists-item
-							a(href="", title="Rent: $420.00 per week").properties__block_list-item_info-lists_link
+							a(href="#", title="Rent: $420.00 per week").properties__block_list-item_info-lists_link
 								i.bg_rent
 									+use("rent")
-								| Rent: $420.00 per week
+								.properties__block_list-item_info-lists_link-block
+									.properties__block_list-item_info-lists_link-block_name Rent: 
+									.properties__block_list-item_info-lists_link-block_value $420.00 per week
 								+use("arrow_down")
+							.properties__block_list-item_info-lists-item_hover
 						li.properties__block_list-item_info-lists-item
-							a(href="", title="Last Payment: $13,119550.00").properties__block_list-item_info-lists_link
+							a(href="#", title="Last Payment: $13,119550.00").properties__block_list-item_info-lists_link
 								i.bg_last_pay
 									+use("latest_payment")
-								| Last Payment: $13,119550.00
+								.properties__block_list-item_info-lists_link-block
+									.properties__block_list-item_info-lists_link-block_name Last Payment:
+									.properties__block_list-item_info-lists_link-block_value $13,119550.00
 								+use("arrow_down")
-								span.tooltip
-									i.bg_tooltip_date
-										+use("calendar")
-									| On 24 July 2016
+							.properties__block_list-item_info-lists-item_hover
 						li.properties__block_list-item_info-lists-item
-							a(href="", title="Tenant: Robert Langham").properties__block_list-item_info-lists_link
+							a(href="#", title="Tenant: Robert Langham").properties__block_list-item_info-lists_link
 								i.bg_tenant
 									+use("tenant")
-								| Tenant: Robert Langham
+								.properties__block_list-item_info-lists_link-block
+									.properties__block_list-item_info-lists_link-block_name Tenant: 
+									.properties__block_list-item_info-lists_link-block_value Robert Langham
 								+use("arrow_down")
+							.properties__block_list-item_info-lists-item_hover
+								.tenant__avatar
+									img(src="/assets/img/face.png", title="")
+								.tenant__block_information
+									.tenant__block_information-name
+										| Robert Langham
+									.tenant__block_information-profession
+										| Designer
+									.tenant__block_information-info
+										| Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+									.tenant__block_information-communications
+										a(href="#").tenant__block_information-communications_call
+											i.tenant__block_information-communications_call-icon
+												+use("call")
+											| Start a call
+										a(href="#").tenant__block_information-communications_mess
+											i.tenant__block_information-communications_mess-icon
+												+use("mess")
+											| Send message
 						li.properties__block_list-item_info-lists-item
-							a(href="", title="Last Inspection: Feb 20.2016").properties__block_list-item_info-lists_link
+							a(href="#", title="Last Inspection: Feb 20.2016").properties__block_list-item_info-lists_link
 								i.bg_last_inspection
 									+use("last_inspection")
-								| Last Inspection: Feb 20.2016
+								.properties__block_list-item_info-lists_link-block
+									.properties__block_list-item_info-lists_link-block_name Last Inspection:
+									.properties__block_list-item_info-lists_link-block_value Feb 20.2016
 								+use("arrow_down")
+							.properties__block_list-item_info-lists-item_hover
 		li.properties__block_list-item
 			.properties__block_list-item_image
-				img(src="assets/img/items/item_2.jpg", alt="")
+				img(src="assets/img/items/item_1.jpg", alt="")
 				span.show_more
 					| ...
 					ul.show_more-small_menu
 						li.show_more-small_menu-item
 							i.show_more-small_menu-item-gear_sm
 								+use("gear")
-							a(href="")
+							a(href="#")
 								| Settings
 						li.show_more-small_menu-item
 							i.show_more-small_menu-item-edit_sm
 								+use("edit_sm")
-							a(href="")
+							a(href="#")
 								| Edit
 						li.show_more-small_menu-item
 							i.show_more-small_menu-item-delete_sm
 								+use("delete_sm")
-							a(href="")
+							a(href="#")
 								| Delete
-				a(href="", title="view details").details
+				a(href="#", title="view details").details
 					| VIEW DETAILS
 			.properties__block_list-item_info
 				.properties__block_list-item_info-address
@@ -94,167 +120,84 @@
 					span.sub__address
 						| North Shore, Auckland
 				.properties__block_list-item_info-status
-					.properties__block_list-item_info-status_board.status__in-arrears
+					.properties__block_list-item_info-status_board.status__up-to-date
 						i.properties__block_list-item_info-status_icon
-							+use("in_arrears")
-						| In arrears: $500.00 (23 days)
-					.properties__block_list-item_info-status_link
-						a(href="").send_reminder
-							i.properties__block_list-item_info-status_link-icon
-								+use("remind")
-							| Send reminder
+							+use("up_to_date")
+						| Up to date
+					.properties__block_list-item_info-status_board.status__acive-listing
+						i.properties__block_list-item_info-status_icon
+							+use("active-listing")
+						| Active listing
+						.properties__block_list-item_info-status_link
+							a(href="#").applicants_listing
+								i.properties__block_list-item_info-status_link-icon
+									+use("view_listing")
+								| View/Edit Listing
+						.properties__block_list-item_info-status_link
+							a(href="#").applicants_listing
+								i.properties__block_list-item_info-status_link-icon
+									+use("view_applicants")
+								| Applicants (2)
 				.properties__block_list-item_info-footer
 					ul.properties__block_list-item_info-lists
 						li.properties__block_list-item_info-lists-item
-							a(href="", title="Rent: $420.00 per week").properties__block_list-item_info-lists_link
+							a(href="#", title="Rent: $420.00 per week").properties__block_list-item_info-lists_link
 								i.bg_rent
 									+use("rent")
-								| Rent: $420.00 per week
+								.properties__block_list-item_info-lists_link-block
+									.properties__block_list-item_info-lists_link-block_name Rent: 
+									.properties__block_list-item_info-lists_link-block_value $420.00 per week
 								+use("arrow_down")
+							.properties__block_list-item_info-lists-item_hover
 						li.properties__block_list-item_info-lists-item
-							a(href="", title="Last Payment: $13,119550.00").properties__block_list-item_info-lists_link
+							a(href="#", title="Last Payment: $13,119550.00").properties__block_list-item_info-lists_link
 								i.bg_last_pay
 									+use("latest_payment")
-								| Last Payment: $13,119550.00
+								.properties__block_list-item_info-lists_link-block
+									.properties__block_list-item_info-lists_link-block_name Last Payment:
+									.properties__block_list-item_info-lists_link-block_value $13,119550.00
 								+use("arrow_down")
-								span.tooltip
-									i.bg_tooltip_date
-										+use("calendar")
-									| On 24 July 2016
+							.properties__block_list-item_info-lists-item_hover
 						li.properties__block_list-item_info-lists-item
-							a(href="", title="Tenant: Robert Langham").properties__block_list-item_info-lists_link
+							a(href="#", title="Tenant: Robert Langham").properties__block_list-item_info-lists_link
 								i.bg_tenant
 									+use("tenant")
-								| Tenant: Robert Langham
+								.properties__block_list-item_info-lists_link-block
+									.properties__block_list-item_info-lists_link-block_name Tenant: 
+									.properties__block_list-item_info-lists_link-block_value Robert Langham
 								+use("arrow_down")
+							.properties__block_list-item_info-lists-item_hover
 						li.properties__block_list-item_info-lists-item
-							a(href="", title="Last Inspection: Feb 20.2016").properties__block_list-item_info-lists_link
+							a(href="#", title="Last Inspection: Feb 20.2016").properties__block_list-item_info-lists_link
 								i.bg_last_inspection
 									+use("last_inspection")
-								| Last Inspection: Feb 20.2016
+								.properties__block_list-item_info-lists_link-block
+									.properties__block_list-item_info-lists_link-block_name Last Inspection:
+									.properties__block_list-item_info-lists_link-block_value Feb 20.2016
 								+use("arrow_down")
+							.properties__block_list-item_info-lists-item_hover
 		li.properties__block_list-item
 			.properties__block_list-item_image
-				img(src="assets/img/items/item_3.jpg", alt="")
+				include google_map
 				span.show_more
 					| ...
 					ul.show_more-small_menu
 						li.show_more-small_menu-item
 							i.show_more-small_menu-item-gear_sm
 								+use("gear")
-							a(href="")
+							a(href="#")
 								| Settings
 						li.show_more-small_menu-item
 							i.show_more-small_menu-item-edit_sm
 								+use("edit_sm")
-							a(href="")
+							a(href="#")
 								| Edit
 						li.show_more-small_menu-item
 							i.show_more-small_menu-item-delete_sm
 								+use("delete_sm")
-							a(href="")
+							a(href="#")
 								| Delete
-				a(href="", title="VIEW DETAILS").details
-					| VIEW DETAILS
-			.properties__block_list-item_info
-				.properties__block_list-item_info-address
-					span.main__address
-						| 42 Miranda Boulevard, Unit 14
-					span.sub__address
-						| North Shore, Auckland
-				.properties__block_list-item_info-status
-					.properties__block_list-item_info-status_board.status__property-vacant
-						i.properties__block_list-item_info-status_icon
-							+use("property_vacant")
-						| THIS PROPERTY IS VACANT
-					.properties__block_list-item_info-status_link
-						a(href="").add_tenants
-							i.properties__block_list-item_info-status_link-icon
-								+use("add_tenants")
-							| add tenants
-				.properties__block_list-item_info-footer
-					.properties__block_list-item_info-footer_advertise
-						a(href="").properties__block_list-item_info-footer_advertise-link
-							i.icon_advertise
-								+use("advertise_prop")
-							| Advertise This Property
-						a(href="").properties__block_list-item_info-footer_advertise-link_create
-							| create a listing
-		li.properties__block_list-item
-			.properties__block_list-item_image
-				img(src="assets/img/items/item_1.jpg", alt="")
-				span.show_more
-					| ...
-					ul.show_more-small_menu
-						li.show_more-small_menu-item
-							i.show_more-small_menu-item-gear_sm
-								+use("gear")
-							a(href="")
-								| Settings
-						li.show_more-small_menu-item
-							i.show_more-small_menu-item-edit_sm
-								+use("edit_sm")
-							a(href="")
-								| Edit
-						li.show_more-small_menu-item
-							i.show_more-small_menu-item-delete_sm
-								+use("delete_sm")
-							a(href="")
-								| Delete
-				a(href="", title="VIEW DETAILS").details
-					| VIEW DETAILS
-			.properties__block_list-item_info
-				.properties__block_list-item_info-address
-					span.main__address
-						| 709/15 Amsterdam Avenue
-					span.sub__address
-						| North Shore, Auckland
-				.properties__block_list-item_info-status
-					.properties__block_list-item_info-status_board.status__property-vacant
-						i.properties__block_list-item_info-status_icon
-							+use("property_vacant")
-						| THIS PROPERTY IS VACANT
-					.properties__block_list-item_info-status_link
-						a(href="").add_tenants
-							i.properties__block_list-item_info-status_link-icon
-								+use("add_tenants")
-							| add tenants
-				.properties__block_list-item_info-footer
-					.properties__block_list-item_info-footer_active-listing
-						span
-							| active listing
-						.properties__block_list-item_info-footer_active-listing_block
-							a(href="").link__listing
-								i.icon__listing
-									+use("view_listing")
-								| View/Edit Listing
-							a(href="").link__applicants
-								i.icon__applicants
-									+use("view_applicants")
-								| View applicants
-
-		li.properties__block_list-item
-			.properties__block_list-item_image
-				img(src="assets/img/items/item_1.jpg", alt="")
-				span.show_more
-					| ...
-					ul.show_more-small_menu
-						li.show_more-small_menu-item
-							i.show_more-small_menu-item-gear_sm
-								+use("gear")
-							a(href="")
-								| Settings
-						li.show_more-small_menu-item
-							i.show_more-small_menu-item-edit_sm
-								+use("edit_sm")
-							a(href="")
-								| Edit
-						li.show_more-small_menu-item
-							i.show_more-small_menu-item-delete_sm
-								+use("delete_sm")
-							a(href="")
-								| Delete
-				a(href="", title="VIEW DETAILS").details
+				a(href="#", title="VIEW DETAILS").details
 					| VIEW DETAILS
 			.properties__block_list-item_info
 				.properties__block_list-item_info-address
@@ -263,62 +206,93 @@
 					span.sub__address
 						| North Shore, Auckland
 				.properties__block_list-item_info-status
-					.properties__block_list-item_info-status_board.status__up-to-date
+					.properties__block_list-item_info-status_board.status__in-arrears
 						i.properties__block_list-item_info-status_icon
-							+use("up_to_date")
-						| Up to date
+							+use("in_arrears")
+						| In arrears: $500.00 (23 days)
+						.properties__block_list-item_info-status_link
+							a(href="#").send_reminder
+								i.properties__block_list-item_info-status_link-icon
+									+use("remind")
+								| Send reminder
 				.properties__block_list-item_info-footer
 					ul.properties__block_list-item_info-lists
 						li.properties__block_list-item_info-lists-item
-							a(href="", title="Rent: $420.00 per week").properties__block_list-item_info-lists_link
+							a(href="#", title="Rent: $420.00 per week").properties__block_list-item_info-lists_link
 								i.bg_rent
 									+use("rent")
-								| Rent: $420.00 per week
+								.properties__block_list-item_info-lists_link-block
+									.properties__block_list-item_info-lists_link-block_name Rent: 
+									.properties__block_list-item_info-lists_link-block_value $420.00 per week
 								+use("arrow_down")
+							.properties__block_list-item_info-lists-item_hover
 						li.properties__block_list-item_info-lists-item
-							a(href="", title="Last Payment: $13,119550.00").properties__block_list-item_info-lists_link
+							a(href="#", title="Last Payment: $13,119550.00").properties__block_list-item_info-lists_link
 								i.bg_last_pay
 									+use("latest_payment")
-								| Last Payment: $13,119550.00
+								.properties__block_list-item_info-lists_link-block
+									.properties__block_list-item_info-lists_link-block_name Last Payment:
+									.properties__block_list-item_info-lists_link-block_value $13,119550.00
 								+use("arrow_down")
-								span.tooltip
-									i.bg_tooltip_date
-										+use("calendar")
-									| On 24 July 2016
+							.properties__block_list-item_info-lists-item_hover
 						li.properties__block_list-item_info-lists-item
-							a(href="", title="Tenant: Robert Langham").properties__block_list-item_info-lists_link
+							a(href="#", title="Tenant: Robert Langham").properties__block_list-item_info-lists_link
 								i.bg_tenant
 									+use("tenant")
-								| Tenant: Robert Langham
+								.properties__block_list-item_info-lists_link-block
+									.properties__block_list-item_info-lists_link-block_name Tenant: 
+									.properties__block_list-item_info-lists_link-block_value Robert Langham
 								+use("arrow_down")
+							.properties__block_list-item_info-lists-item_hover
+								.tenant__avatar
+									img(src="/assets/img/face.png", title="")
+								.tenant__block_information
+									.tenant__block_information-name
+										| Robert Langham
+									.tenant__block_information-profession
+										| Designer
+									.tenant__block_information-info
+										| Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+									.tenant__block_information-communications
+										a(href="#").tenant__block_information-communications_call
+											i.tenant__block_information-communications_call-icon
+												+use("call")
+											| Start a call
+										a(href="#").tenant__block_information-communications_mess
+											i.tenant__block_information-communications_mess-icon
+												+use("mess")
+											| Send message
 						li.properties__block_list-item_info-lists-item
-							a(href="", title="Last Inspection: Feb 20.2016").properties__block_list-item_info-lists_link
+							a(href="#", title="Last Inspection: Feb 20.2016").properties__block_list-item_info-lists_link
 								i.bg_last_inspection
 									+use("last_inspection")
-								| Last Inspection: Feb 20.2016
+								.properties__block_list-item_info-lists_link-block
+									.properties__block_list-item_info-lists_link-block_name Last Inspection:
+									.properties__block_list-item_info-lists_link-block_value Feb 20.2016
 								+use("arrow_down")
+							.properties__block_list-item_info-lists-item_hover
 		li.properties__block_list-item
 			.properties__block_list-item_image
-				img(src="assets/img/items/item_2.jpg", alt="")
+				include google_map
 				span.show_more
 					| ...
 					ul.show_more-small_menu
 						li.show_more-small_menu-item
 							i.show_more-small_menu-item-gear_sm
 								+use("gear")
-							a(href="")
+							a(href="#")
 								| Settings
 						li.show_more-small_menu-item
 							i.show_more-small_menu-item-edit_sm
 								+use("edit_sm")
-							a(href="")
+							a(href="#")
 								| Edit
 						li.show_more-small_menu-item
 							i.show_more-small_menu-item-delete_sm
 								+use("delete_sm")
-							a(href="")
+							a(href="#")
 								| Delete
-				a(href="", title="view details").details
+				a(href="#", title="view details").details
 					| VIEW DETAILS
 			.properties__block_list-item_info
 				.properties__block_list-item_info-address
@@ -331,41 +305,63 @@
 						i.properties__block_list-item_info-status_icon
 							+use("in_arrears")
 						| In arrears: $500.00 (23 days)
-					.properties__block_list-item_info-status_link
-						a(href="").send_reminder
-							i.properties__block_list-item_info-status_link-icon
-								+use("remind")
-							| Send reminder
+						.properties__block_list-item_info-status_link
+							a(href="#").send_reminder
+								i.properties__block_list-item_info-status_link-icon
+									+use("remind")
+								| Send reminder
+					.properties__block_list-item_info-status_board.status__acive-listing
+						i.properties__block_list-item_info-status_icon
+							+use("active-listing")
+						| Active listing
+						.properties__block_list-item_info-status_link
+							a(href="#").applicants_listing
+								i.properties__block_list-item_info-status_link-icon
+									+use("view_listing")
+								| View/Edit Listing
+						.properties__block_list-item_info-status_link
+							a(href="#").applicants_listing
+								i.properties__block_list-item_info-status_link-icon
+									+use("view_applicants")
+								| Applicants (2)
 				.properties__block_list-item_info-footer
 					ul.properties__block_list-item_info-lists
 						li.properties__block_list-item_info-lists-item
-							a(href="", title="Rent: $420.00 per week").properties__block_list-item_info-lists_link
+							a(href="#", title="Rent: $420.00 per week").properties__block_list-item_info-lists_link
 								i.bg_rent
 									+use("rent")
-								| Rent: $420.00 per week
+								.properties__block_list-item_info-lists_link-block
+									.properties__block_list-item_info-lists_link-block_name Rent: 
+									.properties__block_list-item_info-lists_link-block_value $420.00 per week
 								+use("arrow_down")
+							.properties__block_list-item_info-lists-item_hover
 						li.properties__block_list-item_info-lists-item
-							a(href="", title="Last Payment: $13,119550.00").properties__block_list-item_info-lists_link
+							a(href="#", title="Last Payment: $13,119550.00").properties__block_list-item_info-lists_link
 								i.bg_last_pay
 									+use("latest_payment")
-								| Last Payment: $13,119550.00
+								.properties__block_list-item_info-lists_link-block
+									.properties__block_list-item_info-lists_link-block_name Last Payment:
+									.properties__block_list-item_info-lists_link-block_value $13,119550.00
 								+use("arrow_down")
-								span.tooltip
-									i.bg_tooltip_date
-										+use("calendar")
-									| On 24 July 2016
+							.properties__block_list-item_info-lists-item_hover
 						li.properties__block_list-item_info-lists-item
-							a(href="", title="Tenant: Robert Langham").properties__block_list-item_info-lists_link
+							a(href="#", title="Tenant: Robert Langham").properties__block_list-item_info-lists_link
 								i.bg_tenant
 									+use("tenant")
-								| Tenant: Robert Langham
+								.properties__block_list-item_info-lists_link-block
+									.properties__block_list-item_info-lists_link-block_name Tenant: 
+									.properties__block_list-item_info-lists_link-block_value Robert Langham
 								+use("arrow_down")
+							.properties__block_list-item_info-lists-item_hover
 						li.properties__block_list-item_info-lists-item
-							a(href="", title="Last Inspection: Feb 20.2016").properties__block_list-item_info-lists_link
+							a(href="#", title="Last Inspection: Feb 20.2016").properties__block_list-item_info-lists_link
 								i.bg_last_inspection
 									+use("last_inspection")
-								| Last Inspection: Feb 20.2016
+								.properties__block_list-item_info-lists_link-block
+									.properties__block_list-item_info-lists_link-block_name Last Inspection:
+									.properties__block_list-item_info-lists_link-block_value Feb 20.2016
 								+use("arrow_down")
+							.properties__block_list-item_info-lists-item_hover
 		li.properties__block_list-item
 			.properties__block_list-item_image
 				img(src="assets/img/items/item_3.jpg", alt="")
@@ -375,19 +371,19 @@
 						li.show_more-small_menu-item
 							i.show_more-small_menu-item-gear_sm
 								+use("gear")
-							a(href="")
+							a(href="#")
 								| Settings
 						li.show_more-small_menu-item
 							i.show_more-small_menu-item-edit_sm
 								+use("edit_sm")
-							a(href="")
+							a(href="#")
 								| Edit
 						li.show_more-small_menu-item
 							i.show_more-small_menu-item-delete_sm
 								+use("delete_sm")
-							a(href="")
+							a(href="#")
 								| Delete
-				a(href="", title="VIEW DETAILS").details
+				a(href="#", title="VIEW DETAILS").details
 					| VIEW DETAILS
 			.properties__block_list-item_info
 				.properties__block_list-item_info-address
@@ -400,19 +396,21 @@
 						i.properties__block_list-item_info-status_icon
 							+use("property_vacant")
 						| THIS PROPERTY IS VACANT
-					.properties__block_list-item_info-status_link
-						a(href="").add_tenants
-							i.properties__block_list-item_info-status_link-icon
-								+use("add_tenants")
-							| add tenants
+						.properties__block_list-item_info-status_link
+							a(href="#").add_tenants
+								i.properties__block_list-item_info-status_link-icon
+									+use("add_tenants")
+								| add tenants
+					.properties__block_list-item_info-status_board.status__advertise-property
+						i.properties__block_list-item_info-status_icon
+							+use("advertise_prop")
+						| ADVERTISE THIS PROPERTY
+						.properties__block_list-item_info-status_link
+							a(href="#").create_listing
+								i.properties__block_list-item_info-status_link-icon
+									+use("plus")
+								| create a listing
 				.properties__block_list-item_info-footer
-					.properties__block_list-item_info-footer_advertise
-						a(href="").properties__block_list-item_info-footer_advertise-link
-							i.icon_advertise
-								+use("advertise_prop")
-							| Advertise This Property
-						a(href="").properties__block_list-item_info-footer_advertise-link_create
-							| create a listing
 		li.properties__block_list-item
 			.properties__block_list-item_image
 				img(src="assets/img/items/item_1.jpg", alt="")
@@ -422,19 +420,19 @@
 						li.show_more-small_menu-item
 							i.show_more-small_menu-item-gear_sm
 								+use("gear")
-							a(href="")
+							a(href="#")
 								| Settings
 						li.show_more-small_menu-item
 							i.show_more-small_menu-item-edit_sm
 								+use("edit_sm")
-							a(href="")
+							a(href="#")
 								| Edit
 						li.show_more-small_menu-item
 							i.show_more-small_menu-item-delete_sm
 								+use("delete_sm")
-							a(href="")
+							a(href="#")
 								| Delete
-				a(href="", title="VIEW DETAILS").details
+				a(href="#", title="VIEW DETAILS").details
 					| VIEW DETAILS
 			.properties__block_list-item_info
 				.properties__block_list-item_info-address
@@ -447,21 +445,23 @@
 						i.properties__block_list-item_info-status_icon
 							+use("property_vacant")
 						| THIS PROPERTY IS VACANT
-					.properties__block_list-item_info-status_link
-						a(href="").add_tenants
-							i.properties__block_list-item_info-status_link-icon
-								+use("add_tenants")
-							| add tenants
-				.properties__block_list-item_info-footer
-					.properties__block_list-item_info-footer_active-listing
-						span
-							| active listing
-						.properties__block_list-item_info-footer_active-listing_block
-							a(href="").link__listing
-								i.icon__listing
+						.properties__block_list-item_info-status_link
+							a(href="#").add_tenants
+								i.properties__block_list-item_info-status_link-icon
+									+use("add_tenants")
+								| add tenants
+					.properties__block_list-item_info-status_board.status__acive-listing
+						i.properties__block_list-item_info-status_icon
+							+use("active-listing")
+						| Active listing
+						.properties__block_list-item_info-status_link
+							a(href="#").applicants_listing
+								i.properties__block_list-item_info-status_link-icon
 									+use("view_listing")
 								| View/Edit Listing
-							a(href="").link__applicants
-								i.icon__applicants
+						.properties__block_list-item_info-status_link
+							a(href="#").applicants_listing
+								i.properties__block_list-item_info-status_link-icon
 									+use("view_applicants")
-								| View applicants
+								| Applicants (2)
+				.properties__block_list-item_info-footer

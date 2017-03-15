@@ -30,6 +30,12 @@
 }
 .properties__block_list-item_image {
 	position: relative;
+	@include breakpoint(320px) {
+		height: 216px;
+	}
+	@include breakpoint(2600px) {
+		height: 500px;
+	}
 	& img {
 		width: 100%;
 	}
@@ -93,14 +99,16 @@
 }
 .properties__block_list-item_info {
 	@include breakpoint(320px) {
-		padding: 19px 0 14px 0;
-		& > div {
+		padding-top: 19px;
+		& .properties__block_list-item_info-status_board,
+		& .properties__block_list-item_info-address {
 			padding: 0 18px 0 27px;
 		}
 	}
 	@include breakpoint(2600px) {
-		padding: 53.5px 0 34px 0;
-		& > div {
+		padding-top: 53.5px;
+		& .properties__block_list-item_info-status_board,
+		& .properties__block_list-item_info-address {
 			padding: 0 43px 0 60px;
 		}
 	}
@@ -141,18 +149,21 @@
 	border-top: 2px solid $background-content-color;
 	border-bottom: 2px solid $background-content-color;
 	@include breakpoint(320px) {
-		margin: 15px 0px 27px;
-		min-height: 110px;
+		margin-top: 15px;
+		height: 110px;
 	}
 	@include breakpoint(2600px) {
-		margin: 42px 0px 55px;
-	    min-height: 230px;
+		margin-top: 42px;
+	    height: 230px;
 	}
 }
 .properties__block_list-item_info-status_board {
 	text-transform: uppercase;
 	display: flex;
 	align-items: center;
+	width: 100%;
+	padding-top: 30px!important;
+	padding-bottom: 30px!important;
 	&.status__up-to-date {
 		color: $green-text;
 		fill: $green-text;
@@ -161,13 +172,17 @@
 		color: $red-text;
 		fill: $red-text;
 	}
-	&.status__property-vacant {
+	&.status__advertise-property,
+	&.status__acive-listing {
 		color: $logotype-color;
 		fill: $logotype-color;
 	}
+	&.status__property-vacant {
+		color: #a1a5b7;
+		fill: #a1a5b7;
+	}
 	@include breakpoint(320px) {
 		font-size: 9.85px;
-		margin-right: 25px;
 		& .my_svg {
 			width: 24px;
 			height: 24px;
@@ -175,11 +190,13 @@
 	}
 	@include breakpoint(2600px) {
 		font-size: 23px;
-		margin-right: 60px;
 		& .my_svg {
 			width: 55px;
 			height: 55px;
 		}
+	}
+	&:nth-child(2) {
+		border-top: 2px solid $background-content-color;
 	}
 }
 .properties__block_list-item_info-status_icon {
@@ -197,19 +214,33 @@
 		@include breakpoint(320px) {
 			width: 14px;
 			height: 14px;
+			margin-left: 25px;
 		}
 		@include breakpoint(2600px) {
 			width: 32px;
 			height: 32px;
+			margin-left: 50px;
+		}
+	}
+	& #plus {
+		@include breakpoint(320px) {
+			width: 10px;
+			height: 10px;
+			margin-left: 25px;
+		}
+		@include breakpoint(2600px) {
+			width: 24px;
+			height: 24px;
+			margin-left: 50px;
 		}
 	}
 	& .add_tenants {
-		color: $logotype-color;
+		color: #a1a5b7;
 		display: flex;
 		align-items: center;
 		text-decoration: underline;
 		.properties__block_list-item_info-status_link-icon {
-			fill: $blue-text;
+			fill: #a1a5b7;
 		}
 	}
 	& .send_reminder {
@@ -221,11 +252,25 @@
 			fill: $red-text;
 		}
 	}
+	& .create_listing,
+	& .applicants_listing {
+		color: $logotype-color;
+		display: flex;
+		align-items: center;
+		text-decoration: underline;
+		.properties__block_list-item_info-status_link-icon {
+			fill: $logotype-color;
+		}
+	}
 	@include breakpoint(320px) {
 		font-size: 9.85px;
 	}
 	@include breakpoint(2600px) {
 		font-size: 23px;
+	}
+	& a:hover {
+		text-decoration: none!important;
+		opacity: 0.8;
 	}
 }
 .properties__block_list-item_info-status_link-icon {
@@ -236,37 +281,128 @@
 		margin-right: 15px;
 	}
 }
+.properties__block_list-item_info-footer {
+	padding: 0 30px;
+}
 .properties__block_list-item_info-lists {
 	display: flex;
     flex-flow: row wrap;
+    margin-top: 13px;
+    @include breakpoint(320px) {
+    	margin-bottom: 14px;
+    }
+    @include breakpoint(2600px) {
+    	margin-bottom: 60px;
+    }
 }
 .properties__block_list-item_info-lists-item {
 	position: relative;
 	&:nth-child(2n+1) {
-		@include breakpoint(320px) {
-			width: 185px;
-			margin-right:30px;
-		}
-		@include breakpoint(1170px) {
-			margin-right:18px;
-		}
-		@include breakpoint(2600px) {
-			width: 420px;
-			margin-right: 55px;
-		}
+		width: 47.5%;
 	}
 	@include breakpoint(320px) {
-	    margin-bottom: 18.4px;
-	    width: 205px;
+	    padding: 45px 30px 50px 30px;
+	    margin-bottom: -50px;
 	}
 	@include breakpoint(1170px) {
-	    margin-bottom: 11px;
 	    &:nth-child(2n+2) {
 			flex: 1 1 auto;
 		}
 	}
-	@include breakpoint(2600px) {
-		margin-bottom: 32px;
+	transition: box-shadow 0.3s;
+	&:hover .properties__block_list-item_info-lists_link{
+		color: $logotype-color;
+		& .my_svg {
+			fill: $logotype-color!important;
+		}
+	}
+	&.active {
+		box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.11);
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 80%;
+			background-color: #fff;
+			width: 100%;
+			height: 50px;
+			z-index: 9;
+		}
+		& #arrow_down {
+			transform: rotate(180deg);
+			fill: $logotype-color;
+		}
+		& .properties__block_list-item_info-lists-item_hover {
+			visibility: visible;
+		}
+	}
+	&:nth-child(2n+1) .properties__block_list-item_info-lists-item_hover{
+		left: 0;
+	}
+	&:nth-child(2n+2) .properties__block_list-item_info-lists-item_hover{
+		right: 0;
+	}
+}
+.properties__block_list-item_info-lists-item_hover {
+	width: 1000px;
+	position: absolute;
+	visibility: hidden;
+	//transition: visibility 0.1s;
+	//transition: box-shadow 0.1s;
+	top: 100%;
+	z-index: 9;
+	background-color: #fff;
+	box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.11);
+	padding: 60px 70px 65px 55px;
+	display: flex;
+	& i {
+		fill: $logotype-color;
+		margin-right: 25px;
+		& .my_svg {
+			width: 32px;
+			height: 32px;
+		}
+	}
+}
+.tenant__block_information {
+	padding-top: 20px;
+}
+.tenant__avatar {
+	width: 157px;
+	height: 157px;
+	border-radius: 50%;
+    overflow: hidden;
+    margin-right: 50px;
+    flex: 0 0 157px;
+    & img {
+    	max-width: 157px;
+    }
+}
+.tenant__block_information-name {
+	font-size: 33px;
+}
+.tenant__block_information-profession {
+	font-family: $fourth-font;
+	font-size: 20px;
+	color: #c1c4d2;
+	text-transform: uppercase;
+	padding: 30px 0 35px;
+}
+.tenant__block_information-info {
+	font-size: 19px;
+	padding-bottom: 55px;
+}
+.tenant__block_information-communications {
+	display: flex;
+	justify-content: flex-start;
+	a {
+		display: flex;
+		align-items: center;
+		font-family: $fourth-font;
+		font-size: 21px;
+		color: #000;
+		margin-right: 55px;
 	}
 }
 .properties__block_list-item_info-lists_link {
@@ -295,7 +431,7 @@
 		fill: #CCCFD9;
 		position: absolute;
 		right: 0;
-		top: 10px;
+		top: 0;
 	}
 	@include breakpoint(320px) {
 		font-size: 11.13px;
@@ -311,148 +447,9 @@
 			height: 9px;
 		}
 	}
-	&:hover {
-		.tooltip {
-			opacity: 1;
-		}
-	}
 }
-.properties__block_list-item_info-footer_advertise {
-	display: flex;
-	align-items: center;
-	@include breakpoint(320px) {
-		margin-bottom: 17px;
-		justify-content: flex-start;
-	}
-	@include breakpoint(1170px) {
-		justify-content: space-between;
-	}
-	@include breakpoint(2600px) {
-		margin-bottom: 47px;
-	}
-}
-.properties__block_list-item_info-footer_advertise-link {
-	text-transform: uppercase;
-	color: #000;
-	display: flex;
-	align-items: center;
-	margin-right: 25px;
-	@include breakpoint(320px) {
-		font-size: 11.56px;
-		& .icon_advertise {
-			margin-right: 10px;
-		}
-		& .my_svg {
-			width: 14px;
-			height: 14px;
-			transform: rotate(-15deg);
-		}
-	}
-	@include breakpoint(2600px) {
-		font-size: 27px;
-		& .icon_advertise {
-			margin-right: 20px;
-		}
-		& .my_svg {
-			width: 34px;
-			height: 34px;
-		}
-	}
-}
-.properties__block_list-item_info-footer_advertise-link_create {
-	text-transform: uppercase;
-	color: $second-font-color;
-	border-radius: 60px;
-	@include breakpoint(320px) {
-		font-size: 8.56px;
-	    padding: 12.5px 25.64px;
-	    border: 1px solid $second-font-color;
-	}
-	@include breakpoint(2600px) {
-		font-size: 20px;
-		padding: 30px 60px;
-		border: 3px solid $second-font-color;
-	}
-}
-.properties__block_list-item_info-footer_active-listing_block {
-	display: flex;
-	align-items: center;
-    @include breakpoint(320px) {
-    	margin-top: 12px;
-	    margin-bottom: 12px;
-    }
-    @include breakpoint(2600px) {
-    	margin-top: 34px;
-	    margin-bottom: 30px;
-    }
-}
-.properties__block_list-item_info-footer_active-listing {
-	@include breakpoint(320px) {
-		display: flex;
-		align-items: center;
-		& span {
-			font-size: 11.56px;
-			margin-right: 30px;
-		}
-		& a {
-			font-size: 12px;
-			& .icon__listing {
-				margin-right: 4px;
-			}
-			& .icon__applicants {
-				margin-right: 4px;
-			}
-			&.link__listing {
-				margin-right: 31px;
-			}
-		}
-	}
-	@include breakpoint(1170px) {
-		align-items: inherit;
-		flex-direction: column;
-	}
-	@include breakpoint(2600px) {
-		& span {
-			font-size: 27px;
-			margin: 7px 0 0px 9px;
-		}
-		& a {
-			font-size: 24px;
-			& .icon__listing {
-				margin-right: 15px;
-			}
-			& .icon__applicants {
-				margin-right: 15px;
-			}
-			&.link__listing {
-				margin-right: 85px;
-			}
-		}
-	}
-	& span {
-		text-transform: uppercase;
-		color: #000;
-		display: block;
-	}
-	& a {
-		color: $second-font-color;
-		text-transform: uppercase;
-		display: flex;
-		align-items: center;
-		fill: #c2c5d3;
-		@include breakpoint(320px) {
-			& .my_svg {
-				width: 14px;
-				height: 14px;
-			}
-		}
-		@include breakpoint(2600px) {
-			& .my_svg {
-				width: 32px;
-				height: 32px;
-			}
-		}
-	}
+.properties__block_list-item_info-lists_link-block_name {
+	font-family: $fourth-font;
 }
 .show_more:hover {
 	& .show_more-small_menu {
@@ -472,7 +469,6 @@
 	background-color: #fff;
     position: absolute;
     visibility: hidden;
-    //overflow: hidden;
     opacity: 0;
     z-index: 9;
     transition: visibility 0s, opacity 0.3s linear;
@@ -504,13 +500,11 @@
 		}
 	}
 	@include breakpoint(320px) {
-		//padding: 5px 0;
 		border-radius: 22.5px;
 		top: 52px;
 		left: -168%;
 	}
 	@include breakpoint(2600px) {
-		//padding: 45px 0;
 		border-radius: 45px;
 		top: 105px;
 		left: -140%;
@@ -559,35 +553,5 @@
 	&:hover {
 		background-color: #f3f4f8;
 	}
-}
-.tooltip {
-	position: absolute;
-	bottom: 170%;
-    left: 20%;
-    z-index: 1;
-    color: #b8bbc9;
-    padding: 7px 20px;
-    border-radius: 40px;
-    display: flex;
-    align-items: center;
-    background: #fff;
-    box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.1);
-    opacity:0;
-	transition:opacity 0.3s linear;
-    @include breakpoint(320px) {
-    	font-size: 11.13px;
-    }
-    @include breakpoint(2600px) {
-    	font-size: 26px;
-    }
-    &:after {
-    	content: '';
-    	display: block;
-    	border: 10px solid transparent;	
-    	border-top: 10px solid #fff;
-	    position: absolute;
-    	bottom: -65%;
-    	right: 29%;
-    }
 }
 /*!props*/

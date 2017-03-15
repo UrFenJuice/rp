@@ -1,12 +1,23 @@
-//(function() {
-//    'use strict';
-    jQuery('.content, .left-sidebar').scrollbar();
-    //svg4everybody();
-//})();
 jQuery(function($){
     $(document).ready(function(){
         svg4everybody();
         jQuery('.content, .left-sidebar').scrollbar();
+
+        $('.properties__block_list-item_info-lists_link').on('click', function(e){
+            e.preventDefault();
+
+            var $this = $(this),
+                item = $this.closest('.properties__block_list-item_info-lists-item'),
+                list = $this.closest('.properties__block_list-item_info-lists'),
+                items = list.find('.properties__block_list-item_info-lists-item');
+
+            if(!item.hasClass('active')){
+                items.removeClass('active');
+                item.addClass('active');
+            } else {
+                item.removeClass('active')
+            }
+        });
     });
 })
 function e(e, t) {

@@ -18,9 +18,6 @@
 	align-content: center;
 	color: $white-text;
 	text-decoration: none;
-	& b {
-		font-family: $second-font;
-	}
 	@include breakpoint(320px) {
 		height: 5.763vh;
 		font-size: 12px;
