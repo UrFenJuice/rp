@@ -28,6 +28,7 @@
     "rimraf": "2.5.2"
   },
   "dependencies": {
+    "bootstrap": "^3.3.7",
     "flexibility": "^2.0.1",
     "jquery.scrollbar": "^0.2.11",
     "normalize.css": "^4.1.1",
