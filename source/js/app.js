@@ -8,7 +8,7 @@ jQuery(function($){
 
             var $this = $(this),
                 item = $this.closest('.properties__block_list-item_info-lists-item'),
-                list = $this.closest('.properties__block_list-item_info-lists'),
+                list = $this.closest('.properties__block_list'),
                 items = list.find('.properties__block_list-item_info-lists-item');
 
             if(!item.hasClass('active')){

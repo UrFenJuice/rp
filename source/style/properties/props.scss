@@ -102,14 +102,24 @@
 		padding-top: 19px;
 		& .properties__block_list-item_info-status_board,
 		& .properties__block_list-item_info-address {
-			padding: 0 18px 0 27px;
+			padding-right: 18px;
+			padding-left: 27px;
+		}
+		.properties__block_list-item_info-status_board {
+			padding-top: 15px;
+			padding-bottom: 15px;
 		}
 	}
 	@include breakpoint(2600px) {
 		padding-top: 53.5px;
 		& .properties__block_list-item_info-status_board,
 		& .properties__block_list-item_info-address {
-			padding: 0 43px 0 60px;
+			padding-right: 43px;
+			padding-left: 60px;
+		}
+		.properties__block_list-item_info-status_board {
+			padding-top: 30px;
+			padding-bottom: 30px;
 		}
 	}
 }
@@ -162,8 +172,6 @@
 	display: flex;
 	align-items: center;
 	width: 100%;
-	padding-top: 30px!important;
-	padding-bottom: 30px!important;
 	&.status__up-to-date {
 		color: $green-text;
 		fill: $green-text;
@@ -282,7 +290,12 @@
 	}
 }
 .properties__block_list-item_info-footer {
-	padding: 0 30px;
+	@include breakpoint(320px) {
+		padding: 0 14px;
+	}
+	@include breakpoint(2600px) {
+		padding: 0 30px;
+	}
 }
 .properties__block_list-item_info-lists {
 	display: flex;
@@ -301,6 +314,10 @@
 		width: 47.5%;
 	}
 	@include breakpoint(320px) {
+	    padding: 21px 13px 23px 13px;
+	    margin-bottom: -23px;
+	}
+	@include breakpoint(26000px) {
 	    padding: 45px 30px 50px 30px;
 	    margin-bottom: -50px;
 	}
@@ -326,7 +343,7 @@
 			top: 80%;
 			background-color: #fff;
 			width: 100%;
-			height: 50px;
+			height: 30px;
 			z-index: 9;
 		}
 		& #arrow_down {
@@ -345,7 +362,6 @@
 	}
 }
 .properties__block_list-item_info-lists-item_hover {
-	width: 1000px;
 	position: absolute;
 	visibility: hidden;
 	//transition: visibility 0.1s;
@@ -354,44 +370,90 @@
 	z-index: 9;
 	background-color: #fff;
 	box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.11);
-	padding: 60px 70px 65px 55px;
 	display: flex;
-	& i {
-		fill: $logotype-color;
-		margin-right: 25px;
-		& .my_svg {
-			width: 32px;
-			height: 32px;
+	@include breakpoint(320px) {
+		width: 425px;
+		padding: 25px 30px 27px 23px;
+		& i {
+			fill: $logotype-color;
+			margin-right: 10px;
+			& .my_svg {
+				width: 15px;
+				height: 15px;
+			}
+		}
+	}
+	@include breakpoint(2600px) {
+		width: 1000px;
+		padding: 60px 70px 65px 55px;
+		& i {
+			margin-right: 25px;
+			& .my_svg {
+				width: 32px;
+				height: 32px;
+			}
 		}
 	}
 }
 .tenant__block_information {
-	padding-top: 20px;
+	@include breakpoint(320px) {
+		padding-top: 10px;
+	}
+	@include breakpoint(2600px) {
+		padding-top: 20px;
+	}
 }
 .tenant__avatar {
-	width: 157px;
-	height: 157px;
 	border-radius: 50%;
     overflow: hidden;
     margin-right: 50px;
-    flex: 0 0 157px;
-    & img {
-    	max-width: 157px;
+    @include breakpoint(320px) {
+    	width: 75px;
+		height: 75px;
+		flex: 0 0 75px;
+	    & img {
+	    	max-width: 75px;
+	    }
+    }
+    @include breakpoint(2600px) {
+    	width: 157px;
+		height: 157px;
+		flex: 0 0 157px;
+	    & img {
+	    	max-width: 157px;
+	    }
     }
 }
 .tenant__block_information-name {
-	font-size: 33px;
+	@include breakpoint(320px) {
+		font-size: 15px;
+	}
+	@include breakpoint(2600px) {
+		font-size: 33px;
+	}
 }
 .tenant__block_information-profession {
 	font-family: $fourth-font;
-	font-size: 20px;
 	color: #c1c4d2;
 	text-transform: uppercase;
-	padding: 30px 0 35px;
+	@include breakpoint(320px) {
+		padding: 14px 0 16px;
+		font-size: 9px;
+	}
+	@include breakpoint(2600px) {
+		padding: 30px 0 35px;
+		font-size: 20px;
+	}
 }
 .tenant__block_information-info {
-	font-size: 19px;
-	padding-bottom: 55px;
+	@include breakpoint(320px) {
+		font-size: 8px;
+		padding-bottom: 26px;
+	}
+	@include breakpoint(2600px) {
+		font-size: 19px;
+		padding-bottom: 55px;
+	}
 }
 .tenant__block_information-communications {
 	display: flex;
@@ -400,9 +462,15 @@
 		display: flex;
 		align-items: center;
 		font-family: $fourth-font;
-		font-size: 21px;
 		color: #000;
-		margin-right: 55px;
+		@include breakpoint(320px) {
+			font-size: 10px;
+			margin-right: 26px;
+		}
+		@include breakpoint(2600px) {
+			font-size: 21px;
+			margin-right: 55px;
+		}
 	}
 }
 .properties__block_list-item_info-lists_link {
