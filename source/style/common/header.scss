@@ -22,14 +22,14 @@
 		height: 5.763vh;
 		font-size: 12px;
 		& img {
-			max-width: 17px;
+			width: 17px;
 		}
 	}
 	@include breakpoint(2000px) {
 		height: 6.723vh;
 		font-size: 0.9375vw;
 		& img {
-			max-width: 41px;
+			width: 41px;
 		}
 	}
 	@media screen and (min-device-aspect-ratio: 21/9) {
