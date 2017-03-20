@@ -10,6 +10,7 @@
 
 * {
 	box-sizing: border-box;
+	font: 100% $primary-font, sans-serif;
 	margin: 0;
 	padding: 0;
 }
@@ -30,7 +31,7 @@ ul {
 		list-style: none; 
 	}
 }
-.container {
+.rp__container {
 	/*debug*/
 	//@include sgs-change('debug', true);
 	//@include add-grid(4);
@@ -43,17 +44,19 @@ ul {
 		position: relative;
 	}
 }
-a {
+a,
+a:hover {
 	text-decoration: none;
 	cursor: pointer;
+    color: inherit;
 }
 i {
 	font-size: 0;
 }
-.middle .container {
+.rp__middle .rp__container {
 	display: flex;
 }
-.content {
+.rp__content {
 	background-color: $background-content-color;
 	overflow: auto;
 	@include breakpoint(320px) {
@@ -67,7 +70,7 @@ i {
 		height: 93.277vh;
 	}
 }
-.main_content {
+.main__content {
 	@include breakpoint(320px) {
 		padding: 3vh 3.333vw 4vh 4vw!important;
 	}

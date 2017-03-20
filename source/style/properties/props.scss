@@ -36,8 +36,20 @@
 	@include breakpoint(2600px) {
 		height: 500px;
 	}
+	& .properties__block_list-item_image-wrapper {
+		display: block;
+		height: 100%;
+		overflow: hidden;
+    	position: relative;
+	}
 	& img {
 		width: 100%;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
 	}
 	& .show_more {
 		position: absolute;
@@ -66,7 +78,7 @@
 			right: 40px;
 	    }
 	}
-	& .details {
+	& .rp__details {
 		font-family: $second-font;
 		color: $white-text;
 		position: absolute;
@@ -106,8 +118,8 @@
 			padding-left: 27px;
 		}
 		.properties__block_list-item_info-status_board {
-			padding-top: 15px;
-			padding-bottom: 15px;
+			padding-top: 14px;
+			padding-bottom: 14px;
 		}
 	}
 	@include breakpoint(2600px) {
@@ -160,11 +172,11 @@
 	border-bottom: 2px solid $background-content-color;
 	@include breakpoint(320px) {
 		margin-top: 15px;
-		height: 110px;
+		min-height: 110px;
 	}
 	@include breakpoint(2600px) {
 		margin-top: 42px;
-	    height: 230px;
+	    min-height: 230px;
 	}
 }
 .properties__block_list-item_info-status_board {
@@ -172,6 +184,10 @@
 	display: flex;
 	align-items: center;
 	width: 100%;
+	& a {
+		display: flex;
+		align-items: center;
+	}
 	&.status__up-to-date {
 		color: $green-text;
 		fill: $green-text;
@@ -180,6 +196,8 @@
 		color: $red-text;
 		fill: $red-text;
 	}
+	& #advertise_prop,
+	& #active-listing,
 	&.status__advertise-property,
 	&.status__acive-listing {
 		color: $logotype-color;
@@ -203,7 +221,7 @@
 			height: 55px;
 		}
 	}
-	&:nth-child(2) {
+	&:nth-child(n+2) {
 		border-top: 2px solid $background-content-color;
 	}
 }
@@ -576,12 +594,12 @@
 	@include breakpoint(320px) {
 		border-radius: 22.5px;
 		top: 52px;
-		left: -168%;
+		left: -200%;
 	}
 	@include breakpoint(2600px) {
 		border-radius: 45px;
 		top: 105px;
-		left: -140%;
+		left: -170%;
 		min-width: 250px;
 	}
 }

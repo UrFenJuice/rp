@@ -137,7 +137,7 @@
 		font-size: 14px;
 	}
 }
-#bg_dashboard {
+.bg_dashboard {
 	&:hover,
 	&.active{
 		background-color: rgba(255, 180, 63, 0.1);
@@ -146,7 +146,7 @@
 		}
 	}
 }
-#bg_properties {
+.bg_properties {
 	&:hover,
 	&.active{
 		background-color: rgba(0, 172, 193, 0.1);
@@ -155,7 +155,7 @@
 		}
 	}
 }
-#bg_tenants {
+.bg_tenants {
 	&:hover,
 	&.active{
 		background-color: rgba(30, 136, 229, 0.1);
@@ -164,7 +164,7 @@
 		}
 	}
 }
-#bg_applications {
+.bg_applications {
 	&:hover,
 	&.active{
 		background-color: rgba(124, 179, 66, 0.1);
@@ -173,7 +173,7 @@
 		}
 	}
 }
-#bg_messages {
+.bg_messages {
 	&:hover,
 	&.active{
 		background-color: rgba(253, 216, 53, 0.1);
@@ -182,7 +182,7 @@
 		}
 	}
 }
-#bg_reports {
+.bg_reports {
 	&:hover,
 	&.active{
 		background-color: rgba(244, 81, 30, 0.1);
@@ -191,7 +191,7 @@
 		}
 	}
 }
-#bg_maintenance {
+.bg_maintenance {
 	&:hover,
 	&.active{
 		background-color: rgba(84, 110, 122, 0.1);
@@ -200,7 +200,7 @@
 		}
 	}
 }
-#bg_rules {
+.bg_rules {
 	&:hover,
 	&.active{
 		background-color: rgba(142, 36, 170, 0.1);

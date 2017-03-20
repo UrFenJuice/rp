@@ -1,7 +1,7 @@
 jQuery(function($){
     $(document).ready(function(){
         svg4everybody();
-        jQuery('.content, .left-sidebar').scrollbar();
+        jQuery('.rp__content, .left-sidebar').scrollbar();
 
         $('.properties__block_list-item_info-lists_link').on('click', function(e){
             e.preventDefault();
