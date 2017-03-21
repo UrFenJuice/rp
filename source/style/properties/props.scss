@@ -79,34 +79,12 @@
 	    }
 	}
 	& .rp__details {
-		font-family: $second-font;
-		color: $white-text;
 		position: absolute;
 		background-color: $green-element;
-		transition: color 0.3s;
-		transition: background-color 0.3s;
 		&:hover {
 			color: $green-element;
-			background-color: $white-text;
 		}
-		@include breakpoint(320px) {
-			font-size: 8.56px;
-			padding: 13.5px 34.36px;
-			border-radius: 60px;
-			bottom: 22px;
-			right: 22px;
-	    }
-	    @include breakpoint(1170px) {
-	    	bottom: 18px;
-			right: 18px;
-	    }
-	    @include breakpoint(2600px) {
-	    	font-size: 20px;
-	    	padding: 30px 81px;
-			border-radius: 60px;
-	    	bottom: 45px;
-			right: 40px;
-	    }
+		@extend .rp__btn;
 	}
 }
 .properties__block_list-item_info {

@@ -1,0 +1,57 @@
+.prop__menu
+	a(href="#", title="").create-property__back_url.prop__menu_item-link 
+		i.left__arrow.prop__menu_item-link_icon 
+			+use("left-arrow")
+		| Back To All Properties
+h1 Create A Property
+a(href="#").create-property__cancel
+	| cancel
+.create-property__block
+	.create-property__block_middle
+		.create-property__block_middle-left
+			.create-property__block_middle-left_icon
+				i.create-property__block_middle-left_icon-upload
+					+use("upload")
+			a.create-property__block_middle-left_link-upload
+				| UPLoad images
+			p.create-property__block_middle-left_instruction
+				| You can drag and drop images above.
+			p.create-property__block_middle-left_info
+				| Max image size is 10MB per image .jpg .png and gif allowed.
+		.create-property__block_middle-right
+			.create-property__block_middle-right_form
+				.create-property__block_middle-right_form-block
+					.create-property__block_middle-right_form-block-item
+						| Unit/Apartment No
+						input(name='', type='text', value='').create-property__block_middle-right_form-block-item_input
+					.create-property__block_middle-right_form-block-item
+						| Street Number
+						input(name='', type='text', value='').create-property__block_middle-right_form-block-item_input
+				.create-property__block_middle-right_form-block
+					.create-property__block_middle-right_form-block-item
+						| Street Name
+						input(name='', type='text', value='').create-property__block_middle-right_form-block-item_input
+				.create-property__block_middle-right_form-block
+					.create-property__block_middle-right_form-block-item
+						| Suburb
+						input(name='', type='text', value='').create-property__block_middle-right_form-block-item_input
+				.create-property__block_middle-right_form-block
+					.create-property__block_middle-right_form-block-item
+						| Postcode
+						input(name='', type='text', value='').create-property__block_middle-right_form-block-item_input
+					.create-property__block_middle-right_form-block-item
+						| State
+						select.create-property__block_middle-right_form-block-item_select
+							option(value='1') New South Wales
+							option(value='2', selected='selected') Australian Capital Territory
+							option(value='3') Victoria
+							option(value='4') Queensland
+	.create-property__block_footer
+		a.create-property__block_footer-create_link
+			| Create a property
+		i.create-property__block_footer-icon
+			+use("idea")
+		p.create-property__block_footer-txt
+			| If you have multiple properties, you can add them all at once.
+		a(href="#", title="click here").create-property__block_footer-link
+			| Click Here

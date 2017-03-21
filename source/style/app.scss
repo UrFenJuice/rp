@@ -31,6 +31,17 @@ ul {
 		list-style: none; 
 	}
 }
+h1 {
+	@include breakpoint(320px) {
+		font-size: 18px;
+		line-height: 1.5;
+		margin: 0;
+	}
+	@include breakpoint(2600px) {
+		font-size: 46px;
+		line-height: 0.9;
+	}	
+}
 .rp__container {
 	/*debug*/
 	//@include sgs-change('debug', true);
@@ -75,10 +86,10 @@ i {
 		padding: 3vh 3.333vw 4vh 4vw!important;
 	}
 	@include breakpoint(1170px) {
-		padding: 3vh 3.333vw 4vh 3.333vw!important;
+		padding: 3vh 6.146vw 4vh 3.333vw!important;
 	}
 	@include breakpoint(2000px) {
-		padding: 3.3333vh 3.333vw 4vh 3.333vw!important;
+		padding: 3.3333vh 7.667vw 4vh 3.333vw!important;
 	}
 }
 .link_show_me {
@@ -125,6 +136,8 @@ i {
 @import 'common/prop_menu';
 
 @import 'properties/props';
+
+@import 'properties/create';
 
 @import 'common/scroll';
 

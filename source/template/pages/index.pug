@@ -1,8 +1,14 @@
 extends ../_template
 
 block variables
-	- var title = 'PropertyList.aspx'
+	- var title = 'Home page'
 
 block content
-	include ../common/prop_menu
-	include ../properties/props
+	main.content
+		.container
+			h1 Pages
+			ul
+				li
+					a(href="PropertyList.html", target="_blank") Property List
+				li
+					a(href="CreateAProperty.html", target="_blank") Create a Property
