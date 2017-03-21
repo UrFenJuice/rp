@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
+    "bootstrap-select": "^1.12.2",
     "flexibility": "^2.0.1",
     "jquery.scrollbar": "^0.2.11",
     "normalize.css": "^4.1.1",
