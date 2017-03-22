@@ -108,11 +108,16 @@
 }
 .create-property__block_middle-right_form-block-item {
 	flex: 1 1 195px;
+	position: relative;
 	@include breakpoint(320px) {
 		padding-top: 5px;
 	}
 	@include breakpoint(2600px) {
 		padding-top: 10px;
+	}
+	& .help-block {
+		position: absolute;
+		width: 100%;
 	}
 }
 @include breakpoint(320px) {

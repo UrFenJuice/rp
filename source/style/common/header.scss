@@ -35,6 +35,9 @@
 	@media screen and (min-device-aspect-ratio: 21/9) {
 		height: 3vmax;
 	}
+	&:hover {
+		color: $white-text;
+	}
 }
 .company__name {
 	@include breakpoint(320px) {
