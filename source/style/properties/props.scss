@@ -51,7 +51,7 @@
 		right: 0;
 		margin: auto;
 	}
-	& .show_more {
+	& .rp__show_more {
 		position: absolute;
 		color: #cdcfd7;
 		background-color: #fff;
@@ -522,7 +522,7 @@
 	font-family: $fourth-font;
 	padding-bottom: 7px;
 }
-.show_more:hover {
+.rp__show_more:hover {
 	& .show_more-small_menu {
 		opacity: 1;
 		visibility: visible;
