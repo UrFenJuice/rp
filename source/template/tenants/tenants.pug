@@ -1,0 +1,684 @@
+script(src='Scripts/Common.js')
+script(type='text/javascript', src='scripts/moment.min.js')
+script(type='text/javascript', src='scripts/bootstrap-datetimepicker.js')
+script(src='Scripts/bootstrapValidator.min.js')
+script(type='text/javascript', src='https://cdn.polyfill.io/v2/polyfill.js?features=Intl')
+script(src='Scripts/editablegrid/editablegrid.js')
+script(src='Scripts/editablegrid/editablegrid_renderers.js')
+script(src='Scripts/editablegrid/editablegrid_editors.js')
+script(src='Scripts/editablegrid/editablegrid_validators.js')
+script(src='Scripts/editablegrid/editablegrid_utils.js')
+script(src='Scripts/editablegrid/editablegrid_charts.js')
+script(src='Scripts/Garland.js')
+script(type='text/javascript', src='Scripts/bootstrap-datetimepicker.min.js')
+
+.prop__menu
+	a(href="#", title="").create-property__back_url.prop__menu_item-link 
+		i.left__arrow.prop__menu_item-link_icon 
+			+use("left-arrow")
+		| Back To All Properties
+h1 Add Tenants
+p.address__tenant 25 Lincoln Avenue, Rhodes NSW 2138
+a(href="#").create-property__cancel
+	| cancel
+.bodyformadd.tenant__form
+	ul.add-menu.tenant__form_nav
+		li.margsumm.add-menu.tenant__form_nav_item
+			a.adr-menu.add-menu.tenant__form_nav_item-link.step1(href='javascript:void(0);', onclick='garland.showStep(1)')
+				| Tenants
+		li.margsumm.add-menu.tenant__form_nav_item
+			a.adr-menu.add-menu.tenant__form_nav_item-link.step2(href='javascript:void(0);', onclick='garland.showStep(2)')
+				| Rent
+		li.margsumm.add-menu.tenant__form_nav_item
+			a.adr-menu.add-menu.tenant__form_nav_item-link.step3(href='javascript:void(0);', onclick='garland.showStep(3)')
+				| Bond & Pets&nbsp;&nbsp;
+		li.margsumm.add-menu.tenant__form_nav_item
+			a.adr-menu.add-menu.tenant__form_nav_item-link.step4(href='javascript:void(0);', onclick='garland.showStep(4)')
+				| Utilities
+		li.add-menu.tenant__form_nav_item
+			a.add-menu.tenant__form_nav_item-link.adr-menu.step5(href='javascript:void(0);', onclick='garland.showStep(5)')
+				| Summary
+	#divTenantStep1.tenants__block
+		.tenants__block_head
+			i.tenants__block_head_icon
+				+use('view_applicants')
+			h5.tenants__block_head_title Invite your tenant(s) to use RentPayments.
+		.tenant-add.tenants__block_left
+			h5 Tenant 1
+			.atname.form-group
+				| First Name
+				input#MainContent_FirstName(name='ctl00$MainContent$FirstName', type='text')
+			.atname.form-group
+				| Last Name
+				input#MainContent_LastName(name='ctl00$MainContent$LastName', type='text')
+			.atname.form-group
+				| E-Mail
+				input#MainContent_EMail(name='ctl00$MainContent$EMail', type='text')
+		.frequestly.tenants__block_right
+			h5 Frequestly Asked Questions
+			.what
+				h6.what-hap What happens when I add tenant?
+				p.we We will send an invitation to every tenant you add.
+			.can
+				h6.what-hap Can I add guest tenants?
+				p.we
+					| Guest tenants will be added to the property details but they are not responsible for paying the
+					|                             You can add guest tenants by clicking Add Another
+					|                             Tenant.
+		button.btn.btn-default.add-another
+			.view-details ADD ANOTHER TENANT
+	#divTenantStep2.rent-block
+		h5.inv Set up your rent
+		.col-lg-6.col-xs-6.tenant-rent
+			.col-lg-12.col-xs-12.atname-ten
+				label.cplabel(for='state') Frequency
+				select#MainContent_Frequency.state(name='ctl00$MainContent$Frequency', onchange='FrequencyChange(this);')
+					option(value='1') Weekly
+					option(value='2') Fortnightly
+					option(value='3') Monthly
+			.col-lg-12.col-xs-12.atname-ten
+				label#lblRentCost.cplabel(for='strit-name') Weekly Rent
+				input#MainContent_RentCost.unit.weekly-rent(name='ctl00$MainContent$RentCost', type='text')
+			.col-lg-12.col-xs-12.atname-ten
+				label#lblWeeklyDueDate.cplabel(for='state') Weekly Due Date
+				#divCalendarFrequency.form-group-calend(style='display: none')
+					#divDateTimePickerFrequency.input-group.date
+						input#MainContent_FrequencyMonth.first-rent(name='ctl00$MainContent$FrequencyMonth', data-format='dd/MM/yyyy', type='text')
+						span.add-on
+							span.input-group-addon
+				input#MainContent_Periodicity(type='hidden', name='ctl00$MainContent$Periodicity')
+				select#ddlPeriodicity.state(onchange='ddlPeriodicityChange(this);')
+			.col-lg-12.col-xs-12.atname-ten
+				label#lblFirstRentDueOn.cplabel(for='strit-name') First Rent Due On
+				.form-group-calend
+					#divFirstRentDueOn.input-group.date
+						input#MainContent_FirstRentDueOn.first-rent(name='ctl00$MainContent$FirstRentDueOn', data-format='dd/MM/yyyy', type='text')
+						span.add-on
+							span.input-group-addon
+		.col-lg-6.col-xs-6.frequestly-contract
+			h5.freq-rent Contract End Date
+			.radio-b.checked
+				label
+					span.radio
+						input#MainContent_Month2MonthRent(type='radio', name='ctl00$MainContent$Month2Month', value='Month2MonthRent', checked='checked', onclick='FixedTermContractExpiringOn(false);')
+						label(for='MainContent_Month2MonthRent') Month-To-Month rent
+					span.radio-custom
+					span.label Mont-To-month Rent
+			.radio-b
+				label
+					span.radio
+						input#MainContent_FixidTermContractExpiringOn(type='radio', name='ctl00$MainContent$Month2Month', value='FixidTermContractExpiringOn', onclick='FixedTermContractExpiringOn(true);')
+						label(for='MainContent_FixidTermContractExpiringOn') Fixid Term Contract Expiring On:
+					span.radio-custom
+					span.label Fixed Term Contract Expiring On:
+			.form-group-calend
+				#divFixedTermContractExpiringOn.input-group.date
+					input#MainContent_FixedTermContractExpiringOn.first-rent(name='ctl00$MainContent$FixedTermContractExpiringOn', data-format='dd/MM/yyyy', type='text')
+					span.add-on
+						span.input-group-addon
+		.col-lg-6.col-xs-6.frequestly-rent
+			h5.freq Frequestly Asked Questions
+			.can
+				h6.what-hap Can I change these details later?
+				p.we
+					| Yes, you can change these details from a property
+					|                             panel at any time. Some changes may require
+					|                             tenant’s approval.
+	#divTenantStep3.bond_pets-block
+		h5.inv Security deposits and pets
+		.col-lg-6.col-xs-6.bond
+			h5.a_bond Do You Require a Bond?
+			.y-n
+				.radio-b.checked
+					label
+						span.radio
+							input#MainContent_BondMonth2MonthRent(type='radio', name='ctl00$MainContent$Bond', value='BondMonth2MonthRent', onclick='BondFixidTermContractExpiringOn(false);')
+							label(for='MainContent_BondMonth2MonthRent') Month-To-Month rent
+						span.radio-custom
+						span.label No
+				.radio-b
+					label
+						span.radio
+							input#MainContent_BondFixidTermContractExpiringOn(type='radio', name='ctl00$MainContent$Bond', value='BondFixidTermContractExpiringOn', checked='checked', onclick='BondFixidTermContractExpiringOn(true);')
+							label(for='MainContent_BondFixidTermContractExpiringOn') Fixid Term Contract Expiring On:
+						span.radio-custom
+						span.label Yes
+			.col-lg-12.col-xs-12.bond_am
+				label.cplabel(for='strit-name') Bond Amount
+				input#MainContent_BondAmount.unit.weekly-rent(name='ctl00$MainContent$BondAmount', type='text')
+			.col-lg-12.col-xs-12.due_on
+				label.cplabel(for='strit-name') Due On
+				.form-group-calend
+					#divDueOn.input-group.date
+						input#MainContent_BondDueOn.first-rent(name='ctl00$MainContent$BondDueOn', data-format='dd/MM/yyyy hh:mm', type='text')
+						span.add-on
+							span.input-group-addon
+		.col-lg-6.col-xs-6.pets
+			h5.a_bond Pets
+			ul#pets(style='list-style-type: none;')
+				li.no_pets No pets added.
+			.add_pets
+				button.btn.btn-default.add-pets(onclick='return ShowAddPetsControl();')
+					.view-details ADD PETS
+		a#MainContent_LinkButton1.btn.btn-default.add-move-in(onclick='ShowhdnMoveInCostsGrid(); return false;', href="javascript:__doPostBack('ctl00$MainContent$LinkButton1','')")
+			.view-details ADD MOVE-IN COSTS
+		input#MainContent_hdnMoveInCosts(type='hidden', name='ctl00$MainContent$hdnMoveInCosts')
+	#divTenantStep4.utilities
+		h5.inv Utilities
+		.col-lg-12.col-xs-12.utilit.row
+			.col-lg-4.col-xs-3.electricity
+				.electr-icon
+				h6.h-electr Electricity
+				.radio-b.checked.uti
+					label
+						span.radio
+							input#MainContent_ElectricityTenantPays(type='radio', name='ctl00$MainContent$Electricity', value='ElectricityTenantPays')
+							label(for='MainContent_ElectricityTenantPays') Month-To-Month rent
+						span.radio-custom
+						span.label Tenant pays
+				.radio-b.checked.uti
+					label
+						span.radio
+							input#MainContent_ElectricityLandLordPays(type='radio', name='ctl00$MainContent$Electricity', value='ElectricityLandLordPays')
+							label(for='MainContent_ElectricityLandLordPays') Month-To-Month rent
+						span.radio-custom
+						span.label Landlord pays
+				.radio-b.uti
+					label
+						span.radio
+							input#MainContent_ElectricityNotApplicable(type='radio', name='ctl00$MainContent$Electricity', value='ElectricityNotApplicable', checked='checked')
+							label(for='MainContent_ElectricityNotApplicable') Month-To-Month rent
+						span.radio-custom
+						span.label Not applicable
+			.col-lg-4.col-xs-3.electricity
+				.water-icon
+				h6.h-electr Water
+				.radio-b.checked.uti
+					label
+						span.radio
+							input#MainContent_WaterTenantPays(type='radio', name='ctl00$MainContent$Water', value='WaterTenantPays')
+							label(for='MainContent_WaterTenantPays') Month-To-Month rent
+						span.radio-custom
+						span.label Tenant pays
+				.radio-b.uti
+					label
+						span.radio
+							input#MainContent_WaterLandLordPays(type='radio', name='ctl00$MainContent$Water', value='WaterLandLordPays')
+							label(for='MainContent_WaterLandLordPays') Month-To-Month rent
+						span.radio-custom
+						span.label Landlord pays
+				.radio-b.uti
+					label
+						span.radio
+							input#MainContent_WaterNotApplicable(type='radio', name='ctl00$MainContent$Water', value='WaterNotApplicable', checked='checked')
+							label(for='MainContent_WaterNotApplicable') Month-To-Month rent
+						span.radio-custom
+						span.label Not applicable
+			.col-lg-4.col-xs-3.electricity
+				.internet-icon
+				h6.h-electr Internet
+				.radio-b.checked.uti
+					label
+						span.radio
+							input#MainContent_InternetTenantPays(type='radio', name='ctl00$MainContent$Internet', value='InternetTenantPays')
+							label(for='MainContent_InternetTenantPays') Month-To-Month rent
+						span.radio-custom
+						span.label Tenant pays
+				.radio-b.uti
+					label
+						span.radio
+							input#MainContent_InternetLandLordPays(type='radio', name='ctl00$MainContent$Internet', value='InternetLandLordPays')
+							label(for='MainContent_InternetLandLordPays') Month-To-Month rent
+						span.radio-custom
+						span.label Landlord pays
+				.radio-b.uti
+					label
+						span.radio
+							input#MainContent_InternetNotApplicable(type='radio', name='ctl00$MainContent$Internet', value='InternetNotApplicable', checked='checked')
+							label(for='MainContent_InternetNotApplicable') Month-To-Month rent
+						span.radio-custom
+						span.label Not applicable
+			.col-lg-4.col-xs-3.electricity
+				.gas-icon
+				h6.h-electr Gas
+				.radio-b.checked.uti
+					label
+						span.radio
+							input#MainContent_GasTenantPays(type='radio', name='ctl00$MainContent$Gas', value='GasTenantPays')
+							label(for='MainContent_GasTenantPays') Month-To-Month rent
+						span.radio-custom
+						span.label Tenant pays
+				.radio-b.uti
+					label
+						span.radio
+							input#MainContent_GasLandLordPays(type='radio', name='ctl00$MainContent$Gas', value='GasLandLordPays')
+							label(for='MainContent_GasLandLordPays') Month-To-Month rent
+						span.radio-custom
+						span.label Landlord pays
+				.radio-b.uti
+					label
+						span.radio
+							input#MainContent_GasNotApplicable(type='radio', name='ctl00$MainContent$Gas', value='GasNotApplicable', checked='checked')
+							label(for='MainContent_GasNotApplicable') Month-To-Month rent
+						span.radio-custom
+						span.label Not applicable
+			.col-lg-4.col-xs-3.electricity
+				.phone-icon
+				h6.h-electr Phone
+				.radio-b.checked.uti
+					label
+						span.radio
+							input#MainContent_PhoneTenantPays(type='radio', name='ctl00$MainContent$Phone', value='PhoneTenantPays')
+							label(for='MainContent_PhoneTenantPays') Month-To-Month rent
+						span.radio-custom
+						span.label Tenant pays
+				.radio-b.uti
+					label
+						span.radio
+							input#MainContent_PhoneLandLordPays(type='radio', name='ctl00$MainContent$Phone', value='PhoneLandLordPays')
+							label(for='MainContent_PhoneLandLordPays') Month-To-Month rent
+						span.radio-custom
+						span.label Landlord pays
+				.radio-b.uti
+					label
+						span.radio
+							input#MainContent_PhoneNotApplicable(type='radio', name='ctl00$MainContent$Phone', value='PhoneNotApplicable', checked='checked')
+							label(for='MainContent_PhoneNotApplicable') Month-To-Month rent
+						span.radio-custom
+						span.label Not applicable
+			.col-lg-4.col-xs-3.electricity
+				.TV-icon
+				h6.h-electr TV
+				.radio-b.uti
+					label
+						span.radio
+							input#MainContent_TVTenantPays(type='radio', name='ctl00$MainContent$TV', value='TVTenantPays')
+							label(for='MainContent_TVTenantPays') Month-To-Month rent
+						span.radio-custom
+						span.label Tenant pays
+				.radio-b.uti
+					label
+						span.radio
+							input#MainContent_TVLandLordPays(type='radio', name='ctl00$MainContent$TV', value='TVLandLordPays')
+							label(for='MainContent_TVLandLordPays') Month-To-Month rent
+						span.radio-custom
+						span.label Landlord pays
+				.radio-b.uti
+					label
+						span.radio
+							input#MainContent_TVNotApplicable(type='radio', name='ctl00$MainContent$TV', value='TVNotApplicable', checked='checked')
+							label(for='MainContent_TVNotApplicable') Month-To-Month rent
+						span.radio-custom
+						span.label Not applicable
+	#divTenantStep5.summary-block
+		h5.inv Summary
+		.col-lg-8.col-xs-8.summary-add.row
+			.col-lg-6.col-xs-6.summ-add
+				h5.conf-your Confirm your lease setup and invite your tenants.
+				p.everything
+					| Everything look correct? Clicking “confirm” will send your lease terms to the tenants. They can also sign up using the email you entered.
+			.col-lg-6.col-xs-6.summ-add
+				h6.your-tenants Your Tenants will need to:
+				ul.ten-will
+					li.ten-will-need
+						span.ten-will-text Сreate an account
+					li.ten-will-need
+						span.ten-will-text Set up their payments
+					li.ten-will-need
+						span.ten-will-text Add their bank accounts
+					li.ten-will-need
+						span.ten-will-text Verify bank accounts (can take 2-3 business days)
+			h6.addit Additional Notes/Details
+			textarea.addit-textarea
+		.col-lg-6.col-xs-6.steps
+			.step-tenant
+				| Tenants
+				a.edit(href='')
+			p#pFullName.step-tenant-name
+			p#pEmail.step-tenant-e-mail johhnyboy@gmail.com
+		.col-lg-6.col-xs-6.steps
+			.step-rent
+				| Rent
+				a.edit(href='')
+			p.step-rent-summ
+				| $
+				label#lblRentCostSumm
+					| /
+					label#lblFrequency
+		.col-lg-6.col-xs-6.steps
+			.step-tenant
+				| Bonds & Pets
+				a.edit(href='')
+			.col-lg-2.col-xs-3.bond-summ
+				p.step-bond Bond
+				p.step-bond-summ
+					| $
+					label#lblBondCost
+			.col-lg-2.col-xs-3.pets-summ
+				p.step-bond Pets
+				ul#petsSumary.step-bond-summ No pets
+		.col-lg-6.col-xs-6.steps
+			.step-rent
+				| Utilities
+				a.edit(href='')
+			.utilities-step.row
+				.col-lg-3.col-xs-4.uti-step
+					.electr-icon-step
+					p#pElectrUtils Tenant pays
+				.col-lg-3.col-xs-4.uti-step
+					.water-icon-step
+					p#pWaterUtils Landlord pays
+				.col-lg-3.col-xs-4.uti-step
+					.internet-icon-step
+					p#pInternetUtils Tenant pays
+				.col-lg-3.col-xs-4.uti-step
+					.gas-icon-step
+					p#pGasUtils Tenant pays
+				.col-lg-3.col-xs-4.uti-step
+					.phone-icon-step
+					p#pPhoneUtils Landlord pays
+				.col-lg-3.col-xs-4.uti-step
+					.TV-icon-step
+					p#pTvUtils Tenant pays
+	.previous
+		a#MainContent_btnPrevios.btn.btn-default.previ.previ-rent(onclick='garland.showNextStep(-1); return false;', href="javascript:__doPostBack('ctl00$MainContent$btnPrevios','')")
+			| PREVIOUS
+		a#MainContent_btnContinue.btn.btn-default.previ.previ-rent(onclick='garland.showNextStep(1); return false;', href="javascript:__doPostBack('ctl00$MainContent$btnContinue','')")
+			| CONTINUE
+		a#MainContent_btnConfirmAndInvite.btn.btn-default.previ.previ-rent.confirm(onclick='return checkSubmit();', href="javascript:__doPostBack('ctl00$MainContent$btnConfirmAndInvite','')")
+			| CONFIRM AND INVITE
+// Инициализация виджета "Bootstrap datetimepicker"
+script(type='text/javascript').
+	$(function () {
+	$('#divFirstRentDueOn').datetimepicker({
+	format: 'DD/MM/YYYY'
+	}).on('dp.change', DateTimePickerFirstRentDueOnChange);
+	$('#divFixedTermContractExpiringOn').datetimepicker({
+	format: 'DD/MM/YYYY'
+	}).on('dp.change', DateTimePickerFixedTermContractExpiringOnChange);
+	$('#divDueOn').datetimepicker({
+	format: 'DD/MM/YYYY'
+	}).on('dp.change', DateTimePickerFiBondDueOnOnChange);
+	$('#divDateTimePickerFrequency').datetimepicker({
+	format: 'DD/MM/YYYY'
+	}).on('dp.change', divDateTimePickerFrequencyDateChange);
+	$("input:radio").change(function () {
+	//          if (this.checked) {
+	//              $(this).parents(".radio-b").addClass("checked").siblings(".radio-b").removeClass("checked");
+	//          }
+	$("input:radio").each(function () {
+	$(this).parents(".radio-b").toggleClass("checked", this.checked);
+	});
+	});
+	$("input:radio").each(function () {
+	$(this).parents(".radio-b").toggleClass("checked", this.checked);
+	});
+	$("#MainContent_RentCost").change(function() {
+	$(this).val(decimals($(this).val()));
+	});
+	$("#MainContent_BondAmount").change(function() {
+	$(this).val(decimals($(this).val()));
+	});
+	$("#MainContent_BondAmount").keydown(AmountOnly);
+	$("#MainContent_RentCost").keydown(AmountOnly);
+	garland.validSteps = [false,false,false,false,true]; // Steps for Validation
+	garland.currentStep = 1;
+	garland.finishStep = 1;
+	garland.finishStep = 5;
+	garland.btnPrevioId = "MainContent_btnPrevios";
+	garland.btnContinueId = "MainContent_btnContinue";
+	garland.btnSubmitId = "MainContent_btnConfirmAndInvite";
+	garland.initSummary =  function() {
+	var tenantPays    = "Tenant pays";
+	var landlordPays  = "Landlord pays";
+	var notApplicable = "Not applicable";
+	$("#pElectrUtils").text($('#MainContent_ElectricityTenantPays').is(':checked')?tenantPays:
+	$('#MainContent_ElectricityLandLordPays').is(':checked')?landlordPays:notApplicable);
+	$("#pWaterUtils").text($('#MainContent_WaterTenantPays').is(':checked')?tenantPays:
+	$('#MainContent_WaterLandLordPays').is(':checked')?landlordPays:notApplicable);
+	$("#pInternetUtils").text($('#MainContent_InternetTenantPays').is(':checked')?tenantPays:
+	$('#MainContent_InternetLandLordPays').is(':checked')?landlordPays:notApplicable);
+	$("#pGasUtils").text($('#MainContent_GasTenantPays').is(':checked')?tenantPays:
+	$('#MainContent_GasLandLordPays').is(':checked')?landlordPays:notApplicable);
+	$("#pPhoneUtils").text($('#MainContent_PhoneTenantPays').is(':checked')?tenantPays:
+	$('#MainContent_PhoneLandLordPays').is(':checked')?landlordPays:notApplicable);
+	$("#pTvUtils").text($('#MainContent_TVTenantPays').is(':checked')?tenantPays:
+	$('#MainContent_TVLandLordPays').is(':checked')?landlordPays:notApplicable);
+	$("#pFullName").text($('#MainContent_FirstName').val() + " " + $('#MainContent_LastName').val());
+	$("#pEmail").text($('#MainContent_EMail').val());
+	$("#lblRentCostSumm").text($('#MainContent_RentCost').val());
+	$("#lblFrequency").text($('#MainContent_Frequency').find("option:selected").text());
+	$("#lblBondCost").text($('#MainContent_BondAmount').val());
+	petList = $("#petsSumary");
+	if(_pets != undefined ){
+	petList.empty();
+	for(var i=0; i<_pets.length; i++){
+	var listItem = '<li class="no_pets">' + _pets[i].Name + '</li>';
+	petList.append(listItem);
+	}
+	}else{
+	petList.text("No pets");
+	}
+	};
+	garland.showStep(1);
+	FrequencyChange($("#MainContent_Frequency"))
+	$("#divFixedTermContractExpiringOn").hide();
+	$("#MainContent_Periodicity").val($("#ddlPeriodicity").val());
+	InitGrid("MainContent_hdnMoveInCosts");
+	});
+	var step = 1;
+	function divDateTimePickerFrequencyDateChange(e) {
+	$("#MainContent_Periodicity").val(e.date.date());
+	$('#divTenantStep2').bootstrapValidator('revalidateField', $('#MainContent_FrequencyMonth'));
+	}
+	function ddlPeriodicityChange(e) {
+	$("#MainContent_Periodicity").val($("#ddlPeriodicity").val());
+	}
+	function DateTimePickerFirstRentDueOnChange(e){
+	$('#divTenantStep2').bootstrapValidator('revalidateField', $('#MainContent_FirstRentDueOn'));
+	}
+	function DateTimePickerFixedTermContractExpiringOnChange(e){
+	$('#divTenantStep2').bootstrapValidator('revalidateField', $('#MainContent_FixedTermContractExpiringOn'));
+	}
+	function DateTimePickerFiBondDueOnOnChange(e){
+	$("#divTenantStep3").bootstrapValidator('revalidateField', $('#MainContent_BondDueOn'));
+	}
+	function formSubmit(){ }
+	function FrequencyChange(ddl) {
+	var caption = $(ddl).find("option:selected").text();
+	var value = $(ddl).val();
+	var names = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+	var ddlPeriodicity = $("#ddlPeriodicity");
+	var calendar = $("#divCalendarFrequency");
+	var frequencyMonthValidation = false;
+	var prefix = " ";
+	switch (value) {
+	case '1':
+	prefix = "Every ";
+	calendar.hide();
+	//ddlPeriodicity
+	ddlPeriodicity.show();
+	break;
+	case '2':
+	prefix = "Second ";
+	calendar.hide();
+	ddlPeriodicity.show();
+	break;
+	case '3':
+	calendar.show();
+	frequencyMonthValidation = true;
+	ddlPeriodicity.hide();
+	break;
+	}
+	$("#divTenantStep2").data('bootstrapValidator').enableFieldValidators('ctl00$MainContent$FrequencyMonth', frequencyMonthValidation);
+	ddlPeriodicity.empty();
+	$.each(names, function (index, value) {
+	ddlPeriodicity.append(
+	$('<option>', {
+	value: index,
+	text: prefix + value
+	}, '</option>'));
+	});
+	$("#lblWeeklyRent").text(caption + " Rent");
+	$("#lblWeeklyDueDate").text(caption + " Due Date");
+	$("#lblRentCost").text(caption + " Rent");
+	if(!frequencyMonthValidation){
+	$("#MainContent_Periodicity").val($("#ddlPeriodicity").val());
+	}
+	}
+	$('#divTenantStep1').bootstrapValidator({
+	live: 'disabled',
+	feedbackIcons: {
+	valid: 'fa',
+	invalid: 'fa',
+	validating: 'fa'
+	},
+	message: 'This value is not valid',
+	fields: {
+	ctl00$MainContent$FirstName: {
+	validators: {
+	notEmpty: {
+	message: 'Please enter a valid First Name'
+	}
+	}
+	},
+	ctl00$MainContent$LastName: {
+	validators: {
+	notEmpty: {
+	message: 'Please enter a valid Last Name'
+	}
+	}
+	},
+	ctl00$MainContent$EMail: {
+	validators: {
+	notEmpty: {
+	message: 'The email address is required'
+	},
+	emailAddress: {
+	message: 'The value is not a valid email address'
+	}
+	}
+	},
+	}
+	});
+	$('#divTenantStep2').bootstrapValidator({
+	live: 'disabled',
+	feedbackIcons: {
+	valid: 'fa',
+	invalid: 'fa',
+	validating: 'fa'
+	},
+	message: 'This value is not valid',
+	fields: {
+	ctl00$MainContent$Frequency: {
+	validators: {
+	notEmpty: {
+	message: 'Please enter a valid Frequency'
+	},
+	}
+	},
+	ctl00$MainContent$RentCost: {
+	validators: {
+	notEmpty: {
+	message: 'Please enter a valid Frequency'
+	}
+	}
+	},
+	ctl00$MainContent$FrequencyMonth: {
+	validators: {
+	notEmpty: {
+	message: 'The frequency Month is required'
+	},
+	}
+	},
+	ctl00$MainContent$FirstRentDueOn: {
+	validators: {
+	notEmpty: {
+	message: 'The first rent due on is required'
+	},
+	date: {
+	format: 'DD/MM/YYYY',
+	message: 'The value is not a valid first rent due on'
+	}
+	}
+	},
+	ctl00$MainContent$FixedTermContractExpiringOn: {
+	validators: {
+	notEmpty: {
+	message: 'The fixed term contract expiring on is required'
+	},
+	date: {
+	format: 'DD/MM/YYYY',
+	message: 'The value is not a valid fixed term contract expiring on'
+	}
+	}
+	},
+	ddlPeriodicity: {
+	validators: {
+	notEmpty: {
+	message: 'The weekly due date is required'
+	},
+	//date: {
+	//    message: 'The value is not a valid first rent due on'
+	//}
+	}
+	},
+	}
+	});
+	$('#divTenantStep3').bootstrapValidator({
+	live: 'disabled',
+	feedbackIcons: {
+	valid: 'fa',
+	invalid: 'fa',
+	validating: 'fa'
+	},
+	message: 'This value is not valid',
+	fields: {
+	ctl00$MainContent$BondAmount: {
+	validators: {
+	notEmpty: {
+	message: 'The Bond amount  is required'
+	},
+	}
+	},
+	ctl00$MainContent$BondDueOn: {
+	validators: {
+	notEmpty: {
+	message: 'The Bond due on   is required'
+	},
+	date: {
+	format: 'DD/MM/YYYY',
+	message: 'The Bond due on   is required'
+	}
+	}
+	},
+	}
+	});
+	function ShowAddPetsControl(){
+	ShowPoPup("divCreatePetControl");
+	return false;
+	}
+	function ShowhdnMoveInCostsGrid(){
+	ShowPoPup("divEditableGridControl");
+	return false;
+	}
+	function FixedTermContractExpiringOn(show){
+	$("#divTenantStep2").data('bootstrapValidator').enableFieldValidators('ctl00$MainContent$FixedTermContractExpiringOn', show);
+	if(show){
+	$('#divFixedTermContractExpiringOn').show();
+	}else{
+	$('#divFixedTermContractExpiringOn').hide();
+	}
+	}
+	function BondFixidTermContractExpiringOn(checked){
+	$("#divTenantStep3").data('bootstrapValidator').enableFieldValidators('ctl00$MainContent$BondDueOn', checked);
+	}
+	function checkSubmit(){
+	if(garland.currentStep==garland.finishStep){
+	return true;
+	}
+	else{
+	return false;
+	}
+	}
+input#hfLeftMenuId(type='hidden', name='ctl00$hfLeftMenuId', value='AddTenantsKey')

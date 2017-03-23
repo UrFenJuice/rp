@@ -12,6 +12,72 @@ a(href="#").create-property__cancel
 			.create-property__block_middle-left_icon
 				i.create-property__block_middle-left_icon-upload
 					+use("upload")
+				ul#ulImglist.photo-block
+					li.img-block(name='image01.jpg', size='529692')
+						button.img-delete(onclick="RemoveFileFromList('image01.jpg',529692)")
+						canvas#img-id-8.img-photo-block
+						.main-picture-block
+							a.main-picture-link(href='#', data-name='image01.jpg') Add to main
+					li.img-block(name='image02.jpg', size='357660')
+						button.img-delete(onclick="RemoveFileFromList('image02.jpg',357660)")
+						canvas#img-id-9.img-photo-block
+						.main-picture-block
+							a.main-picture-link(href='#', data-name='image02.jpg') Add to main
+					li.img-block(name='image03.jpg', size='321367')
+						button.img-delete(onclick="RemoveFileFromList('image03.jpg',321367)")
+						canvas#img-id-10.img-photo-block
+						.main-picture-block
+							a.main-picture-link(href='#', data-name='image03.jpg') Add to main
+					li.img-block(name='image04.jpg', size='310997')
+						button.img-delete(onclick="RemoveFileFromList('image04.jpg',310997)")
+						canvas#img-id-11.img-photo-block
+						.main-picture-block
+					li.img-block(name='image01.jpg', size='529692')
+						button.img-delete(onclick="RemoveFileFromList('image01.jpg',529692)")
+						canvas#img-id-8.img-photo-block
+						.main-picture-block
+							a.main-picture-link(href='#', data-name='image01.jpg') Add to main
+					li.img-block(name='image02.jpg', size='357660')
+						button.img-delete(onclick="RemoveFileFromList('image02.jpg',357660)")
+						canvas#img-id-9.img-photo-block
+						.main-picture-block
+							a.main-picture-link(href='#', data-name='image02.jpg') Add to main
+					li.img-block(name='image03.jpg', size='321367')
+						button.img-delete(onclick="RemoveFileFromList('image03.jpg',321367)")
+						canvas#img-id-10.img-photo-block
+						.main-picture-block
+							a.main-picture-link(href='#', data-name='image03.jpg') Add to main
+					li.img-block(name='image04.jpg', size='310997')
+						button.img-delete(onclick="RemoveFileFromList('image04.jpg',310997)")
+						canvas#img-id-11.img-photo-block
+						.main-picture-block
+					li.img-block(name='image01.jpg', size='529692')
+						button.img-delete(onclick="RemoveFileFromList('image01.jpg',529692)")
+						canvas#img-id-8.img-photo-block
+						.main-picture-block
+							a.main-picture-link(href='#', data-name='image01.jpg') Add to main
+					li.img-block(name='image02.jpg', size='357660')
+						button.img-delete(onclick="RemoveFileFromList('image02.jpg',357660)")
+						canvas#img-id-9.img-photo-block
+						.main-picture-block
+							a.main-picture-link(href='#', data-name='image02.jpg') Add to main
+					li.img-block(name='image03.jpg', size='321367')
+						button.img-delete(onclick="RemoveFileFromList('image03.jpg',321367)")
+						canvas#img-id-10.img-photo-block
+						.main-picture-block
+							a.main-picture-link(href='#', data-name='image03.jpg') Add to main
+					li.img-block(name='image04.jpg', size='310997')
+						button.img-delete(onclick="RemoveFileFromList('image04.jpg',310997)")
+						canvas#img-id-11.img-photo-block
+						.main-picture-block
+			.limit-img.limit-img-error
+				i.i-lim
+				p.mess-limit-img Selected Photos exceed the limit of 10 mb!
+			.limit-img.limit-count-error
+				p.mess-limit-img
+					span.starrequired *
+					|  Not more than 30 pictures
+			a.main-picture-link(href='#', data-name='image04.jpg') Add to maink
 			a.create-property__block_middle-left_link-upload
 				| UPLoad images
 			p.create-property__block_middle-left_instruction
