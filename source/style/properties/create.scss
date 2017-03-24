@@ -206,10 +206,11 @@
 	@include breakpoint(2600px) {
 		padding-top: 10px;
 	}
-	& .help-block {
-		position: absolute;
-		width: 100%;
-	}
+}
+.help-block {
+	position: absolute;
+	width: 100%;
+    color: #e34711;
 }
 @include breakpoint(320px) {
 	.create-property__block_middle-right_form-block-item:nth-child(2) {
@@ -290,22 +291,7 @@
 }
 .create-property__block_middle-right_form-block-item_select,
 .create-property__block_middle-right_form-block-item_input {
-	width: 100%;
-	position: relative;
-	border: 2px solid #eff1f7;
-	background-color: #fff;
-	height: auto;
-	box-shadow: none;
-	border-radius: 0;
-    font-size: inherit;
-    @include breakpoint(320px) {
-		padding: 7px 5px;
-		margin-top: 3px;
-    }
-    @include breakpoint(2600px) {
-		padding: 21px 15px;
-		margin-top: 10px;
-    }
+	@extend .rp__input;
 }
 .create-property__block_footer {
 	display: flex;

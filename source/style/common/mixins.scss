@@ -77,4 +77,22 @@ $left-menu-color: #010101;
 		right: 40px;
     }
 }
+.rp__input {
+    width: 100%;
+    position: relative;
+    border: 2px solid #eff1f7;
+    background-color: #fff;
+    height: auto;
+    box-shadow: none;
+    border-radius: 0;
+    font-size: inherit;
+    @include breakpoint(320px) {
+        padding: 7px 5px;
+        margin-top: 3px;
+    }
+    @include breakpoint(2600px) {
+        padding: 21px 15px;
+        margin-top: 10px;
+    }
+}
 /*mixins*/

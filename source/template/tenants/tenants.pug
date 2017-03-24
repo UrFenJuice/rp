@@ -17,10 +17,13 @@ script(type='text/javascript', src='Scripts/bootstrap-datetimepicker.min.js')
 		i.left__arrow.prop__menu_item-link_icon 
 			+use("left-arrow")
 		| Back To All Properties
-h1 Add Tenants
-p.address__tenant 25 Lincoln Avenue, Rhodes NSW 2138
-a(href="#").create-property__cancel
-	| cancel
+.tennant__group
+	.tennant__title
+		h1 Add Tenants
+		p.address__tenant North Shore, Auckland
+	.tennant__cancel
+		a(href="#").create-property__cancel.create-property__cancel-tenant
+			| cancel
 .bodyformadd.tenant__form
 	ul.add-menu.tenant__form_nav
 		li.margsumm.add-menu.tenant__form_nav_item
@@ -41,32 +44,32 @@ a(href="#").create-property__cancel
 	#divTenantStep1.tenants__block
 		.tenants__block_head
 			i.tenants__block_head_icon
-				+use('view_applicants')
+				+use('group')
 			h5.tenants__block_head_title Invite your tenant(s) to use RentPayments.
-		.tenant-add.tenants__block_left
-			h5 Tenant 1
-			.atname.form-group
-				| First Name
-				input#MainContent_FirstName(name='ctl00$MainContent$FirstName', type='text')
-			.atname.form-group
-				| Last Name
-				input#MainContent_LastName(name='ctl00$MainContent$LastName', type='text')
-			.atname.form-group
-				| E-Mail
-				input#MainContent_EMail(name='ctl00$MainContent$EMail', type='text')
-		.frequestly.tenants__block_right
-			h5 Frequestly Asked Questions
-			.what
-				h6.what-hap What happens when I add tenant?
-				p.we We will send an invitation to every tenant you add.
-			.can
-				h6.what-hap Can I add guest tenants?
-				p.we
-					| Guest tenants will be added to the property details but they are not responsible for paying the
-					|                             You can add guest tenants by clicking Add Another
-					|                             Tenant.
-		button.btn.btn-default.add-another
-			.view-details ADD ANOTHER TENANT
+		.tenants__block_middle
+			.tenant-add.tenants__block_left
+				h5 Tenant 1
+				.atname.form-group.tenants__block_left_item
+					| First Name
+					input#MainContent_FirstName.tenants__block_left_input(name='ctl00$MainContent$FirstName', type='text')
+				.atname.form-group.tenants__block_left_item
+					| Last Name
+					input#MainContent_LastName.tenants__block_left_input(name='ctl00$MainContent$LastName', type='text')
+				.atname.form-group.tenants__block_left_item
+					| E-Mail
+					input#MainContent_EMail.tenants__block_left_input(name='ctl00$MainContent$EMail', type='text')
+			.frequestly.tenants__block_right
+				h5 Frequestly Asked Questions
+				.tenants__block_right_txt
+					h6 What happens when I add tenant?
+					p We will send an invitation to every tenant you add.
+				.tenants__block_right_txt
+					h6 Can I add guest tenants?
+					p
+						| Guest Tenants wii be added to the property details but they are not responsible for paying the rent. You can add guest tenants by clicking “Add Another Tenant”
+		.tenants__block_footer
+			a(href="#").tenants__block_footer_add_link
+				| ADD ANOTHER TENANT
 	#divTenantStep2.rent-block
 		h5.inv Set up your rent
 		.col-lg-6.col-xs-6.tenant-rent
@@ -380,12 +383,12 @@ a(href="#").create-property__cancel
 				.col-lg-3.col-xs-4.uti-step
 					.TV-icon-step
 					p#pTvUtils Tenant pays
-	.previous
-		a#MainContent_btnPrevios.btn.btn-default.previ.previ-rent(onclick='garland.showNextStep(-1); return false;', href="javascript:__doPostBack('ctl00$MainContent$btnPrevios','')")
+	.previous.tenants__block-links
+		a#MainContent_btnPrevios.previ.previ-rent.tenants__block-link_prev(onclick='garland.showNextStep(-1); return false;', href="javascript:__doPostBack('ctl00$MainContent$btnPrevios','')")
 			| PREVIOUS
-		a#MainContent_btnContinue.btn.btn-default.previ.previ-rent(onclick='garland.showNextStep(1); return false;', href="javascript:__doPostBack('ctl00$MainContent$btnContinue','')")
+		a#MainContent_btnContinue.previ.previ-rent.tenants__block-link_continue(onclick='garland.showNextStep(1); return false;', href="javascript:__doPostBack('ctl00$MainContent$btnContinue','')")
 			| CONTINUE
-		a#MainContent_btnConfirmAndInvite.btn.btn-default.previ.previ-rent.confirm(onclick='return checkSubmit();', href="javascript:__doPostBack('ctl00$MainContent$btnConfirmAndInvite','')")
+		a#MainContent_btnConfirmAndInvite.previ.previ-rent.confirm.tenants__block-link_prev_confirm(onclick='return checkSubmit();', href="javascript:__doPostBack('ctl00$MainContent$btnConfirmAndInvite','')")
 			| CONFIRM AND INVITE
 // Инициализация виджета "Bootstrap datetimepicker"
 script(type='text/javascript').

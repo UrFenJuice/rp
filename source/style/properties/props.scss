@@ -346,8 +346,10 @@
 			height: 40px;
 			z-index: 9;
 		}
-		& #arrow_down {
+		& .arrow__down {
 			transform: rotate(180deg);
+		}
+		& #arrow_down {
 			fill: $logotype-color;
 		}
 		& .properties__block_list-item_info-lists-item_hover {
@@ -497,11 +499,13 @@
 			}
 		}
 	}
-	& #arrow_down {
-		fill: #CCCFD9;
+	& .arrow__down {
 		position: absolute;
 		right: 0;
 		top: 0;
+	}
+	& #arrow_down {
+		fill: #CCCFD9;
 	}
 	@include breakpoint(320px) {
 		font-size: 11.13px;
