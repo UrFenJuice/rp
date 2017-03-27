@@ -1,0 +1,64 @@
+#divTenantStep2.tenants__block
+	.tenants__block_head
+		i.tenants__block_head_icon
+			+use('set-up-your-rent')
+		h5.tenants__block_head_title Set up your rent
+	.tenants__block_middle
+		.tenant-rent.tenants__block_left
+			.atname-ten.form-group.tenants__block_left_item.rp__select
+				| Frequency
+				select#MainContent_Frequency.selectpicker(name='ctl00$MainContent$Frequency', onchange='FrequencyChange(this);')
+					option(value='1') Weekly
+					option(value='2') Fortnightly
+					option(value='3') Monthly
+			.atname-ten.form-group.tenants__block_left_item
+				| Weekly Rent
+				input#MainContent_RentCost.tenants__block_left_input.tenants__block_left_input_icon(name='ctl00$MainContent$RentCost', type='text')
+			.atname-ten.form-group.tenants__block_left_item.rp__select
+				| Weekly Due Date
+				#divCalendarFrequency.form-group-calend(style='display: none')
+					#divDateTimePickerFrequency.input-group.date
+						input#MainContent_FrequencyMonth.first-rent(name='ctl00$MainContent$FrequencyMonth', data-format='dd/MM/yyyy', type='text')
+						span.add-on.tenants__block_left_item-calendar
+							i.input-group-addon
+								+use('calendar')
+				input#MainContent_Periodicity(type='hidden', name='ctl00$MainContent$Periodicity')
+				select#ddlPeriodicity.selectpicker(onchange='ddlPeriodicityChange(this);')
+			.atname-ten.form-group.tenants__block_left_item
+				| First Rent Due On
+				.form-group-calend
+					#divFirstRentDueOn.input-group.date
+						input#MainContent_FirstRentDueOn.tenants__block_left_input(name='ctl00$MainContent$FirstRentDueOn', data-format='dd/MM/yyyy', type='text')
+						span.add-on.tenants__block_left_item-calendar
+							i.input-group-addon
+								+use('calendar')
+		.frequestly-contract.tenants__block_right.tenants__block_right-twocolumns
+			.tenants__block_right-twocolumns_top
+				h5 Contract End Date
+				.radio-b.checked
+					label
+						span.radio
+							input#MainContent_Month2MonthRent(type='radio', name='ctl00$MainContent$Month2Month', value='Month2MonthRent', checked='checked', onclick='FixedTermContractExpiringOn(false);')
+							label(for='MainContent_Month2MonthRent') Month-To-Month rent
+						span.radio-custom
+						span.label Mont-To-month Rent
+				.radio-b
+					label
+						span.radio
+							input#MainContent_FixidTermContractExpiringOn(type='radio', name='ctl00$MainContent$Month2Month', value='FixidTermContractExpiringOn', onclick='FixedTermContractExpiringOn(true);')
+							label(for='MainContent_FixidTermContractExpiringOn') Fixid Term Contract Expiring On:
+						span.radio-custom
+						span.label Fixed Term Contract Expiring On:
+				.form-group-calend
+					#divFixedTermContractExpiringOn.input-group.date
+						input#MainContent_FixedTermContractExpiringOn.tenants__block_left_input(name='ctl00$MainContent$FixedTermContractExpiringOn', data-format='dd/MM/yyyy', type='text')
+						span.add-on.tenants__block_left_item-calendar
+							i.input-group-addon
+								+use('calendar')
+			.tenants__block_right-twocolumns_bottom
+				.frequestly-rent
+					h5 Frequestly Asked Questions
+					.tenants__block_right_txt
+						h6 Can I change these details later?
+						p
+							| Yes, you can change these details from a property panel at any time. Some changes may require tenant’s approval.

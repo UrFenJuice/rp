@@ -1,0 +1,156 @@
+#divTenantStep4.tenants__block
+	.tenants__block_head
+		i.tenants__block_head_icon
+			+use('house')
+		h5.tenants__block_head_title Utilities
+	.tenants__block_middle.tenants__block_middle_utilities
+		.electricity
+			h6
+				+use("flash")
+				| Electricity
+			.radio-b.checked.uti
+				label
+					span.radio
+						input#MainContent_ElectricityTenantPays(type='radio', name='ctl00$MainContent$Electricity', value='ElectricityTenantPays')
+						label(for='MainContent_ElectricityTenantPays') Month-To-Month rent
+					span.radio-custom
+					span.label Tenant pays
+			.radio-b.checked.uti
+				label
+					span.radio
+						input#MainContent_ElectricityLandLordPays(type='radio', name='ctl00$MainContent$Electricity', value='ElectricityLandLordPays')
+						label(for='MainContent_ElectricityLandLordPays') Month-To-Month rent
+					span.radio-custom
+					span.label Landlord pays
+			.radio-b.uti
+				label
+					span.radio
+						input#MainContent_ElectricityNotApplicable(type='radio', name='ctl00$MainContent$Electricity', value='ElectricityNotApplicable', checked='checked')
+						label(for='MainContent_ElectricityNotApplicable') Month-To-Month rent
+					span.radio-custom
+					span.label Not applicable
+		.electricity
+			h6
+				+use("water")
+				| Water
+			.radio-b.checked.uti
+				label
+					span.radio
+						input#MainContent_WaterTenantPays(type='radio', name='ctl00$MainContent$Water', value='WaterTenantPays')
+						label(for='MainContent_WaterTenantPays') Month-To-Month rent
+					span.radio-custom
+					span.label Tenant pays
+			.radio-b.uti
+				label
+					span.radio
+						input#MainContent_WaterLandLordPays(type='radio', name='ctl00$MainContent$Water', value='WaterLandLordPays')
+						label(for='MainContent_WaterLandLordPays') Month-To-Month rent
+					span.radio-custom
+					span.label Landlord pays
+			.radio-b.uti
+				label
+					span.radio
+						input#MainContent_WaterNotApplicable(type='radio', name='ctl00$MainContent$Water', value='WaterNotApplicable', checked='checked')
+						label(for='MainContent_WaterNotApplicable') Month-To-Month rent
+					span.radio-custom
+					span.label Not applicable
+		.electricity
+			h6
+				+use("wifi")
+				| Internet
+			.radio-b.checked.uti
+				label
+					span.radio
+						input#MainContent_InternetTenantPays(type='radio', name='ctl00$MainContent$Internet', value='InternetTenantPays')
+						label(for='MainContent_InternetTenantPays') Month-To-Month rent
+					span.radio-custom
+					span.label Tenant pays
+			.radio-b.uti
+				label
+					span.radio
+						input#MainContent_InternetLandLordPays(type='radio', name='ctl00$MainContent$Internet', value='InternetLandLordPays')
+						label(for='MainContent_InternetLandLordPays') Month-To-Month rent
+					span.radio-custom
+					span.label Landlord pays
+			.radio-b.uti
+				label
+					span.radio
+						input#MainContent_InternetNotApplicable(type='radio', name='ctl00$MainContent$Internet', value='InternetNotApplicable', checked='checked')
+						label(for='MainContent_InternetNotApplicable') Month-To-Month rent
+					span.radio-custom
+					span.label Not applicable
+		.electricity
+			h6
+				+use("gas")
+				| Gas
+			.radio-b.checked.uti
+				label
+					span.radio
+						input#MainContent_GasTenantPays(type='radio', name='ctl00$MainContent$Gas', value='GasTenantPays')
+						label(for='MainContent_GasTenantPays') Month-To-Month rent
+					span.radio-custom
+					span.label Tenant pays
+			.radio-b.uti
+				label
+					span.radio
+						input#MainContent_GasLandLordPays(type='radio', name='ctl00$MainContent$Gas', value='GasLandLordPays')
+						label(for='MainContent_GasLandLordPays') Month-To-Month rent
+					span.radio-custom
+					span.label Landlord pays
+			.radio-b.uti
+				label
+					span.radio
+						input#MainContent_GasNotApplicable(type='radio', name='ctl00$MainContent$Gas', value='GasNotApplicable', checked='checked')
+						label(for='MainContent_GasNotApplicable') Month-To-Month rent
+					span.radio-custom
+					span.label Not applicable
+		.electricity
+			h6
+				+use("phone")
+				| Phone
+			.radio-b.checked.uti
+				label
+					span.radio
+						input#MainContent_PhoneTenantPays(type='radio', name='ctl00$MainContent$Phone', value='PhoneTenantPays')
+						label(for='MainContent_PhoneTenantPays') Month-To-Month rent
+					span.radio-custom
+					span.label Tenant pays
+			.radio-b.uti
+				label
+					span.radio
+						input#MainContent_PhoneLandLordPays(type='radio', name='ctl00$MainContent$Phone', value='PhoneLandLordPays')
+						label(for='MainContent_PhoneLandLordPays') Month-To-Month rent
+					span.radio-custom
+					span.label Landlord pays
+			.radio-b.uti
+				label
+					span.radio
+						input#MainContent_PhoneNotApplicable(type='radio', name='ctl00$MainContent$Phone', value='PhoneNotApplicable', checked='checked')
+						label(for='MainContent_PhoneNotApplicable') Month-To-Month rent
+					span.radio-custom
+					span.label Not applicable
+		.electricity
+			h6
+				+use("tv")
+				| TV
+			.radio-b.uti
+				label
+					span.radio
+						input#MainContent_TVTenantPays(type='radio', name='ctl00$MainContent$TV', value='TVTenantPays')
+						label(for='MainContent_TVTenantPays') Month-To-Month rent
+					span.radio-custom
+					span.label Tenant pays
+			.radio-b.uti
+				label
+					span.radio
+						input#MainContent_TVLandLordPays(type='radio', name='ctl00$MainContent$TV', value='TVLandLordPays')
+						label(for='MainContent_TVLandLordPays') Month-To-Month rent
+					span.radio-custom
+					span.label Landlord pays
+			.radio-b.uti
+				label
+					span.radio
+						input#MainContent_TVNotApplicable(type='radio', name='ctl00$MainContent$TV', value='TVNotApplicable', checked='checked')
+						label(for='MainContent_TVNotApplicable') Month-To-Month rent
+					span.radio-custom
+					span.label Not applicable

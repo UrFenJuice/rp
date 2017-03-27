@@ -1,0 +1,29 @@
+#divTenantStep1.tenants__block
+	.tenants__block_head
+		i.tenants__block_head_icon
+			+use('group')
+		h5.tenants__block_head_title Invite your tenant(s) to use RentPayments.
+	.tenants__block_middle
+		.tenant-add.tenants__block_left
+			h5 Tenant 1
+			.atname.form-group.tenants__block_left_item
+				| First Name
+				input#MainContent_FirstName.tenants__block_left_input(name='ctl00$MainContent$FirstName', type='text')
+			.atname.form-group.tenants__block_left_item
+				| Last Name
+				input#MainContent_LastName.tenants__block_left_input(name='ctl00$MainContent$LastName', type='text')
+			.atname.form-group.tenants__block_left_item
+				| E-Mail
+				input#MainContent_EMail.tenants__block_left_input(name='ctl00$MainContent$EMail', type='text')
+		.frequestly.tenants__block_right
+			h5 Frequestly Asked Questions
+			.tenants__block_right_txt
+				h6 What happens when I add tenant?
+				p We will send an invitation to every tenant you add.
+			.tenants__block_right_txt
+				h6 Can I add guest tenants?
+				p
+					| Guest Tenants wii be added to the property details but they are not responsible for paying the rent. You can add guest tenants by clicking “Add Another Tenant”
+	.tenants__block_footer
+		a(href="#").tenants__block_footer_add_link
+			| ADD ANOTHER TENANT

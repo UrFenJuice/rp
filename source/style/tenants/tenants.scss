@@ -168,6 +168,8 @@
         flex: 0 1 1120px;
     }
     @include breakpoint(320px) {
+        & .tenants__block_right-twocolumns_top,
+        & .tenants__block_right-twocolumns_bottom,
         &>div {
             padding: 27px 30px;
             font-size: 11px;
@@ -180,6 +182,8 @@
         }
     }
     @include breakpoint(2600px) {
+        & .tenants__block_right-twocolumns_top,
+        & .tenants__block_right-twocolumns_bottom,
         &>div {
             padding: 80px 90px 90px 90px;
             font-size: 26px
@@ -188,10 +192,19 @@
             font-size: 30px;
         }
     }
+    & .tenants__block_right-twocolumns_top,
+    & .tenants__block_right-twocolumns_bottom {
+        margin: 0!important;
+    }
+    & .tenants__block_right-twocolumns {
+        border: none;
+        padding: 0;
+    }
 }
 .tenants__block_left_item {
     @include breakpoint(320px) {
         margin-top: 26px;
+        width: 100%;
     }
     @include breakpoint(26000px) {
         margin-top: 73px;
@@ -287,5 +300,71 @@
 }
 .tenants__block_left_input {
     @extend .rp__input;
+}
+.tenants__block_left_item-calendar {
+    position: absolute;
+    top: 50%;
+    & .input-group-addon {
+        display: inline-block;
+    }
+    & .my_svg {
+        fill: #f7941d;
+    }
+    @include breakpoint(320px) {
+        margin-top: -5px;
+        right: 10px;
+        & .my_svg {
+            width: 12px;
+            height: 12px;
+        } 
+    }
+    @include breakpoint(2600px) {
+        margin-top: -13px;
+        right: 30px;
+        & .my_svg {
+            width: 32px;
+            height: 32px;
+        } 
+    }
+}
+.form-group-calend .input-group {
+    position: relative;
+}
+.tenants__block_left_input_icon {
+    background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ5MiA0OTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ5MiA0OTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMzJweCIgaGVpZ2h0PSIzMnB4Ij4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNMzcwLjUsMjU0Yy0xNC42NjctMTEuMzMzLTM2LjY2Ny0yMC42NjctNjYtMjhsLTIzLTV2LTk3YzAuNjY3LDAuNjY3LDEuMzMzLDEsMiwxczEsMC4zMzMsMSwxICAgIGMxOS4zMzQsOS4zMzMsMjkuNjY4LDI1LjMzMywzMSw0OGg3N2MtMS4zMzMtNDAtMTYuMzMzLTcwLjY2Ny00NS05MmMtMTguNjY3LTE0LTQwLjY2Ny0yMy4zMzMtNjYtMjhWMGgtNzF2NTIgICAgYy0zMy4zMzMsNC01OS42NjcsMTQuNjY3LTc5LDMyYy0yNS4zMzMsMjIuNjY3LTM4LDUxLjMzNC0zOCw4NmMwLDM3LjMzMywxMyw2NSwzOSw4M2MxNCwxMCw0MCwxOS4zMzMsNzgsMjh2MTA0ICAgIGMtMTQtNC0yNC42NjctMTAuMzMzLTMyLTE5Yy04LTkuMzMzLTEzLTIyLTE1LTM4aC03NmMwLDM5LjMzMywxNC4zMzMsNzAuMzMzLDQzLDkzYzIwLjY2NywxNiw0Ny4zMzMsMjYuMzMzLDgwLDMxdjQwaDcxdi0zOSAgICBjMzQuNjY3LTQuNjY3LDYyLjMzMy0xNS42NjcsODMtMzNjMjYuNjY3LTIzLjMzMyw0MC01Mi42NjcsNDAtODhDNDA0LjUsMjk4LDM5My4xNjcsMjcyLDM3MC41LDI1NHogTTIxMC41LDIwNCAgICBjLTExLjMzMy0zLjMzMy0xOS4zMzMtNi4zMzMtMjQtOWMtMTIuNjY3LTYuNjY3LTE5LTE3LTE5LTMxYzAtMTUuMzMzLDYuMzMzLTI3LDE5LTM1YzYuNjY3LTQsMTQuNjY3LTcuMzMzLDI0LTEwVjIwNHogTTI5My41LDM4MyAgICBjLTMuMzMzLDEuMzMzLTcuMzMzLDIuMzMzLTEyLDN2LTg5YzEyLjY2Nyw0LDIyLjMzMyw4LDI5LDEyYzExLjMzMyw3LjMzMywxNywxNy4zMzMsMTcsMzBDMzI3LjUsMzYwLjMzMywzMTYuMTY3LDM3NSwyOTMuNSwzODN6IiBmaWxsPSIjZjc5NDFkIi8+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
+    background-repeat: no-repeat;
+    background-position-y: 50% ;
+    @include breakpoint(320px) {
+        background-size: 12px;
+        background-position-x: 5px;
+        padding-left: 20px; 
+    }
+    @include breakpoint(2600px) {
+        background-size: 32px;
+        background-position-x: 20px;
+        padding-left: 30px; 
+    }
+}
+.tenants__block_right-twocolumns {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    & > div {
+        border: 2px solid #eff1f7;
+    }
+}
+.tenants__block_left_input + .add-on > .input-group-addon {
+    padding: 0!important;
+}
+.bootstrap-datetimepicker-widget.dropdown-menu {
+    width: auto!important;
+}
+.tenants__block_middle_utilities {
+    flex-flow: row wrap;
+    &>div{
+        margin-left: 0!important;
+        border: none;
+        flex: 0 1 530px;
+    }
 }
 /*!tenants*/

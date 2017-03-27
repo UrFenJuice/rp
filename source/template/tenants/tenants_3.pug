@@ -1,0 +1,44 @@
+#divTenantStep3.tenants__block
+	.tenants__block_head
+		i.tenants__block_head_icon
+			+use('dog')
+		h5.tenants__block_head_title Security deposits and pets
+	.tenants__block_middle
+		.tenant-add.tenants__block_left
+			h5 Do You Require a Bond?
+			.y-n
+				.radio-b.checked
+					label
+						span.radio
+							input#MainContent_BondMonth2MonthRent(type='radio', name='ctl00$MainContent$Bond', value='BondMonth2MonthRent', onclick='BondFixidTermContractExpiringOn(false);')
+							label(for='MainContent_BondMonth2MonthRent') Month-To-Month rent
+						span.radio-custom
+						span.label No
+				.radio-b
+					label
+						span.radio
+							input#MainContent_BondFixidTermContractExpiringOn(type='radio', name='ctl00$MainContent$Bond', value='BondFixidTermContractExpiringOn', checked='checked', onclick='BondFixidTermContractExpiringOn(true);')
+							label(for='MainContent_BondFixidTermContractExpiringOn') Fixid Term Contract Expiring On:
+						span.radio-custom
+						span.label Yes
+			.form-group.bond_am.tenants__block_left_item
+				| Bond Amount
+				input#MainContent_BondAmount.tenants__block_left_input.tenants__block_left_input_icon(name='ctl00$MainContent$BondAmount', type='text')
+			.form-group.due_on.tenants__block_left_item
+				| Due On
+				.form-group-calend
+					#divDueOn.input-group.date
+						input#MainContent_BondDueOn.tenants__block_left_input(name='ctl00$MainContent$BondDueOn', data-format='dd/MM/yyyy hh:mm', type='text')
+						span.add-on.tenants__block_left_item-calendar
+							i.input-group-addon
+								+use('calendar')
+		.tenant-add.tenants__block_right
+			h5 Pets
+			ul#pets(style='list-style-type: none;')
+				li.no_pets No pets added.
+			a.tenants__block_footer_add_link(onclick='return ShowAddPetsControl();')
+				| ADD PETS
+	.tenants__block_footer
+		a#MainContent_LinkButton1.tenants__block_footer_add_link(onclick='ShowhdnMoveInCostsGrid(); return false;', href="javascript:__doPostBack('ctl00$MainContent$LinkButton1','')")
+			| ADD MOVE-IN COSTS
+	input#MainContent_hdnMoveInCosts(type='hidden', name='ctl00$MainContent$hdnMoveInCosts')
