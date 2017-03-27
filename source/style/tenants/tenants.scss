@@ -361,10 +361,20 @@
 }
 .tenants__block_middle_utilities {
     flex-flow: row wrap;
+    justify-content: flex-start;
+    border: 2px solid #eff1f7;
     &>div{
         margin-left: 0!important;
         border: none;
         flex: 0 1 530px;
+    }
+    & .my_svg {
+        width: 32px;
+        height: 32px;
+        fill: #c69c6d;
+    }
+    & h6 {
+        color: #c69c6d;
     }
 }
 /*!tenants*/
