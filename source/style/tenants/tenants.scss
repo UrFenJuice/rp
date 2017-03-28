@@ -128,15 +128,51 @@
 		right: 0;
 		left: 0;
 		z-index: 1;
-        @include breakpoint(320px) {
+	}
+    @include breakpoint(320px) {
+        #group {
             width: 99px;
             height: 99px;
         }
-        @include breakpoint(2600px) {
+        #set-up-your-rent {
+            width: 59px;
+            height: 59px;
+        }
+        #dog {
+            width: 80px;
+            height: 80px;
+        }
+        #house {
+            width: 81px;
+            height: 81px;
+        }
+        #flag {
+            width: 69px;
+            height: 69px;
+        }
+    }
+    @include breakpoint(2600px) {
+        #group {
             width: 256px;
             height: 256px;
         }
-	}
+        #set-up-your-rent {
+            width: 153px;
+            height: 153px;
+        }
+        #dog {
+            width: 207px;
+            height: 207px;
+        }
+        #house {
+            width: 209px;
+            height: 209px;
+        }
+        #flag {
+            width: 180px;
+            height: 180px;
+        }
+    }
 }
 .tenants__block_head_title {
     text-align: center;
@@ -168,7 +204,19 @@
         flex: 0 1 1120px;
     }
     @include breakpoint(320px) {
-        & .tenants__block_right-twocolumns_top,
+        & .tenants__block_right-twocolumns_top {
+            padding: 17px 30px;
+            font-size: 14px;
+            & .label {
+                font-size: 11px;
+            }
+            & .radio-b:nth-child(1) {
+                margin-top: 17px;
+            }
+            & label {
+                margin-bottom: 0;
+            }
+        }
         & .tenants__block_right-twocolumns_bottom,
         &>div {
             padding: 27px 30px;
@@ -221,7 +269,7 @@
         color: #a8adc2;
     }
     @include breakpoint(320px) {
-        padding: 9px 18px 10px;
+        padding: 9px 0 10px 18px;
         margin-bottom: 16px;
         & p {
             font-size: 10px;
@@ -254,14 +302,17 @@
     border-top: 2px solid #f4f5f9;
     display: flex;
     justify-content: center;
-    & a:nth-last-child(2n+1) {
-        margin-right: 75px;
-    }
     @include breakpoint(320px) {
         padding: 22px 0;
+        & a:nth-last-child(2n+1) {
+            margin-right: 30px;
+        }
     }
     @include breakpoint(2600px) {
         padding: 55px 0;
+        & a:nth-last-child(2n+1) {
+            margin-right: 75px;
+        }
     }
 }
 .tenants__block_footer {
@@ -366,15 +417,218 @@
     &>div{
         margin-left: 0!important;
         border: none;
-        flex: 0 1 530px;
     }
     & .my_svg {
-        width: 32px;
-        height: 32px;
         fill: #c69c6d;
     }
     & h6 {
         color: #c69c6d;
+        display: flex;
+        align-items: center;
+    }
+    @include breakpoint(320px) {
+        & .my_svg {
+            width: 12px;
+            height: 12px;
+        }
+        &>div {
+            flex: 0 1 200px;
+        }
+        & .my_svg {
+            margin-right: 5px;
+        }
+        & h6 {
+            margin-bottom: 15px;
+        }
+    }
+    @include breakpoint(2600px) {
+        & .my_svg {
+            width: 32px;
+            height: 32px;
+        }
+        &>div {
+            flex: 0 1 530px;
+        }
+        & .my_svg {
+            margin-right: 10px;
+        }
+        & h6 {
+            margin-bottom: 30px;
+        }
+    }
+}
+.tenants__block_middle .tenants__block_middle_centered {
+    flex: 1 1 auto;
+}
+.tenants__block_middle_centered-middle {
+    display: flex;
+    justify-content: space-between;
+    @include breakpoint(320px) {
+        margin-bottom: 11px;
+    }
+    @include breakpoint(2600px) {
+        margin-bottom: 23
+        px;
+    }
+}
+.tenants__block_middle_centered-middle_block {
+    @include breakpoint(320px) {
+        flex: 0 1 370px;
+        &>h5 {
+            font-size: 13px;
+            margin-bottom: 25px;
+        }
+        & p {
+            line-height: 1.6;
+        }
+    }
+    @include breakpoint(2600px) {
+        flex: 0 1 905px;
+        &>h5 {
+            font-size: 30px;
+            margin-bottom: 70px;
+        }
+    }
+}
+.tenants__block_middle_centered-middle_block h6 {
+    font-family: $second-font;
+    @include breakpoint(320px) {
+        font-size: 11px;
+        margin-top: 42px;
+        margin-bottom: 15px;
+    }
+    @include breakpoint (2600px) {
+        font-size: 26px;
+        margin-top: 108px;
+        margin-bottom: 44px;
+    }
+}
+.tenants__block_middle_centered-middle_block-list {
+    & li {
+        color: #662d91;
+        list-style: disc;
+        list-style-position: inside;
+        & span {
+            color: #000;
+        }
+        @include breakpoint(320px) {
+            margin-bottom: 5px;
+        }
+        @include breakpoint(2600px) {
+            margin-bottom: 19px;
+        }
+    }
+}
+textarea.addit-textarea {
+    @include breakpoint(320px) {
+        height: 60px;
+    }
+    @include breakpoint(2600px) {
+        height: 160px;
+    }
+}
+.tenants__block_conf {
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    @include breakpoint(320px) {
+        margin: 33px 0 0 0;
+        & .steps {
+            flex: 0 1 430px;
+            margin-bottom: 45px;
+            & .step__middle {
+               padding: 21px 25px;
+               font-size: 11px;
+               color: #a3a7b9; 
+            }
+        }
+    }
+    @include breakpoint(2600px) {
+        margin: 85px 0 0 0;
+        & .steps {
+            flex: 0 1 1120px;
+            margin-bottom: 112px;
+            & .step__middle {
+               padding: 60px 65px;
+               font-size: 26px; 
+            }
+        }
+    }
+    & .step__head {
+        background-color: #f4f5f9;
+        display: flex;
+        justify-content: space-between;
+        @include breakpoint(320px) {
+            font-size: 13px;
+            padding: 16px 25px;
+            & .step__head_edit {
+                color: #c8cde2;
+                font-family: $second-font;
+                font-size: 9px;
+                display: flex;
+                align-items: center;
+            }
+            & #edit_sm {
+                width: 12px;
+                height: 12px;
+                fill: #c8cde2;
+            }
+        }
+        @include breakpoint(2600px) {
+            font-size: 30px;
+            padding: 44px 65px;
+            & .step__head_edit {
+                font-size: 22px;
+            }
+            & #edit_sm {
+                width: 32px;
+                height: 32px;
+            }
+        }
+    }
+}
+.utilities-step {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    & .my_svg {
+        fill: #a3a7b9;
+    }
+    & .uti-step {
+        display: flex;
+        align-items: center;
+    }
+    & .uti-step-icon {
+        margin-right: 6px;
+    }
+    @include breakpoint(320px) {
+        & .my_svg {
+            width: 12px;
+            height: 12px;
+        }
+        & .uti-step {
+            flex: 0 1 100px;
+            margin-bottom: 10px;
+        }
+    }
+    @include breakpoint(2600px) {
+        & .my_svg {
+            width: 32px;
+            height: 32px;
+        }
+        & .uti-step {
+            flex: 0 1 265px;
+            margin-bottom: 31px;
+        }
+    }
+}
+.step__middle {
+    & label {
+        font-weight: normal;
+    }
+    & p {
+        padding: 0;
     }
 }
 /*!tenants*/

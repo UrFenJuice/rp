@@ -5,64 +5,95 @@
 		h5.tenants__block_head_title Summary
 	.tenants__block_middle
 		.tenants__block_middle_centered
-			h5 Confirm your lease setup and invite your tenants.
-			p.everything
-				| Everything look correct? Clicking “confirm” will send your lease terms to the tenants. They can also sign up using the email you entered.
-
-			h6 Your Tenants will need to:
-			ul.ten-will
-				li.ten-will-need
-					| Сreate an account
-				li.ten-will-need
-					| Set up their payments
-				li.ten-will-need
-					| Add their bank accounts
-				li.ten-will-need
-					| Verify bank accounts (can take 2-3 business days)
-			h6 Additional Notes/Details
-			textarea.addit-textarea
-	.tenants__block_middle.tenants__block_middle_utilities
+			.tenants__block_middle_centered
+				.tenants__block_middle_centered-middle
+					.tenants__block_middle_centered-middle_block
+						h5 Confirm your lease setup and invite your tenants.
+						p
+							| Everything look correct? Clicking “confirm” will send your lease terms to the tenants. They can also sign up using the email you entered.
+					.tenants__block_middle_centered-middle_block
+						h6 Your Tenants will need to:
+						ul(type="disc").tenants__block_middle_centered-middle_block-list
+							li
+								span Сreate an account
+							li
+								span Set up their payments
+							li
+								span Add their bank accounts
+							li
+								span Verify bank accounts (can take 2-3 business days)
+				.tenants__block_middle_centered-footer
+					h6 Additional Notes/Details
+					textarea.addit-textarea.tenants__block_left_input
+	.tenants__block_conf
 		.steps
-			.step-tenant
+			.step__head
 				| Tenants
-				a.edit(href='')
-			p#pFullName.step-tenant-name
-			p#pEmail.step-tenant-e-mail johhnyboy@gmail.com
+				a.step__head_edit(href='')
+					i.step__head_idut-icon
+						+use("edit_sm")
+					| edit
+			.step__middle
+				p#pFullName.step-tenant-name
+				p#pEmail.step-tenant-e-mail johhnyboy@gmail.com
 		.steps
-			.step-rent
+			.step__head
 				| Rent
-				a.edit(href='')
-			p.step-rent-summ
-				| $
-				label#lblRentCostSumm
-					| /
-					label#lblFrequency
-		.steps
-			.step-tenant
-				| Bonds & Pets
-				a.edit(href='')
-			.col-lg-2.col-xs-3.bond-summ
-				p.step-bond Bond
-				p.step-bond-summ
+				a.step__head_edit(href='')
+					i.step__head_idut-icon
+						+use("edit_sm")
+					| edit
+			.step__middle
+				p.step-rent-summ
 					| $
-					label#lblBondCost
-			.col-lg-2.col-xs-3.pets-summ
-				p.step-bond Pets
-				ul#petsSumary.step-bond-summ No pets
+					label#lblRentCostSumm
+						| /
+						label#lblFrequency
 		.steps
-			.step-rent
+			.step__head
+				| Bonds & Pets
+				a.step__head_edit(href='')
+					i.step__head_idut-icon
+						+use("edit_sm")
+					| edit
+			.step__middle
+				.bond-summ
+					p.step-bond Bond
+					p.step-bond-summ
+						| $
+						label#lblBondCost
+	
+
+		.steps
+			.step__head
 				| Utilities
-				a.edit(href='')
-			.utilities-step
-				.uti-step
-					p#pElectrUtils Tenant pays
-				.uti-step
-					p#pWaterUtils Landlord pays
-				.uti-step
-					p#pInternetUtils Tenant pays
-				.uti-step
-					p#pGasUtils Tenant pays
-				.uti-step
-					p#pPhoneUtils Landlord pays
-				.uti-step
-					p#pTvUtils Tenant pays
+				a.step__head_edit(href='')
+					i.step__head_idut-icon
+						+use("edit_sm")
+					| edit
+			.step__middle
+				ul.utilities-step
+					li.uti-step
+						i.uti-step-icon
+							+use("flash")
+						p#pElectrUtils Tenant pays
+					li.uti-step
+						i.uti-step-icon
+							+use("water")
+						p#pWaterUtils Landlord pays
+					li.uti-step
+						i.uti-step-icon
+							+use("wifi")
+						p#pInternetUtils Tenant pays
+					li.uti-step
+						i.uti-step-icon
+							+use("gas")
+						p#pGasUtils Tenant pays
+					li.uti-step
+						i.uti-step-icon
+							+use("phone")
+						p#pPhoneUtils Landlord pays
+					li.uti-step
+						i.uti-step-icon
+							+use("tv")
+						p#pTvUtils Tenant pays
