@@ -59,7 +59,8 @@ h1 {
 	}
 }
 a,
-a:hover {
+a:hover,
+a:focus {
 	text-decoration: none;
 	cursor: pointer;
     color: inherit;
@@ -143,6 +144,8 @@ i {
 @import 'properties/create';
 
 @import 'tenants/tenants';
+
+@import 'user/profile';
 
 @import 'common/scroll';
 
