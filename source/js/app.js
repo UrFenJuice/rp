@@ -18,6 +18,20 @@ jQuery(function($){
                 item.removeClass('active')
             }
         });
+        $('.personal__menu-list_item-link').on('click', function(e){
+            e.preventDefault();
+
+            var item = $(this).closest('.personal__menu-list_item'),
+                contentItem = $('.personal__block-list_item'),
+                itemPosition = item.data('class');
+
+            contentItem.filter('.personal__block-list_item-' + itemPosition)
+                .add(item)
+                .addClass('active')
+                .siblings()
+                .removeClass('active');
+
+        });
     });
 })
 function e(e, t) {

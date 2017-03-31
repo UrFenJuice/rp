@@ -49,18 +49,22 @@ $left-menu-color: #010101;
 	font-family: $second-font;
 	transition: color 0.3s;
 	transition: background-color 0.3s;
-	color: $white-text;
+	color: #c9ccd7;
 	text-transform: uppercase;
     text-align: center;
     display: inline-block;
+    border: 2px solid #e9ebf4;
+    background: linear-gradient(to top, #f9fafd, #fff, #fff);
 	&:hover {
-		background-color: $white-text;
+		background: #33dd97;
+        border-color: #2dc888;
+        color: #fff;
 	}
 	@include breakpoint(320px) {
 		min-width: 132px;
 		font-size: 8.56px;
 		padding: 13.5px 34.36px;
-		border-radius: 60px;
+		border-radius: 6px;
 		bottom: 22px;
 		right: 22px;
     }
@@ -71,8 +75,7 @@ $left-menu-color: #010101;
     @include breakpoint(2600px) {
     	min-width: 310px;
     	font-size: 20px;
-    	padding: 30px 81px;
-		border-radius: 60px;
+    	padding: 26px 61px;
     	bottom: 45px;
 		right: 40px;
     }

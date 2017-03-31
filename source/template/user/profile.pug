@@ -8,20 +8,20 @@
 			p We need to verify your identity in order to transfer funds to you. You’ll only need to do this one. 
 			a(href="#") verify now
 	ul.personal__menu-list  
-		li.personal__menu-list_item
-			a(href="#").personal__menu-list_item-link.active
+		li.personal__menu-list_item.active(data-class="first")
+			a(href="#").personal__menu-list_item-link
 				| Personal Information & Password
-		li.personal__menu-list_item
+		li.personal__menu-list_item(data-class="second")
 			a(href="#").personal__menu-list_item-link
 				| Bussines Information
-		li.personal__menu-list_item
+		li.personal__menu-list_item(data-class="third")
 			a(href="#").personal__menu-list_item-link
 				| Accounts & Payments 
-		li.personal__menu-list_item
+		li.personal__menu-list_item(data-class="fourth")
 			a(href="#").personal__menu-list_item-link
 				| Verification
 	ul.personal__block-list
-		li.personal__block-list_item
+		li.personal__block-list_item.personal__block-list_item-first.active
 			.personal__block-list_item_personal
 				.personal__block-list_item_personal-info
 					.personal__block-list_item_personal_head
@@ -40,25 +40,25 @@
 									|add photo
 							#checkuserdata.personal__block-list_item_personal_middle-form(role='form')
 								.form-group.personal__block-list_item_personal_middle-form-item
-									| First Name
+									span First Name
 									input#MainContent_tbFirstNameChange(name='ctl00$MainContent$tbFirstNameChange', type='text', value='Dmitry', data-bv-field='ctl00$MainContent$tbFirstNameChange')
 								.form-group.personal__block-list_item_personal_middle-form-item
-									| Last Name
+									span Last Name
 									input#MainContent_tbLastNameChange(name='ctl00$MainContent$tbLastNameChange', type='text', value='Ososkov', data-bv-field='ctl00$MainContent$tbLastNameChange')
 								.form-group.personal__block-list_item_personal_middle-form-item
-									| Email
+									span Email
 									input#MainContent_tbEmailChange(name='ctl00$MainContent$tbEmailChange', type='email', value='dososkov@gmail.com', data-bv-field='ctl00$MainContent$tbEmailChange')
 								.form-group.personal__block-list_item_personal_middle-form-item
-									| Phone
+									span Phone
 									input#MainContent_tbPhoneChange(name='ctl00$MainContent$tbPhoneChange', type='tel', data-bv-field='ctl00$MainContent$tbPhoneChange')
 								.form-group.personal__block-list_item_personal_middle-form-item
-									| Address
+									span Address
 									input#MainContent_tbAddressChange(name='ctl00$MainContent$tbAddressChange', type='text', value='роь')
 								.form-group.personal__block-list_item_personal_middle-form-item
-									| DOB
+									span DOB
 									input#MainContent_tbDOBChange(name='ctl00$MainContent$tbDOBChange', type='text', value='прть')
-								a#MainContent_lbChangeSave.btn.btn-default.save_change(onclick='return false;', href="javascript:__doPostBack('ctl00$MainContent$lbChangeSave','')")
-									.Show-me-how SAVE
+								a#MainContent_lbChangeSave.rp__btn.personal__block-list_item_personal_middle-form_link(onclick='return false;', href="javascript:__doPostBack('ctl00$MainContent$lbChangeSave','')")
+									| SAVE
 				.personal__block-list_item_personal-password
 					.personal__block-list_item_personal_head
 						i.personal__block-list_item_personal_head-icon
@@ -68,17 +68,23 @@
 						.personal__block-list_item_personal_middle-block(onkeypress="javascript:return WebForm_FireDefaultButton(event, 'MainContent_lbChangePassword')")
 							#checkpassword.personal__block-list_item_personal_middle-form(role='form')
 								.form-group.personal__block-list_item_personal_middle-form-item
-									| Current Password
+									span Current Password
 									input#MainContent_tbCurrentPasswordChange.current_password_change(name='ctl00$MainContent$tbCurrentPasswordChange', type='password', maxlength='25', data-bv-field='ctl00$MainContent$tbCurrentPasswordChange')
 								.form-group.personal__block-list_item_personal_middle-form-item
-									| New Password
+									span New Password
 									input#MainContent_tbNewPasswordChange.new_password_change(name='ctl00$MainContent$tbNewPasswordChange', type='password', maxlength='25', data-bv-field='ctl00$MainContent$tbNewPasswordChange')
 								.form-group.personal__block-list_item_personal_middle-form-item
-									| Confirm
+									span Confirm
 									input#MainContent_tbConfirmChange.confirm_change(name='ctl00$MainContent$tbConfirmChange', type='password', maxlength='25', data-bv-field='ctl00$MainContent$tbConfirmChange')
-								a#MainContent_lbChangePassword.btn.btn-default.save_password(href="javascript:__doPostBack('ctl00$MainContent$lbChangePassword','')")
+								a#MainContent_lbChangePassword.rp__btn.personal__block-list_item_personal_middle-form_link(href="javascript:__doPostBack('ctl00$MainContent$lbChangePassword','')")
 									| SAVE PASSWORD
-								a(href='№') Forgot my current password
-		li.personal__block-list_item
-		li.personal__block-list_item
-		li.personal__block-list_item
+								div
+									a(href='#').personal__block-list_item_personal_middle-form_link-pass
+										+use("help-button")
+										| Forgot my current password
+		li.personal__block-list_item.personal__block-list_item-second
+			| test2
+		li.personal__block-list_item.personal__block-list_item-third
+			| test3
+		li.personal__block-list_item.personal__block-list_item-fourth
+			| test4
