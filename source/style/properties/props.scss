@@ -56,7 +56,7 @@
 		color: #cdcfd7;
 		background-color: #fff;
 		display: block;
-		border-radius: 50%;
+		border-radius: 6px;
 		text-align: center;
 	    line-height: 0.44;
 	    cursor: pointer;
@@ -80,9 +80,13 @@
 	}
 	& .rp__details {
 		position: absolute;
-		background-color: $green-element;
+		background: $green-element;
+		border-color: #2dc888;
+		color: #fff;
 		&:hover {
-			color: $green-element;
+			color: #c9ccd7;
+			border-color: #e9ebf4;
+    		background: linear-gradient(to top, #f9fafd, #fff, #fff);
 		}
 		@extend .rp__btn;
 	}
@@ -556,7 +560,7 @@
 			font-size: 23px;
 		}
 	}
-	&:before {
+	/*&:before {
 		content: '';
 		position: absolute;
 		border-radius: 0%;
@@ -573,14 +577,14 @@
 			border-bottom: 15px solid white;
 			margin-left: -7.5px;
 		}
-	}
+	}*/
 	@include breakpoint(320px) {
-		border-radius: 22.5px;
+		border-radius: 6px;
 		top: 52px;
 		left: -200%;
 	}
 	@include breakpoint(2600px) {
-		border-radius: 45px;
+		border-radius: 6px;
 		top: 105px;
 		left: -170%;
 		min-width: 250px;
@@ -610,19 +614,19 @@
 	@include breakpoint(320px) {
 		padding: 12px 22.5px;
 		&:nth-child(1) {
-			border-radius: 22.5px 22.5px 0 0;
+			border-radius: 6px 6px 0 0;
 		}
 		&:nth-last-child(1) {
-			border-radius: 0 0 22.5px 22.5px;
+			border-radius: 0 0 6px 6px;
 		}
 	}
 	@include breakpoint(2600px) {
 		padding: 24px 45px;
 		&:nth-child(1) {
-			border-radius: 45px 45px 0 0;
+			border-radius: 6px 6px 0 0;
 		}
 		&:nth-last-child(1) {
-			border-radius: 0 0 45px 45px;
+			border-radius: 0 0 6px 6px;
 		}
 	}
 	&:hover {
