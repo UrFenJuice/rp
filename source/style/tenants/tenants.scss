@@ -413,6 +413,8 @@
     top: 50%;
     & .input-group-addon {
         display: inline-block;
+        width: 100%;
+        background-color: transparent;
     }
     @include breakpoint(320px) {
         margin-top: -5px;
@@ -463,6 +465,9 @@
 }
 .tenants__block_left_input + .add-on > .input-group-addon {
     padding: 0!important;
+}
+.add-on + .form-control-feedback {
+    display: none!important;
 }
 .bootstrap-datetimepicker-widget.dropdown-menu {
     width: auto!important;

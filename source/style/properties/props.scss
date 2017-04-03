@@ -1,8 +1,8 @@
 .properties__block_list {
 	display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
+    //justify-content: flex-start;
+    //align-items: flex-start;
     padding: 0;
     margin: 0;
 }
@@ -11,16 +11,19 @@
 	background-color: #fff;
 	@include breakpoint(900px) {
 		width: 604px;
+		height: 542px;
 		margin-right: 28px;
 		margin-bottom: 33px;
 	}
 	@include breakpoint(1170px) {
 		width: 453px;
+		height: 542px;
 		margin-right: 28px;
 		margin-bottom: 33px;
 	}
 	@include breakpoint(2600px) {
 		width: 1060px;
+		height: 1233px;
 		margin-right: 60px;
 		margin-bottom: 75px;
 	}
@@ -56,7 +59,7 @@
 		color: #cdcfd7;
 		background-color: #fff;
 		display: block;
-		border-radius: 50%;
+		border-radius: 6px;
 		text-align: center;
 	    line-height: 0.44;
 	    cursor: pointer;
@@ -77,12 +80,20 @@
 			top: 40px;
 			right: 40px;
 	    }
+	    &:hover {
+	    	background-color: #f4f5f9;
+	    	border-radius: 6px 6px 0 0;
+	    }
 	}
 	& .rp__details {
 		position: absolute;
-		background-color: $green-element;
+		background: linear-gradient(to top, $green-element, $green-element, $green-element);
+		border-color: #2dc888;
+		color: #fff;
 		&:hover {
-			color: $green-element;
+			color: #c9ccd7;
+		    background: linear-gradient(to top, #f9fafd, #fff, #fff);
+		    border-color: #e9ebf4;
 		}
 		@extend .rp__btn;
 	}
@@ -96,8 +107,16 @@
 			padding-left: 27px;
 		}
 		.properties__block_list-item_info-status_board {
-			padding-top: 14px;
-			padding-bottom: 14px;
+			padding-top: 19px;
+			padding-bottom: 18px;
+		}
+		.status__property-vacant {
+			padding-top: 50px;
+    		padding-bottom: 50px;
+		}
+		.status__property-vacant + div {
+			padding-top: 33px;
+			padding-bottom: 33px;
 		}
 	}
 	@include breakpoint(2600px) {
@@ -108,8 +127,16 @@
 			padding-left: 60px;
 		}
 		.properties__block_list-item_info-status_board {
-			padding-top: 30px;
-			padding-bottom: 30px;
+			padding-top: 39px;
+			padding-bottom: 39px;
+		}
+		.status__property-vacant {
+			padding-top: 107px;
+    		padding-bottom: 107px;
+		}
+		.status__property-vacant + div {
+			padding-top: 68px;
+			padding-bottom: 68px;
 		}
 	}
 }
@@ -150,22 +177,36 @@
 	border-bottom: 2px solid $background-content-color;
 	@include breakpoint(320px) {
 		margin-top: 15px;
-		height: 110px;
+		min-height: 110px;
 	}
 	@include breakpoint(2600px) {
 		margin-top: 42px;
-	    height: 230px;
+	    min-height: 230px;
 	}
 }
 .properties__block_list-item_info-status_board {
 	text-transform: uppercase;
 	display: flex;
 	align-items: center;
+	flex-wrap: wrap;
 	margin: auto;
 	width: 100%;
 	& a {
 		display: flex;
 		align-items: center;
+	}
+	& span {
+	    flex: 1 1 100%;
+	    color: #9194a1;
+	    text-transform: initial;
+	    @include breakpoint(320px) {
+			font-size: 11px;
+			margin-top: 15px;
+	    }
+	    @include breakpoint(2600px) {
+			font-size: 25px;
+			margin-top: 40px;
+	    }
 	}
 	&.status__up-to-date {
 		color: $green-text;
@@ -176,8 +217,11 @@
 		fill: $red-text;
 	}
 	& #advertise_prop,
+	&.status__advertise-property {
+		color: #912db2;
+		fill: #912db2;
+	}
 	& #active-listing,
-	&.status__advertise-property,
 	&.status__acive-listing {
 		color: $logotype-color;
 		fill: $logotype-color;
@@ -212,59 +256,75 @@
 		margin-right: 18px;
 	}
 }
+.properties__block_list-item_info-status_board div:nth-child(1) {
+	margin-left: 28px;
+}
 .properties__block_list-item_info-status_link {
 	text-transform: uppercase;
-	text-decoration: underline;
+	& a {
+		border-radius: 6px;
+		margin-left: 17px;
+		@include breakpoint(320px) {
+			padding: 5px 10px;
+		}
+		@include breakpoint(2600px) {
+			padding: 13px 15px;
+		}
+	}
 	& .my_svg {
 		@include breakpoint(320px) {
 			width: 14px;
 			height: 14px;
-			margin-left: 25px;
 		}
 		@include breakpoint(2600px) {
 			width: 32px;
 			height: 32px;
-			margin-left: 60px;
 		}
 	}
 	& #plus {
 		@include breakpoint(320px) {
 			width: 10px;
 			height: 10px;
-			margin-left: 25px;
 		}
 		@include breakpoint(2600px) {
 			width: 24px;
 			height: 24px;
-			margin-left: 50px;
 		}
 	}
 	& .add_tenants {
-		color: #a1a5b7;
+		color: #fff;
+		background-color: #a1a5b7;
 		display: flex;
 		align-items: center;
-		text-decoration: underline;
 		.properties__block_list-item_info-status_link-icon {
-			fill: #a1a5b7;
+			fill: #fff;
 		}
 	}
 	& .send_reminder {
-		color: $red-text;
+		color: #fff;
+		background-color: $red-text;
 		display: flex;
 		align-items: center;
-		text-decoration: underline;
 		.properties__block_list-item_info-status_link-icon {
-			fill: $red-text;
+			fill: #fff;
 		}
 	}
-	& .create_listing,
-	& .applicants_listing {
-		color: $logotype-color;
+	& .create_listing {
+		color: #fff;
+		background-color: #912db2;
 		display: flex;
 		align-items: center;
-		text-decoration: underline;
 		.properties__block_list-item_info-status_link-icon {
-			fill: $logotype-color;
+			fill: #fff;
+		}
+	}
+	& .applicants_listing {
+		color: #fff;
+		background-color: #5788d0;
+		display: flex;
+		align-items: center;
+		.properties__block_list-item_info-status_link-icon {
+			fill: #fff;
 		}
 	}
 	@include breakpoint(320px) {
@@ -300,13 +360,13 @@
 .properties__block_list-item_info-lists {
 	display: flex;
     flex-flow: row wrap;
-    margin-top: 13px;
+    /* margin-top: 13px;
     @include breakpoint(320px) {
     	margin-bottom: 14px;
     }
     @include breakpoint(2600px) {
     	margin-bottom: 60px;
-    }
+    } */
 }
 .properties__block_list-item_info-lists-item {
 	position: relative;
@@ -328,9 +388,9 @@
 	}
 	transition: box-shadow 0.3s;
 	&:hover .properties__block_list-item_info-lists_link{
-		color: $logotype-color;
+		color: #a0a4b4;
 		& .my_svg {
-			fill: $logotype-color!important;
+			fill: #a0a4b4!important;
 		}
 	}
 	&.active {
@@ -350,7 +410,7 @@
 			transform: rotate(180deg);
 		}
 		& #arrow_down {
-			fill: $logotype-color;
+			fill: #a0a4b4;
 		}
 		& .properties__block_list-item_info-lists-item_hover {
 			visibility: visible;
@@ -537,7 +597,7 @@
 		display: block;
 		bottom: 0;
 		width: 100%;
-		height: 77px;
+		height: 10px;
 	}
 }
 .show_more-small_menu {
@@ -556,33 +616,12 @@
 			font-size: 23px;
 		}
 	}
-	&:before {
-		content: '';
-		position: absolute;
-		border-radius: 0%;
-		left: 50%;
-		@include breakpoint(320px) {
-			border: 7.5px solid transparent;
-			border-bottom: 7.5px solid white;
-			margin-left: -3.75px;
-		    top: -13px;
-		}
-		@include breakpoint(2600px) {
-			top: -29px;
-			border: 15px solid transparent;
-			border-bottom: 15px solid white;
-			margin-left: -7.5px;
-		}
-	}
 	@include breakpoint(320px) {
-		border-radius: 22.5px;
-		top: 52px;
-		left: -200%;
+		border-radius: 6px 0 6px 6px;
+		top: 100%;
+	    right: 0px;
 	}
 	@include breakpoint(2600px) {
-		border-radius: 45px;
-		top: 105px;
-		left: -170%;
 		min-width: 250px;
 	}
 }
@@ -610,20 +649,14 @@
 	@include breakpoint(320px) {
 		padding: 12px 22.5px;
 		&:nth-child(1) {
-			border-radius: 22.5px 22.5px 0 0;
+			border-radius: 6px 6px 0 0;
 		}
 		&:nth-last-child(1) {
-			border-radius: 0 0 22.5px 22.5px;
+			border-radius: 0 0 6px 6px;
 		}
 	}
 	@include breakpoint(2600px) {
 		padding: 24px 45px;
-		&:nth-child(1) {
-			border-radius: 45px 45px 0 0;
-		}
-		&:nth-last-child(1) {
-			border-radius: 0 0 45px 45px;
-		}
 	}
 	&:hover {
 		background-color: #f3f4f8;
