@@ -92,8 +92,8 @@
 		color: #fff;
 		&:hover {
 			color: #c9ccd7;
-		    background: linear-gradient(to top, #f9fafd, #fff, #fff);
-		    border-color: #e9ebf4;
+			border-color: #e9ebf4;
+    		background: linear-gradient(to top, #f9fafd, #fff, #fff);
 		}
 		@extend .rp__btn;
 	}
