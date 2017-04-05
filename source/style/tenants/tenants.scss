@@ -78,6 +78,10 @@
             border-color: #662d91;
             background-color: #662d91;
         }
+        &.step6:before {
+            border-color: #c8352d;
+            background-color: #c8352d;
+        }
     }
     & .tenant__form_nav_item-link:hover,
     & .tenant__form_nav_item-link.current-step {
@@ -100,6 +104,10 @@
         &.step5:before {
             border-color: #662d91;
             background-color: #662d91;
+        }
+        &.step6:before {
+            border-color: #c8352d;
+            background-color: #c8352d;
         }
     	color: #000;
     }

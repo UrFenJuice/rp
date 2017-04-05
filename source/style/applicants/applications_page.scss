@@ -1,0 +1,190 @@
+.aplication {
+	background-color: #fff;
+	display: flex;
+	border: 2px solid #e8e9f1;
+	border-radius: 1px;
+}
+.aplication_block {
+	flex: 1 1 1660px;
+	border-right: 2px solid #e8e9f1;
+}
+.aplication_block_header {
+	font-size: 26px;
+	font-family: $fourth-font;
+	display: flex;
+	justify-content: space-between;
+	padding: 32px;
+	& .aplication_block_header_number span {
+		color: #b3b4be;
+	}
+}
+.aplication_block_header_status,
+.aplication_block_header_status .status {
+	display: flex;
+	align-items: center;
+}
+.status {
+	& .my_svg {
+		width: 32px;
+		height: 32px;
+	}
+	& #hourglass {
+		fill: #eab129;
+	}
+	& #correct-symbol {
+		fill: #30d23f;
+	}
+	& #cross-remove-sign {
+		fill: #c8352d;
+	}
+}
+.aplication_block_middle_placement {
+	display: flex;
+	& .aplication_block_middle_placement_photo {
+		flex: 0 1 850px;
+		position: relative;
+		overflow: hidden;
+		height: 640px;
+		& img {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto;
+			height: 100%;
+		}
+	}
+}
+.aplication_block_middle_placement_photo_link {
+	position: absolute;
+	right: 44px;
+	bottom: 32px;
+	background-color: rgba(35, 101, 200, 0.5);
+	border-radius: 50%;
+	padding: 20px 22px;
+	& .my_svg {
+		width: 46px;
+		height: 46px;
+		fill: #fff;
+	}
+}
+.aplication_block_middle_placement_map {
+	flex: 1 1 auto;
+}
+.aplication_block_middle_address {
+	display: flex;
+	flex-direction: column;
+	& .main__address {
+		font-size: 40px;
+		font-family: $fourth-font;
+	}
+	& .sub__address {
+		font-size: 25px;
+		font-family: $third-font;
+		color: #9597a1;
+	}
+}
+.aplication_block_middle_price {
+	font-size: 30px;
+	font-family: $fourth-font;
+}
+.aplication_block_middle_features {
+	display: flex;
+}
+.aplication_block_middle_features_block {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-right: 70px;
+}
+.aplication_block_middle_features_icon {
+	padding: 18px;
+	border-radius: 50%;
+	background-color: #f4f5f9;
+    display: inline-block;
+    position: relative;
+	& .my_svg {
+		width: 64px;
+		height: 64px;
+		fill: #c1c3d0;
+	}
+	& sup {
+		font-size: 26px;
+		font-family: $fourth-font;
+		background-color: #f4511e;
+		border-radius: 50%;
+		width: 43px;
+		height: 43px;
+		color: #fff;
+		display: block;
+		text-align: center;
+		line-height: 1.6;
+		position: absolute;
+		top: -8px;
+		right: -8px;
+	}
+}
+.aplication_chat {
+	flex: 1 1 835px;
+	display: flex;
+	flex-direction: column;
+}
+.aplication_chat_header,
+.aplication_chat_footer {
+	flex: 0 0 auto;
+}
+.aplication_chat_middle {
+	flex: 1 0 auto;
+}
+.aplication_chat_header {
+	display: flex;
+	align-items: center;
+	color: #b6b9c6;
+	font-size: 26px;
+	border-bottom: 2px solid #e8e9f1;
+	padding: 26px 40px;
+	& .aplication_chat_header_icon {
+		display: inline-block;
+		margin-right: 19px;
+		& .my_svg {
+			width: 42px;
+			height: 42px;
+			fill: #b6b9c6;
+		}
+	}
+}
+.aplication_chat_footer {
+	border-top: 2px solid #e8e9f1;
+	& a {
+		font-size: 0;
+		width: 91px;
+		height: 91px;
+		border-left: 2px solid #e8e9f1;
+		position: relative;
+		display: inline-block;
+		& .my_svg {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			margin: auto;
+		}
+		&.aplication_chat_footer_attachment {
+			& .my_svg {
+				width: 24px;
+				height: 24px;
+				fill: #b9bcc9;
+			}
+		}
+		&.aplication_chat_footer_send {
+			background-color: #2dc787;
+			& .my_svg {
+				width: 32px;
+				height: 32px;
+				fill: #fff;
+			}
+		}
+	}
+}
