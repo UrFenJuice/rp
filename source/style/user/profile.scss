@@ -230,6 +230,13 @@
 }
 .personal__block-list_item_personal_middle-form_link {
     margin-top: 44px;
+    color: #c9ccd7;
+    background: linear-gradient(to top, #f9fafd, #fff, #fff);
+	&:hover {
+		background: #33dd97;
+        border-color: #2dc888;
+        color: #fff;
+	}
 }
 .personal__block-list_item_personal_middle-form_link-pass {
 	font-size: 23px;

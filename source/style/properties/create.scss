@@ -1,7 +1,11 @@
 .create-property__cancel {
-	background-color: $red-btn;
+	border-color: #e03737;
+	color: #fff;
+    background: #e94040;
 	&:hover {
-		color: $red-btn;
+		background: #fff;
+        border-color: #e9ebf4;
+        color: #e03737;
 	}
 	@extend .rp__btn;
 	@include breakpoint(320px) {
@@ -14,9 +18,13 @@
 	}
 }
 .create-property__block_footer-create_link {
+	color: #fff;
 	background-color: $green-element;
+	border-color: #2dc888;
 	&:hover {
-		color: $green-element;
+		background-color: #fff;
+		color: #c9ccd7;
+		border-color: #e9ebf4;
 	}
 	@extend .rp__btn;
 	@include breakpoint(320px) {

@@ -53,8 +53,145 @@
 				+use("messages")
 			| Chat with property owner
 		.aplication_chat_middle
+			.aplication_chat_middle_interlocutor
+				| Hello, do you need my service? 
+				.aplication_chat_middle_date 30.11.2016    21:00
+			.aplication_chat_middle_autor
+				| Hi! Very tempting, I'll write you later
+				.aplication_chat_middle_date 30.11.2016    21:00
+			.aplication_chat_middle_interlocutor
+				| Okay
+				.aplication_chat_middle_date 30.11.2016    21:00
 		.aplication_chat_footer
-			input(type="text").aplication_chat_footer_input
+			input(type="text", placeholder="Type your message here...").aplication_chat_footer_input
+			a(href="#").aplication_chat_footer_attachment 
+				+use("attachment")
+				| attachment
+			a(href="#").aplication_chat_footer_send
+				+use("send-message-button")
+				| send message
+
+.aplication
+	.aplication_block
+		.aplication_block_header
+			.aplication_block_header_number
+				| Application number: 
+				span 11422 submitted on 01/03/17
+			.aplication_block_header_status.aplication_block_header_status-pending
+				| Application status:
+				span.status
+					i.status-icon
+						//+use("hourglass")
+						+use("correct-symbol")
+						//+use("cross-remove-sign")
+					| Pending
+		.aplication_block_middle
+			.aplication_block_middle_placement
+				.aplication_block_middle_placement_photo
+					img(src="assets/img/items/item_1.jpg")
+					a(href="#").aplication_block_middle_placement_photo_link
+						i.aplication_block_middle_placement_photo_link_icon
+							+use('photo-frame')
+				.aplication_block_middle_placement_map
+					include ../properties/google_map
+			.aplication_block_middle_address
+				span.main__address
+					| 249/1095 Karangahape Road
+				span.sub__address
+					| North Shore, Auckland
+			.aplication_block_middle_price
+				| $350.00 per week
+			.aplication_block_middle_features
+				.aplication_block_middle_features_block
+					i.aplication_block_middle_features_icon
+						+use("big-mattress")
+						sup 2
+					| Bedrooms
+				.aplication_block_middle_features_block
+					i.aplication_block_middle_features_icon
+						+use("shower-water-running")
+						sup 2
+					| Bathrooms
+				.aplication_block_middle_features_block
+					i.aplication_block_middle_features_icon
+						+use("garage")
+						sup 1
+					| Car Space
+		.aplication_block_footer
+			a(href="#").aplication_block_footer_link-view view application
+			a(href="#").aplication_block_footer_link-withdraw withdraw application
+	.aplication_chat
+		.aplication_chat_header
+			i.aplication_chat_header_icon
+				+use("messages")
+			| Chat with property owner
+		.aplication_chat_middle
+		.aplication_chat_footer
+			input(type="text", placeholder="Type your message here...").aplication_chat_footer_input
+			a(href="#").aplication_chat_footer_attachment 
+				+use("attachment")
+				| attachment
+			a(href="#").aplication_chat_footer_send
+				+use("send-message-button")
+				| send message
+
+.aplication
+	.aplication_block
+		.aplication_block_header
+			.aplication_block_header_number
+				| Application number: 
+				span 11422 submitted on 01/03/17
+			.aplication_block_header_status.aplication_block_header_status-pending
+				| Application status:
+				span.status
+					i.status-icon
+						+use("hourglass")
+						//+use("correct-symbol")
+						//+use("cross-remove-sign")
+					| Pending
+		.aplication_block_middle
+			.aplication_block_middle_placement
+				.aplication_block_middle_placement_photo
+					img(src="assets/img/items/item_1.jpg")
+					a(href="#").aplication_block_middle_placement_photo_link
+						i.aplication_block_middle_placement_photo_link_icon
+							+use('photo-frame')
+				.aplication_block_middle_placement_map
+					include ../properties/google_map
+			.aplication_block_middle_address
+				span.main__address
+					| 249/1095 Karangahape Road
+				span.sub__address
+					| North Shore, Auckland
+			.aplication_block_middle_price
+				| $350.00 per week
+			.aplication_block_middle_features
+				.aplication_block_middle_features_block
+					i.aplication_block_middle_features_icon
+						+use("big-mattress")
+						sup 2
+					| Bedrooms
+				.aplication_block_middle_features_block
+					i.aplication_block_middle_features_icon
+						+use("shower-water-running")
+						sup 2
+					| Bathrooms
+				.aplication_block_middle_features_block
+					i.aplication_block_middle_features_icon
+						+use("garage")
+						sup 1
+					| Car Space
+		.aplication_block_footer
+			a(href="#").aplication_block_footer_link-view view application
+			a(href="#").aplication_block_footer_link-withdraw withdraw application
+	.aplication_chat
+		.aplication_chat_header
+			i.aplication_chat_header_icon
+				+use("messages")
+			| Chat with property owner
+		.aplication_chat_middle
+		.aplication_chat_footer
+			input(type="text", placeholder="Type your message here...").aplication_chat_footer_input
 			a(href="#").aplication_chat_footer_attachment 
 				+use("attachment")
 				| attachment

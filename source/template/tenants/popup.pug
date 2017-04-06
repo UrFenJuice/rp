@@ -1,0 +1,35 @@
+.rp__pop-up
+	p.rp__pop-up_head
+		| Add Tenants
+	.rp__pop-up_middle
+		.rp__pop-up_middle_block
+			i.rp__pop-up_middle_block_icon
+				+use("popup_group")
+			.rp__pop-up_middle_block_title
+				| Current Tenants
+			.rp__pop-up_middle_block_info
+				| My tenants are already living at this property
+			.rp__pop-up_middle_block_btn
+				a(href="#").rp__pop-up_middle_block_btn_link
+					| select
+		.rp__pop-up_middle_block
+			i.rp__pop-up_middle_block_icon
+				+use("popup_user")
+			.rp__pop-up_middle_block_title
+				| New Tenants
+			.rp__pop-up_middle_block_info
+				| My tenants will be moving in soon. 
+				br
+				| They are moving in on
+			.rp__pop-up_middle_block_calendar
+				input.rp__pop-up_middle_block_calendar_input(name='', data-format='dd/MM/yyyy', type='text')
+				span.add-on.tenants__block_left_item-calendar
+					i.input-group-addon
+						+use('calendar')
+			.rp__pop-up_middle_block_btn
+				a(href="#").rp__pop-up_middle_block_btn_link
+					| select
+	a(href="#").rp__pop-up_close
+		i.rp__pop-up_close_icon
+			+use("close")
+		|close

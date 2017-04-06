@@ -408,10 +408,14 @@
 .tenants__block-link_prev_confirm,
 .tenants__block-link_continue {
 	@extend .rp__btn;
-	background-color: $green-element;
+	color: #fff;
+    background-color: $green-element;
+    border-color: #2dc888;
 	&:hover {
-		color: $green-element;
-	}
+        background-color: #fff;
+        color: #c9ccd7;
+        border-color: #e9ebf4;
+    }
 }
 .tenants__block_left_input {
     @extend .rp__input;
@@ -727,3 +731,87 @@ textarea.addit-textarea {
     }
 }
 /*!tenants*/
+.rp__pop-up {
+    background-color: #fff;
+    position: relative;
+    &:after {
+        content: '';
+        display: block;
+        box-shadow: 0px 9px 50px 1px rgba(0,0,0,0.75);
+        width: 95%;
+        margin: auto;
+    }
+}
+.rp__pop-up_head {
+    text-align: center;
+    font-size: 35px;
+    padding: 110px 0 80px 0;
+}
+.rp__pop-up_middle {
+    display: flex;
+    justify-content: center;
+}
+.rp__pop-up_middle_block {
+    margin: 0 17px 95px 17px;
+    padding: 100px 115px 70px 115px;
+    flex: 0 1 800px;
+    text-align: center;
+    border: 3px dashed #e7e9f2;
+    position: relative;
+    & #popup_group {
+        width: 64px;
+        height: 84px;
+    }
+    & #popup_user {
+        width: 84px;
+        height: 84px;  
+    }
+    &:nth-child(1) .rp__pop-up_middle_block_btn {
+        position: absolute;
+        bottom: 70px;
+        width: 100%;
+        left: 0;
+    }
+}
+.rp__pop-up_middle_block_title {
+    font-size: 29px;
+    padding: 35px 0;
+}
+.rp__pop-up_middle_block_info {
+    font-size: 24px;
+    color: #707380;
+    line-height: 1.6;
+    padding-bottom: 32px;
+}
+.rp__pop-up_middle_block_calendar {
+    position: relative;
+    margin-bottom: 45px;
+    & .my_svg {
+        fill: #2dc888;
+    }
+}
+.rp__pop-up_middle_block_calendar_input {
+    color: #b3b6c3;
+    font-size: 22px;
+    border: 2px solid #e7e9f2;
+    border-radius: 0;
+    width: 100%;
+    padding: 23px 21px;
+}
+.rp__pop-up_middle_block_btn_link {
+    @extend .rp__btn;
+    color: #c6cbde;
+    border-color: #c6cbde;
+}
+.rp__pop-up_close {
+    font-size: 0;
+    position: absolute;
+    top: 37px;
+    right: 48px;
+    & .my_svg {
+        width: 53px;
+        height: 53px;
+        fill: #dee0ea;
+    } 
+}
+/*!pop-up tenants*/
