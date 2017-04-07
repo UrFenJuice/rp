@@ -744,59 +744,112 @@ textarea.addit-textarea {
 }
 .rp__pop-up_head {
     text-align: center;
-    font-size: 35px;
-    padding: 110px 0 80px 0;
+    @include breakpoint(320px) {
+        font-size: 16.31px;
+        padding: 52px 0 40px 0;
+    }
+    @include breakpoint(2600px) {
+        font-size: 35px;
+        padding: 110px 0 80px 0;
+    }
 }
 .rp__pop-up_middle {
     display: flex;
     justify-content: center;
 }
 .rp__pop-up_middle_block {
-    margin: 0 17px 95px 17px;
-    padding: 100px 115px 70px 115px;
-    flex: 0 1 800px;
     text-align: center;
-    border: 3px dashed #e7e9f2;
     position: relative;
-    & #popup_group {
-        width: 64px;
-        height: 84px;
-    }
-    & #popup_user {
-        width: 84px;
-        height: 84px;  
-    }
     &:nth-child(1) .rp__pop-up_middle_block_btn {
         position: absolute;
-        bottom: 70px;
         width: 100%;
         left: 0;
     }
+    @include breakpoint(320px) {
+        flex: 0 1 370px;
+        border: 2px dashed #e7e9f2;
+        padding: 42px 53px 33px 53px;
+        margin: 0 8px 44px 8px;
+        & #popup_group {
+            width: 29px;
+            height: 39px;
+        }
+        & #popup_user {
+            width: 39px;
+            height: 39px;  
+        }
+        &:nth-child(1) .rp__pop-up_middle_block_btn {
+            bottom: 33px;
+        }
+    }
+    @include breakpoint(2600px) {
+        flex: 0 1 800px;
+        border: 3px dashed #e7e9f2;
+        padding: 100px 115px 70px 115px;
+        margin: 0 17px 95px 17px;
+        & #popup_group {
+            width: 64px;
+            height: 84px;
+        }
+        & #popup_user {
+            width: 84px;
+            height: 84px;  
+        }
+        &:nth-child(1) .rp__pop-up_middle_block_btn {
+            bottom: 70px;
+        }
+    }
 }
 .rp__pop-up_middle_block_title {
-    font-size: 29px;
-    padding: 35px 0;
+    @include breakpoint(320px) {
+        font-size: 13.51px;
+        padding: 17px 0;
+    }
+    @include breakpoint(2600px) {
+        font-size: 29px;
+        padding: 35px 0;
+    }
 }
 .rp__pop-up_middle_block_info {
-    font-size: 24px;
     color: #707380;
     line-height: 1.6;
-    padding-bottom: 32px;
+    @include breakpoint(320px) {
+        font-size: 11.18px;
+        padding-bottom: 17px;
+    }
+    @include breakpoint(2600px) {
+        font-size: 24px;
+        padding-bottom: 32px;
+    }
 }
 .rp__pop-up_middle_block_calendar {
     position: relative;
-    margin-bottom: 45px;
     & .my_svg {
         fill: #2dc888;
+    }
+    @include breakpoint(320px) {
+        margin-bottom: 18px;
+        & .tenants__block_left_item-calendar {
+            margin-top: -10px;
+        }
+    }
+    @include breakpoint(2600px) {
+        margin-bottom: 45px;
     }
 }
 .rp__pop-up_middle_block_calendar_input {
     color: #b3b6c3;
-    font-size: 22px;
     border: 2px solid #e7e9f2;
     border-radius: 0;
     width: 100%;
-    padding: 23px 21px;
+    @include breakpoint(320px) {
+        font-size: 10.25px;
+        padding: 9px 12px;
+    }
+    @include breakpoint(2600px) {
+        font-size: 22px;
+        padding: 23px 21px;
+    }
 }
 .rp__pop-up_middle_block_btn_link {
     @extend .rp__btn;
@@ -806,12 +859,26 @@ textarea.addit-textarea {
 .rp__pop-up_close {
     font-size: 0;
     position: absolute;
-    top: 37px;
-    right: 48px;
     & .my_svg {
         width: 53px;
         height: 53px;
         fill: #dee0ea;
-    } 
+    }
+    @include breakpoint(320px) {
+        top: 17px;
+        right: 22px;
+        & .my_svg {
+            width: 25px;
+            height: 25px;
+        }
+    }
+    @include breakpoint(2600px) {
+        top: 37px;
+        right: 48px;
+        & .my_svg {
+            width: 53px;
+            height: 53px;
+        }
+    }
 }
 /*!pop-up tenants*/
