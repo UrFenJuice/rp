@@ -733,13 +733,27 @@ textarea.addit-textarea {
 /*!tenants*/
 .rp__pop-up {
     background-color: #fff;
-    position: relative;
+    position: absolute;
+    margin: auto;  
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: inline-block;
     &:after {
         content: '';
         display: block;
         box-shadow: 0px 9px 50px 1px rgba(0,0,0,0.75);
         width: 95%;
         margin: auto;
+    }
+    @include breakpoint(320px) {
+        width: 870px;
+        height: 470px;
+    }
+    @include breakpoint(2600px) {
+        width: 58vw;
+        height: 1000px;
     }
 }
 .rp__pop-up_head {
@@ -778,8 +792,13 @@ textarea.addit-textarea {
             width: 39px;
             height: 39px;  
         }
-        &:nth-child(1) .rp__pop-up_middle_block_btn {
-            bottom: 33px;
+        &:nth-child(1) {
+            & .rp__pop-up_middle_block_calendar {
+                display: none;
+            }
+            & .rp__pop-up_middle_block_btn {
+                bottom: 33px;
+            }
         }
     }
     @include breakpoint(2600px) {
@@ -795,8 +814,10 @@ textarea.addit-textarea {
             width: 84px;
             height: 84px;  
         }
-        &:nth-child(1) .rp__pop-up_middle_block_btn {
-            bottom: 70px;
+        &:nth-child(1) {
+            & .rp__pop-up_middle_block_btn {
+                bottom: 70px;
+            }
         }
     }
 }
@@ -829,9 +850,6 @@ textarea.addit-textarea {
     }
     @include breakpoint(320px) {
         margin-bottom: 18px;
-        & .tenants__block_left_item-calendar {
-            margin-top: -10px;
-        }
     }
     @include breakpoint(2600px) {
         margin-bottom: 45px;
@@ -842,6 +860,8 @@ textarea.addit-textarea {
     border: 2px solid #e7e9f2;
     border-radius: 0;
     width: 100%;
+    float: none !important;
+    z-index: inherit !important;
     @include breakpoint(320px) {
         font-size: 10.25px;
         padding: 9px 12px;
@@ -880,5 +900,11 @@ textarea.addit-textarea {
             height: 53px;
         }
     }
+}
+.modal-backdrop {
+    background-color: #f4f5f9!important;
+}
+.modal-backdrop.in {
+    opacity: .6;
 }
 /*!pop-up tenants*/
