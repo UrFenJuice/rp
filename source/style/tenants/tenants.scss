@@ -731,15 +731,22 @@ textarea.addit-textarea {
     }
 }
 /*!tenants*/
+.rp__pop-up_inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
 .rp__pop-up {
     background-color: #fff;
-    position: absolute;
-    margin: auto;  
+/*     position: absolute;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
-    display: inline-block;
+    margin: auto; */
+    position: relative;
+    display: block;
     &:after {
         content: '';
         display: block;
@@ -749,11 +756,11 @@ textarea.addit-textarea {
     }
     @include breakpoint(320px) {
         width: 870px;
-        height: 470px;
+        //height: 470px;
     }
     @include breakpoint(2600px) {
         width: 58vw;
-        height: 1000px;
+        //height: 1000px;
     }
 }
 .rp__pop-up_head {
@@ -906,5 +913,31 @@ textarea.addit-textarea {
 }
 .modal-backdrop.in {
     opacity: .6;
+}
+.rp__pop-up_middle {
+    & .pr_large_img {
+        width: 50vw;
+        position: relative;
+        overflow: hidden;
+        & img {
+            width: 100%;
+        }
+    }
+    & .thumbnail {
+        display: inline-flex;
+        flex-flow: row wrap;
+        align-content: flex-start; 
+        width: 25vw;
+        & li {
+            font-size: 0;
+            margin: 0 0 27px 0.5vw;
+            & img {
+                width: 11vw;
+            }
+        }
+    }
+    &.rp__pop-up_middle_gallery {
+        align-content: flex-start; 
+    }
 }
 /*!pop-up tenants*/
