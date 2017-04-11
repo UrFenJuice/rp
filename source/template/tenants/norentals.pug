@@ -1,0 +1,14 @@
+.tenant_my_rental
+	+use("cancel-house")
+	h1 You currently have no rentals.
+	span Invite your landlord to RentPayments
+	.tenant__invite
+		.tenant__invite_block
+			| Landlord’s Name
+			input(type="text")
+		.tenant__invite_block
+			| Landlord’s E-mail
+			input(type="text")
+		.tenant__invite_block
+			a(href="#").tenant__invite_block_link
+				| Invite

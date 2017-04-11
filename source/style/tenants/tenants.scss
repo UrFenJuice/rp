@@ -923,21 +923,53 @@ textarea.addit-textarea {
             width: 100%;
         }
     }
+    & #large {
+        width: 50vw;
+        height: auto;
+        float: none;
+        margin-left: 0;
+        margin-top: 0;
+    }
     & .thumbnail {
         display: inline-flex;
         flex-flow: row wrap;
         align-content: flex-start; 
-        width: 25vw;
+        width: 38vw;
+        overflow: auto;
+        border: none;
+        float: none;
+        border-radius: 0;
+        margin: 0;
+        padding: 0;
         & li {
             font-size: 0;
-            margin: 0 0 27px 0.5vw;
+            margin: 0 0.3vw 0.9vw 0.3vw;
             & img {
                 width: 11vw;
+            }
+            & a {
+                display: initial;
             }
         }
     }
     &.rp__pop-up_middle_gallery {
         align-content: flex-start; 
+        margin: 0 1.5vw 1.5vw;
+    }
+}
+.rp__pop-up_head {
+    & .my_svg {
+        display: block;
+        margin: -39px auto 17px;
+        fill: #cacfe2;
+        @include breakpoint(320px) {
+            width: 30px;
+            height: 30px
+        } 
+        @include breakpoint(2600px) {
+            width: 64px;
+            height: 64px
+        } 
     }
 }
 /*!pop-up tenants*/

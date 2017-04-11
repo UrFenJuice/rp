@@ -55,11 +55,16 @@ ul.payments_history_list
 				span arrears
 	li.payments_history_list_item
 		a(href="#").payments_history_list_item_link
-
+br
+br
+br
+br
+br
 
 .rp__pop-up_inner
 	.rp__pop-up
 		p.rp__pop-up_head
+			+use("photo-frame")
 			| Karangahape Road
 		.rp__pop-up_middle.rp__pop-up_middle_gallery
 			#large.pr_large_img
@@ -77,7 +82,59 @@ ul.payments_history_list
 				li
 					a(href='assets/img/items/item_1.jpg')
 						img(src='assets/img/items/item_1.jpg')
+				li
+					a(href='assets/img/items/item_1.jpg')
+						img(src='assets/img/items/item_1.jpg')
+				li
+					a(href='assets/img/items/item_2.jpg')
+						img(src='assets/img/items/item_2.jpg')
+				li
+					a(href='assets/img/items/item_3.jpg')
+						img(src='assets/img/items/item_3.jpg')
+				li
+					a(href='assets/img/items/item_1.jpg')
+						img(src='assets/img/items/item_1.jpg')
 		a(href="#").rp__pop-up_close
 			i.rp__pop-up_close_icon
 				+use("close")
 			|close
+
+script(type='text/javascript').
+	$(document).ready(function(){
+	var block = $("#MainContent_ulThumbnail");
+	var heightBlock = $("#large img");
+	function resizeScreen(resizeBlock, heightBlock){
+	block.height(function(){
+	return heightBlock.height();
+	});
+	};
+	resizeScreen(block, heightBlock);
+	$(window).resize(function(){
+	resizeScreen(block, heightBlock);
+	});
+	$("#MainContent_ulThumbnail li a").click(function(){
+	$("#large img").hide().attr({"src": $(this).attr("href"), "title": $("> img", this).attr("title")});
+	$("#large h2").html($("> img", this).attr("title"));
+	return false;
+	});
+	$("#large>img").load(function(){$("#large>img:hidden").fadeIn("slow")});
+	$("input[placeholder]").each(function () {
+	//$(this).parent().prepend("<label for=\\"" + $(this).attr("id") + "\">" + $(this).attr("placeholder") + "</label>");
+	//$(this).removeAttr("placeholder");
+	if ($(this).val() == "") {
+	$(this).parent().removeClass("active inactive").addClass("inactive");
+	} else {
+	$(this).parent().removeClass("active inactive").addClass("active");
+	}
+	$(this).focus(function () {
+	$(this).parent().removeClass("active inactive").addClass("active");
+	});
+	$(this).blur(function () {
+	if ($(this).val() == "") {
+	$(this).parent().removeClass("active inactive").addClass("inactive");
+	} else {
+	$(this).parent().removeClass("active inactive").addClass("active");
+	}
+	});
+	});
+	});

@@ -1,0 +1,42 @@
+.tenant_my_rental {
+	& #cancel-house {
+		width: 128px;
+		height: 128px;
+		fill: #c0c3cf;
+	} 
+	& h1 {
+		font-size: 46px;
+		font-family: $fourth-font;
+	}
+	& span {
+		color: #9697a1;
+		font-size: 32px;
+		font-family: $third-font;
+	}
+	& .tenant__invite {
+		display: flex;
+		justify-content: flex-start;
+	    align-items: flex-end;
+	    & .tenant__invite_block {
+	    	font-size: 26px;
+			display: flex;
+			flex-direction: column;
+			margin-right: 40px;
+			& input {
+				@extend .rp__input;
+			}
+	    }
+	}
+	& .tenant__invite_block_link {
+		color: #fff;
+		background-color: $green-element;
+		border-color: #2dc888;
+		margin-bottom: 2px;
+		&:hover {
+			background-color: #fff;
+			color: #c9ccd7;
+			border-color: #e9ebf4;
+		}
+		@extend .rp__btn;
+	}
+}
