@@ -12,6 +12,8 @@
 		color: #9697a1;
 		font-size: 32px;
 		font-family: $third-font;
+		display: inline-block;
+	    margin-bottom: 70px;
 	}
 	& .tenant__invite {
 		display: flex;
@@ -20,8 +22,10 @@
 	    & .tenant__invite_block {
 	    	font-size: 26px;
 			display: flex;
+			position: relative;
 			flex-direction: column;
 			margin-right: 40px;
+		    flex: 0 1 19.5%;
 			& input {
 				@extend .rp__input;
 			}
@@ -31,7 +35,7 @@
 		color: #fff;
 		background-color: $green-element;
 		border-color: #2dc888;
-		margin-bottom: 2px;
+	    display: table;
 		&:hover {
 			background-color: #fff;
 			color: #c9ccd7;

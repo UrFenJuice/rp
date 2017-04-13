@@ -1,66 +1,116 @@
-ul.payments_history_list
-	li.payments_history_list_item
-		a(href="#").payments_history_list_item_link
-	li.payments_history_list_item.payments_history_list_item-ok
-		a(href="#").payments_history_list_item_link
-			.payments_history_list_item_link-sum
+ul.invoices_history_list
+	li.invoices_history_list_item
+		a(href="#").invoices_history_list_item_link
+	li.invoices_history_list_item.invoices_history_list_item-paid
+		a(href="#").invoices_history_list_item_link
+			.invoices_history_list_item_link-sum
 				| $2,000.00
-			.payments_history_list_item_link-date
+			.invoices_history_list_item_link-date
 				| 5 Jan 2017
-	li.payments_history_list_item.payments_history_list_item-full_prepaid
-		a(href="#").payments_history_list_item_link
-			.payments_history_list_item_link-sum
+	li.invoices_history_list_item.invoices_history_list_item-next_prepaid
+		a(href="#").invoices_history_list_item_link
+			.invoices_history_list_item_link-sum
 				| $2,000.00
-			.payments_history_list_item_link-date
+			.invoices_history_list_item_link-date
 				| 5 Jan 2017
-			.payments_history_list_item_link-prep
+			.invoices_history_list_item_link-prep
 				| PREPAID
-	li.payments_history_list_item.payments_history_list_item-prepaid
-		a(href="#").payments_history_list_item_link
-			.payments_history_list_item_link-sum
+			.invoices_history_list_item_link-details
+				table.invoices_history_list_item_link-details_table
+					thead
+						tr
+							td Rent: 
+							td $400.00
+						tr
+							td(colspan="2") For period 17.08.2016 - 21.08.2016
+						tr
+							td Invoice:
+							td $100.00
+						tr
+							td(colspan="2") Internet Services
+					tbody
+						tr
+							td Total:
+							td $500.00
+						tr
+							td Paid: 
+							td $500.00
+						tr
+							td Balance:
+							td $0.00
+	li.invoices_history_list_item.invoices_history_list_item-next_sub_prepaid
+		a(href="#").invoices_history_list_item_link
+			.invoices_history_list_item_link-sum
 				| $2,000.00
-			.payments_history_list_item_link-date
+			.invoices_history_list_item_link-date
 				| 5 Jan 2017
-			.payments_history_list_item_link-prep
+			.invoices_history_list_item_link-prep
 				| $100&nbsp;PREPAID
-	li.payments_history_list_item.payments_history_list_item-next
-		a(href="#").payments_history_list_item_link
-			.payments_history_list_item_link-sum
+	li.invoices_history_list_item.invoices_history_list_item-next
+		a(href="#").invoices_history_list_item_link
+			.invoices_history_list_item_link-sum
 				| $2,000.00
-			.payments_history_list_item_link-date
+			.invoices_history_list_item_link-date
 				| 5 Jan 2017
-			.payments_history_list_item_link-prep
-	li.payments_history_list_item.payments_history_list_item-future
-		a(href="#").payments_history_list_item_link
-			.payments_history_list_item_link-sum
+			.invoices_history_list_item_link-prep
+	li.invoices_history_list_item.invoices_history_list_item-next
+		a(href="#").invoices_history_list_item_link
+			.invoices_history_list_item_link-sum
 				| $2,000.00
-			.payments_history_list_item_link-date
+			.invoices_history_list_item_link-date
 				| 5 Jan 2017
-	li.payments_history_list_item.payments_history_list_item-sub_arrears
-		a(href="#").payments_history_list_item_link
-			.payments_history_list_item_link-sum
+			.invoices_history_list_item_link-prep
+	li.invoices_history_list_item.invoices_history_list_item-future
+		a(href="#").invoices_history_list_item_link
+			.invoices_history_list_item_link-sum
 				| $2,000.00
-			.payments_history_list_item_link-date
+			.invoices_history_list_item_link-date
 				| 5 Jan 2017
-			.payments_history_list_item_link-prep
-				| $100&nbsp;PREPAID
+	li.invoices_history_list_item.invoices_history_list_item-sub_arrears
+		a(href="#").invoices_history_list_item_link
+			.invoices_history_list_item_link-sum
+				| $2,000.00
+			.invoices_history_list_item_link-date
+				| 5 Jan 2017
+			.invoices_history_list_item_link-prep
+				//| $100&nbsp;PREPAID
+				span $1,900 in arrears
+	li.invoices_history_list_item.invoices_history_list_item-arrears
+		a(href="#").invoices_history_list_item_link
+			.invoices_history_list_item_link-sum
+				| $2,000.00
+			.invoices_history_list_item_link-date
+				| 5 Jan 2017
+			.invoices_history_list_item_link-prep
 				span arrears
-	li.payments_history_list_item.payments_history_list_item-arrears
-		a(href="#").payments_history_list_item_link
-			.payments_history_list_item_link-sum
-				| $2,000.00
-			.payments_history_list_item_link-date
-				| 5 Jan 2017
-			.payments_history_list_item_link-prep
-				span arrears
-	li.payments_history_list_item
-		a(href="#").payments_history_list_item_link
+	li.invoices_history_list_item
+		a(href="#").invoices_history_list_item_link
 br
 br
 br
 br
 br
-
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
+br
 .rp__pop-up_inner
 	.rp__pop-up
 		p.rp__pop-up_head

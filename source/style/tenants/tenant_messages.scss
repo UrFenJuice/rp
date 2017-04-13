@@ -1,0 +1,237 @@
+.tennant-chat {
+	display: flex;
+	& .tenanant-chat_right {
+		flex: 0 1 550px;
+		margin-left: 38px;
+	}
+	& .tenanant-chat_left {
+		flex: 1 1 auto;
+	}
+	& .tenanant-chat_left,
+	& .tenanant-chat_right {
+		background-color: #fff;
+	}
+}
+.tenanant-chat_left_block {
+	display: flex;
+	height: 100%;
+}
+.tenanant-chat_left_block_search_header input {
+	@extend .rp__input;
+	margin-top: 0;
+}
+.tenanant-chat_left_block_search_middle_result {
+	text-align: center;
+	background-color: #f9fafc;
+	border-bottom: 2px solid #e8e9f1;
+	border-right: 8px solid $logotype-color;
+}
+.tenanant-chat_left_block_search_middle_image {
+	width: 155px;
+	height: 155px;
+	overflow: hidden;
+	border-radius: 50%;
+	margin: auto;
+	position: relative;
+	& img {
+		width: 100%;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		margin: auto; 
+	}
+}
+.tenanant-chat_left_block_search_middle_name {
+	font-size: 32px;
+	font-family: $fourth-font;
+}
+.tenanant-chat_left_block_search_middle_address,
+.tenanant-chat_left_block_search_middle_phone {
+	font-size: 23px;
+}
+.tenanant-chat_left_block_search_middle_date {
+	color: #b1b5bf;
+	font-size: 18px;
+	font-family: $fourth-font;
+}
+.tenanant-chat_left_block_chat-inner_middle,
+.tenanant-chat_left_block_chat-inner {
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 auto;
+}
+.tenanant-chat_left_block_chat-inner_middle .aplication_chat_middle_date {
+	font-size: 20px;
+	color: #b6b9c6;
+}
+.tenanant-chat_left_block_chat-inner_header,
+.tenanant-chat_left_block_chat-inner_footer {
+	flex: 0 0 auto;
+	display: inline-flex;
+	justify-content: flex-end;
+}
+.tenanant-chat_left_block_chat-inner_middle_interlocutor {
+	align-self: flex-start;
+	background-color: #f9fafc;
+	padding: 20px;
+	margin: 20px 70px;
+	position: relative;
+	font-size: 28px;
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: -29px;
+		margin-top: -15px;
+		border: 15px solid transparent;	
+		border-right: 15px solid #f9fafc;
+	}
+}
+.tenanant-chat_left_block_chat-inner_middle_autor {
+	align-self: flex-end;
+	background-color: #eaf2fe;
+	padding: 20px;
+	margin: 20px 70px;
+	position: relative;
+	font-size: 28px;
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 50%;
+		right: -29px;
+		margin-top: -15px;
+		border: 15px solid transparent;	
+		border-left: 15px solid #eaf2fe;
+	}	
+}
+.tenanant-chat_left_block_chat-inner_middle_maintenance-request_icon,
+.tenanant-chat_left_block_chat-inner_middle_payment_icon {
+	display: inline-block;
+	padding: 29px;
+	border-radius: 50%;
+	margin-right: 28px;
+	& .my_svg {
+		width: 47px;
+		height: 47px;
+		fill: #fff;
+	}
+}
+.tenanant-chat_left_block_chat-inner_middle_payment_icon {background-color: #3dce6d;}
+.tenanant-chat_left_block_chat-inner_middle_maintenance-request_icon {background-color: #ce3d3d;}
+.tenanant-chat_left_block_chat-inner_middle_payment,
+.tenanant-chat_left_block_chat-inner_middle_maintenance-request{
+	border: 2px solid #f2f3f8;
+	margin: 20px 70px;
+    display: flex;
+    align-items: center;
+    padding: 13px;
+    border-radius: 67px;
+    & p {
+    	font-size: 30px;
+    }
+    & .aplication_chat_middle_date {
+    	font-size: 24px;
+    	color: #cdd0db;
+    }
+}
+.tenanant-chat_left_block_chat-inner_footer_send {
+	display: inline-block;
+	background-color: #2dc787;
+	border-radius: 50%;
+    padding: 38px;
+    font-size: 0;
+	& .my_svg {
+		width: 32px;
+		height: 32px;
+		fill: #fff;
+	}
+}
+
+.tenanant-chat_left_block_chat-inner_footer_attachment {
+	display: inline-block;
+	font-size: 0;
+	border-radius: 50%;
+	border: 3px solid #e9ebf0;
+    padding: 18px;
+	& .my_svg {
+		width: 24px;
+		height: 24px;
+		fill: #b7bac7;
+	}
+}
+.tenanant-chat_left_block_chat-inner_footer_input {
+	outline: none;
+	border: none;
+}
+
+
+
+
+.tenanant-chat_right {
+	text-align: center;
+	& .payments_history_list {
+		flex-direction: column;
+		& .payments_history_list_item:before {
+			//width: 50vw!important;
+			width: 100% !important;
+			//left: -7.4vw !important;
+			left: 0% !important;
+			transform: rotate(90deg);
+			height: 4px;
+		}
+		& .payments_history_list_item:after, 
+		& .payments_history_list_item:before {
+			//top: 25.7vw;
+			top: 260px;
+		}
+	}
+	& .payments_history_list_item_link-sum {
+		position: absolute;
+		top: -38%;
+		left: 44px;
+	}
+	& .payments_history_list_item_link-date {
+		position: absolute;
+		top: -38%;
+		left: -44px;
+	}
+}
+.tenanant-chat_right_links-block {
+	padding: 0 82px 0 86px;
+}
+.tenanant-chat_right_status {
+	font-size: 21px;
+	text-transform: uppercase;
+	color: #2ec28c;
+}
+.tenanant-chat_right_shedule-title {
+	font-size: 28px;
+	font-family: $fourth-font;
+}
+.tenanant-chat_right_links-block_link {
+	font-size: 23px;
+	text-transform: uppercase;
+	color: #b1b1c0;
+	font-family: $fourth-font;
+	display: flex;
+	align-items: center;
+	border: 2px solid #eff1f6;
+    border-radius: 30px;
+    padding: 12px;
+    margin-bottom: 48px;
+	& .my_svg {
+		width: 32px;
+		height: 32px;
+		fill: #b1b1c0;
+		margin-left: 15px;
+	}
+	& span {
+		flex: 1 1 auto;
+		text-align: center;
+	}
+}
+/*!tennant-chat*/

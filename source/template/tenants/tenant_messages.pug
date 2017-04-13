@@ -1,0 +1,141 @@
+.prop__menu
+	a(href="#", title="").prop__menu_item-link 
+		i.left__arrow.prop__menu_item-link_icon 
+			+use("calendar")
+		| Select Dates
+.tennant-chat
+	.tenanant-chat_left
+		.tenanant-chat_left_block
+			.tenanant-chat_left_block_search
+				.tenanant-chat_left_block_search_header
+					input(type="text", placeholder="Search")
+				.tenanant-chat_left_block_search_middle
+					.tenanant-chat_left_block_search_middle_result
+						.tenanant-chat_left_block_search_middle_image
+							img(src="https://pp.userapi.com/c630527/v630527680/2508/8V_6MmIRP84.jpg")
+						.tenanant-chat_left_block_search_middle_name
+							| Egor Landovich
+						.tenanant-chat_left_block_search_middle_address
+							| 11 Main Street, Hamilton
+						.tenanant-chat_left_block_search_middle_phone
+							| 0499 565-990
+						.tenanant-chat_left_block_search_middle_date
+							| 18:00 on 28 March 2016
+			.tenanant-chat_left_block_chat-inner
+				.tenanant-chat_left_block_chat-inner_header
+				.tenanant-chat_left_block_chat-inner_middle
+					.tenanant-chat_left_block_chat-inner_middle_interlocutor
+						| Can I please get a payment extension?
+						.aplication_chat_middle_date 30.11.2016    21:00
+					.tenanant-chat_left_block_chat-inner_middle_autor
+						| Sure, I can do until the 2nd Aug, OK!?
+						.aplication_chat_middle_date 30.11.2016    21:00
+					.tenanant-chat_left_block_chat-inner_middle_payment
+						i.tenanant-chat_left_block_chat-inner_middle_payment_icon
+							+use("coins")
+						.tenanant-chat_left_block_chat-inner_middle_payment_block
+							p Doro Persch paid $2,200.00
+							.aplication_chat_middle_date 30.11.2016   21:00
+					.tenanant-chat_left_block_chat-inner_middle_autor
+						| Thank’s for the payment)) just in time!
+						.aplication_chat_middle_date 30.11.2016    21:00
+					.tenanant-chat_left_block_chat-inner_middle_maintenance-request
+						i.tenanant-chat_left_block_chat-inner_middle_maintenance-request_icon
+							+use("tools")
+						.tenanant-chat_left_block_chat-inner_middle_maintenance-request_block
+							p Maintenance Request - 
+								span Sink Pipes
+							.aplication_chat_middle_date 30.11.2016   21:00
+					.tenanant-chat_left_block_chat-inner_middle_interlocutor
+						| I’d like to get this fixed ASAP please.
+						.aplication_chat_middle_date 30.11.2016    21:00
+				.tenanant-chat_left_block_chat-inner_footer
+					input(type="text", placeholder="Type your message here...").tenanant-chat_left_block_chat-inner_footer_input
+					a(href="#").tenanant-chat_left_block_chat-inner_footer_attachment
+						+use("attachment")
+					a(href="#").tenanant-chat_left_block_chat-inner_footer_send
+						+use("send-message-button")
+	.tenanant-chat_right
+		.tenanant-chat_right_status Current
+		.tenanant-chat_right_shedule-title Payment Shedule
+		ul.payments_history_list
+			li.payments_history_list_item
+				a(href="#").payments_history_list_item_link
+			li.payments_history_list_item.payments_history_list_item-paid
+				a(href="#").payments_history_list_item_link
+					.payments_history_list_item_link-sum
+						| $2,000.00
+					.payments_history_list_item_link-date
+						| 5 Jan 2017
+			li.payments_history_list_item.payments_history_list_item-next_prepaid
+				a(href="#").payments_history_list_item_link
+					.payments_history_list_item_link-sum
+						| $2,000.00
+					.payments_history_list_item_link-date
+						| 5 Jan 2017
+					.payments_history_list_item_link-prep
+						| PREPAID
+			li.payments_history_list_item.payments_history_list_item-next_sub_prepaid
+				a(href="#").payments_history_list_item_link
+					.payments_history_list_item_link-sum
+						| $2,000.00
+					.payments_history_list_item_link-date
+						| 5 Jan 2017
+					.payments_history_list_item_link-prep
+						| $100&nbsp;PREPAID
+			li.payments_history_list_item.payments_history_list_item-next
+				a(href="#").payments_history_list_item_link
+					.payments_history_list_item_link-sum
+						| $2,000.00
+					.payments_history_list_item_link-date
+						| 5 Jan 2017
+					.payments_history_list_item_link-prep
+			li.payments_history_list_item.payments_history_list_item-next
+				a(href="#").payments_history_list_item_link
+					.payments_history_list_item_link-sum
+						| $2,000.00
+					.payments_history_list_item_link-date
+						| 5 Jan 2017
+					.payments_history_list_item_link-prep
+			li.payments_history_list_item.payments_history_list_item-future
+				a(href="#").payments_history_list_item_link
+					.payments_history_list_item_link-sum
+						| $2,000.00
+					.payments_history_list_item_link-date
+						| 5 Jan 2017
+			li.payments_history_list_item.payments_history_list_item-sub_arrears
+				a(href="#").payments_history_list_item_link
+					.payments_history_list_item_link-sum
+						| $2,000.00
+					.payments_history_list_item_link-date
+						| 5 Jan 2017
+					.payments_history_list_item_link-prep
+						//| $100&nbsp;PREPAID
+						span $1,900 in arrears
+			li.payments_history_list_item.payments_history_list_item-arrears
+				a(href="#").payments_history_list_item_link
+					.payments_history_list_item_link-sum
+						| $2,000.00
+					.payments_history_list_item_link-date
+						| 5 Jan 2017
+					.payments_history_list_item_link-prep
+						span arrears
+			li.payments_history_list_item
+				a(href="#").payments_history_list_item_link
+		.tenanant-chat_right_links-block
+			a(href="").tenanant-chat_right_links-block_link
+				i.tenanant-chat_right_links-block_link_icon
+					+use('speech-bubble')
+				span Send SMS
+			a(href="").tenanant-chat_right_links-block_link
+				i.tenanant-chat_right_links-block_link_icon
+					+use('stopwatch')
+				span Request extension
+			a(href="").tenanant-chat_right_links-block_link
+				i.tenanant-chat_right_links-block_link_icon
+					+use('tag')
+				span Add private note
+			a(href="").tenanant-chat_right_links-block_link
+				i.tenanant-chat_right_links-block_link_icon
+					+use('export')
+				span print/Export

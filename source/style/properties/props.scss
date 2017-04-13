@@ -195,7 +195,7 @@
 		display: flex;
 		align-items: center;
 	}
-	& span {
+	& .properties__block_list-item_info-status_link + span {
 	    flex: 1 1 100%;
 	    color: #9194a1;
 	    text-transform: initial;
@@ -255,6 +255,12 @@
 	@include breakpoint(2600px) {
 		margin-right: 18px;
 	}
+}
+.rental_content .properties__block_list-item_info-status_board {
+	position: absolute;
+    right: 60px;
+    top: 34px;
+    justify-content: flex-end;
 }
 .properties__block_list-item_info-status_board div:nth-child(1) {
 	margin-left: 28px;

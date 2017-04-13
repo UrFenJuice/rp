@@ -3,12 +3,43 @@
 	h1 You currently have no rentals.
 	span Invite your landlord to RentPayments
 	.tenant__invite
-		.tenant__invite_block
+		.tenant__invite_block.form-group
 			| Landlord’s Name
-			input(type="text")
-		.tenant__invite_block
+			input(type="text")#Name
+		.tenant__invite_block.form-group
 			| Landlord’s E-mail
-			input(type="text")
+			input(type="text")#EMail
 		.tenant__invite_block
 			a(href="#").tenant__invite_block_link
 				| Invite
+script.
+	$('.tenant__invite_block_link').click(function(){
+	$('.tenant__invite').bootstrapValidator({
+	live: 'disabled',
+	feedbackIcons: {
+	valid: 'fa',
+	invalid: 'fa',
+	validating: 'fa'
+	},
+	message: 'This value is not valid',
+	fields: {
+	Name: {
+	validators: {
+	notEmpty: {
+	message: '<%:RPResources.msgValidFirstName %>'
+	}
+	}
+	},
+	EMail: {
+	validators: {
+	notEmpty: {
+	message: '<%:RPResources.msgValidEmailIsEmpty%>'
+	},
+	emailAddress: {
+	message: '<%:RPResources.msgValidEmail%>'
+	}
+	}
+	},
+	}
+	});
+	});
