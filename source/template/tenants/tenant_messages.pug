@@ -4,7 +4,7 @@
 			+use("calendar")
 		| Select Dates
 .tennant-chat
-	.tenanant-chat_left
+	//.tenanant-chat_left
 		.tenanant-chat_left_block
 			.tenanant-chat_left_block_search
 				.tenanant-chat_left_block_search_header
@@ -12,7 +12,7 @@
 				.tenanant-chat_left_block_search_middle
 					.tenanant-chat_left_block_search_middle_result
 						.tenanant-chat_left_block_search_middle_image
-							img(src="https://pp.userapi.com/c630527/v630527680/2508/8V_6MmIRP84.jpg")
+							img(src="https://pp.userapi.com/c406423/v406423680/2882/0BaT1DBqt0U.jpg")
 						.tenanant-chat_left_block_search_middle_name
 							| Egor Landovich
 						.tenanant-chat_left_block_search_middle_address
@@ -46,82 +46,107 @@
 							p Maintenance Request - 
 								span Sink Pipes
 							.aplication_chat_middle_date 30.11.2016   21:00
+						a(href="#").tenanant-chat_left_block_chat-inner_middle_maintenance-request_link
+							| View Details
 					.tenanant-chat_left_block_chat-inner_middle_interlocutor
 						| I’d like to get this fixed ASAP please.
 						.aplication_chat_middle_date 30.11.2016    21:00
 				.tenanant-chat_left_block_chat-inner_footer
 					input(type="text", placeholder="Type your message here...").tenanant-chat_left_block_chat-inner_footer_input
-					a(href="#").tenanant-chat_left_block_chat-inner_footer_attachment
+					a(href="#аттачьми по полной").tenanant-chat_left_block_chat-inner_footer_attachment
 						+use("attachment")
 					a(href="#").tenanant-chat_left_block_chat-inner_footer_send
 						+use("send-message-button")
 	.tenanant-chat_right
 		.tenanant-chat_right_status Current
 		.tenanant-chat_right_shedule-title Payment Shedule
-		ul.payments_history_list
-			li.payments_history_list_item
-				a(href="#").payments_history_list_item_link
-			li.payments_history_list_item.payments_history_list_item-paid
-				a(href="#").payments_history_list_item_link
-					.payments_history_list_item_link-sum
+		ul.invoices_history_list
+			li.invoices_history_list_item
+				a(href="#").invoices_history_list_item_link
+			li.invoices_history_list_item.invoices_history_list_item-paid
+				a(href="#").invoices_history_list_item_link
+					.invoices_history_list_item_link-sum
 						| $2,000.00
-					.payments_history_list_item_link-date
+					.invoices_history_list_item_link-date
 						| 5 Jan 2017
-			li.payments_history_list_item.payments_history_list_item-next_prepaid
-				a(href="#").payments_history_list_item_link
-					.payments_history_list_item_link-sum
+			li.invoices_history_list_item.invoices_history_list_item-next_prepaid
+				a(href="#").invoices_history_list_item_link
+					.invoices_history_list_item_link-sum
 						| $2,000.00
-					.payments_history_list_item_link-date
+					.invoices_history_list_item_link-date
 						| 5 Jan 2017
-					.payments_history_list_item_link-prep
+					.invoices_history_list_item_link-prep
 						| PREPAID
-			li.payments_history_list_item.payments_history_list_item-next_sub_prepaid
-				a(href="#").payments_history_list_item_link
-					.payments_history_list_item_link-sum
+					.invoices_history_list_item_link-details
+						table.invoices_history_list_item_link-details_table
+							thead
+								tr
+									td Rent: 
+									td $400.00
+								tr
+									td(colspan="2") For period 17.08.2016 - 21.08.2016
+								tr
+									td Invoice:
+									td $100.00
+								tr
+									td(colspan="2") Internet Services
+							tbody
+								tr
+									td Total:
+									td $500.00
+								tr
+									td Paid: 
+									td $500.00
+								tr
+									td Balance:
+									td $0.00
+			li.invoices_history_list_item.invoices_history_list_item-next_sub_prepaid
+				a(href="#").invoices_history_list_item_link
+					.invoices_history_list_item_link-sum
 						| $2,000.00
-					.payments_history_list_item_link-date
+					.invoices_history_list_item_link-date
 						| 5 Jan 2017
-					.payments_history_list_item_link-prep
+					.invoices_history_list_item_link-prep
 						| $100&nbsp;PREPAID
-			li.payments_history_list_item.payments_history_list_item-next
-				a(href="#").payments_history_list_item_link
-					.payments_history_list_item_link-sum
+			li.invoices_history_list_item.invoices_history_list_item-next
+				a(href="#").invoices_history_list_item_link
+					.invoices_history_list_item_link-sum
 						| $2,000.00
-					.payments_history_list_item_link-date
+					.invoices_history_list_item_link-date
 						| 5 Jan 2017
-					.payments_history_list_item_link-prep
-			li.payments_history_list_item.payments_history_list_item-next
-				a(href="#").payments_history_list_item_link
-					.payments_history_list_item_link-sum
+					.invoices_history_list_item_link-prep
+			li.invoices_history_list_item.invoices_history_list_item-next
+				a(href="#").invoices_history_list_item_link
+					.invoices_history_list_item_link-sum
 						| $2,000.00
-					.payments_history_list_item_link-date
+					.invoices_history_list_item_link-date
 						| 5 Jan 2017
-					.payments_history_list_item_link-prep
-			li.payments_history_list_item.payments_history_list_item-future
-				a(href="#").payments_history_list_item_link
-					.payments_history_list_item_link-sum
+					.invoices_history_list_item_link-prep
+			li.invoices_history_list_item.invoices_history_list_item-future
+				a(href="#").invoices_history_list_item_link
+					.invoices_history_list_item_link-sum
 						| $2,000.00
-					.payments_history_list_item_link-date
+					.invoices_history_list_item_link-date
 						| 5 Jan 2017
-			li.payments_history_list_item.payments_history_list_item-sub_arrears
-				a(href="#").payments_history_list_item_link
-					.payments_history_list_item_link-sum
+			li.invoices_history_list_item.invoices_history_list_item-sub_arrears
+				a(href="#").invoices_history_list_item_link
+					.invoices_history_list_item_link-sum
 						| $2,000.00
-					.payments_history_list_item_link-date
+					.invoices_history_list_item_link-date
 						| 5 Jan 2017
-					.payments_history_list_item_link-prep
+					.invoices_history_list_item_link-prep
 						//| $100&nbsp;PREPAID
 						span $1,900 in arrears
-			li.payments_history_list_item.payments_history_list_item-arrears
-				a(href="#").payments_history_list_item_link
-					.payments_history_list_item_link-sum
+			li.invoices_history_list_item.invoices_history_list_item-arrears
+				a(href="#").invoices_history_list_item_link
+					.invoices_history_list_item_link-sum
 						| $2,000.00
-					.payments_history_list_item_link-date
+					.invoices_history_list_item_link-date
 						| 5 Jan 2017
-					.payments_history_list_item_link-prep
+					.invoices_history_list_item_link-prep
 						span arrears
-			li.payments_history_list_item
-				a(href="#").payments_history_list_item_link
+			li.invoices_history_list_item
+				a(href="#").invoices_history_list_item_link
 		.tenanant-chat_right_links-block
 			a(href="").tenanant-chat_right_links-block_link
 				i.tenanant-chat_right_links-block_link_icon

@@ -346,34 +346,43 @@
         font-family: $second-font;
     }
 }
+.invoices_history_list_item_link:hover {
+    & .invoices_history_list_item_link-details {
+        display: block;
+    }
+}
 .invoices_history_list_item_link-details {
+    transition: display 0.3s;
+    display: none;
     background-color: #fff;
-    padding: 31px 40px;
     border-radius: 20px;
     box-shadow: 0px 0px 36px -7px rgba(0, 0, 0, 0.2);
     position: absolute;
-    left: -300%;
     &:before {
         content: '';
-        border: 19px solid transparent;
-        border-bottom: 19px solid white;
+        border: 10px solid transparent;
+        border-bottom: 10px solid white;
         position: absolute;
         left: 50%;
-        margin-left: -19px;
-        top: -38px;
+        margin-left: -10px;
+        top: -20px;
+    }
+    @include breakpoint(320px) {
+        left: -101%;
+        padding: 14px 17px;
+    }
+    @include breakpoint(2600px) {
+        left: -114%;
+        padding: 31px 40px;
     }
 }
 .invoices_history_list_item_link-details_table {
-    font-size: 22px;
     font-family: $fourth-font;
-    width: 300px;
     & tr td:nth-child(2) {
         text-align: right;
     }
     & td[colspan="2"] {
-        font-size: 17px;
         color: #bec2d0;
-        padding-bottom: 40px;
     }
     & thead tr:nth-last-child(1){
         & td {
@@ -384,8 +393,31 @@
         &:nth-child(1) {
             color: #2dc888;
         }
-        & td {
-            padding-top: 38px;
+    }
+    @include breakpoint(320px) {
+        font-size: 10px;
+        width: 125px;
+        & td[colspan="2"] {
+            font-size: 7px;
+            padding-bottom: 17px;
+        }
+        & tbody tr {
+            & td {
+                padding-top: 16px;
+            }
+        }
+    }
+    @include breakpoint(2600px) {
+        font-size: 22px;
+        width: 300px;
+        & td[colspan="2"] {
+            font-size: 17px;
+            padding-bottom: 40px;
+        }
+        & tbody tr {
+            & td {
+                padding-top: 38px;
+            }
         }
     }
 }
