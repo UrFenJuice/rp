@@ -255,6 +255,7 @@
     @include breakpoint(320px) {
         & .tenants__block_right-twocolumns_top {
             padding: 17px 30px;
+            margin-bottom: 20px!important;
             & .label {
                 font-size: 11px;
                 padding: 0;
@@ -747,13 +748,15 @@ textarea.addit-textarea {
     margin: auto; */
     position: relative;
     display: block;
-    &:after {
+    box-shadow: 0 40px 50px -50px rgba(0, 0, 0, 0.75);
+/*     &:after {
         content: '';
         display: block;
         box-shadow: 0px 9px 50px 1px rgba(0,0,0,0.75);
         width: 95%;
         margin: auto;
-    }
+        height: 0!important;
+    } */
     @include breakpoint(320px) {
         width: 870px;
         //height: 470px;
