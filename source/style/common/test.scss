@@ -341,6 +341,7 @@
     text-transform: uppercase;
     display: flex;
     flex-direction: column;
+    display: block;
     & span {
         font-size: 19px;
         font-family: $second-font;
@@ -353,6 +354,7 @@
 }
 .invoices_history_list_item_link-details {
     transition: display 0.3s;
+    z-index: 3;
     display: none;
     background-color: #fff;
     border-radius: 20px;
@@ -378,6 +380,9 @@
 }
 .invoices_history_list_item_link-details_table {
     font-family: $fourth-font;
+    & tr td:nth-child(1) {
+        text-align: left;
+    }
     & tr td:nth-child(2) {
         text-align: right;
     }

@@ -828,6 +828,10 @@ textarea.addit-textarea {
         }
     }
 }
+.rp__pop-up_footer {
+    text-align: center;
+    margin-bottom: 50px;
+}
 .rp__pop-up_middle_block_title {
     @include breakpoint(320px) {
         font-size: 13.51px;
@@ -882,6 +886,7 @@ textarea.addit-textarea {
     @extend .rp__btn;
     color: #c6cbde;
     border-color: #c6cbde;
+    background-color: #fff;
 }
 .rp__pop-up_close {
     font-size: 0;

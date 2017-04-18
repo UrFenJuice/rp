@@ -22,8 +22,13 @@
 	border-right: 2px solid #e8e9f1;
 }
 .tenanant-chat_left_block_search_header input {
-	@extend .rp__input;
-	margin-top: 0;
+	//@extend .rp__input;
+	margin: 0;
+	width: 100%;
+	font-size: 26px;
+	color: #b6b9c6;
+	border: none;
+    padding: 30px;
 }
 .tenanant-chat_left_block_search_middle_result {
 	text-align: center;
@@ -54,6 +59,28 @@
 	font-size: 32px;
 	font-family: $fourth-font;
 	margin-bottom: 15px;
+	position: relative;
+	& sup {
+		color: #ed1c24;
+		font-size: 24px;
+		font-family: $second-font;
+		position: absolute;
+		right: 35px;
+	    top: 5px;
+	    &:before {
+	    	content: '';
+	    	display: block;
+	    	background-color: #ed1c24;
+	    	width: 6px;
+	    	height: 6px;
+	    	border-radius: 50%;
+			position: absolute;
+			left: -10px;
+			margin: auto;
+			top: 0;
+			bottom: 0;
+	    }
+	}
 }
 .tenanant-chat_left_block_search_middle_address,
 .tenanant-chat_left_block_search_middle_phone {
@@ -166,6 +193,10 @@
 	border: 2px solid #eceef3;
     padding: 24px 65px;
     border-radius: 40px;
+    &:hover {
+    	color: #ce3d3d;
+    	border-color: #ce3d3d;
+    }
 }
 .tenanant-chat_left_block_chat-inner_footer_send {
 	display: inline-block;
@@ -182,13 +213,14 @@
 }
 
 .tenanant-chat_left_block_chat-inner_footer_attachment {
-	display: inline-block;
+	display: block;
 	font-size: 0;
 	border-radius: 50%;
 	border: 3px solid #e9ebf0;
     padding: 18px;
     height: 100%;
     margin-top: 116px;
+    max-height: 66px;
 	& .my_svg {
 		width: 24px;
 		height: 24px;
@@ -199,7 +231,9 @@
 	outline: none;
 	border: none;
 	flex: 1 1 auto;
-	padding: 0 65px 0 65px;
+	padding: 0 65px 121px 65px;
+	font-size: 26px;
+	color: #c3c6d3;
 }
 
 
@@ -209,53 +243,127 @@
 	text-align: center;
 	& .invoices_history_list {
 		flex-direction: column;
+		position: relative;
+		padding-top: 0;
+	    margin-bottom: 47px;
+		&:after {
+			display: none;
+		}
 		& .invoices_history_list_item:before {
-			//width: 50vw!important;
 			width: 100% !important;
-			//left: -7.4vw !important;
 			left: 0% !important;
 			transform: rotate(90deg);
 			height: 4px;
 		}
 		& .invoices_history_list_item:after, 
 		& .invoices_history_list_item:before {
-			//top: 25.7vw;
-			top: 260px;
+			@include breakpoint(320px) {
+				top: 285px;
+			}
+			@include breakpoint(2600px) {
+				top: 295px;
+			}
+			
 		}
 		& .invoices_history_list_item_link {
 			display: block;
+			font-size: 0;
+			&:before {
+				display: inline-block;
+			}
+		}
+		& .invoices_history_list_item-next .invoices_history_list_item_link .invoices_history_list_item_link-prep,
+		& .invoices_history_list_item-next_prepaid .invoices_history_list_item_link .invoices_history_list_item_link-prep {
+			top: 50%;
+			margin-top: -5px;
+			&:before {
+			    display: none!important;
+			}
+			&:after {
+				content: '';
+				display: block;
+				background-image: url(data:image/svg+xml;charset=utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCIgdmlld0JveD0iMCAwIDQ1MS44NDcgNDUxLjg0NyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDUxLjg0NyA0NTEuODQ3OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBhdGggZD0iTTIyNS45MjMsMzU0LjcwNmMtOC4wOTgsMC0xNi4xOTUtMy4wOTItMjIuMzY5LTkuMjYzTDkuMjcsMTUxLjE1N2MtMTIuMzU5LTEyLjM1OS0xMi4zNTktMzIuMzk3LDAtNDQuNzUxICAgYzEyLjM1NC0xMi4zNTQsMzIuMzg4LTEyLjM1NCw0NC43NDgsMGwxNzEuOTA1LDE3MS45MTVsMTcxLjkwNi0xNzEuOTA5YzEyLjM1OS0xMi4zNTQsMzIuMzkxLTEyLjM1NCw0NC43NDQsMCAgIGMxMi4zNjUsMTIuMzU0LDEyLjM2NSwzMi4zOTIsMCw0NC43NTFMMjQ4LjI5MiwzNDUuNDQ5QzI0Mi4xMTUsMzUxLjYyMSwyMzQuMDE4LDM1NC43MDYsMjI1LjkyMywzNTQuNzA2eiIgZmlsbD0iIzJkYzg4OCIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=);
+        		background-repeat: no-repeat;
+				transform: rotate(270deg);
+				float: right;
+				@include breakpoint(320px) {
+					background-size: 6.75px;
+					width: 6.75px;
+					height: 6.75px;
+				    margin: 2px 0 0 5px;
+				}
+				@include breakpoint(2600px) {
+					background-size: 15px;
+					width: 15px;
+					height: 15px;
+				}
+			}
+		}
+		& .invoices_history_list_item-next_sub_prepaid .invoices_history_list_item_link:before {
+		    transform: rotate(45deg);
+		}
+		.invoices_history_list_item_link-details {
+		    @include breakpoint(320px) {
+		        left: 50%;
+		        top: 140%;
+		        margin-left: -80px;
+		    }
+		    @include breakpoint(2600px) {
+		        left: 50%;
+		        margin-left: -190px;
+		    }
 		}
 	}
 	& .invoices_history_list_item_link-sum {
 		position: absolute;
 		top: 0;
-		left: 54%;
+		left: 60%;
 		&:before {
 			display: none!important;
 		}
 	}
 	& .invoices_history_list_item_link-date {
 		position: absolute;
-		left: 54%;
+		left: 60%;
+		bottom: 0;
 	}
 	& .invoices_history_list_item_link-prep {
+		width: 50%!important;
 		bottom: auto!important;
-		left: -54%;
+		left: -10%;
 	    top: 0;
 	    text-align: right!important;
 	}
 }
 .tenanant-chat_right_links-block {
-	padding: 0 82px 0 86px;
+	padding: 84px 82px 33px 86px;
+	position: relative;
+	z-index: 2;
+	border-top: 2px solid #eceef3;
 }
 .tenanant-chat_right_status {
 	font-size: 21px;
 	text-transform: uppercase;
 	color: #2ec28c;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    margin: 63px 0 50px 0;
+	&:before {
+		content: '';
+		display: block;
+		background-image: url(data:image/svg+xml;charset=utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDI2IDI2IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyNiAyNiIgd2lkdGg9IjMycHgiIGhlaWdodD0iMzJweCI+CiAgPHBhdGggZD0ibS4zLDE0Yy0wLjItMC4yLTAuMy0wLjUtMC4zLTAuN3MwLjEtMC41IDAuMy0wLjdsMS40LTEuNGMwLjQtMC40IDEtMC40IDEuNCwwbC4xLC4xIDUuNSw1LjljMC4yLDAuMiAwLjUsMC4yIDAuNywwbDEzLjQtMTMuOWgwLjF2LTguODgxNzhlLTE2YzAuNC0wLjQgMS0wLjQgMS40LDBsMS40LDEuNGMwLjQsMC40IDAuNCwxIDAsMS40bDAsMC0xNiwxNi42Yy0wLjIsMC4yLTAuNCwwLjMtMC43LDAuMy0wLjMsMC0wLjUtMC4xLTAuNy0wLjNsLTcuOC04LjQtLjItLjN6IiBmaWxsPSIjMmRjODg4Ii8+Cjwvc3ZnPgo=);
+		width: 24px;
+		height: 24px;
+		background-size: 24px;
+		background-repeat: no-repeat;
+		margin-right: 15px;
+	}
 }
 .tenanant-chat_right_shedule-title {
 	font-size: 28px;
 	font-family: $fourth-font;
+	margin-bottom: 48px;
 }
 .tenanant-chat_right_links-block_link {
 	font-size: 23px;
@@ -277,6 +385,10 @@
 	& span {
 		flex: 1 1 auto;
 		text-align: center;
+	}
+	&:hover {
+		background-color: #f5f6fb;
+		color: #b1b1c0;
 	}
 }
 /*!tennant-chat*/
