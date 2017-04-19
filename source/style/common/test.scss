@@ -114,6 +114,15 @@
         } 
     }
 }
+.invoices_history_list .invoices_history_list_item-paid .invoices_history_list_item_link {
+    & .invoices_history_list_item_link-prep {
+        position: absolute;
+        bottom: 106%;
+        margin: auto;
+        text-align: center;
+        width: 100%;
+    }
+}
 .invoices_history_list .invoices_history_list_item-next_sub_prepaid .invoices_history_list_item_link ,
 .invoices_history_list .invoices_history_list_item-next_prepaid .invoices_history_list_item_link {
     &:before {
@@ -163,7 +172,7 @@
         transform: rotate(-45deg);
     }
 }
-.invoices_history_list .invoices_history_list_item-next_prepaid .invoices_history_list_item_link {
+.invoices_history_list .arrow .invoices_history_list_item_link {
     & .invoices_history_list_item_link-prep {
         &:before {
             content: '';
@@ -194,7 +203,7 @@
         text-align: center;
         width: 100%;
     }
-    & .invoices_history_list_item_link-prep {
+/*     & .invoices_history_list_item_link-prep {
         &:before {
             content: '';
             display: block;
@@ -214,15 +223,11 @@
                 height: 15px;
             }
         }
-    }
+    } */
 }
 .invoices_history_list .invoices_history_list_item-arrears .invoices_history_list_item_link,
-.invoices_history_list .invoices_history_list_item-sub_arrears .invoices_history_list_item_link,
-.invoices_history_list  .invoices_history_list_item-next .invoices_history_list_item_link,
-.invoices_history_list .invoices_history_list_item-future .invoices_history_list_item_link {
+.invoices_history_list .invoices_history_list_item-sub_arrears .invoices_history_list_item_link {
     &:before {
-        background-color: #f4f5f9;
-        border: 8px solid #f4f5f9;
         @include breakpoint(320px) {
             width: 6.75px;
             height: 6.75px;
@@ -232,7 +237,7 @@
         @include breakpoint(2600px) {
             width: 15px;
             height: 15px;
-            border: 8px solid #f4f5f9;
+            border: 8px solid #2dc888;
             margin: 12.5px auto;
         }
     } 
@@ -253,6 +258,42 @@
             }
         }
     }
+}
+
+.invoices_history_list  .invoices_history_list_item-next .invoices_history_list_item_link {
+     &:before {
+        background-color: #fff;
+        //border: 8px solid #f4f5f9;
+        @include breakpoint(320px) {
+            width: 6.75px;
+            height: 6.75px;
+            border: 3.6px solid #e5e7ee;
+            margin: 6.125px auto;
+        }
+        @include breakpoint(2600px) {
+            width: 15px;
+            height: 15px;
+            border: 8px solid #e5e7ee;
+            margin: 12.5px auto;
+        }
+    } 
+    & .invoices_history_list_item_link-sum {
+        &:before {
+            content: '';
+            border-radius: 50%;
+            background-color: #f4f5f9;
+            display: block;
+            margin: 0px auto 7px auto;
+            @include breakpoint(320px) {
+                width: 4.5px;
+                height: 4.5px;
+            }
+            @include breakpoint(2600px) {
+                width: 10px;
+                height: 10px;
+            }
+        }
+    }   
 }
 .invoices_history_list .invoices_history_list_item-paid .invoices_history_list_item_link {
     & .invoices_history_list_item_link-sum {
@@ -317,7 +358,7 @@
         }
     }
 }
-.invoices_history_list .invoices_history_list_item-future:before,
+.invoices_history_list .invoices_history_list_item-next:before,
 .invoices_history_list .invoices_history_list_item-next_sub_prepaid:before {
     background-color: #e5e7ee;
 }

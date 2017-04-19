@@ -1,0 +1,90 @@
+.tenanant-chat_left.tennant-chat_left_landlord {
+	& .tenanant-chat_left_block_search_middle_result {
+		padding: 47px 35px;
+		& div {
+			margin: 0;
+			padding: 0;
+			text-align: left;
+		}
+	}
+	& .tenanant-chat_left_block_search_middle_image {
+		width: 90px;
+		height: 90px;
+	    float: left;
+	    margin-right: 30px!important;
+	    background-color: #f4f5f9;
+	    text-align: center!important;
+	    text-transform: uppercase;
+	    color: #dbdde4;
+	    font-size: 34px;
+        line-height: 2.6;
+        font-family: $fourth-font;
+	}
+	& .tenanant-chat_left_block_search_middle_name {
+		font-size: 28px;
+		& sup {
+			top: 100%;
+			right: 0;
+			line-height: 20px;
+		}
+	}
+	& .tenanant-chat_left_block_search_middle_address, 
+	& .tenanant-chat_left_block_search_middle_phone {
+		font-size: 22px;
+	}
+}
+.toogle__link {
+	font-size: 27px;
+	color: #a8abba;
+	background-color: #fcfcfe;
+	display: inline-block;
+	width: 100%;
+	padding: 28px 35px;
+	border-bottom: 2px solid #e8e9f1;
+	position: relative;
+	&.collapsed .toogle__link_icon{
+		transform: rotate(0deg);
+	}
+}
+.toogle__link_icon {
+	display: inline-block;
+	position: absolute;
+	right: 35px;
+	top: 50%;
+	margin-top: -9px;
+	transform: rotate(180deg);
+	transition: transform 0.1s ease-out 0.05s;
+	& .my_svg {
+		fill: #c9cddb;
+		width: 18px;
+		height: 18px;
+	}
+}
+.toogle__block {
+	overflow: hidden;
+	transition: height 0.01s;
+}
+
+.latest-payments_table {
+    width: 70.6%;
+    margin: 0 auto;
+	& tr {
+		& th {
+			text-align: center;
+			font-size: 28px;
+			padding-bottom: 50px;
+		}
+		& td {
+			font-size: 22px;
+			font-family: $fourth-font;
+			padding-bottom: 20px;
+			&:nth-child(1) {
+				text-align: left;
+			}
+			&:nth-last-child(1) {
+				text-align: right;
+				color: #a4a9ba;
+			}
+		}
+	}
+}

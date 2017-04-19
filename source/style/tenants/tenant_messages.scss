@@ -22,7 +22,6 @@
 	border-right: 2px solid #e8e9f1;
 }
 .tenanant-chat_left_block_search_header input {
-	//@extend .rp__input;
 	margin: 0;
 	width: 100%;
 	font-size: 26px;
@@ -32,10 +31,21 @@
 }
 .tenanant-chat_left_block_search_middle_result {
 	text-align: center;
-	background-color: #f9fafc;
 	border-bottom: 2px solid #e8e9f1;
-	border-right: 8px solid $logotype-color;
-    margin-right: -2px;
+	position: relative;
+    &:hover,
+    &.active {
+    	background-color: #f9fafc;
+    	&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			height: 100%;
+    		border-right: 8px solid $logotype-color;
+    	}
+    }
 }
 .tenanant-chat_left_block_search_middle_image {
 	width: 155px;
@@ -98,6 +108,7 @@
 	display: flex;
 	flex-direction: column;
 	flex: 1 1 auto;
+	height: 76vh;
 }
 .tenanant-chat_left_block_chat-inner_middle .aplication_chat_middle_date {
 	font-size: 20px;
@@ -116,7 +127,7 @@
 	align-self: flex-start;
 	background-color: #f9fafc;
 	padding: 20px;
-	margin: 20px 70px;
+	margin: 20px 46px;
 	position: relative;
 	font-size: 28px;
 	&:before {
@@ -161,26 +172,39 @@
 	}
 }
 .tenanant-chat_left_block_chat-inner_middle_payment_icon {background-color: #3dce6d;}
-.tenanant-chat_left_block_chat-inner_middle_maintenance-request_icon {background-color: #ce3d3d;}
+.tenanant-chat_left_block_chat-inner_middle_maintenance-request_icon {background-color: #546e7a;}
 .tenanant-chat_left_block_chat-inner_middle_payment,
 .tenanant-chat_left_block_chat-inner_middle_maintenance-request{
-	border: 2px solid #f2f3f8;
-	margin: 20px 70px;
-    display: flex;
+	margin: 20px 150px 20px 70px;
+    //display: flex;
+    display: -webkit-box;
     align-items: center;
     padding: 13px 25px 13px 13px;
-    border-radius: 67px;
+    border-radius: 6px;
     & p {
     	font-size: 30px;
     }
     & .aplication_chat_middle_date {
     	font-size: 24px;
-    	color: #cdd0db;
     }
 }
+.tenanant-chat_left_block_chat-inner_middle_payment {
+	background-color: #edfbf2;
+	& .aplication_chat_middle_date {
+    	color: #a6d8b7;
+    }
+    & span {
+		color: #3dce6d;
+		font-family: $fourth-font;
+	}
+}
 .tenanant-chat_left_block_chat-inner_middle_maintenance-request {
+	background-color: #f1fbff;
+	& .aplication_chat_middle_date {
+    	color: #bbc6cb;
+    }
 	& span {
-		color: #ce3d3d;
+		color: #546e7a;
 	}
 }
 .tenanant-chat_left_block_chat-inner_middle_maintenance-request_block {
@@ -188,15 +212,13 @@
 } 
 .tenanant-chat_left_block_chat-inner_middle_maintenance-request_link {
 	font-size: 20px;
-	color: #d3d5e0;
+	color: #fff;
+	font-family: $fourth-font;
 	text-transform: uppercase;
-	border: 2px solid #eceef3;
-    padding: 24px 65px;
-    border-radius: 40px;
-    &:hover {
-    	color: #ce3d3d;
-    	border-color: #ce3d3d;
-    }
+	background-color: #546e7a;
+    padding: 17px 32px;
+    border-radius: 8px;
+    display: inline-block;
 }
 .tenanant-chat_left_block_chat-inner_footer_send {
 	display: inline-block;

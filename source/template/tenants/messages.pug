@@ -1,0 +1,173 @@
+.prop__menu_block
+	ul.prop__menu
+		li.prop__menu_item
+			a(href="#").prop__menu_item-link
+				i.prop__menu_item-link_icon
+					+use("calendar")
+				.prop__menu_item-link_name
+					| Select Dates
+		li.prop__menu_item
+			a(href="#").prop__menu_item-link
+				i.prop__menu_item-link_icon
+					+use("view_all")
+				.prop__menu_item-link_name
+					| View All
+		li.prop__menu_item
+			a(href="#").prop__menu_item-link
+				i.prop__menu_item-link_icon
+					+use("search")
+				.prop__menu_item-link_name
+					| Search
+.tennant-chat
+	.tenanant-chat_left.tennant-chat_left_landlord
+		.tenanant-chat_left_block
+			.tenanant-chat_left_block_search
+				.tenanant-chat_left_block_search_header
+					//input(type="text", placeholder="Search")
+				.tenanant-chat_left_block_search_middle
+					a(href="#collapse-1", data-toggle="collapse").toogle__link
+						| Current Tenants
+						i.toogle__link_icon
+							+use("arrow_down")
+					#collapse-1.toogle__block.collapse.in
+						.tenanant-chat_left_block_search_middle_result
+							.tenanant-chat_left_block_search_middle_image
+								| el
+							.tenanant-chat_left_block_search_middle_name
+								| Egor Landovich
+								sup 99+
+							.tenanant-chat_left_block_search_middle_address
+								| 11 Main Street, Hamilton
+							.tenanant-chat_left_block_search_middle_date
+								| 18:00 on 28 March 2016
+						.tenanant-chat_left_block_search_middle_result.active
+							.tenanant-chat_left_block_search_middle_image
+								img(src="https://pp.userapi.com/c406423/v406423680/2882/0BaT1DBqt0U.jpg")
+							.tenanant-chat_left_block_search_middle_name
+								| Egor Landovich
+								sup 99+
+							.tenanant-chat_left_block_search_middle_address
+								| 11 Main Street, Hamilton
+							.tenanant-chat_left_block_search_middle_date
+								| 18:00 on 28 March 2016
+					a(href="#collapse-2", data-toggle="collapse").toogle__link
+						| Previous Tenants
+						i.toogle__link_icon
+							+use("arrow_down")
+					#collapse-2.toogle__block.collapse
+						.tenanant-chat_left_block_search_middle_result
+							.tenanant-chat_left_block_search_middle_image
+								img(src="https://pp.userapi.com/c406423/v406423680/2882/0BaT1DBqt0U.jpg")
+							.tenanant-chat_left_block_search_middle_name
+								| Egor Landovich
+								sup 9
+							.tenanant-chat_left_block_search_middle_address
+								| 11 Main Street, Hamilton
+							.tenanant-chat_left_block_search_middle_date
+								| 18:00 on 28 March 2016
+						.tenanant-chat_left_block_search_middle_result
+							.tenanant-chat_left_block_search_middle_image
+								img(src="https://pp.userapi.com/c406423/v406423680/2882/0BaT1DBqt0U.jpg")
+							.tenanant-chat_left_block_search_middle_name
+								| Egor Landovich
+								sup 1
+							.tenanant-chat_left_block_search_middle_address
+								| 11 Main Street, Hamilton
+							.tenanant-chat_left_block_search_middle_date
+								| 18:00 on 28 March 2016
+			.tenanant-chat_left_block_chat-inner
+				.tenanant-chat_left_block_chat-inner_header
+				.tenanant-chat_left_block_chat-inner_middle#chatroom
+					.tenanant-chat_left_block_chat-inner_middle_interlocutor
+						| Can I please get a payment extension?
+						.aplication_chat_middle_date 30.11.2016    21:00
+					.tenanant-chat_left_block_chat-inner_middle_autor
+						| Sure, I can do until the 2nd Aug, OK!?
+						.aplication_chat_middle_date 30.11.2016    21:00
+					.tenanant-chat_left_block_chat-inner_middle_payment
+						i.tenanant-chat_left_block_chat-inner_middle_payment_icon
+							+use("coins")
+						.tenanant-chat_left_block_chat-inner_middle_payment_block
+							p Doro Persch paid 
+								span $2,200.00
+							.aplication_chat_middle_date 30.11.2016   21:00
+					.tenanant-chat_left_block_chat-inner_middle_autor
+						| Thank’s for the payment)) just in time!
+						.aplication_chat_middle_date 30.11.2016    21:00
+					.tenanant-chat_left_block_chat-inner_middle_maintenance-request
+						i.tenanant-chat_left_block_chat-inner_middle_maintenance-request_icon
+							+use("tools")
+						.tenanant-chat_left_block_chat-inner_middle_maintenance-request_block
+							p Maintenance Request - 
+								span Sink Pipes
+							.aplication_chat_middle_date 30.11.2016   21:00
+							a(href="#").tenanant-chat_left_block_chat-inner_middle_maintenance-request_link
+								| View Details
+					.tenanant-chat_left_block_chat-inner_middle_interlocutor
+						| I’d like to get this fixed ASAP please.
+						.aplication_chat_middle_date 30.11.2016    21:00
+				.tenanant-chat_left_block_chat-inner_footer
+					input(type="text", placeholder="Type your message here...").tenanant-chat_left_block_chat-inner_footer_input#messageBody
+					a(href="#аттачьми по полной").tenanant-chat_left_block_chat-inner_footer_attachment
+						+use("attachment")
+					a(href="#").tenanant-chat_left_block_chat-inner_footer_send#btnSendMessage
+						+use("send-message-button")
+	.tenanant-chat_right
+		.tenanant-chat_left_block_search_middle_result
+			.tenanant-chat_left_block_search_middle_image
+				img(src="https://pp.userapi.com/c406423/v406423680/2882/0BaT1DBqt0U.jpg")
+			.tenanant-chat_left_block_search_middle_name
+				| Egor Landovich
+			.tenanant-chat_left_block_search_middle_address
+				| 11 Main Street, Hamilton
+			.tenanant-chat_left_block_search_middle_phone
+				| 0499 565-990
+			.tenanant-chat_left_block_search_middle_date
+				| 18:00 on 28 March 2016
+			.tenanant-chat_right_status Current
+			table.latest-payments_table
+				thead
+					tr
+						th(colspan="2") Latest Payments
+				tbody
+					tr
+						td 30.11.2016
+						td $2,200.00
+					tr
+						td 29.10.2016
+						td $400.00
+					tr
+						td 28.10.2016
+						td $170.00
+					tr
+						td 22.9.2016
+						td $200.00
+		.tenanant-chat_right_links-block
+			//asp:linkbutton#btnShowMessageAttachment(runat='server').tenanant-chat_right_links-block_link
+				i.tenanant-chat_right_links-block_link_icon
+					+use("")
+				span SEND ATTACHMENT
+			asp:linkbutton#btnShowMessageTemplate(runat='server').tenanant-chat_right_links-block_link
+				i.tenanant-chat_right_links-block_link_icon
+					+use("file")
+				span SELECT TEMPLATE
+			asp:linkbutton#btnShowMessageSMS(runat='server').tenanant-chat_right_links-block_link
+				i.tenanant-chat_right_links-block_link_icon
+					+use("speech-bubble")
+				span SEND SMS
+			//asp:linkbutton#btnShowEMailMessage(runat='server').tenanant-chat_right_links-block_link
+				i.tenanant-chat_right_links-block_link_icon
+					+use("")
+				span SEND LETTER BY MAIL
+			asp:linkbutton#btnShowMessagePrivateNote(runat='server').tenanant-chat_right_links-block_link
+				i.tenanant-chat_right_links-block_link_icon
+					+use("tag")
+				span ADD PRIVATE NOTE
+			asp:linkbutton#btnShowMessageReminder(runat='server').tenanant-chat_right_links-block_link
+				i.tenanant-chat_right_links-block_link_icon
+					+use("ring")
+				span ADD REMINDER
+			a(href="").tenanant-chat_right_links-block_link
+				i.tenanant-chat_right_links-block_link_icon
+					+use("export")
+				span PRINT/EXPORT
