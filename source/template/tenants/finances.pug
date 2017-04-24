@@ -1,0 +1,235 @@
+.prop__menu_block
+	ul.prop__menu
+		li.prop__menu_item
+			a.prop__menu_item-link(href='#')
+				i.prop__menu_item-link_icon
+					+use('left-arrow')
+				.prop__menu_item-link_name Back To All Properties
+		li.prop__menu_item
+			a.prop__menu_item-link(href='#')
+				i.prop__menu_item-link_icon
+					+use('edit_sm')
+				.prop__menu_item-link_name Edit Property
+
+.finances__block
+	.finances__block_title
+		.finances__block_title_img
+			img(src="assets/img/items/item_1.jpg")
+		.finances__block_title_address
+			span.main__address 249/1095 Karangahape Road
+			span.sub__address North Shore, Auckland
+	.finances__block_status-bar
+		.finances__block_status-bar_lease
+			a(href="#").finances__block_status-bar_lease_link
+				.finances__block_status-bar_lease_img
+					img(src="assets/img/avatar.png")
+				.finances__block_status-bar_lease_name
+					span select lease
+					| Zach Galifianakis
+		.finances__block_status-bar_status
+			.properties__block_list-item_info-status_board.status__in-arrears
+				i.properties__block_list-item_info-status_icon
+					+use('in_arrears')
+				| In arrears: $500.00 (23 days)
+				.properties__block_list-item_info-status_link
+					a.send_reminder(href='#')
+						i.properties__block_list-item_info-status_link-icon
+							+use('remind')
+						| Send reminder
+	.finances__block_tenant
+		.finances__block_tenant_btn-block
+			a(href="#").finances__block_tenant_btn-block_link
+				| contact tenant
+			a(href="#").finances__block_tenant_btn-block_link
+				| offline payment
+			a(href="#").finances__block_tenant_btn-block_link
+				| add credit
+			a(href="#").finances__block_tenant_btn-block_link
+				| add charge
+			a(href="#").finances__block_tenant_btn-block_link
+				| log expenses
+			a(href="#").finances__block_tenant_btn-block_link.finances__block_tenant_btn-block_link_last
+				+use('more')
+		.finances__block_tenant_info
+			.finances__block_tenant_info_block
+				.finances__block_tenant_info_block_line
+					i.finances__block_tenant_info_block_icon
+						+use('tenant')
+					.finances__block_tenant_info_block_line-info
+						.finances__block_tenant_info_block_line_object
+							| Tenant
+						.finances__block_tenant_info_block_line_details
+							| Zach Galifianakis
+				.finances__block_tenant_info_block_line
+					i.finances__block_tenant_info_block_icon
+						+use('currency')
+					.finances__block_tenant_info_block_line-info
+						.finances__block_tenant_info_block_line_object
+							| Rent
+						.finances__block_tenant_info_block_line_details
+							| $2,000/month due on the 5th
+				.finances__block_tenant_info_block_line
+					i.finances__block_tenant_info_block_icon
+						+use('contract')
+					.finances__block_tenant_info_block_line-info
+						.finances__block_tenant_info_block_line_object
+							| Contract
+						.finances__block_tenant_info_block_line_details
+							| Expires 5th Aprils 2017
+			.finances__block_tenant_info_block
+				.finances__block_tenant_info_block_line
+					i.finances__block_tenant_info_block_icon
+						+use('wallet')
+					.finances__block_tenant_info_block_line-info
+						.finances__block_tenant_info_block_line_object
+							| Balance
+						.finances__block_tenant_info_block_line_details
+							| $21,600.00
+				.finances__block_tenant_info_block_line
+					i.finances__block_tenant_info_block_icon
+						+use('calendar')
+					.finances__block_tenant_info_block_line-info
+						.finances__block_tenant_info_block_line_object
+							| March 2017
+						.finances__block_tenant_info_block_line_details
+							| Received $1,590.00 of $2,000.00
+				.finances__block_tenant_info_block_line
+					i.finances__block_tenant_info_block_icon
+						+use('calendar')
+					.finances__block_tenant_info_block_line-info
+						.finances__block_tenant_info_block_line_object
+							| April 2017
+						.finances__block_tenant_info_block_line_details
+							| Received $1,590.00 of $2,000.00
+	.finances__block_payments
+		.finances__block_payments_tabs
+			ul.personal__menu-list  
+				li.personal__menu-list_item.active(data-class="first")
+					a(href="#").personal__menu-list_item-link
+						| Finances
+				li.personal__menu-list_item(data-class="second")
+					a(href="#").personal__menu-list_item-link
+						| Lease
+				li.personal__menu-list_item(data-class="third")
+					a(href="#").personal__menu-list_item-link
+						| Listings
+				li.personal__menu-list_item(data-class="fourth")
+					a(href="#").personal__menu-list_item-link
+						| Ledger
+				li.personal__menu-list_item(data-class="fifth")
+					a(href="#").personal__menu-list_item-link
+						| Maintenance
+				li.personal__menu-list_item(data-class="sixth")
+					a(href="#").personal__menu-list_item-link
+						| Messages
+				li.personal__menu-list_item(data-class="seventh")
+					a(href="#").personal__menu-list_item-link
+						| Attachments
+			ul.personal__block-list
+				li.personal__block-list_item.personal__block-list_item-first.active
+					.finances__block_payments_tabs_inner
+						.finances__block_payments_tabs_inner_block
+							h4 Payment Schedule
+							p Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old
+							ul.invoices_history_list
+								li.invoices_history_list_item
+									a(href="#").invoices_history_list_item_link
+								li.invoices_history_list_item.invoices_history_list_item-paid.arrow
+									a(href="#").invoices_history_list_item_link
+										.invoices_history_list_item_link-sum
+											| $2,000.00
+										.invoices_history_list_item_link-date
+											| 5 Jan 2017
+										.invoices_history_list_item_link-prep
+								li.invoices_history_list_item.invoices_history_list_item-next_prepaid.arrow
+									a(href="#").invoices_history_list_item_link
+										.invoices_history_list_item_link-sum
+											| $2,000.00
+										.invoices_history_list_item_link-date
+											| 5 Jan 2017
+										.invoices_history_list_item_link-prep
+											| PREPAID
+										.invoices_history_list_item_link-details
+											table.invoices_history_list_item_link-details_table
+												thead
+													tr
+														td Rent: 
+														td $400.00
+													tr
+														td(colspan="2") For period 17.08.2016 - 21.08.2016
+													tr
+														td Invoice:
+														td $100.00
+													tr
+														td(colspan="2") Internet Services
+												tbody
+													tr
+														td Total:
+														td $500.00
+													tr
+														td Paid: 
+														td $500.00
+													tr
+														td Balance:
+														td $0.00
+								li.invoices_history_list_item.invoices_history_list_item-next_sub_prepaid.arrow
+									a(href="#").invoices_history_list_item_link
+										.invoices_history_list_item_link-sum
+											| $2,000.00
+										.invoices_history_list_item_link-date
+											| 5 Jan 2017
+										.invoices_history_list_item_link-prep
+											| $100&nbsp;PREPAID
+								li.invoices_history_list_item.invoices_history_list_item-next.arrow
+									a(href="#").invoices_history_list_item_link
+										.invoices_history_list_item_link-sum
+											| $2,000.00
+										.invoices_history_list_item_link-date
+											| 5 Jan 2017
+										.invoices_history_list_item_link-prep
+								li.invoices_history_list_item.invoices_history_list_item-sub_arrears.arrow
+									a(href="#").invoices_history_list_item_link
+										.invoices_history_list_item_link-sum
+											| $2,000.00
+										.invoices_history_list_item_link-date
+											| 5 Jan 2017
+										.invoices_history_list_item_link-prep
+											//| $100&nbsp;PREPAID
+											span $1,900 in arrears
+								li.invoices_history_list_item.invoices_history_list_item-arrears.arrow
+									a(href="#").invoices_history_list_item_link
+										.invoices_history_list_item_link-sum
+											| $2,000.00
+										.invoices_history_list_item_link-date
+											| 5 Jan 2017
+										.invoices_history_list_item_link-prep
+											span arrears
+								li.invoices_history_list_item
+									a(href="#").invoices_history_list_item_link
+		
+						.finances__block_payments_tabs_inner_block
+							h4 Payments and Charges
+							p Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old
+						.finances__block_payments_tabs_inner_block
+							h4 Expenses
+							p Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old
+						.finances__block_payments_tabs_inner_block
+							h4 Cashflow
+							a(href="#").finances__block_payments_tabs_inner_block_month
+								| Monthly
+							p Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old
+						.finances__block_payments_tabs_inner_block
+							h4 Arrears
+							p Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old
+				li.personal__block-list_item.personal__block-list_item-second
+					| test1
+				li.personal__block-list_item.personal__block-list_item-third
+					| test2
+				li.personal__block-list_item.personal__block-list_item-fourth
+					| test3
+				li.personal__block-list_item.personal__block-list_item-fifth
+					| test4
+				li.personal__block-list_item.personal__block-list_item-sixth
+					| test5
+				li.personal__block-list_item.personal__block-list_item-seventh
+					| test6

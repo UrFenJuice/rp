@@ -1,0 +1,197 @@
+.finances__block_title {
+	display: flex;
+}
+.finances__block_title_img {
+	width: 83px;
+	height: 83px;
+	overflow: hidden;
+	& img {
+		height: 100%;
+	}
+}
+.finances__block_title_address {
+	margin-left: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	& .main__address {
+		font-size: 46px;
+		font-family: $fourth-font;
+	    line-height: 0.7;
+	}
+	& .sub__address {
+		color: #9597a1;
+		font-size: 28px;
+		font-family: $third-font;
+	    line-height: 0.8;
+	}
+}
+.finances__block_status-bar {
+	display: flex;
+    align-items: center;
+    margin: 50px 0 30px;
+}
+.finances__block_status-bar_lease {
+	background-color: #fff;
+	font-size: 31px;
+	font-family: $fourth-font;
+	padding: 45px 40px 44px 70px;
+	flex: 0 1 1215px;
+	& .finances__block_status-bar_lease_link {
+		display: inline-flex;
+	}
+	& .finances__block_status-bar_lease_img {
+		width: 57px;
+		height: 57px;
+		position: relative;
+		& img {
+			width: 100%;
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			border-radius: 50%;
+			width: 17px;
+			height: 17px;
+			background-color: #2dc888;
+			top: 3px;
+			right: 0;
+		}
+	}
+	& .finances__block_status-bar_lease_name {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		margin-left: 30px;
+	}
+	& span {
+		color: #cfd2dd;
+		text-transform: uppercase;
+		font-size: 20px;
+		font-family: $second-font;
+	}
+}
+.finances__block_status-bar_status {
+	background-color: #fdf4f4;
+	padding: 45px 0px 44px 60px;
+	flex: 1 1 auto;
+}
+.finances__block_tenant {
+	background-color: #fff;
+	padding: 80px 70px;
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+.finances__block_tenant_btn-block {
+	padding-bottom: 54px;
+	position: relative;
+	&:before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		height: 2px;
+		width: 150%;
+		left: -25%;
+		background-color: #f4f5f9;
+	}
+}
+.finances__block_tenant_btn-block_link {
+	@extend .rp__btn;
+    color: #c9ccd7;
+    background: linear-gradient(to top, #f9fafd, #fff, #fff);
+	&:hover {
+		background: #33dd97;
+        border-color: #2dc888;
+        color: #fff;
+	}
+	margin-right: 30px;
+}
+.finances__block_tenant_btn-block_link_last {
+	margin-right: 0;
+	min-width: auto;
+	padding: 22px 20px;
+	& .my_svg {
+		width: 24px;
+		height: 24px;
+		fill: #cdcfd7;
+	}
+}
+.finances__block_tenant_info {
+	display: flex;
+	justify-content: space-between;
+	padding: 65px 0;
+}
+.finances__block_tenant_info_block {
+	border: 2px solid #f4f5f9;
+	padding: 66px 84px 0 84px;
+	flex: 1 1 auto;
+	&:nth-child(1) {
+		margin-right: 30px;
+	}
+	&:nth-child(2) {
+		margin-left: 30px;
+	}
+	& .my_svg {
+		width: 84px;
+		height: 84px;
+		fill: #9e9fa8;
+		stroke-width: 0px;
+	}
+}
+.finances__block_tenant_info_block_line {
+	display: flex;
+	margin-bottom: 65px;
+}
+.finances__block_tenant_info_block_line-info {
+	margin-left: 40px;
+	font-size: $fourth-font;
+	font-size: 30px;
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.finances__block_tenant_info_block_line_object {
+	color: #9e9fa8;
+}
+.finances__block_tenant_info_block_line_details {
+	color: #53555f; 
+}
+
+.finances__block_payments {
+	background-color: #fff;
+	overflow: hidden;
+}
+.finances__block_payments_tabs {
+	display: flex;
+	flex-direction: column;
+	& .personal__menu-list {
+		display: inline-flex;
+		margin: 0 auto;
+		width: auto;
+		position: relative;
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			height: 2px;
+			width: 200%;
+			left: -50%;
+			background-color: #f4f5f9;
+		}
+	}
+}
+.finances__block_payments_tabs_inner_block {
+	border-bottom: 2px solid #f4f5f9;
+	& h4 {
+		text-align: center;
+		font-size: 35px;
+		font-family: $fourth-font;
+		margin-top: 140px;
+	}
+	p {
+		font-size: 26px;
+		text-align: center;
+		color: #b1b4bf;
+		padding: 0 490px;
+	} 
+}

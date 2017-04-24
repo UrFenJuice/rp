@@ -1,254 +1,238 @@
-a(href="#").download_ledger
-	| Download ledger
-a(href="#").pay_card
-	| Pay with debit / credit card
-.reports-finances
-	.reports-finances_block
-		.reports-finances_block_title
-			h3 Payments Schedule
-		ul.invoices_history_list
-			li.invoices_history_list_item
-				a(href="#").invoices_history_list_item_link
-			li.invoices_history_list_item.invoices_history_list_item-paid.arrow
-				a(href="#").invoices_history_list_item_link
-					.invoices_history_list_item_link-sum
-						| $2,000.00
-					.invoices_history_list_item_link-date
-						| 5 Jan 2017
-					.invoices_history_list_item_link-prep
-			li.invoices_history_list_item.invoices_history_list_item-next_prepaid.arrow
-				a(href="#").invoices_history_list_item_link
-					.invoices_history_list_item_link-sum
-						| $2,000.00
-					.invoices_history_list_item_link-date
-						| 5 Jan 2017
-					.invoices_history_list_item_link-prep
-						| PREPAID
-					.invoices_history_list_item_link-details
-						table.invoices_history_list_item_link-details_table
-							thead
-								tr
-									td Rent: 
-									td $400.00
-								tr
-									td(colspan="2") For period 17.08.2016 - 21.08.2016
-								tr
-									td Invoice:
-									td $100.00
-								tr
-									td(colspan="2") Internet Services
-							tbody
-								tr
-									td Total:
-									td $500.00
-								tr
-									td Paid: 
-									td $500.00
-								tr
-									td Balance:
-									td $0.00
-			li.invoices_history_list_item.invoices_history_list_item-next_sub_prepaid.arrow
-				a(href="#").invoices_history_list_item_link
-					.invoices_history_list_item_link-sum
-						| $2,000.00
-					.invoices_history_list_item_link-date
-						| 5 Jan 2017
-					.invoices_history_list_item_link-prep
-						| $100&nbsp;PREPAID
-			li.invoices_history_list_item.invoices_history_list_item-next.arrow
-				a(href="#").invoices_history_list_item_link
-					.invoices_history_list_item_link-sum
-						| $2,000.00
-					.invoices_history_list_item_link-date
-						| 5 Jan 2017
-					.invoices_history_list_item_link-prep
-			li.invoices_history_list_item.invoices_history_list_item-sub_arrears.arrow
-				a(href="#").invoices_history_list_item_link
-					.invoices_history_list_item_link-sum
-						| $2,000.00
-					.invoices_history_list_item_link-date
-						| 5 Jan 2017
-					.invoices_history_list_item_link-prep
-						//| $100&nbsp;PREPAID
-						span $1,900 in arrears
-			li.invoices_history_list_item.invoices_history_list_item-arrears.arrow
-				a(href="#").invoices_history_list_item_link
-					.invoices_history_list_item_link-sum
-						| $2,000.00
-					.invoices_history_list_item_link-date
-						| 5 Jan 2017
-					.invoices_history_list_item_link-prep
-						span arrears
-			li.invoices_history_list_item
-				a(href="#").invoices_history_list_item_link
-	.reports-finances_block
-		.reports-finances_block_title
-			h3 Paid In The Last 12 Months
-		.reports-finances_block_middle
-			svg(width='960', height='500')
-				g(transform='translate(480,250)')
-					path(fill='#1f77b4', d='M1.4083438190194563e-14,-230A230,230 0 0,1 218.7429987478853,-71.0739087062379L142.65847744427302,-46.35254915624211A150,150 0 0,0 9.184850993605149e-15,-150Z')
-					path(fill='#aec7e8', d='M218.7429987478853,-71.0739087062379A230,230 0 0,1 135.1906080272688,186.07390870623792L88.16778784387097,121.35254915624212A150,150 0 0,0 142.65847744427302,-46.35254915624211Z')
-					path(fill='#ff7f0e', d='M135.1906080272688,186.07390870623792A230,230 0 0,1 -135.1906080272688,186.07390870623792L-88.16778784387095,121.35254915624212A150,150 0 0,0 88.16778784387097,121.35254915624212Z')
-					path(fill='#ffbb78', d='M-135.1906080272688,186.07390870623792A230,230 0 0,1 -218.74299874788534,-71.07390870623787L-142.65847744427305,-46.35254915624209A150,150 0 0,0 -88.16778784387095,121.35254915624212Z')
-					path(fill='#2ca02c', d='M-218.74299874788534,-71.07390870623787A230,230 0 0,1 -4.225031457058368e-14,-230L-2.7554552980815446e-14,-150A150,150 0 0,0 -142.65847744427305,-46.35254915624209Z')
-	.reports-finances_block
-		.reports-finances_block_title
-			h3 Arrears Rate
-		.reports-finances_block_middle
-			.reports-finances_block_middle_rate
-				i.reports-finances_block_middle_rate_icon
-					+use("passage-of-time")
-				.reports-finances_block_middle_rate_number
-					| 4
-				.reports-finances_block_middle_rate_info
-					|  of the last 32 payments were late 
-		.reports-finances_block_footer
-			.reports-finances_block_footer_title Latest Arrears
-			ul.reports-finances_block_footer_list-latest-arrears
-				li.reports-finances_block_footer_list-latest-arrears_item
-					.reports-finances_block_footer_list-latest-arrears_item_date
-						i.reports-finances_block_footer_list-latest-arrears_item_date_icon
-							+use("arrow_down")
-						| 17 March 2015
-					.reports-finances_block_footer_list-latest-arrears_item_price $344.00
-					.reports-finances_block_footer_list-latest-arrears_item_days-late 4 days late
-				li.reports-finances_block_footer_list-latest-arrears_item
-					.reports-finances_block_footer_list-latest-arrears_item_date
-						i.reports-finances_block_footer_list-latest-arrears_item_date_icon
-							+use("arrow_down")
-						| 17 March 2015
-					.reports-finances_block_footer_list-latest-arrears_item_price $344.00
-					.reports-finances_block_footer_list-latest-arrears_item_days-late 4 days late
-				li.reports-finances_block_footer_list-latest-arrears_item
-					.reports-finances_block_footer_list-latest-arrears_item_date
-						i.reports-finances_block_footer_list-latest-arrears_item_date_icon
-							+use("arrow_down")
-						| 17 March 2015
-					.reports-finances_block_footer_list-latest-arrears_item_price $344.00
-					.reports-finances_block_footer_list-latest-arrears_item_days-late 4 days late
-				li.reports-finances_block_footer_list-latest-arrears_item
-					.reports-finances_block_footer_list-latest-arrears_item_date
-						i.reports-finances_block_footer_list-latest-arrears_item_date_icon
-							+use("arrow_down")
-						| 17 March 2015
-					.reports-finances_block_footer_list-latest-arrears_item_price $344.00
-					.reports-finances_block_footer_list-latest-arrears_item_days-late 4 days late
-	.reports-finances_block
-		.reports-finances_block_title
-			| Latest Invoices
-			a(href="#").reports-finances_block_title_viewall
-				| VIEW ALL
-		.reports-finances_block_middle
-			table.reports-finances_block_middle_table
-				thead
-					tr
-						th Date
-						th invoice
-						th amount
-						th Status
-				tbody
-					tr
-						td Sep 9,2016
-						td Internet Services
-						td $350.00
-						td
-							span.status__paid
-								| PAID
-					tr
-						td Sep 9,2016
-						td Rent
-						td $1.350.00
-						td
-							span.status__partially-paid
-								| PARTIALLY PAID
-					tr
-						td Sep 9,2016
-						td Maintenance
-						td $150.00
-						td
-							span.status__due-on
-								| Due on 1 Mar 17
-					tr
-						td Sep 9,2016
-						td Other Services
-						td $50.00
-						td
-							span.status__overdue
-								| OVERDUE
-	.reports-finances_block
-		.reports-finances_block_title
-			h3 Recurring Invoices
-				span (7)
-			a(href="#").reports-finances_block_title_viewall
-				| VIEW ALL
-		.reports-finances_block_middle
-			table.reports-finances_block_middle_table
-				thead
-					tr
-						th invoice
-						th amount
-						th frequency
-				tbody
-					tr
-						td Internet Services
-						td $350.00
-						td Daily
-					tr
-						td Rent
-						td $50.00
-						td Daily
-					tr
-						td Maintenance
-						td $1.350.00
-						td Weekly
-					tr
-						td Other Services
-						td $150.00
-						td Daily
-	.reports-finances_block
-		.reports-finances_block_title
-			h3 Latest Payments
-			a(href="#").reports-finances_block_title_viewall
-				| VIEW ALL
-		.reports-finances_block_middle
-			table.reports-finances_block_middle_table
-				thead
-					tr
-						th Data received
-						th amount
-				tbody
-					tr
-						td Sep 9,2016
-						td $350.00
-					tr
-						td Sep 9,2016
-						td $1.550.00
-					tr
-						td Sep 9,2016
-						td $120.00
-					tr
-						td Sep 9,2016
-						td $40.00
-
-figure
-	figcaption A graph that shows the number of fruit collected
-	svg.chart(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='420', height='150', aria-labelledby='title', role='img')
-		title#title A bart chart showing information
-		g.bar
-			rect(width='40', height='19')
-			text(x='45', y='9.5', dy='.35em') 4 apples
-		g.bar
-			rect(width='80', height='19', y='20')
-			text(x='85', y='28', dy='.35em') 8 bananas
-		g.bar
-			rect(width='150', height='19', y='40')
-			text(x='150', y='48', dy='.35em') 15 kiwis
-		g.bar
-			rect(width='160', height='19', y='60')
-			text(x='161', y='68', dy='.35em') 16 oranges
-		g.bar
-			rect(width='230', height='19', y='80')
-			text(x='235', y='88', dy='.35em') 23 lemons
-
-
+.reports-finances__inner
+	a(href="#").download_ledger
+		| Download ledger
+	a(href="#").pay_card
+		| Pay with debit / credit card
+	.reports-finances
+		.reports-finances_block
+			.reports-finances_block_title
+				h3 Payments Schedule
+			ul.invoices_history_list
+				li.invoices_history_list_item
+					a(href="#").invoices_history_list_item_link
+				li.invoices_history_list_item.invoices_history_list_item-paid.arrow
+					a(href="#").invoices_history_list_item_link
+						.invoices_history_list_item_link-sum
+							| $2,000.00
+						.invoices_history_list_item_link-date
+							| 5 Jan 2017
+						.invoices_history_list_item_link-prep
+				li.invoices_history_list_item.invoices_history_list_item-next_prepaid.arrow
+					a(href="#").invoices_history_list_item_link
+						.invoices_history_list_item_link-sum
+							| $2,000.00
+						.invoices_history_list_item_link-date
+							| 5 Jan 2017
+						.invoices_history_list_item_link-prep
+							| PREPAID
+						.invoices_history_list_item_link-details
+							table.invoices_history_list_item_link-details_table
+								thead
+									tr
+										td Rent: 
+										td $400.00
+									tr
+										td(colspan="2") For period 17.08.2016 - 21.08.2016
+									tr
+										td Invoice:
+										td $100.00
+									tr
+										td(colspan="2") Internet Services
+								tbody
+									tr
+										td Total:
+										td $500.00
+									tr
+										td Paid: 
+										td $500.00
+									tr
+										td Balance:
+										td $0.00
+				li.invoices_history_list_item.invoices_history_list_item-next_sub_prepaid.arrow
+					a(href="#").invoices_history_list_item_link
+						.invoices_history_list_item_link-sum
+							| $2,000.00
+						.invoices_history_list_item_link-date
+							| 5 Jan 2017
+						.invoices_history_list_item_link-prep
+							| $100&nbsp;PREPAID
+				li.invoices_history_list_item.invoices_history_list_item-next.arrow
+					a(href="#").invoices_history_list_item_link
+						.invoices_history_list_item_link-sum
+							| $2,000.00
+						.invoices_history_list_item_link-date
+							| 5 Jan 2017
+						.invoices_history_list_item_link-prep
+				li.invoices_history_list_item.invoices_history_list_item-sub_arrears.arrow
+					a(href="#").invoices_history_list_item_link
+						.invoices_history_list_item_link-sum
+							| $2,000.00
+						.invoices_history_list_item_link-date
+							| 5 Jan 2017
+						.invoices_history_list_item_link-prep
+							//| $100&nbsp;PREPAID
+							span $1,900 in arrears
+				li.invoices_history_list_item.invoices_history_list_item-arrears.arrow
+					a(href="#").invoices_history_list_item_link
+						.invoices_history_list_item_link-sum
+							| $2,000.00
+						.invoices_history_list_item_link-date
+							| 5 Jan 2017
+						.invoices_history_list_item_link-prep
+							span arrears
+				li.invoices_history_list_item
+					a(href="#").invoices_history_list_item_link
+		.reports-finances_block
+			.reports-finances_block_title
+				h3 Paid In The Last 12 Months
+			.reports-finances_block_middle
+				svg(width='960', height='500')
+					g(transform='translate(480,250)')
+						path(fill='#1f77b4', d='M1.4083438190194563e-14,-230A230,230 0 0,1 218.7429987478853,-71.0739087062379L142.65847744427302,-46.35254915624211A150,150 0 0,0 9.184850993605149e-15,-150Z')
+						path(fill='#aec7e8', d='M218.7429987478853,-71.0739087062379A230,230 0 0,1 135.1906080272688,186.07390870623792L88.16778784387097,121.35254915624212A150,150 0 0,0 142.65847744427302,-46.35254915624211Z')
+						path(fill='#ff7f0e', d='M135.1906080272688,186.07390870623792A230,230 0 0,1 -135.1906080272688,186.07390870623792L-88.16778784387095,121.35254915624212A150,150 0 0,0 88.16778784387097,121.35254915624212Z')
+						path(fill='#ffbb78', d='M-135.1906080272688,186.07390870623792A230,230 0 0,1 -218.74299874788534,-71.07390870623787L-142.65847744427305,-46.35254915624209A150,150 0 0,0 -88.16778784387095,121.35254915624212Z')
+						path(fill='#2ca02c', d='M-218.74299874788534,-71.07390870623787A230,230 0 0,1 -4.225031457058368e-14,-230L-2.7554552980815446e-14,-150A150,150 0 0,0 -142.65847744427305,-46.35254915624209Z')
+		.reports-finances_block
+			.reports-finances_block_title
+				h3 Arrears Rate
+			.reports-finances_block_middle
+				.reports-finances_block_middle_rate
+					i.reports-finances_block_middle_rate_icon
+						+use("calendar-ok")
+					.reports-finances_block_middle_rate_title
+						| Your payments are always on time!
+				//.reports-finances_block_middle_rate
+					i.reports-finances_block_middle_rate_icon
+						+use("passage-of-time")
+					.reports-finances_block_middle_rate_number
+						| 4
+					.reports-finances_block_middle_rate_info
+						|  of the last 32 payments were late 
+			//.reports-finances_block_footer
+				.reports-finances_block_footer_title Latest Arrears
+				ul.reports-finances_block_footer_list-latest-arrears
+					li.reports-finances_block_footer_list-latest-arrears_item
+						.reports-finances_block_footer_list-latest-arrears_item_date
+							i.reports-finances_block_footer_list-latest-arrears_item_date_icon
+								+use("arrow_down")
+							| 17 March 2015
+						.reports-finances_block_footer_list-latest-arrears_item_price $344.00
+						.reports-finances_block_footer_list-latest-arrears_item_days-late 4 days late
+					li.reports-finances_block_footer_list-latest-arrears_item
+						.reports-finances_block_footer_list-latest-arrears_item_date
+							i.reports-finances_block_footer_list-latest-arrears_item_date_icon
+								+use("arrow_down")
+							| 17 March 2015
+						.reports-finances_block_footer_list-latest-arrears_item_price $344.00
+						.reports-finances_block_footer_list-latest-arrears_item_days-late 4 days late
+					li.reports-finances_block_footer_list-latest-arrears_item
+						.reports-finances_block_footer_list-latest-arrears_item_date
+							i.reports-finances_block_footer_list-latest-arrears_item_date_icon
+								+use("arrow_down")
+							| 17 March 2015
+						.reports-finances_block_footer_list-latest-arrears_item_price $344.00
+						.reports-finances_block_footer_list-latest-arrears_item_days-late 4 days late
+					li.reports-finances_block_footer_list-latest-arrears_item
+						.reports-finances_block_footer_list-latest-arrears_item_date
+							i.reports-finances_block_footer_list-latest-arrears_item_date_icon
+								+use("arrow_down")
+							| 17 March 2015
+						.reports-finances_block_footer_list-latest-arrears_item_price $344.00
+						.reports-finances_block_footer_list-latest-arrears_item_days-late 4 days late
+		.reports-finances_block
+			.reports-finances_block_title
+				| Latest Invoices
+				a(href="#").reports-finances_block_title_viewall
+					| VIEW ALL
+			.reports-finances_block_middle
+				table.reports-finances_block_middle_table
+					thead
+						tr
+							th Date
+							th invoice
+							th amount
+							th Status
+					tbody
+						tr
+							td Sep 9,2016
+							td Internet Services
+							td $350.00
+							td
+								span.status__paid
+									| PAID
+						tr
+							td Sep 9,2016
+							td Rent
+							td $1.350.00
+							td
+								span.status__partially-paid
+									| PARTIALLY PAID
+						tr
+							td Sep 9,2016
+							td Maintenance
+							td $150.00
+							td
+								span.status__due-on
+									| Due on 1 Mar 17
+						tr
+							td Sep 9,2016
+							td Other Services
+							td $50.00
+							td
+								span.status__overdue
+									| OVERDUE
+		.reports-finances_block
+			.reports-finances_block_title
+				h3 Recurring Invoices
+					span (7)
+				a(href="#").reports-finances_block_title_viewall
+					| VIEW ALL
+			.reports-finances_block_middle
+				table.reports-finances_block_middle_table
+					thead
+						tr
+							th invoice
+							th amount
+							th frequency
+					tbody
+						tr
+							td Internet Services
+							td $350.00
+							td Daily
+						tr
+							td Rent
+							td $50.00
+							td Daily
+						tr
+							td Maintenance
+							td $1.350.00
+							td Weekly
+						tr
+							td Other Services
+							td $150.00
+							td Daily
+		.reports-finances_block
+			.reports-finances_block_title
+				h3 Latest Payments
+				a(href="#").reports-finances_block_title_viewall
+					| VIEW ALL
+			.reports-finances_block_middle
+				table.reports-finances_block_middle_table
+					thead
+						tr
+							th Data received
+							th amount
+					tbody
+						tr
+							td Sep 9,2016
+							td $350.00
+						tr
+							td Sep 9,2016
+							td $1.550.00
+						tr
+							td Sep 9,2016
+							td $120.00
+						tr
+							td Sep 9,2016
+							td $40.00

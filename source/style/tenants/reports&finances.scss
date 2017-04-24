@@ -1,3 +1,10 @@
+.reports-finances__inner {
+	overflow: hidden;
+	& .invoices_history_list:after {
+		width: 60px;
+		right: -60px;
+	}
+}
 .reports-finances {
 	display: flex;
 	flex-flow: row wrap;
@@ -48,12 +55,25 @@
 .reports-finances_block_middle_rate_icon {
 	display: block;
 	& .my_svg {
-		width: 320px;
-		height: 320px;
-		fill: #f7f8fb;
 		margin: 0 auto;
 	    display: block;
 	}
+	& #passage-of-time {
+		width: 320px;
+		height: 320px;
+		fill: #f7f8fb;
+	}
+	& #calendar-ok {
+		width: 215px;
+		height: 215px;
+		fill: #f4511e;
+	}
+}
+.reports-finances_block_middle_rate_title {
+	font-size: 40px;
+	text-align: center;
+	font-family: $fourth-font;
+	text-transform: uppercase;
 }
 .reports-finances_block_middle_rate_number {
 	color: #f4511e;
@@ -137,10 +157,28 @@
 }
 .download_ledger {
 	@extend .rp__btn;
-
+    margin-top: 44px;
+    color: #c9ccd7;
+    background: linear-gradient(to top, #f9fafd, #fff, #fff);
+	&:hover {
+		background: #33dd97;
+        border-color: #2dc888;
+        color: #fff;
+	}
+	margin-right: 35px;
+	margin-bottom: 90px;
 }
 .pay_card {
 	@extend .rp__btn;
+	color: #fff;
+	background-color: $green-element;
+	border-color: #2dc888;
+	&:hover {
+		background-color: #fff;
+		color: #c9ccd7;
+		border-color: #e9ebf4;
+	}
+	margin-bottom: 90px;
 }
 
 /*tables*/
