@@ -205,6 +205,7 @@
 		color: #fff;
 	    float: right;
 	    padding: 6.5px 9.5px;
+	    margin-right: 40px;
 	}
 	& th,
 	& td {
@@ -229,6 +230,24 @@
 	}
 	& .status__overdue {
 		background-color: #c8352d;
+	}
+	& .status__completed {
+		background-color: #82c81f;
+	}
+	& .status__pending {
+		background-color: #fdd835;
+	}
+	& .status__rejected {
+		background-color: #e03737;
+	}
+	& .status__credit {
+		background-color: #0072bc;
+	}
+	& .status__offline {
+		background-color: #4c4f5a;
+	}
+	& .status__prepaid {
+		background-color: #2dc887;
 	}
 	& tbody tr:nth-child(2n+1) {
 		& td {

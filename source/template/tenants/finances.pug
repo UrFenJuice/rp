@@ -210,17 +210,264 @@
 						.finances__block_payments_tabs_inner_block
 							h4 Payments and Charges
 							p Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old
+							.finances__block_payments_tabs_inner_tables
+								.reports-finances_block
+									.reports-finances_block_title
+										| Recent Payments & Credits
+										a(href="#").reports-finances_block_title_viewall
+											| VIEW ALL
+									.reports-finances_block_middle
+										table.reports-finances_block_middle_table.date-received
+											thead
+												tr
+													th Date Received
+													th 
+													th amount
+											tbody
+												tr
+													td September 9,2016
+													td
+														span.status__completed
+															| completed
+													td $350.00
+												tr
+													td September 9,2016
+													td
+														span.status__pending
+															| pending
+													td $1.350.00
+												tr
+													td September 9,2016
+													td
+														span.status__rejected
+															| rejected
+													td $150.00
+												tr
+													td September 9,2016
+													td
+														span.status__credit
+															| credit
+													td $50.00
+												tr
+													td September 9,2016
+													td
+														span.status__offline
+															| offline
+													td $50.00
+								.reports-finances_block
+									.reports-finances_block_title
+										h3 Upcoming charges
+										a(href="#").reports-finances_block_title_viewall
+											| VIEW ALL
+									.reports-finances_block_middle
+										table.reports-finances_block_middle_table
+											thead
+												tr
+													th due on
+													th note
+													th
+													th amount
+											tbody
+												tr
+													td September 9,2016
+													td Rent
+													td 
+														span.status__prepaid
+															| prepaid
+													td $350.00
+												tr
+													td Rent
+													td Rent
+													td 
+														span.status__prepaid
+															| $100 PREPAID
+													td $50.00
+												tr
+													td September 9,2016
+													td Rent
+													td 
+													td $1.350.00
+												tr
+													td September 9,2016
+													td Power
+													td 
+													td $150.00
+												tr
+													td September 9,2016
+													td Power
+													td 
+													td $150.00
+								.reports-finances_block
+									.reports-finances_block_title
+										| recurring charges
+										a(href="#").reports-finances_block_title_viewall
+											| VIEW ALL
+									.reports-finances_block_middle
+										table.reports-finances_block_middle_table
+											thead
+												tr
+													th Description
+													th amount
+													th frequency
+													th Next Charge
+											tbody
+												tr
+													td Internet Services
+													td $900.00
+													td Monthly
+													td September 9,2016
+												tr
+													td Power
+													td $900.00
+													td Weekly
+													td September 9,2016
+												tr
+													td TV
+													td $900.00
+													td Monthly
+													td September 9,2016
+												tr
+													td Garden Maintenace
+													td $900.00
+													td Daily
+													td September 9,2016
+												tr
+													td Other
+													td $900.00
+													td Daily
+													td September 9,2016
+							.finances__block_tenant_btn-block
+								a.finances__block_tenant_btn-block_link(href='#') offline payment
+								a.finances__block_tenant_btn-block_link(href='#') add a credit
+								a.finances__block_tenant_btn-block_link(href='#') add a charge
 						.finances__block_payments_tabs_inner_block
 							h4 Expenses
 							p Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old
+							.finances__block_payments_tabs_inner_tables
+								.reports-finances_block
+									.reports-finances_block_title
+										| Recent expenses
+										a(href="#").reports-finances_block_title_viewall
+											| VIEW ALL
+									.reports-finances_block_middle
+										table.reports-finances_block_middle_table
+											thead
+												tr
+													th Data Received
+													th CATEGORY
+													th amount
+											tbody
+												tr
+													td September 9,2016
+													td Principal
+													td $900.00
+												tr
+													td September 9,2016
+													td Insurance
+													td $900.00
+												tr
+													td September 9,2016
+													td Rates
+													td $900.00
+												tr
+													td September 9,2016
+													td Principal
+													td $900.00
+												tr
+													td September 9,2016
+													td Principal
+													td $900.00
+								.reports-finances_block
+							.finances__block_tenant_btn-block
+								a.finances__block_tenant_btn-block_link(href='#') add an expense
 						.finances__block_payments_tabs_inner_block
 							h4 Cashflow
 							a(href="#").finances__block_payments_tabs_inner_block_month
 								| Monthly
+								i.arrow-down
+									+use('arrow_down')
 							p Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old
 						.finances__block_payments_tabs_inner_block
 							h4 Arrears
 							p Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old
+							.finances__block_payments_tabs_inner_tables.finances__block_payments_tabs_inner_tables_last
+								.reports-finances_block
+									.reports-finances_block_middle
+										.reports-finances_block_middle_rate
+											i.reports-finances_block_middle_rate_icon
+												+use("passage-of-time")
+											.reports-finances_block_middle_rate_number
+												| 4
+											.reports-finances_block_middle_rate_info
+												|  of the last 32 payments were late
+								.reports-finances_block
+									ul.payment_history_calendar
+										li.payment_history_calendar_item.late
+											.payment_history_calendar_item_date
+												| April 2016
+											.payment_history_calendar_item_price
+												| $344.00
+										li.payment_history_calendar_item.on-time
+											.payment_history_calendar_item_date
+												| May 2016
+											.payment_history_calendar_item_price
+												| $344.00
+										li.payment_history_calendar_item.late
+											.payment_history_calendar_item_date
+												| June 2016
+											.payment_history_calendar_item_price
+												| $344.00
+										li.payment_history_calendar_item.on-time
+											.payment_history_calendar_item_date
+												| July 2016
+											.payment_history_calendar_item_price
+												| $344.00
+										li.payment_history_calendar_item.late
+											.payment_history_calendar_item_date
+												| August 2016
+											.payment_history_calendar_item_price
+												| $344.00
+										li.payment_history_calendar_item.on-time
+											.payment_history_calendar_item_date
+												| September 2016
+											.payment_history_calendar_item_price
+												| $344.00
+										li.payment_history_calendar_item.late
+											.payment_history_calendar_item_date
+												| October 2016
+											.payment_history_calendar_item_price
+												| $344.00
+										li.payment_history_calendar_item.on-time
+											.payment_history_calendar_item_date
+												| November 2016
+											.payment_history_calendar_item_price
+												| $344.00
+										li.payment_history_calendar_item.late
+											.payment_history_calendar_item_date
+												| December 2016
+											.payment_history_calendar_item_price
+												| $344.00
+										li.payment_history_calendar_item.on-time
+											.payment_history_calendar_item_date
+												| January 2016
+											.payment_history_calendar_item_price
+												| $344.00
+										li.payment_history_calendar_item.late
+											.payment_history_calendar_item_date
+												| February 2016
+											.payment_history_calendar_item_price
+												| $344.00
+										li.payment_history_calendar_item.late
+											.payment_history_calendar_item_date
+												| March 2016
+											.payment_history_calendar_item_price
+												| $344.00
+									ul.payment_history_calendar_info
+										li.payment_history_calendar_info_item.late
+											| - Late
+										li.payment_history_calendar_info_item.on-time
+											| - On Time
+
 				li.personal__block-list_item.personal__block-list_item-second
 					| test1
 				li.personal__block-list_item.personal__block-list_item-third

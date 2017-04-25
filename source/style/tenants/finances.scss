@@ -180,6 +180,9 @@
 		}
 	}
 }
+.finances__block_payments_tabs_inner {
+	padding: 0 70px;
+}
 .finances__block_payments_tabs_inner_block {
 	border-bottom: 2px solid #f4f5f9;
 	& h4 {
@@ -192,6 +195,156 @@
 		font-size: 26px;
 		text-align: center;
 		color: #b1b4bf;
-		padding: 0 490px;
+		padding: 0 20%;
+		margin-top: 70px;
+		margin-bottom: 100px;
 	} 
+}
+
+.finances__block_payments_tabs_inner_tables {
+	display: flex;
+	justify-content: space-between;
+    flex-flow: row wrap;
+    & .reports-finances_block {
+    	flex-grow: 0;
+    	flex-basis: 1100px;
+    } 
+    & .reports-finances_block_title {
+    	text-transform: uppercase;
+    	& .reports-finances_block_title_viewall {
+    		background-color: #e4e6ee;
+    		color: #000;
+    		&:hover {
+    			background-color: #fff;
+    		}
+    	}
+    }
+    & .reports-finances_block_middle_table tbody tr {
+    	&:nth-child(2n+1) td {
+    		background-color: #fff;
+    	}
+    	&:nth-child(2n+2) td {
+    		background-color: #f4f5f9;
+    	}
+    }
+    & th {
+		&:nth-child(4) {
+			text-align: left;
+		}
+	}
+}
+.reports-finances_block_middle_table.date-received {
+	& td {
+		&:nth-child(2) {
+			width: 40%;
+		}
+	}
+}
+.finances__block_payments_tabs_inner_block_month {
+	font-size: 26px;
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+	& .arrow-down {
+		display: inline-block;
+		margin-left: 20px;
+	}
+	& .my_svg {
+		width: 20px;
+		height: 20px;
+		fill: #c2c4d0;
+	}
+}
+
+.payment_history_calendar {
+	display: flex;
+	justify-content: space-between;
+	flex-flow: row wrap;
+	text-align: center;
+	font-family: $fourth-font;
+	& .payment_history_calendar_item {
+		flex: 1 1 25%;
+		margin-bottom: 90px;
+		&:before {
+			content: '';
+			position: relative;
+			width: 8px;
+			height: 8px;
+			border: 7px solid;
+			border-radius: 50%;
+			display: block;
+			margin: 0 auto;
+			margin-bottom: 25px;
+		}
+		&.late {
+			&:before {
+				border-color: #f4511e;
+			}
+			& .payment_history_calendar_item_date {
+				color: #f4511e;
+			}
+		}
+		&.on-time {
+			&:before {
+				border-color: #2dc888;
+			}
+			& .payment_history_calendar_item_date {
+				color: #2dc888;
+			}
+		}
+	}
+	& .payment_history_calendar_item_date {
+		font-size: 21.83px;
+	}
+	& .payment_history_calendar_item_price {
+		font-size: 21.96px;
+	}
+}
+.finances__block_payments_tabs_inner_tables_last {
+	margin-bottom: 230px;
+	& .reports-finances_block {
+		flex: 1 1 50%;
+		padding-bottom: 0;
+		position: relative;
+		overflow: inherit;
+	}
+	& .reports-finances_block_middle {
+		display: flex;
+		height: 100%;
+		padding-bottom: 100px;
+	}
+	& .reports-finances_block_middle_rate {
+		margin: auto;
+	}
+}
+.payment_history_calendar_info {
+	position: absolute;
+	bottom: -60px;
+    right: 0;
+	display: flex;
+	font-size: 23px;
+	font-family: $fourth-font;
+	& .payment_history_calendar_info_item {
+		display: inline-flex;
+		align-items: center;
+		margin-left: 70px;
+		&:before {
+			content: '';
+			position: relative;
+			width: 8px;
+			height: 8px;
+			border: 7px solid;
+			border-radius: 50%;
+			display: inline-block;
+			margin-right: 15px;
+		}
+		&.late {
+			border-color: #f4511e;
+			color: #f4511e;
+		}
+		&.on-time {
+			border-color: #2dc888;
+			color: #2dc888;
+		}
+	}
 }
