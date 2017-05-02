@@ -85,31 +85,27 @@
 		.reports-finances_block
 			.reports-finances_block_title
 				h3 Paid In The Last 12 Months
-			.reports-finances_block_middle
-				svg(width='960', height='500')
-					g(transform='translate(480,250)')
-						path(fill='#1f77b4', d='M1.4083438190194563e-14,-230A230,230 0 0,1 218.7429987478853,-71.0739087062379L142.65847744427302,-46.35254915624211A150,150 0 0,0 9.184850993605149e-15,-150Z')
-						path(fill='#aec7e8', d='M218.7429987478853,-71.0739087062379A230,230 0 0,1 135.1906080272688,186.07390870623792L88.16778784387097,121.35254915624212A150,150 0 0,0 142.65847744427302,-46.35254915624211Z')
-						path(fill='#ff7f0e', d='M135.1906080272688,186.07390870623792A230,230 0 0,1 -135.1906080272688,186.07390870623792L-88.16778784387095,121.35254915624212A150,150 0 0,0 88.16778784387097,121.35254915624212Z')
-						path(fill='#ffbb78', d='M-135.1906080272688,186.07390870623792A230,230 0 0,1 -218.74299874788534,-71.07390870623787L-142.65847744427305,-46.35254915624209A150,150 0 0,0 -88.16778784387095,121.35254915624212Z')
-						path(fill='#2ca02c', d='M-218.74299874788534,-71.07390870623787A230,230 0 0,1 -4.225031457058368e-14,-230L-2.7554552980815446e-14,-150A150,150 0 0,0 -142.65847744427305,-46.35254915624209Z')
+			.reports-finances_block_middle.reports-finances_block_middle_chart
+				//canvas#doughnut_chart
+				//#js-legend.chart-legend
+				canvas#bar_chart
 		.reports-finances_block
 			.reports-finances_block_title
 				h3 Arrears Rate
 			.reports-finances_block_middle
-				.reports-finances_block_middle_rate
+				//.reports-finances_block_middle_rate
 					i.reports-finances_block_middle_rate_icon
 						+use("calendar-ok")
 					.reports-finances_block_middle_rate_title
 						| Your payments are always on time!
-				//.reports-finances_block_middle_rate
+				.reports-finances_block_middle_rate
 					i.reports-finances_block_middle_rate_icon
 						+use("passage-of-time")
 					.reports-finances_block_middle_rate_number
 						| 4
 					.reports-finances_block_middle_rate_info
 						|  of the last 32 payments were late 
-			//.reports-finances_block_footer
+			.reports-finances_block_footer
 				.reports-finances_block_footer_title Latest Arrears
 				ul.reports-finances_block_footer_list-latest-arrears
 					li.reports-finances_block_footer_list-latest-arrears_item

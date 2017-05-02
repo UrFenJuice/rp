@@ -26,6 +26,8 @@
 				.finances__block_status-bar_lease_name
 					span select lease
 					| Zach Galifianakis
+				i.arrow-down
+					+use('arrow_down')
 		.finances__block_status-bar_status
 			.properties__block_list-item_info-status_board.status__in-arrears
 				i.properties__block_list-item_info-status_icon
@@ -68,7 +70,7 @@
 							| Rent
 						.finances__block_tenant_info_block_line_details
 							| $2,000/month due on the 5th
-				.finances__block_tenant_info_block_line
+				.finances__block_tenant_info_block_line.finances__block_tenant_info_block_line_status
 					i.finances__block_tenant_info_block_icon
 						+use('contract')
 					.finances__block_tenant_info_block_line-info
@@ -117,10 +119,11 @@
 					a(href="#").personal__menu-list_item-link
 						| Ledger
 				li.personal__menu-list_item(data-class="fifth")
-					a(href="#").personal__menu-list_item-link
+					a(href="#").personal__menu-list_item-link.personal__menu-list_item-link_dot
 						| Maintenance
 				li.personal__menu-list_item(data-class="sixth")
 					a(href="#").personal__menu-list_item-link
+						span 99+
 						| Messages
 				li.personal__menu-list_item(data-class="seventh")
 					a(href="#").personal__menu-list_item-link
@@ -378,6 +381,9 @@
 													td Principal
 													td $900.00
 								.reports-finances_block
+									.reports-finances_block_middle.reports-finances_block_middle_chart
+										canvas#doughnut_chart
+										#js-legend.chart-legend
 							.finances__block_tenant_btn-block
 								a.finances__block_tenant_btn-block_link(href='#') add an expense
 						.finances__block_payments_tabs_inner_block
@@ -387,6 +393,20 @@
 								i.arrow-down
 									+use('arrow_down')
 							p Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old
+							.box
+								svg.chart(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', height='400', width='1000', aria-labelledby='title', role='img')
+									g.bar(transform='translate(0,0)')
+										rect(height='100', y='100', width='50')
+										rect(height='60', y='140', width='50', x="50")
+									g.bar(transform='translate(150,0)')
+										rect(height='60', y='140', width='50')
+										rect(height='60', y='140', width='50', x="150")
+									g.bar(transform='translate(250,0)')
+										rect(height='200', width='50')
+										rect(height='60', y='140', width='50', x="250")
+
+
+
 						.finances__block_payments_tabs_inner_block
 							h4 Arrears
 							p Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old

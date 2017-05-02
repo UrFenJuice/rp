@@ -89,6 +89,28 @@
 			    margin-bottom: -3px;
 			}
 		}
+		& span {
+			margin-right: 15px;
+			background-color: #d8dbe5;
+			color: #fff;
+			border-radius: 50%;
+			font-size: 19px;
+			font-family: $second-font;
+			padding: 10px 5px;
+		}
+	}
+}
+.personal__menu-list_item-link_dot {
+	&:before {
+		content: '';
+		position: relative;
+		display: inline-block;
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		background-color: #ed1c24;
+		margin-right: 15px;
+    	top: -4px;
 	}
 }
 .personal__menu-list_item {
