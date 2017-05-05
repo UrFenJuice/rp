@@ -112,21 +112,22 @@
 .finances__block_tenant_btn-block_link {
 	@extend .rp__btn;
     color: #c9ccd7;
-    background: linear-gradient(to top, #f9fafd, #fff, #fff);
+    background: linear-gradient(to top, #f9fafd, #fefeff, #fff);
 	&:hover {
-		background: #33dd97;
-        border-color: #2dc888;
-        color: #fff;
+		background: linear-gradient(to top, #fafbfd, #f5f6fb, #f4f5fb);
+        border-color: #e9ebf4;
+        color: #c8cbd6;
 	}
 	margin-right: 30px;
 }
 .finances__block_tenant_btn-block_link_last {
 	margin-right: 0;
 	min-width: auto;
-	padding: 22px 20px;
+	padding-left: 20px;
+	padding-right: 20px;
 	& .my_svg {
 		width: 24px;
-		height: 24px;
+		height: 19px;
 		fill: #cdcfd7;
 	}
 }
@@ -162,6 +163,12 @@
 			content: '';
 			position: relative;
 			margin-right: 15px;
+			background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDI2IDI2IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyNiAyNiIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4Ij4KICA8cGF0aCBkPSJtLjMsMTRjLTAuMi0wLjItMC4zLTAuNS0wLjMtMC43czAuMS0wLjUgMC4zLTAuN2wxLjQtMS40YzAuNC0wLjQgMS0wLjQgMS40LDBsLjEsLjEgNS41LDUuOWMwLjIsMC4yIDAuNSwwLjIgMC43LDBsMTMuNC0xMy45aDAuMXYtOC44ODE3OGUtMTZjMC40LTAuNCAxLTAuNCAxLjQsMGwxLjQsMS40YzAuNCwwLjQgMC40LDEgMCwxLjRsMCwwLTE2LDE2LjZjLTAuMiwwLjItMC40LDAuMy0wLjcsMC4zLTAuMywwLTAuNS0wLjEtMC43LTAuM2wtNy44LTguNC0uMi0uM3oiIGZpbGw9IiMyZWMyOGMiLz4KPC9zdmc+Cg==);
+			background-size: 24px;
+			background-position: 50%;
+			display: inline-block;
+			width: 24px;
+			height: 24px;
 		}
 	}
 }
@@ -238,17 +245,18 @@
     flex-flow: row wrap;
     & .reports-finances_block {
     	flex-grow: 0;
-    	flex-basis: 1100px;
+    	flex-basis: 1125px;
+    	border: none;
+    	padding: 100px 0;
+    	&.reports-finances_block_chart {
+    		& .reports-finances_block_title {
+		    	text-align: center;
+		    	display: block;
+		    }
+    	}
     } 
     & .reports-finances_block_title {
     	text-transform: uppercase;
-    	& .reports-finances_block_title_viewall {
-    		background-color: #e4e6ee;
-    		color: #000;
-    		&:hover {
-    			background-color: #fff;
-    		}
-    	}
     }
     & .reports-finances_block_middle_table tbody tr {
     	&:nth-child(2n+1) td {
@@ -259,6 +267,7 @@
     	}
     }
     & th {
+    	border-bottom: 1px solid #ebedf2;
 		&:nth-child(4) {
 			text-align: left;
 		}
@@ -338,6 +347,7 @@
 		padding-bottom: 0;
 		position: relative;
 		overflow: inherit;
+		border: 2px solid #e8e9f1;
 	}
 	& .reports-finances_block_middle {
 		display: flex;
@@ -379,3 +389,80 @@
 		}
 	}
 }
+.bar_chart_inner {
+	margin-bottom: 100px;
+}
+
+//attachment
+.attachments__block_tabs_inner {
+	display: flex;
+    justify-content: space-between;
+	flex-flow: row wrap;
+	padding: 50px 70px 0px 70px;
+}
+.attachments__block_item {
+	border: 2px solid #eff1f7;
+	padding: 40px 25px 40px 40px;
+	flex: 0 1 48%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 70px;
+	& .my_svg {
+		width: 32px;
+		height: 32px;
+		fill: #c2c5d3;
+	}
+}
+.attachments__block_item_link {
+	display: inline-block;
+	&:hover {
+		& .my_svg {
+			fill: #e0e2ee;
+		}
+	}
+}
+.attachments__block_item_link_icon {
+	display: inline-block;
+	padding: 0 20px;
+}
+.attachments__block_item_info {
+	width: 70%;
+}
+.attachments__block_item_info_name {
+	font-size: 28px;
+}
+.attachments__block_item_info_additionally {
+	font-size: 24px;
+	color: #c2c5d3;
+	display: flex;
+}
+.attachments__block_item_info_name {
+	margin-bottom: 10px;
+}
+.attachments__block_item_info_additionally_date {
+	margin-right: 40px;
+}
+.attachments__block_upload-link {
+	@extend .rp__btn;
+	border-color: #4ed19b;
+    background: linear-gradient(to top, #30d28f, #33dc96, #33dd97);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    max-width: 300px;
+    justify-content: center;
+    margin: 0 auto 78px auto;
+	& .my_svg {
+		width: 32px;
+		height: 32px;
+		fill: #fff;
+		margin-right: 15px;
+	}
+	&:hover {
+		border-color: #2dc888;
+		background: linear-gradient(to top, #30d390, #2dc988, #2dc888);
+		color: #fff;
+	}
+}
+//!attachment

@@ -1,6 +1,10 @@
 .rp__pop-up
 	p.rp__pop-up_head
 		| Add Tenants
+	p.rp__pop-up_address
+		| 223/22 Floyd Rose Street, Hamilton
+	a(href="#").rp__pop-up_view-details
+		| VIEW DETAILS
 	.rp__pop-up_middle
 		.rp__pop-up_middle_block
 			i.rp__pop-up_middle_block_icon
@@ -29,6 +33,15 @@
 			.rp__pop-up_middle_block_btn
 				a(href="#").rp__pop-up_middle_block_btn_link
 					| select
+	.rp__pop-up_footer
+		a(href="#").rp__pop-up_footer_link
+			i.rp__pop-up_footer_link_icon
+				+use('plus')
+			| ADD ANOTHER PROPERTY
+		a(href="#").rp__pop-up_footer_link
+			i.rp__pop-up_footer_link_icon
+				+use('plus')
+			| Add Multiple Properties
 	a(href="#").rp__pop-up_close
 		i.rp__pop-up_close_icon
 			+use("close")

@@ -1,4 +1,12 @@
-ul.invoices_history_list
+.my_class(style="width: 25%;position: relative; margin: 100px auto;")
+	canvas#double_doughnut_chart
+	#js-legend.chart-legend
+//.my_class(style="width: 25%;position: relative; margin: 50px auto;")
+	canvas#doughnut_chart
+	#js-legend.chart-legend
+//.my_class(style="width: 100%;")
+	canvas#bar_chart
+//ul.invoices_history_list
 	li.invoices_history_list_item
 		a(href="#").invoices_history_list_item_link
 	li.invoices_history_list_item.invoices_history_list_item-paid.arrow
@@ -73,33 +81,8 @@ ul.invoices_history_list
 				span arrears
 	li.invoices_history_list_item
 		a(href="#").invoices_history_list_item_link
-br
-br
-br
-br
-br
-br
-br
-br
-br
-br
-br
-br
-br
-br
-br
-br
-br
-br
-br
-br
-br
-br
-br
-br
-br
-br
-.rp__pop-up_inner
+
+//.rp__pop-up_inner
 	.rp__pop-up
 		p.rp__pop-up_head
 			+use("photo-frame")
@@ -137,7 +120,7 @@ br
 				+use("close")
 			|close
 
-script(type='text/javascript').
+//script(type='text/javascript').
 	$(document).ready(function(){
 	var block = $("#MainContent_ulThumbnail");
 	var heightBlock = $("#large img");

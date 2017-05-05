@@ -19,15 +19,18 @@
 		font-size: 25px;
 		color: #9597a1;
 	}
-	& a {
-		color: #f9b022;
-		font-size: 20px;
-		font-family: $second-font;
-		text-decoration: underline;
-		display: inline-block;
-		margin-top: 20px;
-		letter-spacing: 3.5px;
-	}
+}
+.personal__verify_link {
+	letter-spacing: 3.5px;
+	color: #fff;
+	background-color: #f9b022;
+	display: inline-block;
+	font-size: 23px;
+	font-family: $fourth-font;
+	text-transform: uppercase;
+	border-radius: 8px;
+	padding: 14px 11px;
+	margin-top: 20px;
 }
 .personal__menu-list {
 	display: flex;
@@ -61,11 +64,12 @@
 			content: "";
 			display: block;
 			position: absolute;
-			bottom: -36px;
+			bottom: -33px;
 			left: 50%;
 			margin-left: -18px;
 			border: 18px solid transparent;	
 			border-top: 18px solid #2dc888;
+			z-index: 9;
 		}
 	}
 	& .personal__menu-list_item-link {

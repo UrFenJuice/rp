@@ -380,7 +380,9 @@
 													td September 9,2016
 													td Principal
 													td $900.00
-								.reports-finances_block
+								.reports-finances_block.reports-finances_block_chart
+									.reports-finances_block_title
+										| Expenses This Month
 									.reports-finances_block_middle.reports-finances_block_middle_chart
 										canvas#doughnut_chart
 										#js-legend.chart-legend
@@ -393,20 +395,8 @@
 								i.arrow-down
 									+use('arrow_down')
 							p Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old
-							.box
-								svg.chart(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', height='400', width='1000', aria-labelledby='title', role='img')
-									g.bar(transform='translate(0,0)')
-										rect(height='100', y='100', width='50')
-										rect(height='60', y='140', width='50', x="50")
-									g.bar(transform='translate(150,0)')
-										rect(height='60', y='140', width='50')
-										rect(height='60', y='140', width='50', x="150")
-									g.bar(transform='translate(250,0)')
-										rect(height='200', width='50')
-										rect(height='60', y='140', width='50', x="250")
-
-
-
+							.bar_chart_inner
+								canvas#bar_chart
 						.finances__block_payments_tabs_inner_block
 							h4 Arrears
 							p Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old
@@ -499,4 +489,71 @@
 				li.personal__block-list_item.personal__block-list_item-sixth
 					| test5
 				li.personal__block-list_item.personal__block-list_item-seventh
-					| test6
+					.attachments__block_tabs_inner
+						.attachments__block_item
+							.attachments__block_item_info
+								p.attachments__block_item_info_name Rent Payments Doc 2016
+								.attachments__block_item_info_additionally
+									.attachments__block_item_info_additionally_date
+										| 30.11.2016
+									.attachments__block_item_info_additionally_file-type
+										| PDF
+							.attachments__block_item_links
+								a(href="#").attachments__block_item_link
+									i.attachments__block_item_link_icon
+										+use("eye")
+								a(href="#").attachments__block_item_link
+									i.attachments__block_item_link_icon
+										+use("export")
+								a(href="#").attachments__block_item_link
+									i.attachments__block_item_link_icon
+										+use("mail")
+								a(href="#").attachments__block_item_link
+									i.attachments__block_item_link_icon
+										+use("delete_sm")
+						.attachments__block_item
+							.attachments__block_item_info
+								p.attachments__block_item_info_name Rent Payments Doc 2016
+								.attachments__block_item_info_additionally
+									.attachments__block_item_info_additionally_date
+										| 30.11.2016
+									.attachments__block_item_info_additionally_file-type
+										| PDF
+							.attachments__block_item_links
+								a(href="#").attachments__block_item_link
+									i.attachments__block_item_link_icon
+										+use("eye")
+								a(href="#").attachments__block_item_link
+									i.attachments__block_item_link_icon
+										+use("export")
+								a(href="#").attachments__block_item_link
+									i.attachments__block_item_link_icon
+										+use("mail")
+								a(href="#").attachments__block_item_link
+									i.attachments__block_item_link_icon
+										+use("delete_sm")
+						.attachments__block_item
+							.attachments__block_item_info
+								p.attachments__block_item_info_name Rent Payments Doc 2016
+								.attachments__block_item_info_additionally
+									.attachments__block_item_info_additionally_date
+										| 30.11.2016
+									.attachments__block_item_info_additionally_file-type
+										| PDF
+							.attachments__block_item_links
+								a(href="#").attachments__block_item_link
+									i.attachments__block_item_link_icon
+										+use("eye")
+								a(href="#").attachments__block_item_link
+									i.attachments__block_item_link_icon
+										+use("export")
+								a(href="#").attachments__block_item_link
+									i.attachments__block_item_link_icon
+										+use("mail")
+								a(href="#").attachments__block_item_link
+									i.attachments__block_item_link_icon
+										+use("delete_sm")
+					a(href="#").attachments__block_upload-link
+						i.attachments__block_upload-link_icon
+							+use("export")
+						| upload
