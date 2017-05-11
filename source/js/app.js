@@ -1,7 +1,15 @@
 jQuery(function($){
     $(document).ready(function(){
         svg4everybody();
-        jQuery('.rp__content, .left-sidebar, .tenanant-chat_left_block_chat-inner_middle').scrollbar();
+        jQuery('.rp__content, .left-sidebar').scrollbar();
+        jQuery('#divChatHistory').scrollbar({
+            "onScroll": function () {
+                $('#divChatHistory').bind("DOMSubtreeModified", function () {
+                    console.log('1');
+                    $('#divChatHistory').scrollTop($('#divChatHistory').scrollTop() + 500);
+                });
+            }
+        });
 
         $('.properties__block_list-item_info-lists_link').on('click', function(e){
             e.preventDefault();

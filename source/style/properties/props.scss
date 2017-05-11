@@ -1,8 +1,6 @@
 .properties__block_list {
 	display: flex;
     flex-flow: row wrap;
-    //justify-content: flex-start;
-    //align-items: flex-start;
     padding: 0;
     margin: 0;
 }
@@ -11,34 +9,31 @@
 	background-color: #fff;
 	@include breakpoint(900px) {
 		width: 604px;
-		height: 542px;
 		margin-right: 28px;
 		margin-bottom: 33px;
 	}
 	@include breakpoint(1170px) {
 		width: 453px;
-		height: 542px;
 		margin-right: 28px;
 		margin-bottom: 33px;
 	}
-	@include breakpoint(2600px) {
+/* 	@include breakpoint(2600px) {
 		width: 1060px;
-		height: 1233px;
 		margin-right: 60px;
 		margin-bottom: 75px;
 	}
 	@include breakpoint(3300px) {
 		margin-right: 30px;
-	}
+	} */
 }
 .properties__block_list-item_image {
 	position: relative;
 	@include breakpoint(320px) {
 		height: 216px;
 	}
-	@include breakpoint(2600px) {
+/* 	@include breakpoint(2600px) {
 		height: 500px;
-	}
+	} */
 	& .properties__block_list-item_image-wrapper {
 		display: block;
 		height: 100%;
@@ -55,7 +50,6 @@
 		margin: auto;
 	}
 	& .rp__show_more {
-		position: absolute;
 		color: #cdcfd7;
 		background-color: #fff;
 		display: block;
@@ -63,33 +57,27 @@
 		text-align: center;
 	    line-height: 0.44;
 	    cursor: pointer;
+	    position: relative;
 	    @include breakpoint(320px) {
-	    	width: 30px;
-			height: 30px;
-			font-size: 30px;
-			top: 17px;
-			right: 22px;
+	    	width: 26px;
+			height: 26px;
+			font-size: 26px;
 	    }
-	    @include breakpoint(1170px) {
-	    	right: 18px;
-	    }
-	    @include breakpoint(2600px) {
+/* 	    @include breakpoint(2600px) {
 	    	width: 70px;
 			height: 70px;
 			font-size: 70px;
-			top: 40px;
-			right: 40px;
-	    }
+	    } */
 	    &:hover {
 	    	background-color: #f4f5f9;
 	    	border-radius: 6px 6px 0 0;
 	    }
 	}
 	& .rp__details {
-		position: absolute;
 		background: linear-gradient(to top, $green-element, $green-element, $green-element);
 		border-color: #2dc888;
 		color: #fff;
+		margin-right: 10px;
 		&:hover {
 			color: #c9ccd7;
 			border-color: #e9ebf4;
@@ -98,11 +86,28 @@
 		@extend .rp__btn;
 	}
 }
-.properties__block_list-item_info {
+.properties__block_list-item_image-footer {
+	position: absolute;
+	bottom: 2px;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.3);
+	display: flex;
+	align-items: center;
+	padding-top: 15px;
+	padding-bottom: 15px;
 	@include breakpoint(320px) {
-		padding-top: 19px;
-		& .properties__block_list-item_info-status_board,
-		& .properties__block_list-item_info-address {
+		padding-right: 18px;
+		padding-left: 27px;
+	}
+/* 	@include breakpoint(2600px) {
+		padding-right: 43px;
+		padding-left: 60px;
+	} */
+}
+.properties__block_list-item_info {
+	position: relative;
+	@include breakpoint(320px) {
+		& .properties__block_list-item_info-status_board {
 			padding-right: 18px;
 			padding-left: 27px;
 		}
@@ -110,19 +115,17 @@
 			padding-top: 19px;
 			padding-bottom: 18px;
 		}
-		.status__property-vacant {
+/* 		.status__property-vacant {
 			padding-top: 50px;
     		padding-bottom: 50px;
 		}
 		.status__property-vacant + div {
 			padding-top: 33px;
 			padding-bottom: 33px;
-		}
+		} */
 	}
-	@include breakpoint(2600px) {
-		padding-top: 53.5px;
-		& .properties__block_list-item_info-status_board,
-		& .properties__block_list-item_info-address {
+/* 	@include breakpoint(2600px) {
+		& .properties__block_list-item_info-status_board {
 			padding-right: 43px;
 			padding-left: 60px;
 		}
@@ -138,11 +141,12 @@
 			padding-top: 68px;
 			padding-bottom: 68px;
 		}
-	}
+	} */
 }
 .properties__block_list-item_info-address {
 	display: flex;
 	flex-direction: column;
+	width: 68%;
 	& .sub__address {
 		font-family: $third-font;
 		color: #9597a1;
@@ -151,6 +155,7 @@
 		& .main__address {
 			font-size: 17.12px;
 			display: inline-block;
+			color: #fff;
 		}
 		& .sub__address {
 			font-size: 10.7px;
@@ -158,7 +163,7 @@
 			display: inline-block;
 		}
 	}
-	@include breakpoint(2600px) {
+/* 	@include breakpoint(2600px) {
 		& .main__address {
 			font-size: 40px;
 		}
@@ -166,23 +171,20 @@
 			font-size: 25px;
 			padding: 7px 0;
 		}
-	}
+	} */
 }
 .properties__block_list-item_info-status {
 	display: flex;
 	flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
-	border-top: 2px solid $background-content-color;
 	border-bottom: 2px solid $background-content-color;
 	@include breakpoint(320px) {
-		margin-top: 15px;
-		min-height: 110px;
+		height: 110px;
 	}
-	@include breakpoint(2600px) {
-		margin-top: 42px;
+/* 	@include breakpoint(2600px) {
 	    min-height: 230px;
-	}
+	} */
 }
 .properties__block_list-item_info-status_board {
 	text-transform: uppercase;
@@ -195,7 +197,7 @@
 		display: flex;
 		align-items: center;
 	}
-	& .properties__block_list-item_info-status_link + span {
+/* 	& .properties__block_list-item_info-status_link + span {
 	    flex: 1 1 100%;
 	    color: #9194a1;
 	    text-transform: initial;
@@ -206,8 +208,8 @@
 	    @include breakpoint(2600px) {
 			font-size: 25px;
 			margin-top: 40px;
-	    }
-	}
+	    } 
+	} */
 	&.status__up-to-date {
 		color: $green-text;
 		fill: $green-text;
@@ -237,13 +239,13 @@
 			height: 24px;
 		}
 	}
-	@include breakpoint(2600px) {
+/* 	@include breakpoint(2600px) {
 		font-size: 23px;
 		& .my_svg {
 			width: 55px;
 			height: 55px;
 		}
-	}
+	} */
 	&:nth-child(n+2) {
 		border-top: 2px solid $background-content-color;
 	}
@@ -252,9 +254,9 @@
 	@include breakpoint(320px) {
 		margin-right: 4px;
 	}
-	@include breakpoint(2600px) {
+/* 	@include breakpoint(2600px) {
 		margin-right: 18px;
-	}
+	} */
 }
 .rental_content .properties__block_list-item_info-status_board {
 	position: absolute;
@@ -273,29 +275,29 @@
 		@include breakpoint(320px) {
 			padding: 5px 10px;
 		}
-		@include breakpoint(2600px) {
+/* 		@include breakpoint(2600px) {
 			padding: 13px 15px;
-		}
+		} */
 	}
 	& .my_svg {
 		@include breakpoint(320px) {
 			width: 14px;
 			height: 14px;
 		}
-		@include breakpoint(2600px) {
+/* 		@include breakpoint(2600px) {
 			width: 32px;
 			height: 32px;
-		}
+		} */
 	}
 	& #plus {
 		@include breakpoint(320px) {
 			width: 10px;
 			height: 10px;
 		}
-		@include breakpoint(2600px) {
+/* 		@include breakpoint(2600px) {
 			width: 24px;
 			height: 24px;
-		}
+		} */
 	}
 	& .add_tenants {
 		color: #fff;
@@ -336,9 +338,9 @@
 	@include breakpoint(320px) {
 		font-size: 9.85px;
 	}
-	@include breakpoint(2600px) {
+/* 	@include breakpoint(2600px) {
 		font-size: 23px;
-	}
+	} */
 	&:hover {
 		text-decoration: none;
 		a {
@@ -351,17 +353,18 @@
 	@include breakpoint(320px) {
 		margin-right: 7px;
 	}
-	@include breakpoint(2600px) {
+/* 	@include breakpoint(2600px) {
 		margin-right: 15px;
-	}
+	} */
 }
 .properties__block_list-item_info-footer {
+	height: 135px;
 	@include breakpoint(320px) {
 		padding: 0 14px;
 	}
-	@include breakpoint(2600px) {
+/* 	@include breakpoint(2600px) {
 		padding: 0 30px;
-	}
+	} */
 }
 .properties__block_list-item_info-lists {
 	display: flex;
@@ -383,10 +386,10 @@
 	    padding: 21px 13px 23px 13px;
 	    margin-bottom: -23px;
 	}
-	@include breakpoint(2600px) {
+/* 	@include breakpoint(2600px) {
 	    padding: 45px 30px 50px 30px;
 	    margin-bottom: -50px;
-	}
+	} */
 	@include breakpoint(1170px) {
 	    &:nth-child(2n+2) {
 			flex: 1 1 auto;
@@ -432,8 +435,6 @@
 .properties__block_list-item_info-lists-item_hover {
 	position: absolute;
 	visibility: hidden;
-	//transition: visibility 0.1s;
-	//transition: box-shadow 0.1s;
 	top: 100%;
 	z-index: 9;
 	background-color: #fff;
@@ -451,7 +452,7 @@
 			}
 		}
 	}
-	@include breakpoint(2600px) {
+/* 	@include breakpoint(2600px) {
 		width: 1000px;
 		padding: 60px 70px 65px 55px;
 		& i {
@@ -461,15 +462,15 @@
 				height: 32px;
 			}
 		}
-	}
+	} */
 }
 .tenant__block_information {
 	@include breakpoint(320px) {
 		padding-top: 10px;
 	}
-	@include breakpoint(2600px) {
+/* 	@include breakpoint(2600px) {
 		padding-top: 20px;
-	}
+	} */
 }
 .tenant__avatar {
 	border-radius: 50%;
@@ -490,22 +491,22 @@
 	    	left: 0;
 	    }
     }
-    @include breakpoint(2600px) {
+/*     @include breakpoint(2600px) {
     	width: 157px;
 		height: 157px;
 		flex: 0 0 157px;
 	    & img {
 	    	max-width: 157px;
 	    }
-    }
+    } */
 }
 .tenant__block_information-name {
 	@include breakpoint(320px) {
 		font-size: 15px;
 	}
-	@include breakpoint(2600px) {
+/* 	@include breakpoint(2600px) {
 		font-size: 33px;
-	}
+	} */
 }
 .tenant__block_information-profession {
 	font-family: $fourth-font;
@@ -516,10 +517,10 @@
 		padding: 14px 0 16px;
 		font-size: 9px;
 	}
-	@include breakpoint(2600px) {
+/* 	@include breakpoint(2600px) {
 		padding: 25px 0 30px;
 		font-size: 20px;
-	}
+	} */
 }
 .tenant__block_information-info {
 	line-height: 1.7;
@@ -527,10 +528,10 @@
 		font-size: 8px;
 		padding-bottom: 26px;
 	}
-	@include breakpoint(2600px) {
+/* 	@include breakpoint(2600px) {
 		font-size: 19px;
 		padding-bottom: 48px;
-	}
+	} */
 }
 .tenant__block_information-communications {
 	display: flex;
@@ -544,10 +545,10 @@
 			font-size: 10px;
 			margin-right: 26px;
 		}
-		@include breakpoint(2600px) {
+/* 		@include breakpoint(2600px) {
 			font-size: 21px;
 			margin-right: 55px;
-		}
+		} */
 	}
 }
 .properties__block_list-item_info-lists_link {
@@ -564,13 +565,13 @@
 				height: 14px;
 			}
 		}
-		@include breakpoint(2600px) {
+/* 		@include breakpoint(2600px) {
 			margin-right: 20px;
 			& .my_svg {
 				width: 32px;
 				height: 32px;
 			}
-		}
+		} */
 	}
 	& .arrow__down {
 		position: absolute;
@@ -587,13 +588,13 @@
 			height: 7px;
 		}
 	}
-	@include breakpoint(2600px) {
+/* 	@include breakpoint(2600px) {
 		font-size: 26px;
 		& #arrow_down {
 			width: 16px;
 			height: 9px;
 		}
-	}
+	} */
 }
 .properties__block_list-item_info-lists_link-block_name {
 	font-family: $fourth-font;
@@ -625,18 +626,18 @@
 		@include breakpoint(320px) {
 			font-size: 12.5px;
 		}
-		@include breakpoint(2600px) {
+/* 		@include breakpoint(2600px) {
 			font-size: 23px;
-		}
+		} */
 	}
 	@include breakpoint(320px) {
 		border-radius: 6px 0 6px 6px;
 		top: 100%;
 	    right: 0px;
 	}
-	@include breakpoint(2600px) {
+/* 	@include breakpoint(2600px) {
 		min-width: 250px;
-	}
+	} */
 }
 .show_more-small_menu-item {
 	display: flex;
@@ -651,13 +652,13 @@
 				height: 16px;
 			}
 		}
-		@include breakpoint(2600px) {
+/* 		@include breakpoint(2600px) {
 			margin-right: 20px;
 			& .my_svg {
 				width: 32px;
 				height: 32px;
 			}
-		}
+		} */
 	}
 	@include breakpoint(320px) {
 		padding: 12px 22.5px;
@@ -668,9 +669,9 @@
 			border-radius: 0 0 6px 6px;
 		}
 	}
-	@include breakpoint(2600px) {
+/* 	@include breakpoint(2600px) {
 		padding: 24px 45px;
-	}
+	} */
 	&:hover {
 		background-color: #f3f4f8;
 	}

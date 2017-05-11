@@ -2,25 +2,31 @@
 	fill: rgba(255, 180, 63, 1);
 }
 .left__menu_item-link_icon_properties {
-	fill: rgba(0, 172, 193, 1);
+	fill: rgba(80, 158, 221, 1);
 }
 .left__menu_item-link_icon_tenants {
-	fill: rgba(30, 136, 229, 1);
-}
-.left__menu_item-link_icon_applications {
-	fill: rgba(124, 179, 66, 1);
+	fill: rgba(114, 194, 117, 1);
 }
 .left__menu_item-link_icon_messages {
-	fill: rgba(253, 216, 53, 1);
-}
-.left__menu_item-link_icon_reports {
-	fill: rgba(244, 81, 30, 1);
+	fill: rgba(235, 208, 88, 1);
 }
 .left__menu_item-link_icon_maintenance {
 	fill: rgba(84, 110, 122, 1);
 }
+.left__menu_item-link_icon_listings {
+	fill: rgba(87, 136, 208, 1);
+}
+.left__menu_item-link_icon_applications {
+	fill: rgba(229, 170, 23, 1);
+}
+.left__menu_item-link_icon_finances {
+	fill: rgba(193, 199, 221, 1);
+}
+.left__menu_item-link_icon_reports {
+	fill: rgba(219, 120, 154, 1);
+}
 .left__menu_item-link_icon_rules {
-	fill: rgba(142, 36, 170, 1);
+	fill: rgba(222, 119, 111, 1);
 }
 .left__menu_item-link_icon_inspection {
 	fill: rgba(57, 43, 164, 1);
@@ -28,50 +34,30 @@
 /*!left menu icons*/
 .left__menu_item-link_icon {
 	font-size: 0;
+	position: relative;
+	z-index: 9;
+	opacity: .99;
 	@include breakpoint(320px) {
-		margin: 0 auto 10px auto;
+	    margin-left: 11.3%;
+		margin-right: 16px;
 	    display: inline-block;
 		& .my_svg {
 			width: 27px;
 			height: 27px;
 		}
-		& #tenants {
-			height: 19px;
-		}
-		& #messages,
-		& #reports,
-		& #properties {
-			height: 23px;
-		}
 	}
 	@include breakpoint(2000px) {
-		margin: 0 auto 20px auto;
+		margin-right: 32px;
 		& .my_svg {
-			width: 2vw;
-			height: 2vw;
-		}
-		& #tenants {
-			height: 1.407vw;
-		}
-		& #messages,
-		& #reports,
-		& #properties {
-			height: 1.703vw;
+			width: 1vw;
+			height: 1vw;
 		}
 	}
 	@media screen and (min-device-aspect-ratio: 21/9) {
-		margin: 0 auto 10px auto;
+		margin-right: 16px;
 		& .my_svg {
 			width: 1.5vw;
 			height: 1.5vw;
-		}
-		& #tenants {
-			height: 1.055vw;
-		}
-		& #messages,
-		& #reports,
-		& #properties {
-			height: 1.277vw;
 		}
 	}
 }
@@ -100,9 +86,10 @@
 }
 .left__menu_item-link {
 	color: $left-menu-color;
-	text-align: center;
-	text-transform: uppercase;
-	display: block;
+	z-index: 999;
+	display: flex;
+	align-items: center;
+    justify-content: flex-start;
 	&:after {
 		transition: background-color 0.3s;
 	}
@@ -145,52 +132,34 @@
 	&.active{
 		background-color: rgba(255, 180, 63, 0.1);
 		&:after {
-			background-color: #ffb43f;
+			background-color: rgba(255, 180, 63, 1);
 		}
 	}
 }
 .bg_properties {
 	&:hover,
 	&.active{
-		background-color: rgba(0, 172, 193, 0.1);
+		background-color: rgba(80, 158, 221, 0.1);
 		&:after {
-			background-color: #00acc1;
+			background-color: rgba(80, 158, 221, 1);
 		}
 	}
 }
 .bg_tenants {
 	&:hover,
 	&.active{
-		background-color: rgba(30, 136, 229, 0.1);
+		background-color: rgba(114, 194, 117, 0.1);
 		&:after {
-			background-color: #1e88e5;
-		}
-	}
-}
-.bg_applications {
-	&:hover,
-	&.active{
-		background-color: rgba(124, 179, 66, 0.1);
-		&:after {
-			background-color: #7cb342;
+			background-color: rgb(114, 194, 117);
 		}
 	}
 }
 .bg_messages {
 	&:hover,
 	&.active{
-		background-color: rgba(253, 216, 53, 0.1);
+		background-color: rgba(235, 208, 88, 0.1);
 		&:after {
-			background-color: #fdd835;
-		}
-	}
-}
-.bg_reports {
-	&:hover,
-	&.active{
-		background-color: rgba(244, 81, 30, 0.1);
-		&:after {
-			background-color: #f4511e;
+			background-color: rgb(235, 208, 88);
 		}
 	}
 }
@@ -199,16 +168,52 @@
 	&.active{
 		background-color: rgba(84, 110, 122, 0.1);
 		&:after {
-			background-color: #546e7a;
+			background-color: rgba(84, 110, 122, 1);
+		}
+	}
+}
+.bg_listings {
+	&:hover,
+	&.active{
+		background-color: rgba(87, 136, 208, 0.1);
+		&:after {
+			background-color: rgba(87, 136, 208, 1);
+		}
+	}
+}
+.bg_applications {
+	&:hover,
+	&.active{
+		background-color: rgba(229, 170, 23, 0.1);
+		&:after {
+			background-color: rgba(229, 170, 23, 1);
+		}
+	}
+}
+.bg_finances {
+	&:hover,
+	&.active{
+		background-color: rgba(193, 199, 221, 0.1);
+		&:after {
+			background-color: rgba(193, 199, 221, 1);
+		}
+	}
+}
+.bg_reports {
+	&:hover,
+	&.active{
+		background-color: rgba(219, 120, 154, 0.1);
+		&:after {
+			background-color: rgba(219, 120, 154, 1);
 		}
 	}
 }
 .bg_rules {
 	&:hover,
 	&.active{
-		background-color: rgba(142, 36, 170, 0.1);
+		background-color: rgba(222, 119, 111, 0.1);
 		&:after {
-			background-color: #8e24aa;
+			background-color: rgba(222, 119, 111, 1);
 		}
 	}
 }
