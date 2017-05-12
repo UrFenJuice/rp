@@ -5,11 +5,53 @@ jQuery(function($){
         jQuery('#divChatHistory').scrollbar({
             "onScroll": function () {
                 $('#divChatHistory').bind("DOMSubtreeModified", function () {
-                    console.log('1');
                     $('#divChatHistory').scrollTop($('#divChatHistory').scrollTop() + 500);
                 });
             }
         });
+
+        // возвращает cookie с именем name, если есть, если нет, то undefined
+        function getCookie(name) {
+            var matches = document.cookie.match(new RegExp(
+                "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+            ));
+            return matches ? decodeURIComponent(matches[1]) : undefined;
+        }
+
+        function setCookie(name, value, options) {
+          options = options || {};
+
+          var expires = options.expires;
+
+          if (typeof expires == "number" && expires) {
+            var d = new Date();
+            d.setTime(d.getTime() + expires * 1000);
+            expires = options.expires = d;
+          }
+          if (expires && expires.toUTCString) {
+            options.expires = expires.toUTCString();
+          }
+
+          value = encodeURIComponent(value);
+
+          var updatedCookie = name + "=" + value;
+
+          for (var propName in options) {
+            updatedCookie += "; " + propName;
+            var propValue = options[propName];
+            if (propValue !== true) {
+              updatedCookie += "=" + propValue;
+            }
+          }
+
+          document.cookie = updatedCookie;
+        }
+
+        function deleteCookie(name) {
+          setCookie(name, "", {
+            expires: -1
+          })
+        }
 
         $('.properties__block_list-item_info-lists_link').on('click', function(e){
             e.preventDefault();
@@ -41,6 +83,23 @@ jQuery(function($){
 
         });
 
+        if(typeof(getCookie("propertyClass")) !== 'undefined')
+        {
+            $('.properties__block').addClass('properties__block-table');
+        }
+        $('#bg_view_all').on('click', function(e){
+            e.preventDefault();
+
+            var item = $('.properties__block');
+
+            if(!item.hasClass('properties__block-table')){
+                item.addClass('properties__block-table');
+                setCookie("propertyClass", true);
+            } else {
+                item.removeClass('properties__block-table');
+                deleteCookie("propertyClass");
+            }
+        });
         //charts
 /*        var BarChart = $("#bar_chart");
 

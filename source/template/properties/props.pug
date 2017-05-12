@@ -1,5 +1,27 @@
 .properties__block
 	ul.properties__block_list
+		li.properties__block_list-item.properties__block-table_header
+			.properties__block_list-item_image
+				.properties__block_list-item_image-wrapper
+				.properties__block_list-item_image-footer
+					.properties__block_list-item_info-address
+						| Address
+			.properties__block_list-item_info
+				.properties__block_list-item_info-status
+					.properties__block_list-item_info-status_board
+						| Lease
+					.properties__block_list-item_info-status_board
+						| Listing
+				.properties__block_list-item_info-footer
+					ul.properties__block_list-item_info-lists
+						li.properties__block_list-item_info-lists-item
+							| Rent
+						li.properties__block_list-item_info-lists-item
+							| Tenant
+						li.properties__block_list-item_info-lists-item
+							| Last Payment
+						li.properties__block_list-item_info-lists-item
+							| Last Inspection
 		li.properties__block_list-item
 			.properties__block_list-item_image
 				.properties__block_list-item_image-wrapper
@@ -7,7 +29,7 @@
 				.properties__block_list-item_image-footer
 					.properties__block_list-item_info-address
 						span.main__address
-							| 249/1095 Karangahape Road
+							| 249/1095
 						span.sub__address
 							| North Shore, Auckland
 					a(href="#", title="VIEW DETAILS").rp__details
@@ -35,7 +57,20 @@
 					.properties__block_list-item_info-status_board.status__up-to-date
 						i.properties__block_list-item_info-status_icon
 							+use("up_to_date")
-						| Up to date
+						span
+							p.properties__block_list-item_info-status_board-sub Lease
+							| Up to date
+					.properties__block_list-item_info-status_board.status__acive-listing
+						i.properties__block_list-item_info-status_icon
+							+use("active-listing")
+						span
+							p.properties__block_list-item_info-status_board-sub Listing
+							| no Active listing
+						.properties__block_list-item_info-status_link
+							a(href="#").create_listing
+								i.properties__block_list-item_info-status_link-icon
+									+use("plus")
+								| Create a listing	
 				.properties__block_list-item_info-footer
 					ul.properties__block_list-item_info-lists
 						li.properties__block_list-item_info-lists-item
@@ -127,11 +162,15 @@
 					.properties__block_list-item_info-status_board.status__up-to-date
 						i.properties__block_list-item_info-status_icon
 							+use("up_to_date")
-						| Up to date
+						span
+							p.properties__block_list-item_info-status_board-sub Lease
+							| Up to date
 					.properties__block_list-item_info-status_board.status__acive-listing
 						i.properties__block_list-item_info-status_icon
 							+use("active-listing")
-						| Active listing
+						span
+							p.properties__block_list-item_info-status_board-sub Listing
+							| Active
 						.properties__block_list-item_info-status_link
 							a(href="#").applicants_listing
 								i.properties__block_list-item_info-status_link-icon
@@ -182,7 +221,8 @@
 							.properties__block_list-item_info-lists-item_hover
 		li.properties__block_list-item
 			.properties__block_list-item_image
-				include google_map
+				.properties__block_list-item_image-wrapper
+					include google_map
 				.properties__block_list-item_image-footer
 					.properties__block_list-item_info-address
 						span.main__address
@@ -214,7 +254,9 @@
 					.properties__block_list-item_info-status_board.status__in-arrears
 						i.properties__block_list-item_info-status_icon
 							+use("in_arrears")
-						| In arrears: $500.00 (23 days)
+						span 
+							p.properties__block_list-item_info-status_board-sub Lease
+							| In arrears: $500.00 (23 days)
 						.properties__block_list-item_info-status_link
 							a(href="#").send_reminder
 								i.properties__block_list-item_info-status_link-icon
@@ -278,7 +320,8 @@
 							.properties__block_list-item_info-lists-item_hover
 		li.properties__block_list-item
 			.properties__block_list-item_image
-				include google_map
+				.properties__block_list-item_image-wrapper
+					include google_map
 				.properties__block_list-item_image-footer
 					.properties__block_list-item_info-address
 						span.main__address
@@ -310,7 +353,9 @@
 					.properties__block_list-item_info-status_board.status__in-arrears
 						i.properties__block_list-item_info-status_icon
 							+use("in_arrears")
-						| In arrears: $500.00 (23 days)
+						span
+							p.properties__block_list-item_info-status_board-sub Lease
+							| In arrears: $500.00 (23 days)
 						.properties__block_list-item_info-status_link
 							a(href="#").send_reminder
 								i.properties__block_list-item_info-status_link-icon
@@ -319,7 +364,9 @@
 					.properties__block_list-item_info-status_board.status__acive-listing
 						i.properties__block_list-item_info-status_icon
 							+use("active-listing")
-						| Active listing
+						span
+							p.properties__block_list-item_info-status_board-sub Lease
+							| Active
 						.properties__block_list-item_info-status_link
 							a(href="#").applicants_listing
 								i.properties__block_list-item_info-status_link-icon
@@ -403,7 +450,9 @@
 					.properties__block_list-item_info-status_board.status__property-vacant
 						i.properties__block_list-item_info-status_icon
 							+use("property_vacant")
-						| THIS PROPERTY IS VACANT
+						span 
+							p.properties__block_list-item_info-status_board-sub Lease
+							| THIS PROPERTY IS VACANT
 						.properties__block_list-item_info-status_link
 							a(href="#").add_tenants
 								i.properties__block_list-item_info-status_link-icon
@@ -412,12 +461,14 @@
 					.properties__block_list-item_info-status_board.status__advertise-property
 						i.properties__block_list-item_info-status_icon
 							+use("advertise_prop")
-						| ADVERTISE THIS PROPERTY
+						span 
+							p.properties__block_list-item_info-status_board-sub listing
+							| ADVERTISE THIS PROPERTY
 						.properties__block_list-item_info-status_link
 							a(href="#").create_listing
 								i.properties__block_list-item_info-status_link-icon
 									+use("plus")
-								| create a listing
+								| Create a listing
 				.properties__block_list-item_info-footer
 		li.properties__block_list-item
 			.properties__block_list-item_image
@@ -455,7 +506,9 @@
 					.properties__block_list-item_info-status_board.status__property-vacant
 						i.properties__block_list-item_info-status_icon
 							+use("property_vacant")
-						| THIS PROPERTY IS VACANT
+						span 
+							p.properties__block_list-item_info-status_board-sub Lease
+							| THIS PROPERTY IS VACANT
 						.properties__block_list-item_info-status_link
 							a(href="#").add_tenants
 								i.properties__block_list-item_info-status_link-icon
@@ -464,7 +517,9 @@
 					.properties__block_list-item_info-status_board.status__acive-listing
 						i.properties__block_list-item_info-status_icon
 							+use("active-listing")
-						| Active listing
+						span
+							p.properties__block_list-item_info-status_board-sub Lease
+							| Active
 						.properties__block_list-item_info-status_link
 							a(href="#").applicants_listing
 								i.properties__block_list-item_info-status_link-icon

@@ -1,8 +1,20 @@
 .prop__menu_block
 	ul.prop__menu
-		each item, id in prop_menu_items
-			li.prop__menu_item
-				a(href="#", id="bg_"+id).prop__menu_item-link
-						i(class="prop__menu_item-link_icon_"+id).prop__menu_item-link_icon
-							+use(id)
-						.prop__menu_item-link_name= item
+		li.prop__menu_item
+			a(href="#", id="bg_add_property").prop__menu_item-link
+					i(class="prop__menu_item-link_icon_add_property").prop__menu_item-link_icon
+						+use('add_property')
+					.prop__menu_item-link_name
+						| Add Property
+		li.prop__menu_item
+			a(href="#", id="bg_search").prop__menu_item-link
+					i(class="prop__menu_item-link_icon_search").prop__menu_item-link_icon
+						+use('search')
+					.prop__menu_item-link_name
+						| Search
+		li.prop__menu_item
+			a(href="#", id="bg_view_all").prop__menu_item-link
+					i(class="prop__menu_item-link_icon_view_all").prop__menu_item-link_icon
+						+use('view_all')
+					.prop__menu_item-link_name
+						| View: Table

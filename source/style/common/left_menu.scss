@@ -34,9 +34,6 @@
 /*!left menu icons*/
 .left__menu_item-link_icon {
 	font-size: 0;
-	position: relative;
-	z-index: 9;
-	opacity: .99;
 	@include breakpoint(320px) {
 	    margin-left: 11.3%;
 		margin-right: 16px;
@@ -93,6 +90,19 @@
 	&:after {
 		transition: background-color 0.3s;
 	}
+	&.bg_maintenance,
+	&.bg_applications,
+	&.bg_reports {
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			background-color: #f4f5f9;
+			height: 2px;
+			width: 100%;
+			bottom: 0;
+		}
+	}
 	&:hover,
 	&.active {
 		transition: background-color 0.3s;
@@ -109,6 +119,9 @@
 			@include breakpoint(2000px) {
 				width: 10px;
 			}
+		}
+		&:before {
+			display: none;
 		}
 	}
 	@include breakpoint(320px) {

@@ -90,7 +90,7 @@
 	position: absolute;
 	bottom: 2px;
 	width: 100%;
-	background-color: rgba(0, 0, 0, 0.3);
+	background-color: rgba(0, 0, 0, 0.4);
 	display: flex;
 	align-items: center;
 	padding-top: 15px;
@@ -114,6 +114,9 @@
 		.properties__block_list-item_info-status_board {
 			padding-top: 19px;
 			padding-bottom: 18px;
+		}
+		& span {
+			flex-grow: 1;
 		}
 /* 		.status__property-vacant {
 			padding-top: 50px;
@@ -142,6 +145,10 @@
 			padding-bottom: 68px;
 		}
 	} */
+}
+.properties__block_list-item_info-status_board-sub {
+	color: #c3c6d1;
+	margin: 0;
 }
 .properties__block_list-item_info-address {
 	display: flex;
@@ -213,24 +220,39 @@
 	&.status__up-to-date {
 		color: $green-text;
 		fill: $green-text;
+		& .properties__block_list-item_info-status_link a {
+			background-color: $green-text;
+		}
 	}
 	&.status__in-arrears {
 		color: $red-text;
 		fill: $red-text;
+		& .properties__block_list-item_info-status_link a {
+			background-color: $red-text;
+		}
 	}
 	& #advertise_prop,
 	&.status__advertise-property {
 		color: #912db2;
 		fill: #912db2;
+		& .properties__block_list-item_info-status_link a {
+			background-color: #912db2;
+		}
 	}
 	& #active-listing,
 	&.status__acive-listing {
 		color: $logotype-color;
 		fill: $logotype-color;
+		& .properties__block_list-item_info-status_link a {
+			background-color: $logotype-color;
+		}
 	}
 	&.status__property-vacant {
 		color: #a1a5b7;
 		fill: #a1a5b7;
+		& .properties__block_list-item_info-status_link a {
+			background-color: #a1a5b7;
+		}
 	}
 	@include breakpoint(320px) {
 		font-size: 9.85px;
@@ -301,7 +323,6 @@
 	}
 	& .add_tenants {
 		color: #fff;
-		background-color: #a1a5b7;
 		display: flex;
 		align-items: center;
 		.properties__block_list-item_info-status_link-icon {
@@ -310,7 +331,6 @@
 	}
 	& .send_reminder {
 		color: #fff;
-		background-color: $red-text;
 		display: flex;
 		align-items: center;
 		.properties__block_list-item_info-status_link-icon {
@@ -319,7 +339,6 @@
 	}
 	& .create_listing {
 		color: #fff;
-		background-color: #912db2;
 		display: flex;
 		align-items: center;
 		.properties__block_list-item_info-status_link-icon {
@@ -328,7 +347,6 @@
 	}
 	& .applicants_listing {
 		color: #fff;
-		background-color: #5788d0;
 		display: flex;
 		align-items: center;
 		.properties__block_list-item_info-status_link-icon {
@@ -676,4 +694,181 @@
 		background-color: #f3f4f8;
 	}
 }
+.properties__block-table_header {
+	display: none;
+	transition: display 1s;
+}
 /*!props*/
+
+/*props-table*/
+.properties__block-table {
+	box-shadow: 0px 0px 40px -13px rgba(0, 0, 0, 0.5);
+	border-radius: 6px;
+	overflow: hidden;
+	& .properties__block_list-item_info-lists_link-block_name,
+	& .properties__block_list-item_info-status_board-sub,
+	& .rp__details,
+	& .rp__show_more,
+	& i,
+	& .my_svg {
+		display: none;
+		visibility: hidden;
+	}
+	& .properties__block-table_header {
+		background-color: #bbbfcd!important;
+		margin: 0;
+		color: #fff;
+		display: block;
+		transition: display 1s;
+		& div {
+			font-family: $fourth-font;
+			font-size: 17.12px;
+			text-align: center;
+			text-transform: capitalize;
+		    justify-content: center;
+		}
+	}
+	& .properties__block_list-item {
+		width: 100%;
+		margin: 0;
+		padding: 20px 15px;
+		display: flex;
+		&:nth-child(1) {
+			& .properties__block_list-item_image-wrapper{
+				background-color: transparent!important;
+			}
+		}
+		&:nth-child(2n+1) {
+			background-color: #f4f5f9;
+			& .properties__block_list-item_image-wrapper{
+				background-color: #fff;
+			}
+		}
+    	&:nth-child(2n+2) {
+    		& .properties__block_list-item_image-wrapper{
+				background-color: #e5e7ee;
+			}
+    	}
+	}
+	& .properties__block_list-item_image {
+		width: 33%;
+		display: flex;
+	    align-items: center;
+	    @include breakpoint(320px) {
+	    	height: auto;
+	    }
+	}
+	& .properties__block_list-item_image-wrapper {
+		width: 45px;
+		height: 45px;
+		position: relative;
+		overflow: hidden;
+		border-radius: 5px;
+		& img {
+			width: 100%;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+		}
+	}
+	& .properties__block_list-item_image-footer {
+		position: relative;
+		background-color: inherit;
+		text-align: center;
+		width: 83%;
+		padding: 0 30px 0 15px;
+		& .main__address {
+			color: #000;
+		}
+	}
+	& .properties__block_list-item_info-address {
+		width: 100%;
+	}
+	& .properties__block_list-item_info {
+		display: flex;
+		flex: 1 1 auto;
+	}
+	& .properties__block_list-item_info-status {
+		width: 40%;
+		height: auto;
+		flex-direction: row;
+		border: none;
+	    justify-content: flex-start;
+        align-items: center;
+	}
+	& .properties__block_list-item_info-status_board {
+		width: 50%;
+		//display: block;
+		border: none;
+		padding: 0;
+		margin: 0;
+		text-align: center;
+		& > a,
+		& span {
+			flex: 0 0 100%;
+		}
+		& .properties__block_list-item_info-status_link {
+			flex: 0 0 50%;
+		    margin: 0 auto;
+		    text-transform: initial;
+		}
+	}
+	& .properties__block_list-item_info-status_link a {
+		padding: 0;
+		margin: 0 auto;
+		background-color: inherit;
+		display: block;
+	}
+	& .properties__block_list-item_info-footer {
+		height: auto;
+		padding: 0;
+		width: 60%;
+		display: flex;
+		align-items: center;
+		padding-left: 30px;
+	} 
+	& .properties__block_list-item_info-lists {
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		width: 100%;
+	}
+	& .properties__block_list-item_info-lists-item {
+		width: 30%;
+		margin: auto;
+		padding: 0;
+		flex: inherit;
+		&:nth-child(1) {
+			order: 1;
+		}
+		&:nth-child(2) {
+			order: 3;
+		}
+		&:nth-child(3) {
+			order: 2;
+		}
+		&:nth-child(4) {
+			order: 4;
+		}
+	}
+	& .properties__block_list-item_info-lists_link-block {
+		margin: 0 auto;
+	}
+	& .sub__address {
+		padding: 0;
+	}
+	& .properties__block_list-item_info-lists_link-block_value {
+		text-align: center;
+	}
+	& .applicants_listing,
+	& .create_listing,
+	& .send_reminder,
+	& .add_tenants {
+		color: inherit;
+		background-color: inherit!important;
+		text-decoration: underline;
+	}
+}
+/*!props-table*/
