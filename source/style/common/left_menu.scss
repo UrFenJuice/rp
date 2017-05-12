@@ -76,14 +76,13 @@
 	height: 100%;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: flex-start;
 }
 .left__menu_item {
 	position: relative;
 }
 .left__menu_item-link {
 	color: $left-menu-color;
-	z-index: 999;
 	display: flex;
 	align-items: center;
     justify-content: flex-start;
