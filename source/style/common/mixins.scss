@@ -54,16 +54,11 @@ $left-menu-color: #81869a;
     display: inline-block;
     border: 2px solid;
 	@include breakpoint(320px) {
-		min-width: 95px;
+		min-width: 100px;
 		font-size: 9.85px;
 		padding: 5px 10px;
 		border-radius: 6px;
     }
-/*     @include breakpoint(2600px) {
-    	min-width: 310px;
-    	font-size: 23px;
-    	padding: 26px 61px;
-    } */
 }
 .rp__input {
     width: 100%;
@@ -78,9 +73,5 @@ $left-menu-color: #81869a;
         padding: 7px 5px;
         margin-top: 3px;
     }
-/*     @include breakpoint(2600px) {
-        padding: 21px 15px;
-        margin-top: 10px;
-    } */
 }
 /*mixins*/

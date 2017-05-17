@@ -3,12 +3,7 @@
 	justify-content: space-between;
 }
 .header__logo {
-	@include breakpoint(320px) {
-		width: 17vw;
-	}
-	@include breakpoint(1170px) {
-		width: 12.4375vw;
-	}
+	width: 235px;
 	background-color: $logotype-color;
 }
 .header__logo_link {
@@ -18,37 +13,30 @@
 	align-content: center;
 	color: $white-text;
 	text-decoration: none;
+	& b {
+		font-family: $second-font;
+	}
 	@include breakpoint(320px) {
 		height: 5.763vh;
-		font-size: 12px;
+		font-size: 15.05px;
 		& img {
-			width: 17px;
+			width: 19px;
 		}
 	}
-	@include breakpoint(2000px) {
+ 	@include breakpoint(2000px) {
 		height: 6.723vh;
-		font-size: 0.9375vw;
-		& img {
-			width: 41px;
-		}
 	}
 	@media screen and (min-device-aspect-ratio: 21/9) {
-		height: 3vmax;
+		height: 2vmax;
 	}
 	&:hover {
 		color: $white-text;
 	}
 }
 .company__name {
-	@include breakpoint(320px) {
-		text-transform: uppercase;
-		padding-left: 8px;
-		letter-spacing: -0.7px;
-	}
-	@include breakpoint(2000px) {
-		padding-left: 23px;
-		letter-spacing: -1.5px;
-	}
+	text-transform: uppercase;
+	padding-left: 8px;
+	letter-spacing: -0.7px;
 }
 .header__menu {
 	flex: 1 1 40vw;
@@ -85,12 +73,11 @@
 	@include breakpoint(1170px) {
 		margin-right: 5vw;
 	}
-	@include breakpoint(2000px) {
-		margin-right: 3.9vw;
+ 	@include breakpoint(2000px) {
 	    height: 6.723vh;
 	}
 	@media screen and (min-device-aspect-ratio: 21/9) {
-		height: 3vmax;
+		height: 2vmax;
 	}
 }
 .header__menu_block_item-link {
@@ -109,12 +96,7 @@
 			border-bottom: 3px solid $green-element;
 		}
 	}
-	@include breakpoint(320px) {
-		font-size: 14px;
-	}
-	@include breakpoint(2000px) {
-		font-size: 0.90625vw;
-	}
+	font-size: 14px;
 }
 .header__user {
 	display: flex;
@@ -127,12 +109,7 @@
 	& .header__user_login_name {
 		text-transform: uppercase;
 		color: $profile-font-color;
-		@include breakpoint(320px) {
-			font-size: 10.94px;
-		}
-		@include breakpoint(2000px) {
-			font-size: 0.71875vw;
-		}
+		font-size: 13px;
 	}
 	& > div {
 		border-left: 1px solid $border-color;
@@ -141,102 +118,46 @@
 		@include breakpoint(320px) {
 			height: 5.763vh;
 		}
-		@include breakpoint(2000px) {
+ 		@include breakpoint(2000px) {
 		    height: 6.723vh;
 		}
 		@media screen and (min-device-aspect-ratio: 21/9) {
-			height: 3vmax;
-		}
+			height: 2vmax;
+		} 
 	}
 }
 .header__user_avatar {
 	border-radius: 50%;
 	overflow: hidden;
+	width: 30px;
+	height: 30px;
 	& img {
+		max-width: 30px;
 		height: auto;
-	}
-	@include breakpoint(320px) {
-		width: 30px;
-		height: 30px;
-		& img {
-			max-width: 30px;
-		}
-	}
-	@include breakpoint(2000px) {
-		width: 50px;
-		height: 50px;
-		& img {
-			max-width: 50px;
-		}
-	}
-	@include breakpoint(2600px) {
-		width: 64px;
-		height: 64px;
-		& img {
-			max-width: 64px;
-		}
 	}
 }
 .header__user_login_link {
 	display: flex;
 	align-items: center;
-	@include breakpoint(320px) {
-		margin: auto 27px;
-		& div:nth-child(1) {
-			margin-right: 10px;
-		}
-	}
-	@include breakpoint(2000px) {
-		margin: auto 60px;
-		& div:nth-child(1) {
-			margin-right: 20px;
-		}
+	margin: auto 27px;
+	& div:nth-child(1) {
+		margin-right: 10px;
 	}
 }
 .header__user_menu_link {
 	fill: #e3e5ee;
-	@include breakpoint(320px) {
-	    margin: auto 18px;
-	    & #equal {
-			width: 20px;
-			height: 20px;
-	    }
-	}
-	@include breakpoint(2000px) {
-	    margin: auto 40px;
-	    & #equal {
-			width: 1.34vw;
-			height: 1.34vw;
-	    }
-	}
-	@include breakpoint(2600px) {
-		& #equal {
-			width: 1.34vw;
-			height: 1.34vw;
-	    }
-	}
+    margin: auto 18px;
+    & #equal {
+		width: 26px;
+		height: 26px;
+    }
 }
 .header__user_settings_link {
 	fill: #e3e5ee;
-	@include breakpoint(320px) {
-	    margin: auto 17px;
-	    & #gear {
-			width: 23px;
-			height: 23px;
-	    }
-	}
-	@include breakpoint(2000px) {
-	    margin: auto 36px;
-	    & #gear {
-			width: 1.53vw;
-			height: 1.53vw;
-	    }
-	}
-	@include breakpoint(2600px) {
-		& #gear {
-			width: 1.53vw;
-			height: 1.53vw;
-	    }
-	}
+    margin: auto 17px;
+    & #gear {
+		width: 26px;
+		height: 26px;
+    }
 }
 /*!header*/

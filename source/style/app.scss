@@ -35,15 +35,9 @@ ul {
 	}
 }
 h1 {
-	@include breakpoint(320px) {
-		font-size: 18px;
-		line-height: 1.5;
-		margin: 0;
-	}
-	@include breakpoint(2600px) {
-		font-size: 46px;
-		line-height: 0.9;
-	}	
+	font-size: 18px;
+	line-height: 1.5;
+	margin: 0;
 }
 .rp__container {
 	/*debug*/
@@ -52,11 +46,9 @@ h1 {
 	//@include background-grid($color: blue);
 	/*!debug*/
 	
-	@include breakpoint(320px) {
-		width: 100%;
-		margin: 0 auto;
-		position: relative;
-	}
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
 }
 a,
 a:hover,
@@ -68,6 +60,19 @@ a:focus {
 i {
 	font-size: 0;
 	display: inline-block;
+	position: relative;
+	& .my_svg {
+		z-index: 1;
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+	}
 }
 .rp__middle .rp__container {
 	display: flex;
@@ -75,16 +80,8 @@ i {
 .rp__content {
 	background-color: $background-content-color;
 	overflow: auto;
-	@include breakpoint(320px) {
-		height: 94.237vh;
-		width: 83vw;
-	}
-	@include breakpoint(1170px) {
-		width: 87.5625vw;
-	}
-	@include breakpoint(2000px) {
-		height: 93.277vh;
-	}
+	height: 94.237vh;
+	flex: 1 1 auto;
 }
 .main__content {
 	overflow: hidden;
@@ -93,9 +90,6 @@ i {
 	}
 	@include breakpoint(1170px) {
 		padding: 3vh 3.333vw 4vh 3.333vw!important;
-	}
-	@include breakpoint(2000px) {
-		padding: 3.3333vh 7.667vw 4vh 3.333vw!important;
 	}
 }
 .link_show_me {
@@ -107,32 +101,18 @@ i {
     text-transform: uppercase;
     display: flex;
     align-items: center;
-    @include breakpoint(320px) {
-    	font-size: 9.79px;
-	    padding: 16px 17px;
-        right: -84px;
-        & .icon_show_me {
-        	margin-right: 10px;
-    	}
-    	& .my_svg {
-    		transform: translate(30) rotate(45 50 50);
-    		fill: #c2c5d3;
-    		width: 15px;
-    		height: 15px;
-    	}
-    }
-    @include breakpoint(2600px) {
-    	font-size: 23px;
-    	padding: 45px 44px;
-    	right: -205px;
-    	& .icon_show_me {
-        	margin-right: 20px;
-    	}
-    	& .my_svg {
-    		width: 35px;
-    		height: 35px;
-    	}
-    }
+	font-size: 9.79px;
+    padding: 16px 17px;
+    right: -84px;
+    & .icon_show_me {
+    	margin-right: 10px;
+	}
+	& .my_svg {
+		transform: translate(30) rotate(45 50 50);
+		fill: #c2c5d3;
+		width: 15px;
+		height: 15px;
+	}
 }
 
 @import 'common/header';

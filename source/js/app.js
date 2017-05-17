@@ -100,6 +100,7 @@ jQuery(function($){
                 deleteCookie("propertyClass");
             }
         });
+        
         //charts
 /*        var BarChart = $("#bar_chart");
 

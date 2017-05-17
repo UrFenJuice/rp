@@ -8,14 +8,8 @@
         color: #e03737;
 	}
 	@extend .rp__btn;
-	@include breakpoint(320px) {
-		margin-top: 5px;
-		margin-bottom: 25px;
-	}
-	@include breakpoint(2600px) {
-		margin-top: 38px;
-		margin-bottom: 65px;
-	}
+	margin-top: 5px;
+	margin-bottom: 25px;
 }
 .create-property__block_footer-create_link {
 	color: #fff;
@@ -27,21 +21,11 @@
 		border-color: #e9ebf4;
 	}
 	@extend .rp__btn;
-	@include breakpoint(320px) {
-		margin-bottom: 30px;
-	}
-	@include breakpoint(2600px) {
-		margin-bottom: 80px;
-	}
+	margin-bottom: 30px;
 }
 .create-property__block {
 	background-color: #fff;
-	@include breakpoint(320px) {
-		padding: 21px 26px 35px;
-	}
-	@include breakpoint(2600px) {
-		padding: 55px 70px 95px;
-	}
+	padding: 21px 26px 35px;
 }
 .create-property__block_middle {
 	display: flex;
@@ -50,22 +34,13 @@
 .create-property__block_middle-left {
 	text-align: center;
 	border: 2px solid #eceef3;
-	@include breakpoint(320px) {
-		padding: 32px 0 40px;
-		& .my_svg {
-			fill: #e9ebf1;
-			width: 130px;
-			height: 127px;
-		}
-	}
-	@include breakpoint(2600px) {
-		padding: 90px 0 108px;
-		& .my_svg {
-			width: 328px;
-			height: 328px;
-		}
-	}
+	padding: 32px 0 40px;
 	flex: 1 1 auto;
+	& .my_svg {
+		fill: #e9ebf1;
+		width: 130px;
+		height: 127px;
+	}
 }
 .create-property__block_middle-left_icon {
 	position: relative;
@@ -123,6 +98,7 @@
 .create-property__block_middle-left .limit-img {
 	width: 40%;
 	margin: auto;
+	font-size: 10px;
 	&.limit-img-error {
 		color: #e3574c;
 		text-align: center;
@@ -130,12 +106,6 @@
 	&.limit-count-error p{
 		color: #c2c5d3;
 		text-align: left;
-	}
-	@include breakpoint(320px) {
-		font-size: 10px;
-	}
-	@include breakpoint(2600px) {
-		font-size: 24px;
 	}
 }
 .create-property__block_middle-left .i-lim {
@@ -145,18 +115,10 @@
     display: inline-block;
     position: relative;
     float: none;
-    @include breakpoint(320px) {
-		height: 15px;
-		width: 15px;
-		background-size: 15px;
-		top: 4px;
-    }
-    @include breakpoint(2600px) {
-		height: 32px;
-		width: 32px;
-		background-size: 32px;
-		top: 9px;
-    }
+	height: 15px;
+	width: 15px;
+	background-size: 15px;
+	top: 4px;
 }
 .starrequired {
 	color: #e2574c;
@@ -165,46 +127,15 @@
 	color: #d3d5e0;
 	border: 2px solid #eceef3;
 	@extend .rp__btn;
-    @include breakpoint(320px) {
-    	margin: 20px 0 10px;
-    }
-    @include breakpoint(2600px) {
-    	margin: 66px 0 41px;
-    }
+	margin: 20px 0 10px;
 }
 .create-property__block_middle-left_instruction {
-	@include breakpoint(320px) {
-		font-size: 11px;
-	}
-	@include breakpoint(2600px) {
-		font-size: 28px;
-	}
+	font-size: 11px;
 }
 .create-property__block_middle-left_info {
-	@include breakpoint(320px) {
-		font-size: 10px;
-	}
-	@include breakpoint(2600px) {
-		font-size: 24px;
-	}
+	font-size: 10px;
 	color: $second-font-color;
 }
-/* .create-property__block_middle-right {
-	flex: 0 1 1120px;
-	@include breakpoint(320px) {
-		font-size: 10px;
-		margin-left: 30px;
-	}
-	@include breakpoint(2600px) {
-		font-size: 26px;
-		//margin-left: 88px;
-	}
-} */
-/* .create-property__block_middle-right_form {
-	height: 100%;
-	flex-direction: column;
-}
-.create-property__block_middle-right_form, */
 .create-property__block_middle-right_form-block {
 	display: flex;
 	justify-content: space-between;
@@ -214,12 +145,7 @@
 .create-property__block_middle-right_form-block-item {
 	flex: 1 1 195px;
 	position: relative;
-	@include breakpoint(320px) {
-		padding-top: 5px;
-	}
-	@include breakpoint(2600px) {
-		padding-top: 10px;
-	}
+	padding-top: 5px;
 }
 .create-property__block_middle-left_title {
 	font-size: 35px;
@@ -234,18 +160,11 @@
 	width: 100%;
     color: #e34711;
 }
-@include breakpoint(320px) {
-	.create-property__block_middle-right_form-block-item {
-		margin-left: 45px;
-		&:nth-child(1) {
-			margin-left: 0px;
-			flex: 0 1 44%;
-		}
-	}
-}
-@include breakpoint(2600px) {
-	.create-property__block_middle-right_form-block-item {
-		margin-left: 45px;
+.create-property__block_middle-right_form-block-item {
+	margin-left: 45px;
+	&:nth-child(1) {
+		margin-left: 0px;
+		flex: 0 1 44%;
 	}
 }
 .rp__select .open>.dropdown-toggle.btn-default {
@@ -263,25 +182,13 @@
 	background-color: #fff;
 	font-size: inherit;
 	border-radius: 0;
-    @include breakpoint(320px) {
-		padding: 7px 10px 7px 5px!important;
-    }
-    @include breakpoint(2600px) {
-		padding: 21px 20px 21px 15px!important;
-    }
+	padding: 7px 10px 7px 5px!important;
     & .bs-caret {
 		background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMjkgMTI5IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMjkgMTI5IiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiPgogIDxnPgogICAgPHBhdGggZD0ibTEyMS4zLDM0LjZjLTEuNi0xLjYtNC4yLTEuNi01LjgsMGwtNTEsNTEuMS01MS4xLTUxLjFjLTEuNi0xLjYtNC4yLTEuNi01LjgsMC0xLjYsMS42LTEuNiw0LjIgMCw1LjhsNTMuOSw1My45YzAuOCwwLjggMS44LDEuMiAyLjksMS4yIDEsMCAyLjEtMC40IDIuOS0xLjJsNTMuOS01My45YzEuNy0xLjYgMS43LTQuMiAwLjEtNS44eiIgZmlsbD0iI2Q5ZDlkOSIvPgogIDwvZz4KPC9zdmc+Cg==);
 		background-repeat: no-repeat;
-		@include breakpoint(320px) {
-			width: 11px;
-			height: 11px;
-			background-size: 11px 11px;
-		}
-		@include breakpoint(2600px) {
-			width: 30px;
-			height: 30px;
-			background-size: 30px 30px;
-		}
+		width: 11px;
+		height: 11px;
+		background-size: 11px 11px;
 	}
 }
 .dropdown-menu {
@@ -294,12 +201,6 @@
     	display: block;
     }
     & li {
-    	@include breakpoint(320px) {
-			//padding: 7px 5px;
-	    }
-	    @include breakpoint(2600px) {
-			//padding: 21px 15px;
-	    }
 	    &:hover {
 	    	background-color: #eff1f7;
 	    }
@@ -335,57 +236,29 @@
 		border: 2px solid #eff1f7;
 		background-color: #fff;
 		font-size: inherit;
-		@include breakpoint(320px) {
-			padding: 7px 10px 7px 5px !important;
-		}
-		@include breakpoint(2600px) {
-		    padding: 18px 20px 18px 15px !important;
-		}
+		padding: 7px 10px 7px 5px !important;
 	}
 }
 .create-property__block_footer {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	@include breakpoint(320px) {
-		padding-top: 29px;
-	}
-	@include breakpoint(2600px) {
-		padding-top: 87px;
-	}
+	padding-top: 29px;
 	& .my_svg {
 		fill: #e6e8f1;
-		@include breakpoint(320px) {
-			width: 22px;
-			height: 24px;
-			margin-bottom: 11px;
-		}
-		@include breakpoint(2600px) {
-			width: 58px;
-			height: 64px;
-			margin-bottom: 30px;
-		}
+		width: 22px;
+		height: 24px;
+		margin-bottom: 11px;
 	}
 	& .create-property__block_footer-txt {
 		color: #e6e8f1;
-		@include breakpoint(320px) {
-			font-size: 9.58px;
-			margin-bottom: 6px;
-		}
-		@include breakpoint(2600px) {
-			font-size: 25px;
-			margin-bottom: 17px;
-		}
+		font-size: 9.58px;
+		margin-bottom: 6px;
 	}
 	& .create-property__block_footer-link {
 		text-decoration: underline;
 		color: $green-element;
-		@include breakpoint(320px) {
-			font-size: 9.58px;
-		}
-		@include breakpoint(2600px) {
-			font-size: 23px;
-		}
+		font-size: 9.58px;
 	}
 }
 /*!create property*/

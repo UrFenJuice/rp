@@ -33,42 +33,21 @@
 }
 /*!left menu icons*/
 .left__menu_item-link_icon {
-	font-size: 0;
-	@include breakpoint(320px) {
-	    margin-left: 11.3%;
-		margin-right: 16px;
-	    display: inline-block;
-		& .my_svg {
-			width: 27px;
-			height: 27px;
-		}
-	}
-	@include breakpoint(2000px) {
-		margin-right: 32px;
-		& .my_svg {
-			width: 1vw;
-			height: 1vw;
-		}
-	}
-	@media screen and (min-device-aspect-ratio: 21/9) {
-		margin-right: 16px;
-		& .my_svg {
-			width: 1.5vw;
-			height: 1.5vw;
-		}
+    margin-left: 11.3%;
+	margin-right: 16px;
+	& .my_svg {
+		width: 19px;
+		height: 19px;
 	}
 }
 .left-sidebar {
 	overflow: hidden;
-	flex: 1 0 12.4375vw;
+	flex: 0 0 235px;
 	@include breakpoint(320px) {
 		height: 94.237vh;
-		width: 17vw;
+		width: 235px;
 	}
-	@include breakpoint(1170px) {
-		width: 12.4375vw;
-	}
-	@include breakpoint(2000px) {
+ 	@include breakpoint(2000px) {
 		height: 93.277vh;
 	}
 }
@@ -89,6 +68,7 @@
 	&:after {
 		transition: background-color 0.3s;
 	}
+	&.bg_dashboard,
 	&.bg_maintenance,
 	&.bg_applications,
 	&.bg_reports {
@@ -112,32 +92,14 @@
 			top: 0;
 			right: 0;
 			height: 100%;
-			@include breakpoint(320px) {
-				width: 3px;
-			}
-			@include breakpoint(2000px) {
-				width: 10px;
-			}
+			width: 3px;
 		}
 		&:before {
 			display: none;
 		}
 	}
-	@include breakpoint(320px) {
-		font-size: 11px;
-		padding: 2.89vh 0;
-	}
-	@include breakpoint(2000px) {
-		font-size: 0.78125vw;
-		padding: 2vh 0;
-	}
-	@include breakpoint(2880px) {
-		padding: 2.6vh 0;
-		font-size: 25px;
-	}
-	@media screen and (min-device-aspect-ratio: 21/9) {
-		font-size: 14px;
-	}
+	font-size: 14px;
+	padding: 28px 0;
 }
 .bg_dashboard {
 	&:hover,
