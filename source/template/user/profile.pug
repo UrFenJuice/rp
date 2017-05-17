@@ -22,11 +22,13 @@
 				| Verification
 	ul.personal__block-list
 		li.personal__block-list_item.personal__block-list_item-first.active
+			.personal__block-list_item_head
+				i.personal__block-list_item_personal_head_icon
+					+use("user")
+				| Personal Information & Password
 			.personal__block-list_item_personal
 				.personal__block-list_item_personal-info
 					.personal__block-list_item_personal_head
-						i.personal__block-list_item_personal_head-icon
-							+use("user")
 						| Personal Information
 					.personal__block-list_item_personal_middle
 						.personal__block-list_item_personal_middle-block
@@ -61,8 +63,6 @@
 									| SAVE
 				.personal__block-list_item_personal-password
 					.personal__block-list_item_personal_head
-						i.personal__block-list_item_personal_head-icon
-							+use("padlock_sm")
 						| Password
 					.personal__block-list_item_personal_middle
 						.personal__block-list_item_personal_middle-block(onkeypress="javascript:return WebForm_FireDefaultButton(event, 'MainContent_lbChangePassword')")
@@ -76,12 +76,10 @@
 								.form-group.personal__block-list_item_personal_middle-form-item
 									span Confirm
 									input#MainContent_tbConfirmChange.confirm_change(name='ctl00$MainContent$tbConfirmChange', type='password', maxlength='25', data-bv-field='ctl00$MainContent$tbConfirmChange')
-								a#MainContent_lbChangePassword.rp__btn.personal__block-list_item_personal_middle-form_link(href="javascript:__doPostBack('ctl00$MainContent$lbChangePassword','')")
+								a#MainContent_lbChangePassword.personal__block-list_item_personal_middle-form_link(href="javascript:__doPostBack('ctl00$MainContent$lbChangePassword','')")
 									| SAVE PASSWORD
-								div
-									a(href='#').personal__block-list_item_personal_middle-form_link-pass
-										+use("help-button")
-										| Forgot my current password
+								a(href='#').personal__block-list_item_personal_middle-form_link-pass
+									| Forgot my current password
 		li.personal__block-list_item.personal__block-list_item-second
 			| test2
 		li.personal__block-list_item.personal__block-list_item-third
