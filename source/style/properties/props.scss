@@ -70,7 +70,7 @@
 	position: absolute;
 	bottom: 2px;
 	width: 100%;
-	background-color: rgba(0, 0, 0, 0.4);
+	background-color: rgba(0, 0, 0, 0.5);
 	display: flex;
 	align-items: center;
 	padding-top: 15px;
@@ -83,10 +83,8 @@
 	& .properties__block_list-item_info-status_board {
 		padding-right: 18px;
 		padding-left: 27px;
-	}
-	.properties__block_list-item_info-status_board {
-		padding-top: 19px;
-		padding-bottom: 18px;
+		padding-top: 14px;
+		padding-bottom: 14px;
 	}
 	& a,
 	& span {
@@ -563,7 +561,6 @@
 	}
 	& .properties__block_list-item_info-status_board {
 		width: 50%;
-		//display: block;
 		border: none;
 		padding: 0;
 		margin: 0;
