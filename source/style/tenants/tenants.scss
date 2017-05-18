@@ -3,12 +3,7 @@
     justify-content: flex-start;
 }
 .tennant__title {
-    @include breakpoint(320px) {
-        padding: 0 25px 25px 0;
-    }
-    @include breakpoint(2600px) {
-        padding: 0 50px 65px 0;
-    }
+    padding: 0 25px 25px 0;
 }
 .tenant__form {
 	background-color: #fff;
@@ -532,44 +527,23 @@ textarea.addit-textarea {
         background-repeat: no-repeat;
         background-position: 50%;
         background-image: url(data:image/svg+xml;charset=utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDI2IDI2IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyNiAyNiIgd2lkdGg9IjMycHgiIGhlaWdodD0iMzJweCI+CiAgPHBhdGggZD0ibS4zLDE0Yy0wLjItMC4yLTAuMy0wLjUtMC4zLTAuN3MwLjEtMC41IDAuMy0wLjdsMS40LTEuNGMwLjQtMC40IDEtMC40IDEuNCwwbC4xLC4xIDUuNSw1LjljMC4yLDAuMiAwLjUsMC4yIDAuNywwbDEzLjQtMTMuOWgwLjF2LTguODgxNzhlLTE2YzAuNC0wLjQgMS0wLjQgMS40LDBsMS40LDEuNGMwLjQsMC40IDAuNCwxIDAsMS40bDAsMC0xNiwxNi42Yy0wLjIsMC4yLTAuNCwwLjMtMC43LDAuMy0wLjMsMC0wLjUtMC4xLTAuNy0wLjNsLTcuOC04LjQtLjItLjN6IiBmaWxsPSIjZmZmZmZmIi8+Cjwvc3ZnPgo=);
-        @include breakpoint(320px) {
-            width: 100px;
-            height: 100px;
-            margin-left: -50px;
-            top: -50px;
-            background-size: 35px;
-        }
-        @include breakpoint(2600px) {
-            width: 204px;
-            height: 204px;
-            margin-left: -102px;
-            top: -102px;
-            background-size: 70px;
-        }
+        width: 100px;
+        height: 100px;
+        margin-left: -50px;
+        top: -50px;
+        background-size: 35px;
     }
 }
 .rp__pop-up_head {
     text-align: center;
-    @include breakpoint(320px) {
-        font-size: 16.31px;
-        padding: 52px 0 20px 0;
-    }
-    @include breakpoint(2600px) {
-        font-size: 35px;
-        padding: 170px 0 40px 0;
-    }
+    font-size: 16.31px;
+    padding: 52px 0 20px 0;
     & .my_svg {
         display: block;
         margin: -39px auto 17px;
         fill: #cacfe2;
-        @include breakpoint(320px) {
-            width: 30px;
-            height: 30px
-        } 
-        @include breakpoint(2600px) {
-            width: 64px;
-            height: 64px
-        } 
+        width: 30px;
+        height: 30px
     }
 }
 .rp__pop-up_address {
@@ -606,53 +580,28 @@ textarea.addit-textarea {
         width: 100%;
         left: 0;
     }
-    @include breakpoint(320px) {
-        flex: 0 1 370px;
-        border: 2px dashed #e7e9f2;
-        padding: 42px 53px 33px 53px;
-        margin: 0 8px 44px 8px;
-        & #popup_group {
-            width: 29px;
-            height: 39px;
-        }
-        & #popup_user {
-            width: 39px;
-            height: 39px;  
-        }
-        & #list {
-            width: 39px;
-            height: 39px;  
-        }
-        &:nth-child(1) {
-            & .rp__pop-up_middle_block_calendar {
-                display: none;
-            }
-            & .rp__pop-up_middle_block_btn {
-                bottom: 33px;
-            }
-        }
+    flex: 0 1 370px;
+    border: 2px dashed #e7e9f2;
+    padding: 42px 53px 33px 53px;
+    margin: 0 8px 44px 8px;
+    & #popup_group {
+        width: 29px;
+        height: 39px;
     }
-    @include breakpoint(2600px) {
-        flex: 0 1 800px;
-        border: 3px dashed #e7e9f2;
-        padding: 100px 115px 70px 115px;
-        margin: 0 17px 55px 17px;
-        & #popup_group {
-            width: 64px;
-            height: 84px;
+    & #popup_user {
+        width: 39px;
+        height: 39px;  
+    }
+    & #list {
+        width: 39px;
+        height: 39px;  
+    }
+    &:nth-child(1) {
+        & .rp__pop-up_middle_block_calendar {
+            display: none;
         }
-        & #popup_user {
-            width: 84px;
-            height: 84px;  
-        }
-        & #list {
-            width: 64px;
-            height: 64px;  
-        }
-        &:nth-child(1) {
-            & .rp__pop-up_middle_block_btn {
-                bottom: 70px;
-            }
+        & .rp__pop-up_middle_block_btn {
+            bottom: 33px;
         }
     }
 }
@@ -661,38 +610,21 @@ textarea.addit-textarea {
     margin-bottom: 50px;
 }
 .rp__pop-up_middle_block_title {
-    @include breakpoint(320px) {
-        font-size: 13.51px;
-        padding: 17px 0;
-    }
-    @include breakpoint(2600px) {
-        font-size: 29px;
-        padding: 35px 0;
-    }
+    font-size: 13.51px;
+    padding: 17px 0;
 }
 .rp__pop-up_middle_block_info {
     color: #707380;
     line-height: 1.6;
-    @include breakpoint(320px) {
-        font-size: 11.18px;
-        padding-bottom: 17px;
-    }
-    @include breakpoint(2600px) {
-        font-size: 24px;
-        padding-bottom: 32px;
-    }
+    font-size: 11.18px;
+    padding-bottom: 17px;
 }
 .rp__pop-up_middle_block_calendar {
     position: relative;
     & .my_svg {
         fill: #2dc888;
     }
-    @include breakpoint(320px) {
-        margin-bottom: 18px;
-    }
-    @include breakpoint(2600px) {
-        margin-bottom: 45px;
-    }
+    margin-bottom: 18px;
 }
 .rp__pop-up_middle_block_calendar_input {
     color: #b3b6c3;
@@ -701,14 +633,8 @@ textarea.addit-textarea {
     width: 100%;
     float: none !important;
     z-index: inherit !important;
-    @include breakpoint(320px) {
-        font-size: 10.25px;
-        padding: 9px 12px;
-    }
-    @include breakpoint(2600px) {
-        font-size: 22px;
-        padding: 23px 21px;
-    }
+    font-size: 10.25px;
+    padding: 9px 12px;
 }
 .rp__pop-up_middle_block_btn_link {
     @extend .rp__btn;
@@ -728,21 +654,11 @@ textarea.addit-textarea {
         height: 53px;
         fill: #dee0ea;
     }
-    @include breakpoint(320px) {
-        top: 17px;
-        right: 22px;
-        & .my_svg {
-            width: 25px;
-            height: 25px;
-        }
-    }
-    @include breakpoint(2600px) {
-        top: 37px;
-        right: 48px;
-        & .my_svg {
-            width: 53px;
-            height: 53px;
-        }
+    top: 17px;
+    right: 22px;
+    & .my_svg {
+        width: 25px;
+        height: 25px;
     }
 }
 .modal-backdrop {

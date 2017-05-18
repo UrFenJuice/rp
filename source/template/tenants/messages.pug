@@ -23,58 +23,55 @@
 		.tenanant-chat_left_block
 			.tenanant-chat_left_block_search
 				.tenanant-chat_left_block_search_header
-					//input(type="text", placeholder="Search")
+					ul.personal__menu-list
+						li.personal__menu-list_item.active(data-class='first')
+							a.personal__menu-list_item-link(href='#') Current Tenants       
+						li.personal__menu-list_item(data-class='second')
+							a.personal__menu-list_item-link(href='#') Previous Tenants
 				.tenanant-chat_left_block_search_middle
-					a(href="#collapse-1", data-toggle="collapse").toogle__link
-						| Current Tenants
-						i.toogle__link_icon
-							+use("arrow_down")
-					#collapse-1.toogle__block.collapse.in
-						.tenanant-chat_left_block_search_middle_result
-							.tenanant-chat_left_block_search_middle_image
-								| el
-							.tenanant-chat_left_block_search_middle_name
-								| Egor Landovich
-								sup 99+
-							.tenanant-chat_left_block_search_middle_address
-								| 11 Main Street, Hamilton
-							.tenanant-chat_left_block_search_middle_date
-								| 18:00 on 28 March 2016
-						.tenanant-chat_left_block_search_middle_result.active
-							.tenanant-chat_left_block_search_middle_image
-								img(src="https://pp.userapi.com/c406423/v406423680/2882/0BaT1DBqt0U.jpg")
-							.tenanant-chat_left_block_search_middle_name
-								| Egor Landovich
-								sup 99+
-							.tenanant-chat_left_block_search_middle_address
-								| 11 Main Street, Hamilton
-							.tenanant-chat_left_block_search_middle_date
-								| 18:00 on 28 March 2016
-					a(href="#collapse-2", data-toggle="collapse").toogle__link
-						| Previous Tenants
-						i.toogle__link_icon
-							+use("arrow_down")
-					#collapse-2.toogle__block.collapse
-						.tenanant-chat_left_block_search_middle_result
-							.tenanant-chat_left_block_search_middle_image
-								img(src="https://pp.userapi.com/c406423/v406423680/2882/0BaT1DBqt0U.jpg")
-							.tenanant-chat_left_block_search_middle_name
-								| Egor Landovich
-								sup 9
-							.tenanant-chat_left_block_search_middle_address
-								| 11 Main Street, Hamilton
-							.tenanant-chat_left_block_search_middle_date
-								| 18:00 on 28 March 2016
-						.tenanant-chat_left_block_search_middle_result
-							.tenanant-chat_left_block_search_middle_image
-								img(src="https://pp.userapi.com/c406423/v406423680/2882/0BaT1DBqt0U.jpg")
-							.tenanant-chat_left_block_search_middle_name
-								| Egor Landovich
-								sup 1
-							.tenanant-chat_left_block_search_middle_address
-								| 11 Main Street, Hamilton
-							.tenanant-chat_left_block_search_middle_date
-								| 18:00 on 28 March 2016
+					ul.personal__block-list
+						li.personal__block-list_item.personal__block-list_item-first.active
+							.tenanant-chat_left_block_search_middle_result
+								.tenanant-chat_left_block_search_middle_image
+									| el
+								.tenanant-chat_left_block_search_middle_name
+									| Egor Landovich
+									sup 99+
+								.tenanant-chat_left_block_search_middle_address
+									| 11 Main Street, Hamilton
+								.tenanant-chat_left_block_search_middle_date
+									| 18:00 on 28 March 2016
+							.tenanant-chat_left_block_search_middle_result.active
+								.tenanant-chat_left_block_search_middle_image
+									img(src="https://pp.userapi.com/c406423/v406423680/2882/0BaT1DBqt0U.jpg")
+								.tenanant-chat_left_block_search_middle_name
+									| Egor Landovich
+									sup 99+
+								.tenanant-chat_left_block_search_middle_address
+									| 11 Main Street, Hamilton
+								.tenanant-chat_left_block_search_middle_date
+									| 18:00 on 28 March 2016
+						li.personal__block-list_item.personal__block-list_item-second
+							.tenanant-chat_left_block_search_middle_result
+								.tenanant-chat_left_block_search_middle_image
+									img(src="https://pp.userapi.com/c406423/v406423680/2882/0BaT1DBqt0U.jpg")
+								.tenanant-chat_left_block_search_middle_name
+									| Egor Landovich
+									sup 9
+								.tenanant-chat_left_block_search_middle_address
+									| 11 Main Street, Hamilton
+								.tenanant-chat_left_block_search_middle_date
+									| 18:00 on 28 March 2016
+							.tenanant-chat_left_block_search_middle_result
+								.tenanant-chat_left_block_search_middle_image
+									img(src="https://pp.userapi.com/c406423/v406423680/2882/0BaT1DBqt0U.jpg")
+								.tenanant-chat_left_block_search_middle_name
+									| Egor Landovich
+									sup 1
+								.tenanant-chat_left_block_search_middle_address
+									| 11 Main Street, Hamilton
+								.tenanant-chat_left_block_search_middle_date
+									| 18:00 on 28 March 2016
 			.tenanant-chat_left_block_chat-inner
 				.tenanant-chat_left_block_chat-inner_header
 				.tenanant-chat_left_block_chat-inner_middle#chatroom
@@ -91,6 +88,8 @@
 							p Doro Persch paid 
 								span $2,200.00
 							.aplication_chat_middle_date 30.11.2016   21:00
+							a(href="#").tenanant-chat_left_block_chat-inner_middle_payment_link
+								| View Details
 					.tenanant-chat_left_block_chat-inner_middle_autor
 						| Thank’s for the payment)) just in time!
 						.aplication_chat_middle_date 30.11.2016    21:00
@@ -113,35 +112,6 @@
 					a(href="#").tenanant-chat_left_block_chat-inner_footer_send#btnSendMessage
 						+use("send-message-button")
 	.tenanant-chat_right
-		.tenanant-chat_left_block_search_middle_result
-			.tenanant-chat_left_block_search_middle_image
-				img(src="https://pp.userapi.com/c406423/v406423680/2882/0BaT1DBqt0U.jpg")
-			.tenanant-chat_left_block_search_middle_name
-				| Egor Landovich
-			.tenanant-chat_left_block_search_middle_address
-				| 11 Main Street, Hamilton
-			.tenanant-chat_left_block_search_middle_phone
-				| 0499 565-990
-			.tenanant-chat_left_block_search_middle_date
-				| Tenant Since On: 28 March 2016
-			.tenanant-chat_right_status Current
-			table.latest-payments_table
-				thead
-					tr
-						th(colspan="2") Latest Payments
-				tbody
-					tr
-						td 30.11.2016
-						td $2,200.00
-					tr
-						td 29.10.2016
-						td $400.00
-					tr
-						td 28.10.2016
-						td $170.00
-					tr
-						td 22.9.2016
-						td $200.00
 		.tenanant-chat_right_links-block
 			//asp:linkbutton#btnShowMessageAttachment(runat='server').tenanant-chat_right_links-block_link
 				i.tenanant-chat_right_links-block_link_icon

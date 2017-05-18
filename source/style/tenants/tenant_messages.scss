@@ -1,16 +1,14 @@
 .tennant-chat {
 	display: flex;
-	width: 102%;
 	& .tenanant-chat_right {
-		flex: 0 1 550px;
+		flex: 0 1 280px;
 		margin-left: 38px;
 	}
 	& .tenanant-chat_left {
 		flex: 1 1 auto;
-		border: 2px solid #e8e9f1;
+		border-radius: 6px;
 	}
-	& .tenanant-chat_left,
-	& .tenanant-chat_right {
+	& .tenanant-chat_left {
 		background-color: #fff;
 	}
 }
@@ -19,32 +17,24 @@
 	height: 100%;
 }
 .tenanant-chat_left_block_search {
-	flex: 0 1 560px;
-	border-right: 2px solid #e8e9f1;
-}
-.tenanant-chat_left_block_search_header input {
-	margin: 0;
-	width: 100%;
-	font-size: 26px;
-	color: #b6b9c6;
-	border: none;
-    padding: 30px;
+	flex: 0 1 310px;
+	border-right: 1px solid #e8e9f1;
 }
 .tenanant-chat_left_block_search_middle_result {
 	text-align: center;
-	border-bottom: 2px solid #e8e9f1;
+	border-bottom: 1px solid #e8e9f1;
 	position: relative;
     &:hover,
     &.active {
-    	background-color: #f9fafc;
+    	background-color: rgba(129, 144, 197, 0.1);
     	&:after {
 			content: '';
 			display: block;
 			position: absolute;
 			top: 0;
-			right: 0;
+			right: -1px;
 			height: 100%;
-    		border-right: 8px solid $logotype-color;
+    		border-right: 2px solid #8190c5;
     	}
     }
 }
@@ -73,7 +63,7 @@
 	position: relative;
 	& sup {
 		color: #ed1c24;
-		font-size: 24px;
+		font-size: 10px;
 		font-family: $second-font;
 		position: absolute;
 		right: 35px;
@@ -97,11 +87,10 @@
 .tenanant-chat_left_block_search_middle_phone {
 	font-size: 23px;
 	margin-bottom: 15px;
+	color: #7078a6;
 }
 .tenanant-chat_left_block_search_middle_date {
 	color: #b1b5bf;
-	font-size: 18px;
-	font-family: $fourth-font;
 	margin: 30px auto 80px;
 }
 .tenanant-chat_left_block_chat-inner_middle,
@@ -112,8 +101,7 @@
 	height: 83vh;
 }
 .tenanant-chat_left_block_chat-inner_middle .aplication_chat_middle_date {
-	font-size: 20px;
-	color: #b6b9c6;
+	font-size: 10.6px;
 }
 .tenanant-chat_left_block_chat-inner_header,
 .tenanant-chat_left_block_chat-inner_footer {
@@ -122,71 +110,84 @@
 	justify-content: flex-end;
 }
 .tenanant-chat_left_block_chat-inner_footer {
-	border-top: 2px solid #e8e9f1;
+	border-top: 1px solid #e8e9f1;
 }
 .tenanant-chat_left_block_chat-inner_middle_interlocutor {
 	align-self: flex-start;
-	background-color: #f9fafc;
-	padding: 20px;
-	margin: 20px 46px;
+	background-color: #fdf3e2;
+	padding: 13px;
+	margin: 25px 5% 0;
 	position: relative;
-	font-size: 28px;
+	font-size: 14.84px;
 	&:before {
 		content: '';
 		display: block;
 		position: absolute;
 		top: 50%;
-		left: -29px;
-		margin-top: -15px;
-		border: 15px solid transparent;	
-		border-right: 15px solid #f9fafc;
+		left: -13px;
+		margin-top: -9px;
+		border: 9px solid transparent;	
+		border-right: 4.5px solid #fdf3e2;
+	}
+	& .aplication_chat_middle_date {
+		color: #d5c8b2;
 	}
 }
 .tenanant-chat_left_block_chat-inner_middle_autor {
 	align-self: flex-end;
-	background-color: #eaf2fe;
-	padding: 20px;
-	margin: 20px 37px;
+	background-color: #f5f7fe;
+	padding: 13px;
+	margin: 25px 5% 0;
 	position: relative;
-	font-size: 28px;
+	font-size: 14.84px;
 	&:before {
 		content: '';
 		display: block;
 		position: absolute;
 		top: 50%;
-		right: -29px;
-		margin-top: -15px;
-		border: 15px solid transparent;	
-		border-left: 15px solid #eaf2fe;
+		right: -13px;
+		margin-top: -9px;
+		border: 9px solid transparent;	
+		border-left: 4.5px solid #f5f7fe;
+	}
+	& .aplication_chat_middle_date {
+		color: #b6b9c6;
 	}	
 }
 .tenanant-chat_left_block_chat-inner_middle_maintenance-request_icon,
 .tenanant-chat_left_block_chat-inner_middle_payment_icon {
 	display: inline-block;
-	padding: 29px;
+	padding: 12px;
 	border-radius: 50%;
-	margin-right: 28px;
+	margin-right: 15px;
+	background-color: #fff;
 	& .my_svg {
-		width: 47px;
-		height: 47px;
-		fill: #fff;
+		width: 33px;
+		height: 33px;
 	}
 }
-.tenanant-chat_left_block_chat-inner_middle_payment_icon {background-color: #3dce6d;}
-.tenanant-chat_left_block_chat-inner_middle_maintenance-request_icon {background-color: #546e7a;}
+.tenanant-chat_left_block_chat-inner_middle_maintenance-request_icon {
+	& .my_svg {
+		fill: #546e7a;
+	}
+}
+.tenanant-chat_left_block_chat-inner_middle_payment_icon {
+	& .my_svg {
+		fill: #3dce6d;
+	}
+}
 .tenanant-chat_left_block_chat-inner_middle_payment,
 .tenanant-chat_left_block_chat-inner_middle_maintenance-request{
-	margin: 20px 150px 20px 46px;
-    //display: flex;
+	margin: 25px 5% 0;
     display: -webkit-box;
     align-items: center;
-    padding: 13px 25px 13px 13px;
+    padding: 10px;
     border-radius: 6px;
     & p {
-    	font-size: 30px;
+    	font-size: 14.87px;
     }
     & .aplication_chat_middle_date {
-    	font-size: 24px;
+    	font-size: 10.62px;
     }
 }
 .tenanant-chat_left_block_chat-inner_middle_payment {
@@ -211,26 +212,36 @@
 .tenanant-chat_left_block_chat-inner_middle_maintenance-request_block {
 	flex: 1 1 auto;
 } 
+.tenanant-chat_left_block_chat-inner_middle_payment_link,
 .tenanant-chat_left_block_chat-inner_middle_maintenance-request_link {
-	font-size: 20px;
+	font-size: 10.62px;
 	color: #fff;
 	font-family: $fourth-font;
 	text-transform: uppercase;
-	background-color: #546e7a;
-    padding: 17px 32px;
-    border-radius: 8px;
+    padding: 8px 17px;
+    border-radius: 6px;
     display: inline-block;
+    &:hover {
+    	color: #fff;
+    	opacity: .8;
+    }
+}
+.tenanant-chat_left_block_chat-inner_middle_payment_link {
+	background-color: #3dce6d;
+}
+.tenanant-chat_left_block_chat-inner_middle_maintenance-request_link {
+	background-color: #546e7a;
 }
 .tenanant-chat_left_block_chat-inner_footer_send {
 	display: inline-block;
 	background-color: #2dc787;
 	border-radius: 50%;
-    padding: 38px;
+    padding: 19px;
     font-size: 0;
-    margin: 95px 50px 40px 28px; 
+    margin: 95px 50px 40px 13px; 
 	& .my_svg {
-		width: 32px;
-		height: 32px;
+		width: 16px;
+		height: 16px;
 		fill: #fff;
 	}
 }
@@ -239,14 +250,14 @@
 	display: block;
 	font-size: 0;
 	border-radius: 50%;
-	border: 3px solid #e9ebf0;
-    padding: 18px;
+	border: 1px solid #e9ebf0;
+    padding: 9px;
     height: 100%;
-    margin-top: 116px;
+    margin-top: 106px;
     max-height: 66px;
 	& .my_svg {
-		width: 24px;
-		height: 24px;
+		width: 11px;
+		height: 11px;
 		fill: #b7bac7;
 	}
 }
@@ -254,8 +265,8 @@
 	outline: none;
 	border: none;
 	flex: 1 1 auto;
-	padding: 0 65px 121px 65px;
-	font-size: 26px;
+	padding: 0 65px 121px 5%;
+	font-size: 13px;
 	color: #c3c6d3;
 }
 
@@ -280,13 +291,7 @@
 		}
 		& .invoices_history_list_item:after, 
 		& .invoices_history_list_item:before {
-			@include breakpoint(320px) {
-				top: 285px;
-			}
-			@include breakpoint(2600px) {
-				top: 295px;
-			}
-			
+			top: 285px;
 		}
 		& .invoices_history_list_item_link {
 			display: block;
@@ -309,32 +314,19 @@
         		background-repeat: no-repeat;
 				transform: rotate(270deg);
 				float: right;
-				@include breakpoint(320px) {
-					background-size: 6.75px;
-					width: 6.75px;
-					height: 6.75px;
-				    margin: 2px 0 0 5px;
-				}
-				@include breakpoint(2600px) {
-					background-size: 15px;
-					width: 15px;
-					height: 15px;
-				}
+				background-size: 6.75px;
+				width: 6.75px;
+				height: 6.75px;
+			    margin: 2px 0 0 5px;
 			}
 		}
 		& .invoices_history_list_item-next_sub_prepaid .invoices_history_list_item_link:before {
 		    transform: rotate(45deg);
 		}
 		.invoices_history_list_item_link-details {
-		    @include breakpoint(320px) {
-		        left: 50%;
-		        top: 140%;
-		        margin-left: -80px;
-		    }
-		    @include breakpoint(2600px) {
-		        left: 50%;
-		        margin-left: -190px;
-		    }
+	        left: 50%;
+	        top: 140%;
+	        margin-left: -80px;
 		}
 	}
 	& .invoices_history_list_item_link-sum {
@@ -359,10 +351,11 @@
 	}
 }
 .tenanant-chat_right_links-block {
-	padding: 67px 82px 33px 86px;
+	padding: 32px 27px 5px;
 	position: relative;
 	z-index: 2;
-	border-top: 2px solid #eceef3;
+	border-radius: 6px;
+	background-color: #fff;
 }
 .tenanant-chat_right_status {
 	font-size: 21px;
@@ -389,28 +382,30 @@
 	margin-bottom: 48px;
 }
 .tenanant-chat_right_links-block_link {
-	font-size: 23px;
+	font-size: 13px;
 	text-transform: uppercase;
 	color: #b1b1c0;
 	font-family: $fourth-font;
 	display: flex;
 	align-items: center;
-	border: 2px solid #eff1f6;
-    border-radius: 30px;
-    padding: 12px;
-    margin-bottom: 48px;
+	border: 1px solid #eff1f6;
+    border-radius: 6px;
+    padding: 6px;
+    margin-bottom: 27px;
+    cursor: pointer;
+	background: linear-gradient(to top, #f9fafd, #fff, #fff);
 	& .my_svg {
-		width: 32px;
-		height: 32px;
+		width: 22px;
+		height: 22px;
 		fill: #b1b1c0;
-		margin-left: 15px;
+		margin-left: 11px;
 	}
 	& span {
 		flex: 1 1 auto;
 		text-align: center;
 	}
 	&:hover {
-		background-color: #f5f6fb;
+		background: #f5f6fb;
 		color: #b1b1c0;
 	}
 }
