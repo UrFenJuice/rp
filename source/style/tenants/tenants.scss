@@ -119,42 +119,23 @@
         text-decoration: none;
         color: #c0c3d0;
     }
-    @include breakpoint(320px) {
-        padding: 15px 148px 15px 148px;
-        font-size: 10px;
-        & .tenant__form_nav_item-link:before {
-            width: 3px;
-            height: 3px;
-            border: 2px solid #c0c3d0;
-            background-color: #c0c3d0;
-            box-sizing: content-box;
-        }
-        & .tenant__form_nav_item-link:before {
-            margin: 0 auto 5px auto;
-            box-sizing: content-box;
-        }
-        & .tenant__form_nav_item:after,
-        & .tenant__form_nav_item:before {
-            top: 3px;
-            box-sizing: content-box;
-        }
+    padding: 15px 148px 15px 148px;
+    font-size: 10px;
+    & .tenant__form_nav_item-link:before {
+        width: 3px;
+        height: 3px;
+        border: 2px solid #c0c3d0;
+        background-color: #c0c3d0;
+        box-sizing: content-box;
     }
-    @include breakpoint(2600px) {
-        padding: 37px 380px 32px 389px;
-        font-size: 22px;
-        & .tenant__form_nav_item-link:before {
-            width: 10px;
-            height: 10px;
-            border: 5px solid #c0c3d0;
-            background-color: #f9fafd;
-        }
-        & .tenant__form_nav_item-link:before {
-            margin: 0 auto 14px auto;
-        }
-        & .tenant__form_nav_item:after,
-        & .tenant__form_nav_item:before {
-            top: 10px;
-        }
+    & .tenant__form_nav_item-link:before {
+        margin: 0 auto 5px auto;
+        box-sizing: content-box;
+    }
+    & .tenant__form_nav_item:after,
+    & .tenant__form_nav_item:before {
+        top: 3px;
+        box-sizing: content-box;
     }
 }
 /*!garland*/
@@ -164,17 +145,14 @@
 .address__tenant {
     font-family: $third-font;
     color: #9597a1;
-    @include breakpoint(320px) {
-        font-size: 11px;
-    }
-    @include breakpoint(2600px) {
-        font-size: 28px;
-    }
+    font-size: 11px;
 }
 .tenants__block_head {
 	position: relative;
 }
 .tenants__block_head_icon {
+    display: inherit;
+    position: inherit;
 	& .my_svg {
 		fill: #f4f5f9;
 		display: block;
@@ -186,49 +164,25 @@
 		left: 0;
 		z-index: 1;
 	}
-    @include breakpoint(320px) {
-        #group {
-            width: 99px;
-            height: 99px;
-        }
-        #set-up-your-rent {
-            width: 59px;
-            height: 59px;
-        }
-        #dog {
-            width: 80px;
-            height: 80px;
-        }
-        #house {
-            width: 81px;
-            height: 81px;
-        }
-        #flag {
-            width: 69px;
-            height: 69px;
-        }
+    #group {
+        width: 99px;
+        height: 99px;
     }
-    @include breakpoint(2600px) {
-        #group {
-            width: 256px;
-            height: 256px;
-        }
-        #set-up-your-rent {
-            width: 153px;
-            height: 153px;
-        }
-        #dog {
-            width: 207px;
-            height: 207px;
-        }
-        #house {
-            width: 209px;
-            height: 209px;
-        }
-        #flag {
-            width: 180px;
-            height: 180px;
-        }
+    #set-up-your-rent {
+        width: 59px;
+        height: 59px;
+    }
+    #dog {
+        width: 80px;
+        height: 80px;
+    }
+    #house {
+        width: 81px;
+        height: 81px;
+    }
+    #flag {
+        width: 69px;
+        height: 69px;
     }
 }
 .tenants__block_head_title {
@@ -236,22 +190,11 @@
     z-index: 2;
     letter-spacing: 0.5px;
     position: relative;
-    @include breakpoint(320px) {
-        font-size: 15px;
-        margin: 45px auto 44px auto;
-    }
-    @include breakpoint(2600px) {
-        font-size: 35px;
-        margin: 123px auto 121px auto;
-    }
+    font-size: 15px;
+    margin: 45px auto 44px auto;
 }
 .tenants__block {
-    @include breakpoint(320px) {
-        padding: 0 26px 30px 26px;
-    }
-    @include breakpoint(2600px) {
-        padding: 0 70px 80px 70px;   
-    }
+    padding: 0 26px 30px 26px;
 }
 .tenants__block_middle {
     display: flex;
@@ -260,48 +203,30 @@
         border: 2px solid #eff1f7;
         flex: 0 1 1120px;
     }
-    @include breakpoint(320px) {
-        & .tenants__block_right-twocolumns_top {
-            padding: 17px 30px;
-            margin-bottom: 20px!important;
-            & .label {
-                font-size: 11px;
-                padding: 0;
-            }
-            & .radio-b:nth-child(1) {
-                margin-top: 17px;
-            }
-            & label {
-                margin-bottom: 0;
-            }
-        }
-        & .tenants__block_right-twocolumns_bottom,
-        &>div {
-            padding: 27px 30px;
+    & .tenants__block_right-twocolumns_top {
+        padding: 17px 30px;
+        margin-bottom: 20px!important;
+        & .label {
             font-size: 11px;
-            &:nth-child(2) {
-               margin-left: 26px; 
-            }
+            padding: 0;
         }
-        & h5 {
-            font-size: 14px;
+        & .radio-b:nth-child(1) {
+            margin-top: 17px;
+        }
+        & label {
+            margin-bottom: 0;
         }
     }
-    @include breakpoint(2600px) {
-        & .tenants__block_right-twocolumns_top {
-            & .label {
-                font-size: 26px;
-            }
+    & .tenants__block_right-twocolumns_bottom,
+    &>div {
+        padding: 27px 30px;
+        font-size: 11px;
+        &:nth-child(2) {
+           margin-left: 26px; 
         }
-        & .tenants__block_right-twocolumns_top,
-        & .tenants__block_right-twocolumns_bottom,
-        &>div {
-            padding: 80px 90px 90px 90px;
-            font-size: 26px
-        }
-        & h5 {
-            font-size: 30px;
-        }
+    }
+    & h5 {
+        font-size: 14px;
     }
     & .tenants__block_right-twocolumns_top,
     & .tenants__block_right-twocolumns_bottom {
@@ -316,18 +241,10 @@
     margin-bottom: 0!important;
 }
 .tenants__block_left_item {
-    @include breakpoint(320px) {
-        margin-top: 26px;
-        width: 100%;
-        & .bootstrap-select {
-            margin-top: 3px;
-        }
-    }
-    @include breakpoint(2600px) {
-        margin-top: 73px;
-        & .bootstrap-select {
-            margin-top: 10px;
-        }
+    margin-top: 26px;
+    width: 100%;
+    & .bootstrap-select {
+        margin-top: 3px;
     }
     position: relative;
 }
@@ -340,61 +257,30 @@
     & p {
         color: #a8adc2;
     }
-    @include breakpoint(320px) {
-        padding: 9px 0 10px 18px;
-        margin-bottom: 16px;
-        & p {
-            font-size: 10px;
-        }
-        & h6 {
-            margin-bottom: 6px;
-        }
+    padding: 9px 0 10px 18px;
+    margin-bottom: 16px;
+    & p {
+        font-size: 10px;
     }
-    @include breakpoint(2600px) {
-        padding: 25px 0 40px 40px;
-        margin-bottom: 40px;
-        & p {
-            font-size: 24px;
-            line-height: 1.6;
-        }
-        & h6 {
-            margin-bottom: 13px;
-        }
+    & h6 {
+        margin-bottom: 6px;
     }
 }
 .tenants__block_right h5 {
-    @include breakpoint(320px) {
-        margin-top: 0;
-        margin-bottom: 19px;
-    }
-    @include breakpoint(2600px) {
-        margin-bottom: 50px;
-    }
+    margin-top: 0;
+    margin-bottom: 19px;
 }
 .previous.tenants__block-links {
     border-top: 2px solid #f4f5f9;
     display: flex;
     justify-content: center;
-    @include breakpoint(320px) {
-        padding: 22px 0;
-        & a:nth-last-child(2n+1) {
-            margin-right: 30px;
-        }
-    }
-    @include breakpoint(2600px) {
-        padding: 55px 0;
-        & a:nth-last-child(2n+1) {
-            margin-right: 75px;
-        }
+    padding: 22px 0;
+    & a:nth-last-child(2n+1) {
+        margin-right: 30px;
     }
 }
 .tenants__block_footer {
-    @include breakpoint(320px) {
-        margin-top: 30px;
-    }
-    @include breakpoint(2600px) {
-        margin-top: 80px;
-    }
+    margin-top: 30px;
 }
 .tenants__block_footer_add_link {
     color:  #c3c6d4;
@@ -437,22 +323,12 @@
         width: 100%;
         background-color: transparent;
     }
-    @include breakpoint(320px) {
-        margin-top: -5px;
-        right: 10px;
-        & .my_svg {
-            width: 12px;
-            height: 12px;
-        } 
-    }
-    @include breakpoint(2600px) {
-        margin-top: -13px;
-        right: 30px;
-        & .my_svg {
-            width: 32px;
-            height: 32px;
-        } 
-    }
+    margin-top: -5px;
+    right: 10px;
+    & .my_svg {
+        width: 12px;
+        height: 12px;
+    } 
 }
 .form-group-calend .input-group {
     position: relative;
@@ -468,16 +344,9 @@
 }
 .tenants__block_left_input_icon {
     background-repeat: no-repeat;
-    @include breakpoint(320px) {
-        background-size: 12px;
-        background-position: 5px 50%;
-        padding-left: 20px; 
-    }
-    @include breakpoint(2600px) {
-        background-size: 32px;
-        background-position: 20px 50%;
-        padding-left: 60px; 
-    }
+    background-size: 12px;
+    background-position: 5px 50%;
+    padding-left: 20px; 
 }
 .tenants__block_right-twocolumns {
     display: flex;
@@ -513,46 +382,20 @@
         align-items: center;
         font-family: $second-font;
     }
-    @include breakpoint(320px) {
-        & .my_svg {
-            width: 12px;
-            height: 12px;
-        }
-        &>div {
-            flex: 0 1 200px;
-        }
-        & .my_svg {
-            margin-right: 5px;
-        }
-        & h6 {
-            margin-top: 0;
-            margin-bottom: 15px;
-            font-size: 13px;
-        }
+    & .my_svg {
+        width: 12px;
+        height: 12px;
     }
-    @include breakpoint(2600px) {
-        & .my_svg {
-            width: 32px;
-            height: 32px;
-        }
-        &>div {
-            flex: 0 1 530px;
-        }
-        & .my_svg {
-            margin-right: 10px;
-        }
-        & h6 {
-            margin-top: 15px;
-            margin-bottom: 42px;
-            font-size: 26px;
-        }
+    &>div {
+        flex: 0 1 200px;
     }
-}
-.radio-custom {
-    @include breakpoint(2600px) {
-        width: 30px;
-        height: 30px;
-        border: 6px solid;
+    & .my_svg {
+        margin-right: 5px;
+    }
+    & h6 {
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-size: 13px;
     }
 }
 .tenants__block_middle .tenants__block_middle_centered {
@@ -561,46 +404,24 @@
 .tenants__block_middle_centered-middle {
     display: flex;
     justify-content: space-between;
-    @include breakpoint(320px) {
-        margin-bottom: 11px;
-    }
-    @include breakpoint(2600px) {
-        margin-bottom: 23
-        px;
-    }
+    margin-bottom: 11px;
 }
 .tenants__block_middle_centered-middle_block {
-    @include breakpoint(320px) {
-        flex: 0 1 386px;
-        &>h5 {
-            font-size: 13px;
-            margin-top: 2px;
-            margin-bottom: 25px;
-        }
-        & p {
-            line-height: 1.6;
-        }
+    flex: 0 1 386px;
+    &>h5 {
+        font-size: 13px;
+        margin-top: 2px;
+        margin-bottom: 25px;
     }
-    @include breakpoint(2600px) {
-        flex: 0 1 908px;
-        &>h5 {
-            font-size: 30px;
-            margin-bottom: 70px;
-        }
+    & p {
+        line-height: 1.6;
     }
 }
 .tenants__block_middle_centered-middle_block h6 {
     font-family: $second-font;
-    @include breakpoint(320px) {
-        font-size: 11px;
-        margin-top: 42px;
-        margin-bottom: 15px;
-    }
-    @include breakpoint (2600px) {
-        font-size: 26px;
-        margin-top: 108px;
-        margin-bottom: 44px;
-    }
+    font-size: 11px;
+    margin-top: 42px;
+    margin-bottom: 15px;
 }
 .tenants__block_middle_centered-middle_block-list {
     & li {
@@ -610,91 +431,49 @@
         & span {
             color: #000;
         }
-        @include breakpoint(320px) {
-            margin-bottom: 5px;
-        }
-        @include breakpoint(2600px) {
-            margin-bottom: 19px;
-        }
+        margin-bottom: 5px;
     }
 }
 .tenants__block_middle_centered-footer h6 {
-    @include breakpoint(320px) {
-        margin-top: 12px;
-        font-size: 11px;
-        margin-bottom: 0;
-    }
-    @include breakpoint(2600px) {
-        margin-top: 26px;
-        font-size: 26px;
-    }
+    margin-top: 12px;
+    font-size: 11px;
+    margin-bottom: 0;
 }
 textarea.addit-textarea {
-    @include breakpoint(320px) {
-        height: 60px;
-    }
-    @include breakpoint(2600px) {
-        height: 160px;
-    }
+    height: 60px;
 }
 .tenants__block_conf {
     padding: 0;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    @include breakpoint(320px) {
-        margin: 33px 0 0 0;
-        & .steps {
-            flex: 0 1 430px;
-            margin-bottom: 45px;
-            & .step__middle {
-               padding: 21px 25px;
-               font-size: 11px;
-               color: #a3a7b9; 
-            }
-        }
-    }
-    @include breakpoint(2600px) {
-        margin: 85px 0 0 0;
-        & .steps {
-            flex: 0 1 1120px;
-            margin-bottom: 112px;
-            & .step__middle {
-               padding: 60px 65px;
-               font-size: 26px; 
-            }
+    margin: 33px 0 0 0;
+    & .steps {
+        flex: 0 1 430px;
+        margin-bottom: 45px;
+        & .step__middle {
+           padding: 21px 25px;
+           font-size: 11px;
+           color: #a3a7b9; 
         }
     }
     & .step__head {
         background-color: #f4f5f9;
         display: flex;
         justify-content: space-between;
-        @include breakpoint(320px) {
-            font-size: 13px;
-            padding: 16px 25px;
-            & .step__head_edit {
-                color: #c8cde2;
-                font-family: $second-font;
-                font-size: 9px;
-                display: flex;
-                align-items: center;
-            }
-            & #edit_sm {
-                width: 12px;
-                height: 12px;
-                fill: #c8cde2;
-            }
+        font-size: 13px;
+        padding: 16px 25px;
+        & .step__head_edit {
+            color: #c8cde2;
+            font-family: $second-font;
+            font-size: 9px;
+            display: flex;
+            align-items: center;
         }
-        @include breakpoint(2600px) {
-            font-size: 30px;
-            padding: 44px 65px;
-            & .step__head_edit {
-                font-size: 22px;
-            }
-            & #edit_sm {
-                width: 32px;
-                height: 32px;
-            }
+        & #edit_sm {
+            width: 12px;
+            height: 12px;
+            fill: #c8cde2;
         }
     }
 }
@@ -712,25 +491,13 @@ textarea.addit-textarea {
     & .uti-step-icon {
         margin-right: 6px;
     }
-    @include breakpoint(320px) {
-        & .my_svg {
-            width: 12px;
-            height: 12px;
-        }
-        & .uti-step {
-            flex: 0 1 100px;
-            margin-bottom: 10px;
-        }
+    & .my_svg {
+        width: 12px;
+        height: 12px;
     }
-    @include breakpoint(2600px) {
-        & .my_svg {
-            width: 32px;
-            height: 32px;
-        }
-        & .uti-step {
-            flex: 0 1 265px;
-            margin-bottom: 31px;
-        }
+    & .uti-step {
+        flex: 0 1 100px;
+        margin-bottom: 10px;
     }
 }
 .step__middle {
@@ -751,31 +518,10 @@ textarea.addit-textarea {
 }
 .rp__pop-up {
     background-color: #fff;
-/*     position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    margin: auto; */
     position: relative;
     display: block;
     box-shadow: 0 40px 50px -50px rgba(0, 0, 0, 0.75);
-/*     &:after {
-        content: '';
-        display: block;
-        box-shadow: 0px 9px 50px 1px rgba(0,0,0,0.75);
-        width: 95%;
-        margin: auto;
-        height: 0!important;
-    } */
-    @include breakpoint(320px) {
-        width: 870px;
-        //height: 470px;
-    }
-    @include breakpoint(2600px) {
-        width: 58vw;
-        //height: 1000px;
-    }
+    width: 870px;
     &:before {
         content: '';
         position: absolute;

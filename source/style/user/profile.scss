@@ -43,6 +43,7 @@
 	font-size: 13px;
 	background-color: #888c9b;
 	border-radius: 6px 6px 0 0;
+	text-align: center;
 	& .personal__menu-list_item.active .personal__menu-list_item-link {
 		color: #fff;
 		&:after {
@@ -111,12 +112,21 @@
 	background-color: #fff;
 	border-radius: 0 0 6px 6px;
 	overflow: hidden;
+	@include breakpoint(320px) {
+		flex-wrap: wrap;
+	}
+	@include breakpoint(1280px) {
+		flex-wrap: nowrap;
+	}
 }
+.personal__block-list_item_personal-password,
 .personal__block-list_item_personal-info {
-	flex: 0 1 630px;
-}
-.personal__block-list_item_personal-password {
-	flex: 0 1 630px;
+	@include breakpoint(320px) {
+		flex: 0 1 100%;
+	}
+	@include breakpoint(1280px) {
+		flex: 0 1 630px;
+	}
 }
 .personal__block-list_item_personal_head {
 	font-size: 18px;
@@ -191,6 +201,12 @@
 	& input[disabled] {
 		border: none;
 		background-color: #fff;
+		border: 2px solid transparent;
+	}
+	& small {
+		text-align: right;
+		bottom: -12px;
+		right: 0;
 	}
 }
 .personal__block-list_item_personal-info {
