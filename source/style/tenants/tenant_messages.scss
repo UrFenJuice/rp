@@ -2,7 +2,10 @@
 	display: flex;
 	& .tenanant-chat_right {
 		flex: 0 1 280px;
-		margin-left: 38px;
+		margin-left: 20px;
+		display: inline-flex;
+		flex-direction: column;
+		justify-content: space-between;
 	}
 	& .tenanant-chat_left {
 		flex: 1 1 auto;
@@ -407,6 +410,44 @@
 	&:hover {
 		background: #f5f6fb;
 		color: #b1b1c0;
+	}
+}
+.tenanant-chat_right_help-block {
+	background-color: #fff;
+	border-radius: 6px;
+	padding: 40px 30px;
+	margin-top: 25px;
+}
+.tenanant-chat_right_help-block_icon {
+	background-color: #f4f5f9;
+	overflow: hidden;
+	border-radius: 50%;
+	padding: 28px;
+	& .my_svg {
+		width: 42px;
+		height: 42px;
+		fill: #d6d9e2;
+	}
+}
+.tenanant-chat_right_help-block_title {
+	font-size: 18px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.tenanant-chat_right_help-block_preview {
+	font-size: 13px;
+	color: #888a93;
+    line-height: 1.64;
+}
+.tenanant-chat_right_help-block_link {
+	@extend .rp__btn;
+	margin-top: 20px;
+	color: #fff;
+	background-color: #abb0be;
+	border-color: #abb0be;
+	&:hover {
+		opacity: .8;
+		color: #fff;
 	}
 }
 /*!tennant-chat*/
