@@ -101,7 +101,7 @@ jQuery(function($){
             }
         }); // изменение внешнего вида пропертей с сохранением в куки
 
-        var owl = $("#owl-slider_help").owlCarousel({
+        var owl_help = $("#owl-slider_help").owlCarousel({
             items: 1,
             slideSpeed: 5000,
             autoplay: true,
@@ -111,7 +111,34 @@ jQuery(function($){
             dots: true,
             itemElement:'li',
             stageElement:'ul',
-            dotsClass:'owl-slider_help_pager',
+            dotsClass:'owl-slider_help_pager'
+        });
+
+        var owl_tenants = $("#owl-slider_tenants").owlCarousel({
+            nav:true,
+            items: 3,
+            slideSpeed: 5000,
+            autoplay: false,
+            autoplayTimeout: 5000,
+            loop: true,
+            singleItem: false,
+            dots: false,
+            itemElement:'li',
+            stageElement:'ul'
+        });
+
+        var owl_tenants = $("#owl-slider_roommates").owlCarousel({
+            nav:true,
+            items: 2,
+            slideSpeed: 5000,
+            autoplay: false,
+            autoplayTimeout: 5000,
+            loop: true,
+            margin: 15,
+            singleItem: false,
+            dots: false,
+            itemElement:'li',
+            stageElement:'ul'
         });
         
         //charts
