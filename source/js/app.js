@@ -105,13 +105,13 @@ jQuery(function($){
             items: 1,
             slideSpeed: 5000,
             autoplay: true,
-            autoplayTimeout: 4500,
+            autoplayTimeout: 5000,
             loop: true,
             singleItem: true,
             dots: true,
             itemElement:'li',
             stageElement:'ul',
-            dotsClass:'owl-slider__pager',
+            dotsClass:'owl-slider_help_pager',
         });
         
         //charts
