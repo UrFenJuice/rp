@@ -1,6 +1,6 @@
 jQuery(function($){
     $(document).ready(function(){
-        svg4everybody();
+        svg4everybody(); //полифил для свг
         jQuery('.rp__content, .left-sidebar').scrollbar();
         jQuery('#divChatHistory').scrollbar({
             "onScroll": function () {
@@ -8,7 +8,7 @@ jQuery(function($){
                     $('#divChatHistory').scrollTop($('#divChatHistory').scrollTop() + 500);
                 });
             }
-        });
+        }); //кастомные скролы + скролл для нового сообщения в чате
 
         // возвращает cookie с именем name, если есть, если нет, то undefined
         function getCookie(name) {
@@ -51,7 +51,7 @@ jQuery(function($){
           setCookie(name, "", {
             expires: -1
           })
-        }
+        } //работа с куками
 
         $('.properties__block_list-item_info-lists_link').on('click', function(e){
             e.preventDefault();
@@ -67,7 +67,8 @@ jQuery(function($){
             } else {
                 item.removeClass('active')
             }
-        });
+        }); // табы для пропертей
+
         $('.personal__menu-list_item-link').on('click', function(e){
             e.preventDefault();
 
@@ -80,8 +81,7 @@ jQuery(function($){
                 .addClass('active')
                 .siblings()
                 .removeClass('active');
-
-        });
+        }); // табы
 
         if(typeof(getCookie("propertyClass")) !== 'undefined')
         {
@@ -99,6 +99,19 @@ jQuery(function($){
                 item.removeClass('properties__block-table');
                 deleteCookie("propertyClass");
             }
+        }); // изменение внешнего вида пропертей с сохранением в куки
+
+        var owl = $("#owl-slider_help").owlCarousel({
+            items: 1,
+            slideSpeed: 5000,
+            autoplay: true,
+            autoplayTimeout: 4500,
+            loop: true,
+            singleItem: true,
+            dots: true,
+            itemElement:'li',
+            stageElement:'ul',
+            dotsClass:'owl-slider__pager',
         });
         
         //charts
@@ -152,7 +165,7 @@ jQuery(function($){
         });*/
         //!barchart
 
-        var DoubleDoughnutChart = $('#double_doughnut_chart');
+/*        var DoubleDoughnutChart = $('#double_doughnut_chart');
         var data = {
             datasets: [{
                 data: [10.05, 200.00],
@@ -205,7 +218,7 @@ jQuery(function($){
             var c = 'rgb(' + r + ',' + g + ',' + b + ')';
             myDoubleDoughnutChart.data.datasets[0].backgroundColor[i] = c;
         }
-        myDoubleDoughnutChart.update();
+        myDoubleDoughnutChart.update();*/
 
         //!doubledoughnutchart
 
