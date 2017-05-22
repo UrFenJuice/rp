@@ -80,17 +80,12 @@ i {
 .rp__content {
 	background-color: $background-content-color;
 	overflow: auto;
-	height: 94.237vh;
+	height: 94vh;
 	flex: 1 1 auto;
 }
 .main__content {
 	overflow: hidden;
-	@include breakpoint(320px) {
-		padding: 3vh 3.333vw 4vh 4vw!important;
-	}
-	@include breakpoint(1170px) {
-		padding: 3vh 3.333vw 4vh 3.333vw!important;
-	}
+	padding: 60px 130px 20px 60px!important;
 }
 .link_show_me {
 	position: fixed;
@@ -102,8 +97,8 @@ i {
     display: flex;
     align-items: center;
 	font-size: 9.79px;
-    padding: 16px 17px;
-    right: -84px;
+	padding: 19.5px 17px;
+	right: -78px;
     & .icon_show_me {
     	margin-right: 10px;
 	}

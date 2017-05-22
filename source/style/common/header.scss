@@ -13,21 +13,13 @@
 	align-content: center;
 	color: $white-text;
 	text-decoration: none;
+	height: 64px;
+	font-size: 15.05px;
+	& img {
+		width: 19px;
+	}
 	& b {
 		font-family: $second-font;
-	}
-	@include breakpoint(320px) {
-		height: 5.763vh;
-		font-size: 15.05px;
-		& img {
-			width: 19px;
-		}
-	}
- 	@include breakpoint(2000px) {
-		height: 6.723vh;
-	}
-	@media screen and (min-device-aspect-ratio: 21/9) {
-		height: 2vmax;
 	}
 	&:hover {
 		color: $white-text;
@@ -42,12 +34,7 @@
 	flex: 1 1 40vw;
 	border-bottom: 1px solid $border-color;
 	overflow: hidden;
-	@include breakpoint(320px) {
-		padding-left: 4vw;
-	}
-	@include breakpoint(1170px) {
-		padding-left: 3.375vw;
-	}
+	padding-left: 60px;
 }
 .header__menu_block {
 	display: flex;
@@ -59,25 +46,18 @@
 	display: flex;
     align-items: center;
     position: relative;
+    height: 64px;
 	&:nth-last-child(1) {
 		margin-right: 0;
 	}
 	@include breakpoint(320px) {
 		margin-right: 2vw;
-	    height: 5.763vh;
 	}
 	@include breakpoint(900px) {
 		margin-right: 7vw;
-	    height: 5.763vh;
 	}
 	@include breakpoint(1170px) {
 		margin-right: 5vw;
-	}
- 	@include breakpoint(2000px) {
-	    height: 6.723vh;
-	}
-	@media screen and (min-device-aspect-ratio: 21/9) {
-		height: 2vmax;
 	}
 }
 .header__menu_block_item-link {
@@ -115,15 +95,7 @@
 		border-left: 1px solid $border-color;
 		display: flex;
 		align-items: center;
-		@include breakpoint(320px) {
-			height: 5.763vh;
-		}
- 		@include breakpoint(2000px) {
-		    height: 6.723vh;
-		}
-		@media screen and (min-device-aspect-ratio: 21/9) {
-			height: 2vmax;
-		} 
+		height: 64px;
 	}
 }
 .header__user_avatar {
@@ -136,6 +108,12 @@
 		height: auto;
 	}
 }
+.header__user_login {
+	background-color: #888c9b;
+	& .header__user_login_name {
+		color: #fff; 
+	}
+}
 .header__user_login_link {
 	display: flex;
 	align-items: center;
@@ -146,7 +124,7 @@
 }
 .header__user_menu_link {
 	fill: #e3e5ee;
-    margin: auto 18px;
+    margin: auto 19px;
     & #equal {
 		width: 26px;
 		height: 26px;
@@ -154,7 +132,7 @@
 }
 .header__user_settings_link {
 	fill: #e3e5ee;
-    margin: auto 17px;
+    margin: auto 19px;
     & #gear {
 		width: 26px;
 		height: 26px;

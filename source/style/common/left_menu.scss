@@ -46,13 +46,8 @@
 .left-sidebar {
 	overflow: hidden;
 	flex: 0 0 235px;
-	@include breakpoint(320px) {
-		height: 94.237vh;
-		width: 235px;
-	}
- 	@include breakpoint(2000px) {
-		height: 93.277vh;
-	}
+	height: 94vh;
+	width: 235px;
 }
 .left__menu {
 	height: 100%;
