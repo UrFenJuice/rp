@@ -29,7 +29,7 @@
 	text-transform: uppercase;
 	border-radius: 8px;
 	padding: 9px 27px;
-	margin-top: 20px;
+	margin-top: 9px;
 	&:visited,
 	&:active,
 	&:hover {
@@ -44,17 +44,18 @@
 	background-color: #888c9b;
 	border-radius: 6px 6px 0 0;
 	text-align: center;
+	border-bottom: 2px solid #f4f5f9;
 	& .personal__menu-list_item.active .personal__menu-list_item-link {
 		color: #fff;
 		&:after {
 			content: "";
 			display: block;
 			position: absolute;
-			bottom: 0;
+			bottom: -2px;
 			left: 50%;
-			margin-left: -12px;
-			border: 12px solid transparent;
-			border-bottom: 9px solid #ffffff;
+			margin-left: -14px;
+			border: 14px solid transparent;
+			border-bottom: 10px solid #ffffff;
 			z-index: 9;
 		}
 	}
@@ -93,9 +94,8 @@
 }
 .personal__block-list_item_head {
 	background-color: #fff;
-	padding: 35px 50px;
+	padding: 34px 50px;
 	font-size: 22px;
-	border-top: 2px solid #f4f5f9;
 	border-bottom: 2px solid #f4f5f9;
 	display: flex;
 	align-items: center;
@@ -130,7 +130,7 @@
 }
 .personal__block-list_item_personal_head {
 	font-size: 18px;
-    padding: 50px 0px 0px 50px;
+    padding: 48px 0px 0px 50px;
     display: flex;
     align-items: center;
 }
