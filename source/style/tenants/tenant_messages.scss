@@ -559,6 +559,13 @@
 		width: 54px;
 		height: 54px;
 	    margin: 25px auto 10px auto;
+		background-color: #f4f5f9;
+		text-align: center !important;
+		text-transform: uppercase;
+		color: #dbdde4;
+		font-size: 18px;
+		line-height: 3;
+		font-family: $fourth-font;
 		& img {
 			width: 100%;
 			position: absolute;
@@ -590,6 +597,10 @@
 	height: 32px;
 	position: relative;
 	margin-right: 10px;
+	background-image: url(data:image/svg+xml;charset=utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMS4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ4NiA0ODYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ4NiA0ODY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNjRweCIgaGVpZ2h0PSI2NHB4Ij4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNNDUxLjYsMzg4Yy01Ny4zLTQ3LjEtMTE5LjEtNzguMy0xMzEuNy04NC41Yy0xLjQtMC43LTIuMy0yLjEtMi4zLTMuN3YtODkuMmMxMS4yLTcuNSwxOC42LTIwLjIsMTguNi0zNC43VjgzLjMgICAgYzAtNDYtMzcuMy04My4zLTgzLjMtODMuM2gtMTBoLTEwYy00NiwwLTgzLjMsMzcuMy04My4zLDgzLjN2OTIuNWMwLDE0LjUsNy40LDI3LjIsMTguNiwzNC43djg5LjJjMCwxLjYtMC45LDMtMi4zLDMuNyAgICBjLTEyLjYsNi4yLTc0LjQsMzcuNC0xMzEuNyw4NC41QzI0LDM5Ni41LDE4LDQwOS4yLDE4LDQyMi42VjQ4NmgyMjVoMjI1di02My40QzQ2OCw0MDkuMiw0NjIsMzk2LjUsNDUxLjYsMzg4eiIgZmlsbD0iI2Q5ZGFkYiIvPgoJPC9nPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=);
+	background-size: 18px;
+	background-position: 50%;
+	background-repeat: no-repeat;
 	& img {
 		width: 100%;
 		position: absolute;
@@ -602,10 +613,14 @@
 }
 .tenanant-chat_middle_table {
 	width: 100%;
+	margin-top: 50px;
 	& th {
 		font-size: 15.35px;
+		text-align: left;
+		padding-bottom: 30px;
 	}
 	& td {
+		padding-bottom: 25px;
 		font-size: 13px;
 		&:nth-child(2) {
 			text-align: right;
