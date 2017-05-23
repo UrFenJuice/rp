@@ -31,16 +31,11 @@
         content: '';
         display: block;
         width: 100vw;
-        background-color: #2dc888;
+        background-color: #86cb88;
         position: absolute;
         z-index: 1; 
         left: 50%;
-        @include breakpoint(320px) {
-            height: 3.6px;
-        }
-        @include breakpoint(2600px) {
-            height: 8px;
-        }
+        height: 6px;
     }
     & .invoices_history_list_item:nth-last-child(1) {
         &:before {
@@ -68,32 +63,15 @@
     	position: relative;
     	border-radius: 50%;
     	z-index: 2;
-        background-color: #2dc888;
-        @include breakpoint(320px) {
-            width: 6.75px;
-            height: 6.75px;
-            margin: 8.125px auto;
-            border: 1px solid #2dc888;
-        }
-        @include breakpoint(2600px) {
-            width: 15px;
-            height: 15px;
-            margin: 19.5px auto;
-            border: 2px solid #2dc888;
-        }
-    }
-    & .invoices_history_list_item_link:focus {
-        text-decoration: none;
-        color: #c0c3d0;
+        background-color: #86cb88;
+        width: 13px;
+        height: 13px;
+        margin: 12.5px auto;
+        border: 1px solid #86cb88;
     }
     & .invoices_history_list_item:after,
     & .invoices_history_list_item:before {
-        @include breakpoint(320px) {
-            top: 11px;
-        }
-        @include breakpoint(2600px) {
-            top: 25px;
-        }
+        top: 17px;
     }
 }
 .invoices_history_list .invoices_history_list_item-paid .invoices_history_list_item_link {
@@ -102,16 +80,9 @@
         background-repeat: no-repeat;
         background-position: 50%;
         margin: 0 auto;
-        @include breakpoint(320px) {
-            width: 23px;
-            height: 23px;
-            background-size: 11px;
-        } 
-        @include breakpoint(2600px) {
-            width: 52px;
-            height: 52px;
-            background-size: 25px;
-        } 
+        width: 40px;
+        height: 40px;
+        background-size: 20px;
     }
 }
 .invoices_history_list .invoices_history_list_item-paid .invoices_history_list_item_link {
@@ -127,34 +98,20 @@
 .invoices_history_list .invoices_history_list_item-next_prepaid .invoices_history_list_item_link {
     &:before {
         background-color: #fff;
-        @include breakpoint(320px) {
-            width: 6.75px;
-            height: 6.75px;
-            border: 3.6px solid #2dc888;
-            margin: 6.125px auto;
-        }
-        @include breakpoint(2600px) {
-            width: 15px;
-            height: 15px;
-            border: 8px solid #2dc888;
-            margin: 12.5px auto;
-        }
+        width: 10px;
+        height: 10px;
+        border: 6px solid #86cb88;
+        margin: 9px auto;
     }
     & .invoices_history_list_item_link-sum {
         &:before {
             content: '';
             border-radius: 50%;
-            background-color: #2dc888;
+            background-color: #86cb88;
             display: block;
             margin: 0px auto 7px auto;
-            @include breakpoint(320px) {
-                width: 4.5px;
-                height: 4.5px;
-            }
-            @include breakpoint(2600px) {
-                width: 10px;
-                height: 10px;
-            }
+            width: 8px;
+            height: 8px;
         }
     }
     & .invoices_history_list_item_link-prep {
@@ -167,8 +124,8 @@
 }
 .invoices_history_list .invoices_history_list_item-next_sub_prepaid .invoices_history_list_item_link {
     &:before {
-        border-bottom-color: #e5e7ee;
-        border-right-color: #e5e7ee;
+        border-bottom-color: #f4f5f9;
+        border-right-color: #f4f5f9;
         transform: rotate(-45deg);
     }
 }
@@ -182,16 +139,9 @@
             margin: auto;
             position: relative;
             top: -9px;
-            @include breakpoint(320px) {
-                background-size: 7px;
-                width: 7px;
-                height: 7px;
-            }
-            @include breakpoint(2600px) {
-                background-size: 15px;
-                width: 15px;
-                height: 15px;
-            }
+            background-size: 13px;
+            width: 13px;
+            height: 13px;
         }
     }
 }
@@ -207,18 +157,10 @@
 .invoices_history_list .invoices_history_list_item-arrears .invoices_history_list_item_link,
 .invoices_history_list .invoices_history_list_item-sub_arrears .invoices_history_list_item_link {
     &:before {
-        @include breakpoint(320px) {
-            width: 6.75px;
-            height: 6.75px;
-            border: 3.6px solid #2dc888;
-            margin: 6.125px auto;
-        }
-        @include breakpoint(2600px) {
-            width: 15px;
-            height: 15px;
-            border: 8px solid #2dc888;
-            margin: 12.5px auto;
-        }
+        width: 10px;
+        height: 10px;
+        border: 6px solid #86cb88;
+        margin: 9px auto;
     } 
     & .invoices_history_list_item_link-sum {
         &:before {
@@ -227,14 +169,8 @@
             background-color: #f4f5f9;
             display: block;
             margin: 0px auto 7px auto;
-            @include breakpoint(320px) {
-                width: 4.5px;
-                height: 4.5px;
-            }
-            @include breakpoint(2600px) {
-                width: 10px;
-                height: 10px;
-            }
+            width: 8px;
+            height: 8px;
         }
     }
 }
@@ -242,19 +178,10 @@
 .invoices_history_list  .invoices_history_list_item-next .invoices_history_list_item_link {
      &:before {
         background-color: #fff;
-        //border: 8px solid #f4f5f9;
-        @include breakpoint(320px) {
-            width: 6.75px;
-            height: 6.75px;
-            border: 3.6px solid #e5e7ee;
-            margin: 6.125px auto;
-        }
-        @include breakpoint(2600px) {
-            width: 15px;
-            height: 15px;
-            border: 8px solid #e5e7ee;
-            margin: 12.5px auto;
-        }
+        width: 10px;
+        height: 10px;
+        border: 6px solid #f4f5f9;
+        margin: 9px auto;
     } 
     & .invoices_history_list_item_link-sum {
         &:before {
@@ -263,14 +190,8 @@
             background-color: #f4f5f9;
             display: block;
             margin: 0px auto 7px auto;
-            @include breakpoint(320px) {
-                width: 4.5px;
-                height: 4.5px;
-            }
-            @include breakpoint(2600px) {
-                width: 10px;
-                height: 10px;
-            }
+            width: 8px;
+            height: 8px;
         }
     }   
 }
@@ -282,24 +203,18 @@
             background-color: transparent;
             display: block;
             margin: 0px auto 7px auto;
-            @include breakpoint(320px) {
-                width: 4.5px;
-                height: 4.5px;
-            }
-            @include breakpoint(2600px) {
-                width: 10px;
-                height: 10px;
-            }
+            width: 8px;
+            height: 8px;
         }
     }
 }
 .invoices_history_list .invoices_history_list_item-sub_arrears .invoices_history_list_item_link {
     &:before {
         background-color: #fff;
-        border-color: #e03737;
+        border-color: #f6c374;
     }
     & .invoices_history_list_item_link-sum {
-        color: #e03737;
+        color: #f6c374;
         &:before {
             background-color: transparent;
         }
@@ -311,17 +226,17 @@
         text-align: center;
         width: 100%;
         & span {
-            color: #e03737;
+            color: #f6c374;
         }
     }
 }
 .invoices_history_list .invoices_history_list_item-arrears .invoices_history_list_item_link {
     &:before {
         background-color: #fff;
-        border-color: #e03737;
+        border-color: #f6c374;
     }
     & .invoices_history_list_item_link-sum {
-        color: #e03737;
+        color: #f6c374;
         &:before {
             background-color: transparent;
         }
@@ -333,17 +248,17 @@
         text-align: center;
         width: 100%;
         & span {
-            color: #e03737;
+            color: #f6c374;
         }
     }
 }
 .invoices_history_list .invoices_history_list_item-next:before,
 .invoices_history_list .invoices_history_list_item-next_sub_prepaid:before {
-    background-color: #e5e7ee;
+    background-color: #f4f5f9;
 }
 .invoices_history_list .invoices_history_list_item-sub_arrears:before,
 .invoices_history_list .invoices_history_list_item-arrears:before {
-    background-color: #e13737;
+    background-color: #f6c374;
 }
 .invoices_history_list_item_link-sum {
     text-align: center;
@@ -389,17 +304,13 @@
         margin-left: -10px;
         top: -20px;
     }
-    @include breakpoint(320px) {
-        left: -101%;
-        padding: 14px 17px;
-    }
-    @include breakpoint(2600px) {
-        left: -114%;
-        padding: 31px 40px;
-    }
+    left: -95%;
+    padding: 30px;
 }
 .invoices_history_list_item_link-details_table {
     font-family: $fourth-font;
+    font-size: 14.85px;
+    width: 210px;
     & tr td:nth-child(1) {
         text-align: left;
     }
@@ -416,62 +327,29 @@
     }
     & tbody tr {
         &:nth-child(1) {
-            color: #2dc888;
+            color: #86cb88;
         }
     }
-    @include breakpoint(320px) {
-        font-size: 10px;
-        width: 125px;
-        & td[colspan="2"] {
-            font-size: 7px;
-            padding-bottom: 17px;
-        }
-        & tbody tr {
-            & td {
-                padding-top: 16px;
-            }
-        }
+    & td[colspan="2"] {
+        font-size: 12px;
+        padding-bottom: 17px;
     }
-    @include breakpoint(2600px) {
-        font-size: 22px;
-        width: 300px;
-        & td[colspan="2"] {
-            font-size: 17px;
-            padding-bottom: 40px;
-        }
-        & tbody tr {
-            & td {
-                padding-top: 38px;
-            }
+    & tbody tr {
+        & td {
+            padding-top: 16px;
         }
     }
 }
-@include breakpoint(320px) {
-    .invoices_history_list_item_link-sum {
-        font-size: 10.35px;
-    }
-    .invoices_history_list_item_link-date {
-        font-size: 8.1px;
-    }
-    .invoices_history_list_item_link-prep {
-        font-size: 8.55px;
-        & span {
-            font-size: 8.55px;
-        }
-    }
+.invoices_history_list_item_link-sum {
+    font-size: 17.74px;
 }
-@include breakpoint(2600px) {
-    .invoices_history_list_item_link-sum {
-        font-size: 23px;
-    }
-    .invoices_history_list_item_link-date {
-        font-size: 18px;
-    }
-    .invoices_history_list_item_link-prep {
-        font-size: 19px;
-        & span {
-            font-size: 19px;
-        }
+.invoices_history_list_item_link-date {
+    font-size: 13.89px;
+}
+.invoices_history_list_item_link-prep {
+    font-size: 14px;
+    & span {
+        font-size: 14px;
     }
 }
 

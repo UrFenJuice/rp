@@ -22,9 +22,9 @@
 		.finances__block_status-bar_lease
 			a(href="#").finances__block_status-bar_lease_link
 				.finances__block_status-bar_lease_img
-					img(src="assets/img/avatar.png")
+					img(src="assets/img/avatar_grey.png")
 				.finances__block_status-bar_lease_name
-					span select lease
+					span Select Lease
 					| Zach Galifianakis
 				i.arrow-down
 					+use('arrow_down')
@@ -54,55 +54,53 @@
 				+use('more')
 		.finances__block_tenant_info
 			.finances__block_tenant_info_block
-				.finances__block_tenant_info_block_line
-					i.finances__block_tenant_info_block_icon
-						+use('tenant')
-					.finances__block_tenant_info_block_line-info
-						.finances__block_tenant_info_block_line_object
-							| Tenant
-						.finances__block_tenant_info_block_line_details
-							| Zach Galifianakis
-				.finances__block_tenant_info_block_line
-					i.finances__block_tenant_info_block_icon
-						+use('currency')
-					.finances__block_tenant_info_block_line-info
-						.finances__block_tenant_info_block_line_object
-							| Rent
-						.finances__block_tenant_info_block_line_details
-							| $2,000/month due on the 5th
-				.finances__block_tenant_info_block_line.finances__block_tenant_info_block_line_status
-					i.finances__block_tenant_info_block_icon
-						+use('contract')
-					.finances__block_tenant_info_block_line-info
-						.finances__block_tenant_info_block_line_object
-							| Contract
-						.finances__block_tenant_info_block_line_details
-							| Expires 5th Aprils 2017
+				i.finances__block_tenant_info_block_icon
+					+use('tenant')
+				.finances__block_tenant_info_block-info
+					.finances__block_tenant_info_block_object
+						| Tenant
+					.finances__block_tenant_info_block_details
+						| Zach Galifianakis
 			.finances__block_tenant_info_block
-				.finances__block_tenant_info_block_line
-					i.finances__block_tenant_info_block_icon
-						+use('wallet')
-					.finances__block_tenant_info_block_line-info
-						.finances__block_tenant_info_block_line_object
-							| Balance
-						.finances__block_tenant_info_block_line_details
-							| $21,600.00
-				.finances__block_tenant_info_block_line
-					i.finances__block_tenant_info_block_icon
-						+use('calendar')
-					.finances__block_tenant_info_block_line-info
-						.finances__block_tenant_info_block_line_object
-							| March 2017
-						.finances__block_tenant_info_block_line_details
-							| Received $1,590.00 of $2,000.00
-				.finances__block_tenant_info_block_line
-					i.finances__block_tenant_info_block_icon
-						+use('calendar')
-					.finances__block_tenant_info_block_line-info
-						.finances__block_tenant_info_block_line_object
-							| April 2017
-						.finances__block_tenant_info_block_line_details
-							| Received $1,590.00 of $2,000.00
+				i.finances__block_tenant_info_block_icon
+					+use('currency')
+				.finances__block_tenant_info_block-info
+					.finances__block_tenant_info_block_object
+						| Rent
+					.finances__block_tenant_info_block_details
+						| $2,000/month due on the 5th
+			.finances__block_tenant_info_block
+				i.finances__block_tenant_info_block_icon
+					+use('contract')
+				.finances__block_tenant_info_block-info
+					.finances__block_tenant_info_block_object
+						| Contract
+					.finances__block_tenant_info_block_details
+						| Expires 5th Aprils 2017
+			.finances__block_tenant_info_block
+				i.finances__block_tenant_info_block_icon
+					+use('wallet')
+				.finances__block_tenant_info_block-info
+					.finances__block_tenant_info_block_object
+						| Balance
+					.finances__block_tenant_info_block_details
+						| $21,600.00
+			.finances__block_tenant_info_block
+				i.finances__block_tenant_info_block_icon
+					+use('calendar')
+				.finances__block_tenant_info_block-info
+					.finances__block_tenant_info_block_object
+						| March 2017
+					.finances__block_tenant_info_block_details
+						| Received $1,590.00 of $2,000.00
+			.finances__block_tenant_info_block
+				i.finances__block_tenant_info_block_icon
+					+use('calendar')
+				.finances__block_tenant_info_block-info
+					.finances__block_tenant_info_block_object
+						| April 2017
+					.finances__block_tenant_info_block_details
+						| Received $1,590.00 of $2,000.00
 	.finances__block_payments
 		.finances__block_payments_tabs
 			ul.personal__menu-list  
@@ -123,7 +121,7 @@
 						| Maintenance
 				li.personal__menu-list_item(data-class="sixth")
 					a(href="#").personal__menu-list_item-link
-						span 99+
+						span
 						| Messages
 				li.personal__menu-list_item(data-class="seventh")
 					a(href="#").personal__menu-list_item-link

@@ -58,6 +58,12 @@
 .left__menu_item {
 	position: relative;
 }
+.left__menu_line {
+	& hr {
+		height: 1px;
+		background-color: #f4f5f9;
+	}
+}
 .left__menu_item-link {
 	color: $left-menu-color;
 	display: flex;
@@ -65,20 +71,6 @@
     justify-content: flex-start;
 	&:after {
 		transition: background-color 0.3s;
-	}
-	&.bg_dashboard,
-	&.bg_maintenance,
-	&.bg_applications,
-	&.bg_reports {
-		&:before {
-			content: '';
-			display: block;
-			position: absolute;
-			background-color: #f4f5f9;
-			height: 2px;
-			width: 100%;
-			bottom: 0;
-		}
 	}
 	&:hover,
 	&.active {
@@ -92,12 +84,9 @@
 			height: 100%;
 			width: 3px;
 		}
-		&:before {
-			display: none;
-		}
 	}
 	font-size: 14px;
-	padding: 28px 0;
+	padding: 21px 0;
 }
 .bg_dashboard {
 	&:hover,

@@ -39,12 +39,17 @@
 	& .personal__menu-list {
 		justify-content: center;
 		padding-top: 15px;
+		border-color: #fff;
 		& .personal__menu-list_item {
 			border-radius: 6px 6px 0 0;
+		    bottom: -1px;
 			&.active {
 				background-color: #fff;
 				& .personal__menu-list_item-link {
 					color: #777b8c;
+					&:after {
+						display: none;
+					}
 				}
 			}
 			& .personal__menu-list_item-link {
