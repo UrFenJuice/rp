@@ -291,8 +291,8 @@ jQuery(function($){
                         angleSector = (prev + (90 - anglePie)) / 2; // center angle sector
                         prev = 90 - anglePie;
 
-                        Xposition = (chart.chart.width / 2 + 30) * Math.cos(Math.PI/180*angleSector) + chart.chart.width / 2 - 8;
-                        Yposition = - (chart.chart.width / 2 + 30) * Math.sin(Math.PI/180*angleSector) + chart.chart.width / 2 - 8;
+                        Xposition = (chart.chart.width / 2 + 30) * Math.cos(Math.PI/180*angleSector) + chart.chart.width / 2 - 4;
+                        Yposition = - (chart.chart.width / 2 + 30) * Math.sin(Math.PI/180*angleSector) + chart.chart.width / 2;
 
                         if(angleSector > -90)
                         {
@@ -330,13 +330,18 @@ jQuery(function($){
         }
         myDoughnutChart.update();
         document.getElementById('js-legend').innerHTML = myDoughnutChart.generateLegend();
+        function chartElementToLeft() {
+            $( ".left" ).each(function( index ) {
+                var left = parseInt($( this ).css('left'), 10);
+                var width = $( this ).width();
+                var leftMargin = left - width;
+                $( this ).css("left", leftMargin + 'px');
+            });
+        };
+        setTimeout(
+            chartElementToLeft
+            , 500);
 
-        $( ".left" ).each(function( index ) {
-            var left = parseInt($( this ).css('left'), 10);
-            var width = $( this ).width();
-            var leftMargin = left - width;
-            $( this ).css("left", leftMargin + 'px');
-        });
         //!doughnutchart
         //!charts
     });
