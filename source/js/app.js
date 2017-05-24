@@ -142,18 +142,18 @@ jQuery(function($){
         });
         
         //charts
-/*        var BarChart = $("#bar_chart");
+        var BarChart = $("#bar_chart");
 
         var data = {
             labels: ["Jan 17", "Feb 17", "Mar 17", "Apr 17", "May 17", "Jun 17", "Jul 17", "Aug 17", "Sep 17", "Oct 17", "Nov 17", "Dec 17"],
             datasets: [
                 {
-                    backgroundColor: "#26c6da",
+                    backgroundColor: "#bde7ec",
                     borderWidth: 0,
                     data: [23,27,34,19,43,36,57,44,29,33,46,25]
                 },
                 {
-                    backgroundColor: "#00acc1",
+                    backgroundColor: "#96d4db",
                     borderWidth: 0,
                     data: [44,43,45,36,27,18,24,33,45,36,27,18]
                 }
@@ -171,12 +171,12 @@ jQuery(function($){
                     xAxes: [{
                         gridLines: {
                             display:false,
-                            lineWidth: 8
+                            lineWidth: 5
                         },
                         ticks: {
                             fontFamily: "Montserrat-Regular",
-                            fontColor: "#000",
-                            fontSize: 28
+                            fontColor: "#96d4db",
+                            fontSize: 14
                         },
                         barPercentage: 1,
                         categoryPercentage: 0.6
@@ -189,7 +189,7 @@ jQuery(function($){
                     }]
                 }
             }
-        });*/
+        });
         //!barchart
 
 /*        var DoubleDoughnutChart = $('#double_doughnut_chart');
@@ -249,12 +249,12 @@ jQuery(function($){
 
         //!doubledoughnutchart
 
-/*        var DoughnutChart = $('#doughnut_chart');
+        var DoughnutChart = $('#doughnut_chart');
         var data = {
             labels: ['Priz', 'Principal', 'Insurance', 'Rates', 'Insurance', 'Rates'],
             datasets: [{
-                data: [10.05, 200.00, 333.12, 12.34, 122.44, 335.65],
-                bodyFontSize: 50,
+                data: [200.00, 10.05, 333.12, 12.34, 122.44, 335.65],
+                bodyFontSize: 13,
                 borderWidth: 0,
                 backgroundColor: []
             }]
@@ -266,7 +266,7 @@ jQuery(function($){
                 legend: {
                     display: false
                 },
-                cutoutPercentage: 80,
+                cutoutPercentage: 90,
                 legendCallback: function(chart) {
                     var text = [];
                     var arrayData = chart.data.datasets[0].data;
@@ -291,8 +291,8 @@ jQuery(function($){
                         angleSector = (prev + (90 - anglePie)) / 2; // center angle sector
                         prev = 90 - anglePie;
 
-                        Xposition = (chart.chart.width / 2 + 50) * Math.cos(Math.PI/180*angleSector) + chart.chart.width / 2 - 8;
-                        Yposition = - (chart.chart.width / 2 + 50) * Math.sin(Math.PI/180*angleSector) + chart.chart.width / 2 - 8;
+                        Xposition = (chart.chart.width / 2 + 30) * Math.cos(Math.PI/180*angleSector) + chart.chart.width / 2 - 8;
+                        Yposition = - (chart.chart.width / 2 + 30) * Math.sin(Math.PI/180*angleSector) + chart.chart.width / 2 - 8;
 
                         if(angleSector > -90)
                         {
@@ -303,7 +303,7 @@ jQuery(function($){
                             SectorClass = "left";
                         }
                         text.push('<li class="' + SectorClass + '" style="left:' + Xposition + 'px; top:' + Yposition + 'px;">');
-                        text.push('<span style="background-color:' + chart.data.datasets[0].backgroundColor[i] + '"></span>');
+                        text.push('<span style="border-color:' + chart.data.datasets[0].backgroundColor[i] + '"></span>');
                         text.push('<div><p style="color:' + chart.data.datasets[0].backgroundColor[i] + '">'); 
                         if (chart.data.labels[i]) {
                             text.push(chart.data.labels[i]);
@@ -314,7 +314,7 @@ jQuery(function($){
                     }
                     text.push('</ul>');
 
-                    text.push('<div class="doughnut_chart_sum"><p class="doughnut_chart_sum_title">Total</p><p class="doughnut_chart_sum_price">$' + arrayAllSum.toFixed(2) + '</p></div>');
+                    text.push('<div class="doughnut_chart_sum"><p class="doughnut_chart_sum_title">Expenses</p><p class="doughnut_chart_sum_price">$' + arrayAllSum.toFixed(2) + '</p></div>');
                     return text.join("");
                 }
             }
@@ -336,7 +336,7 @@ jQuery(function($){
             var width = $( this ).width();
             var leftMargin = left - width;
             $( this ).css("left", leftMargin + 'px');
-        });*/
+        });
         //!doughnutchart
         //!charts
     });

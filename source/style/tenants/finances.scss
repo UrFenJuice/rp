@@ -93,20 +93,17 @@
 	overflow: hidden;
 	margin-bottom: 26px;
 }
+.finances__block_tenant .finances__block_tenant_btn-block {
+	text-align: inherit;
+	margin-bottom: 0px;
+}
 .finances__block_tenant_btn-block {
 	background-color: #fff;
 	border-radius: 6px;
 	padding: 13px;
 	position: relative;
-	&:before {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		height: 2px;
-		width: 150%;
-		left: -25%;
-		background-color: #f4f5f9;
-	}
+    text-align: center;
+    margin-bottom: 90px;
 }
 .finances__block_tenant_btn-block_link {
 	@extend .rp__btn;
@@ -201,7 +198,7 @@
 	& h4 {
 		text-align: center;
 		font-size: 22px;
-		margin-top: 90px;
+		padding-top: 90px;
 	}
 	&>p {
 		font-size: 13px;
@@ -232,7 +229,10 @@
     	flex-grow: 0;
     	flex-basis: 580px;
     	border: none;
-    	padding: 100px 0;
+    	padding: 0;
+    	&:nth-child(1) {
+    		background-color: #fafbfd;
+    	}
     	&.reports-finances_block_chart {
     		& .reports-finances_block_title {
 		    	text-align: center;
@@ -287,19 +287,20 @@
 	flex-flow: row wrap;
 	text-align: center;
 	font-family: $fourth-font;
+	margin: 45px 45px 0 45px;
 	& .payment_history_calendar_item {
 		flex: 1 1 25%;
-		margin-bottom: 90px;
+		margin-bottom: 45px;
 		&:before {
 			content: '';
 			position: relative;
 			width: 8px;
 			height: 8px;
-			border: 7px solid;
+			border: 2px solid;
 			border-radius: 50%;
 			display: block;
 			margin: 0 auto;
-			margin-bottom: 25px;
+			margin-bottom: 19px;
 		}
 		&.late {
 			&:before {
@@ -326,29 +327,30 @@
 	}
 }
 .finances__block_payments_tabs_inner_tables_last {
-	margin-bottom: 230px;
+	margin-bottom: 100px;
 	& .reports-finances_block {
 		flex: 1 1 50%;
 		padding-bottom: 0;
 		position: relative;
 		overflow: inherit;
-		border: 2px solid #e8e9f1;
+		border: 1px solid #e8e9f1;
+		border-radius: 6px;
 	}
 	& .reports-finances_block_middle {
 		display: flex;
 		height: 100%;
-		padding-bottom: 100px;
 	}
 	& .reports-finances_block_middle_rate {
 		margin: auto;
+		width: 100%;
 	}
 }
 .payment_history_calendar_info {
 	position: absolute;
-	bottom: -60px;
+	bottom: -32px;
     right: 0;
 	display: flex;
-	font-size: 23px;
+	font-size: 12.22px;
 	font-family: $fourth-font;
 	& .payment_history_calendar_info_item {
 		display: inline-flex;
@@ -359,10 +361,10 @@
 			position: relative;
 			width: 8px;
 			height: 8px;
-			border: 7px solid;
+			border: 2px solid;
 			border-radius: 50%;
 			display: inline-block;
-			margin-right: 15px;
+			margin-right: 7px;
 		}
 		&.late {
 			border-color: #f4511e;

@@ -13,8 +13,8 @@
 .reports-finances_block {
 	background-color: #fff;
     justify-content: space-between;
-    padding: 100px 60px;
-    margin-bottom: 36px;
+    padding: 0px 60px;
+    margin-bottom: 58px;
     border: 2px solid #e8e9f1;
     border-radius: 2px;
     overflow: hidden;
@@ -83,7 +83,7 @@
 	font-family: $fourth-font;
     text-align: center;
     position: absolute;
-    top: 70px;
+    top: 40px;
     left: 0;
     right: 0;
 }
@@ -95,7 +95,7 @@
 	text-align: center;
 	left: 0;
 	right: 0;
-	top: 200px;
+	top: 110px;
 }
 .reports-finances_block_footer {
 	& .reports-finances_block_footer_title {
@@ -184,27 +184,30 @@
 }
 .reports-finances_block_middle_chart {
 	position: relative;
-	margin: 90px 280px 0 280px;
+	margin: 40px 152px 60px 152px;
 }
 .chart-legend {
 	position: absolute;
 	top: 0;
 	width: 100%;
 	height: 100%;
+	font-size: 13.26px;
 	& span {
-		width: 17px;
-		height: 17px;
+		width: 9px;
+		height: 9px;
 		border-radius: 50%;
+		border: 2px solid;
 		display: block;
-		margin-right: 38px;
+		margin-right: 27px;
 	}
 	& li {
 		position: absolute;
 		display: flex;
 		&.left {
+			text-align: right;
 			span {
 				order: 2;
-				margin-left: 38px;
+				margin-left: 27px;
 				margin-right: 0;
 			}
 		}
@@ -214,15 +217,19 @@
 .doughnut_chart_sum {
 	position: relative;
 	top: 50%;
-	margin-top: -40px;
+	margin-top: -20px;
 	display: block;
 	font-family: $fourth-font;
 	text-align: center;
 	& .doughnut_chart_sum_title {
-		font-size: 28px;
+		font-size: 12px;
+		text-transform: uppercase;
+		color: #b0b4c1;
 	}
 	& .doughnut_chart_sum_price {
-		font-size: 38px;
+		font-size: 21px;
+		color: #43485c;
+		font-family: $second-font;
 	}
 }
 /*tables*/
