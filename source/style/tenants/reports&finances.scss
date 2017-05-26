@@ -14,8 +14,6 @@
 	background-color: #fff;
     justify-content: space-around;
     padding: 25px;
-    margin-left: auto;
-    margin-right: auto;
     margin-bottom: 30px;
     border-radius: 6px;
     overflow: hidden;
@@ -174,6 +172,41 @@
     	font-size: 21px;
     	color: #ced0d8;
     }
+}
+.reports-finances_block_links_text {
+	display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #c4c6cf;
+    float: right;
+    text-align: right;
+    height: 100%;
+	& .my_svg {
+		width: 32px;
+		height: 32px;
+		fill: #d4d5dc;
+		margin-right: 20px;
+	}
+	& span {
+		color: #989ca9;
+	}
+}
+.reports-finances_block_advice {
+	& .reports-finances_block_advice_title {
+		color: #000;
+		font-size: 24px;
+		text-align: right;
+		font-family: $fourth-font;
+	    float: left;
+	    margin: 0px 30px;
+	}
+	& .reports-finances_block_advice_text {
+		font-size: 13px;
+		color: #aaadba;
+		text-align: left;
+		font-family: $primary-font;
+		line-height: 1.7;
+	}
 }
 .download_ledger {
 	@extend .rp__btn;
