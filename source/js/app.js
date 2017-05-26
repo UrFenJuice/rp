@@ -2,13 +2,21 @@ jQuery(function($){
     $(document).ready(function(){
         svg4everybody(); //полифил для свг
         jQuery('.rp__content, .left-sidebar').scrollbar();
+
+
+        var chatHeight = 0;
+        $( "#divChatHistory > div" ).each(function( index ) {
+            var $this = $(this);
+            chatHeight += $this.outerHeight();
+        });
+        $('#divChatHistory').scrollTop($('#divChatHistory').scrollTop() + chatHeight);
         jQuery('#divChatHistory').scrollbar({
             "onScroll": function () {
                 $('#divChatHistory').bind("DOMSubtreeModified", function () {
                     $('#divChatHistory').scrollTop($('#divChatHistory').scrollTop() + 500);
                 });
             }
-        }); //кастомные скролы + скролл для нового сообщения в чате
+        });
 
         // возвращает cookie с именем name, если есть, если нет, то undefined
         function getCookie(name) {
@@ -142,7 +150,7 @@ jQuery(function($){
         });
         
         //charts
-        var BarChart = $("#bar_chart");
+/*        var BarChart = $("#bar_chart");
 
         var data = {
             labels: ["Jan 17", "Feb 17", "Mar 17", "Apr 17", "May 17", "Jun 17", "Jul 17", "Aug 17", "Sep 17", "Oct 17", "Nov 17", "Dec 17"],
@@ -189,7 +197,7 @@ jQuery(function($){
                     }]
                 }
             }
-        });
+        });*/
         //!barchart
 
 /*        var DoubleDoughnutChart = $('#double_doughnut_chart');

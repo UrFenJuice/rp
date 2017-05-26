@@ -12,17 +12,29 @@
 }
 .reports-finances_block {
 	background-color: #fff;
-    justify-content: space-between;
-    padding: 0px 60px;
-    margin-bottom: 58px;
-    border: 2px solid #e8e9f1;
-    border-radius: 2px;
+    justify-content: space-around;
+    padding: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    border-radius: 6px;
     overflow: hidden;
-    &:nth-child(1) {
+    &.reports-finances_block_links {
     	flex: 1 1 100%;
-    	overflow: inherit;
     }
-    flex: 0 1 1200px;
+    &.reports-finances_block_schedule {
+    	flex: 0 1 1270px;
+    }
+    &.reports-finances_block_advice {
+    	flex: 0 1 680px;
+    }
+    &.reports-finances_block_rate {
+    	flex: 0 1 1310px;
+    }
+    &.reports-finances_block_chart,
+    &.reports-finances_block_table {
+    	flex: 0 1 640px;
+    }
 }
 .reports-finances_block_title {
 	font-size: 13.05px;
@@ -49,6 +61,11 @@
 			color: #000;
 			text-decoration: underline;
 		}
+	}
+	& h3 {
+		font-size: 16px;
+		color: #000;
+		font-family: $primary-font;
 	}
 }
 .reports-finances_block_middle_rate {
@@ -160,28 +177,24 @@
 }
 .download_ledger {
 	@extend .rp__btn;
-    margin-top: 44px;
-    color: #c9ccd7;
-    background: linear-gradient(to top, #f9fafd, #fff, #fff);
+	color: #b6bac9;
+	background-color: #f4f5f9;
+	border-color: #f4f5f9;
+	margin-right: 20px;
 	&:hover {
-		background: #33dd97;
-        border-color: #2dc888;
-        color: #fff;
+		color: #b6bac9;
+		opacity: .8;
 	}
-	margin-right: 35px;
-	margin-bottom: 90px;
 }
-.pay_card {
+.make_payment {
 	@extend .rp__btn;
 	color: #fff;
-	background-color: $green-element;
-	border-color: #2dc888;
+	background-color: #86cb88;
+	border-color: #86cb88;
 	&:hover {
-		background-color: #fff;
-		color: #c9ccd7;
-		border-color: #e9ebf4;
+		color: #fff;
+		opacity: .8;
 	}
-	margin-bottom: 90px;
 }
 .reports-finances_block_middle_chart {
 	position: relative;
@@ -267,7 +280,7 @@
 			padding-left: 26px;
 		}
 		&:nth-last-child(1) {
-			padding-right: 57px;
+			padding-right: 27px;
 		}
 	}
 	& td {

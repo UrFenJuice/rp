@@ -1,10 +1,11 @@
 .reports-finances__inner
-	a(href="#").download_ledger
-		| Download ledger
-	a(href="#").pay_card
-		| Pay with debit / credit card
 	.reports-finances
-		.reports-finances_block
+		.reports-finances_block.reports-finances_block_links
+			a(href="#").download_ledger
+				| Download ledger
+			a(href="#").make_payment
+				| make a payment
+		.reports-finances_block.reports-finances_block_schedule
 			.reports-finances_block_title
 				h3 Payments Schedule
 			ul.invoices_history_list
@@ -82,29 +83,30 @@
 							span arrears
 				li.invoices_history_list_item
 					a(href="#").invoices_history_list_item_link
-		.reports-finances_block
+		.reports-finances_block.reports-finances_block_advice
+		.reports-finances_block.reports-finances_block_chart
 			.reports-finances_block_title
 				h3 Paid In The Last 12 Months
 			.reports-finances_block_middle.reports-finances_block_middle_chart
 				canvas#doughnut_chart
 				#js-legend.chart-legend
-		.reports-finances_block
+		.reports-finances_block.reports-finances_block_rate
 			.reports-finances_block_title
 				h3 Arrears Rate
 			.reports-finances_block_middle
-				//.reports-finances_block_middle_rate
+				.reports-finances_block_middle_rate
 					i.reports-finances_block_middle_rate_icon
 						+use("calendar-ok")
 					.reports-finances_block_middle_rate_title
 						| Your payments are always on time!
-				.reports-finances_block_middle_rate
+				//.reports-finances_block_middle_rate
 					i.reports-finances_block_middle_rate_icon
 						+use("passage-of-time")
 					.reports-finances_block_middle_rate_number
 						| 4
 					.reports-finances_block_middle_rate_info
 						|  of the last 32 payments were late 
-			.reports-finances_block_footer
+			//.reports-finances_block_footer
 				.reports-finances_block_footer_title Latest Arrears
 				ul.reports-finances_block_footer_list-latest-arrears
 					li.reports-finances_block_footer_list-latest-arrears_item
@@ -135,11 +137,9 @@
 							| 17 March 2015
 						.reports-finances_block_footer_list-latest-arrears_item_price $344.00
 						.reports-finances_block_footer_list-latest-arrears_item_days-late 4 days late
-		.reports-finances_block
+		.reports-finances_block.reports-finances_block_table
 			.reports-finances_block_title
 				h3 Latest Invoices
-				a(href="#").reports-finances_block_title_viewall
-					| VIEW ALL
 			.reports-finances_block_middle
 				table.reports-finances_block_middle_table
 					thead
@@ -177,12 +177,10 @@
 							td
 								span.status__overdue
 									| OVERDUE
-		.reports-finances_block
+		.reports-finances_block.reports-finances_block_table
 			.reports-finances_block_title
 				h3 Recurring Invoices
 					span (7)
-				a(href="#").reports-finances_block_title_viewall
-					| VIEW ALL
 			.reports-finances_block_middle
 				table.reports-finances_block_middle_table
 					thead
@@ -207,11 +205,9 @@
 							td Other Services
 							td $150.00
 							td Daily
-		.reports-finances_block
+		.reports-finances_block.reports-finances_block_table
 			.reports-finances_block_title
 				h3 Latest Payments
-				a(href="#").reports-finances_block_title_viewall
-					| VIEW ALL
 			.reports-finances_block_middle
 				table.reports-finances_block_middle_table
 					thead
