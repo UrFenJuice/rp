@@ -77,19 +77,24 @@ jQuery(function($){
             }
         }); // табы для пропертей
 
-        $('.personal__menu-list_item-link').on('click', function(e){
-            e.preventDefault();
+        
+        function initTabCkick() {
+            $('.personal__menu-list_item-link').on('click', function(e){
+                e.preventDefault();
 
-            var item = $(this).closest('.personal__menu-list_item'),
-                contentItem = $('.personal__block-list_item'),
-                itemPosition = item.data('class');
+                var item = $(this).closest('.personal__menu-list_item'),
+                    contentItem = $('.personal__block-list_item'),
+                    itemPosition = item.data('class');
 
-            contentItem.filter('.personal__block-list_item-' + itemPosition)
-                .add(item)
-                .addClass('active')
-                .siblings()
-                .removeClass('active');
-        }); // табы
+                contentItem.filter('.personal__block-list_item-' + itemPosition)
+                    .add(item)
+                    .addClass('active')
+                    .siblings()
+                    .removeClass('active');
+            })
+        } // табы
+
+        initTabCkick();
 
         if(typeof(getCookie("propertyClass")) !== 'undefined')
         {
@@ -257,7 +262,7 @@ jQuery(function($){
 
         //!doubledoughnutchart
 
-        var DoughnutChart = $('#doughnut_chart');
+/*        var DoughnutChart = $('#doughnut_chart');
         var data = {
             labels: ['Priz', 'Principal', 'Insurance', 'Rates', 'Insurance', 'Rates'],
             datasets: [{
@@ -348,7 +353,7 @@ jQuery(function($){
         };
         setTimeout(
             chartElementToLeft
-            , 500);
+            , 500);*/
 
         //!doughnutchart
         //!charts

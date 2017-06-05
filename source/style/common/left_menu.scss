@@ -45,9 +45,11 @@
 }
 .left-sidebar {
 	overflow: hidden;
-	flex: 0 0 235px;
+	//flex: 0 0 235px;
 	height: 94vh;
-	width: 235px;
+	//width: 235px;
+	width: 185px;
+	flex: 0 0 185px;
 }
 .left__menu {
 	height: 100%;

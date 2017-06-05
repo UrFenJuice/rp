@@ -93,6 +93,11 @@
 				li.invoices_history_list_item
 					a(href="#").invoices_history_list_item_link
 		.reports-finances_block.reports-finances_block_advice
+			.reports-finances_block_title
+				h3
+				a(href="#").reports-finances_block_title_link
+					i.reports-finances_block_title_link_icon
+						+use("cross-in-circle")
 			.reports-finances_block_middle
 				p
 					span.reports-finances_block_advice_title
@@ -115,8 +120,84 @@
 		.reports-finances_block.reports-finances_block_rate
 			.reports-finances_block_title
 				h3 Arrears Rate
-			.reports-finances_block_middle
-				.reports-finances_block_middle_rate
+			.reports-finances_block_middle.finances__block_payments_tabs_inner_tables.finances__block_payments_tabs_inner_tables_last
+				.reports-finances_block
+					.reports-finances_block_middle
+						.reports-finances_block_middle_rate
+							i.reports-finances_block_middle_rate_icon
+								+use("passage-of-time")
+							.reports-finances_block_middle_rate_number
+								| 4
+							.reports-finances_block_middle_rate_info
+								|  of the last 32 payments were late
+				.reports-finances_block
+					ul.payment_history_calendar
+						li.payment_history_calendar_item.late
+							.payment_history_calendar_item_date
+								| April 2016
+							.payment_history_calendar_item_price
+								| $344.00
+						li.payment_history_calendar_item.on-time
+							.payment_history_calendar_item_date
+								| May 2016
+							.payment_history_calendar_item_price
+								| $344.00
+						li.payment_history_calendar_item.late
+							.payment_history_calendar_item_date
+								| June 2016
+							.payment_history_calendar_item_price
+								| $344.00
+						li.payment_history_calendar_item.on-time
+							.payment_history_calendar_item_date
+								| July 2016
+							.payment_history_calendar_item_price
+								| $344.00
+						li.payment_history_calendar_item.late
+							.payment_history_calendar_item_date
+								| August 2016
+							.payment_history_calendar_item_price
+								| $344.00
+						li.payment_history_calendar_item.on-time
+							.payment_history_calendar_item_date
+								| September 2016
+							.payment_history_calendar_item_price
+								| $344.00
+						li.payment_history_calendar_item.late
+							.payment_history_calendar_item_date
+								| October 2016
+							.payment_history_calendar_item_price
+								| $344.00
+						li.payment_history_calendar_item.on-time
+							.payment_history_calendar_item_date
+								| November 2016
+							.payment_history_calendar_item_price
+								| $344.00
+						li.payment_history_calendar_item.late
+							.payment_history_calendar_item_date
+								| December 2016
+							.payment_history_calendar_item_price
+								| $344.00
+						li.payment_history_calendar_item.on-time
+							.payment_history_calendar_item_date
+								| January 2016
+							.payment_history_calendar_item_price
+								| $344.00
+						li.payment_history_calendar_item.late
+							.payment_history_calendar_item_date
+								| February 2016
+							.payment_history_calendar_item_price
+								| $344.00
+						li.payment_history_calendar_item.late
+							.payment_history_calendar_item_date
+								| March 2016
+							.payment_history_calendar_item_price
+								| $344.00
+					ul.payment_history_calendar_info
+						li.payment_history_calendar_info_item.late
+							| - Late
+						li.payment_history_calendar_info_item.on-time
+							| - On Time
+				//.reports-finances_block_middle_rate
 					i.reports-finances_block_middle_rate_icon
 						+use("calendar-ok")
 					.reports-finances_block_middle_rate_title
@@ -125,7 +206,7 @@
 					i.reports-finances_block_middle_rate_icon
 						+use("passage-of-time")
 					.reports-finances_block_middle_rate_number
-						| 4
+						| 22
 					.reports-finances_block_middle_rate_info
 						|  of the last 32 payments were late 
 			//.reports-finances_block_footer
@@ -162,6 +243,9 @@
 		.reports-finances_block.reports-finances_block_table
 			.reports-finances_block_title
 				h3 Latest Invoices
+				a(href="#").reports-finances_block_title_link
+					i.reports-finances_block_title_link_icon
+						+use("arrow-right")
 			.reports-finances_block_middle
 				table.reports-finances_block_middle_table
 					thead
@@ -199,10 +283,20 @@
 							td
 								span.status__overdue
 									| OVERDUE
+						tr
+							td Sep 9,2016
+							td Other Services
+							td $50.00
+							td
+								span.status__overdue
+									| OVERDUE
 		.reports-finances_block.reports-finances_block_table
 			.reports-finances_block_title
 				h3 Recurring Invoices
 					span (7)
+				a(href="#").reports-finances_block_title_link
+					i.reports-finances_block_title_link_icon
+						+use("arrow-right")
 			.reports-finances_block_middle
 				table.reports-finances_block_middle_table
 					thead
@@ -227,25 +321,51 @@
 							td Other Services
 							td $150.00
 							td Daily
+						tr
+							td Other Services
+							td $150.00
+							td Daily
 		.reports-finances_block.reports-finances_block_table
 			.reports-finances_block_title
 				h3 Latest Payments
+				a(href="#").reports-finances_block_title_link
+					i.reports-finances_block_title_link_icon
+						+use("arrow-right")
 			.reports-finances_block_middle
 				table.reports-finances_block_middle_table
 					thead
 						tr
 							th Data received
+							th Status
 							th amount
 					tbody
 						tr
 							td Sep 9,2016
+							td
+								span.status__paid
+									| PAID
 							td $350.00
 						tr
 							td Sep 9,2016
+							td
+								span.status__partially-paid
+									| PARTIALLY PAID
 							td $1.550.00
 						tr
 							td Sep 9,2016
+							td
+								span.status__due-on
+									| Due on 1 Mar 17
 							td $120.00
 						tr
 							td Sep 9,2016
+							td
+								span.status__overdue
+									| OVERDUE
+							td $40.00
+						tr
+							td Sep 9,2016
+							td
+								span.status__overdue
+									| OVERDUE
 							td $40.00

@@ -1,23 +1,44 @@
 .aplication {
 	background-color: #fff;
 	display: flex;
-	border: 2px solid #e8e9f1;
-	border-radius: 1px;
-	margin-bottom: 90px;
+	border-radius: 6px;
+	margin-bottom: 43px;
+	overflow: hidden;
+	& .tenanant-chat_left_block_chat-inner_middle {
+		height: 420px;
+	}	
+	& .tenanant-chat_left_block_chat-inner_header {
+		display: flex;
+		align-items: center;
+		background-color: #979aa7;
+	    justify-content: flex-start;
+	    font-size: 14px;
+	    color: #d0d2dd;
+	    padding: 21px 25px;
+		& .my_svg {
+			width: 16px;
+			height: 16px;
+			fill: #d9ddea;
+			margin-right: 10px;
+		}
+	}
 }
 .aplication_block {
-	flex: 1 1 1660px;
-	border-right: 2px solid #e8e9f1;
+	flex: 1 1 1392px;
+	border-right: 1px solid #e8e9f1;
+	padding: 0 40px 45px 35px;
 }
 .aplication_block_header {
-	font-size: 26px;
-	font-family: $fourth-font;
+	font-size: 13px;
 	display: flex;
 	justify-content: space-between;
-	padding: 32px;
-	& .aplication_block_header_number span {
-		color: #b3b4be;
+    padding: 22px 0;
+	& .aplication_block_header_number {
+		color: #adb1c0;
 	}
+}
+.aplication_block_header_status {
+	color: #adb1c0;
 }
 .aplication_block_header_status,
 .aplication_block_header_status .status {
@@ -26,27 +47,39 @@
 }
 .status {
 	& .my_svg {
-		width: 32px;
-		height: 32px;
+		width: 16px;
+		height: 16px;
 		margin: 0 10px;
 	}
-	& #hourglass {
-		fill: #eab129;
+	&.status__pending {
+		color: #dcbc6c;
+		& .my_svg {
+			fill: #dcbc6c;
+		}
 	}
-	& #correct-symbol {
-		fill: #30d23f;
+	&.status__accepted {
+		color: #b2e184;
+		& .my_svg {
+			fill: #b2e184;
+		}
 	}
-	& #cross-remove-sign {
-		fill: #c8352d;
+	&.status__declined {
+		color: #c75050;
+		& .my_svg {
+			fill: #c75050;
+		}
 	}
 }
 .aplication_block_middle_placement {
 	display: flex;
+	border-radius: 6px;
+	overflow: hidden;
+	margin-bottom: 32px;
 	& .aplication_block_middle_placement_photo {
-		flex: 0 1 850px;
+		flex: 0 1 50%;
 		position: relative;
 		overflow: hidden;
-		height: 640px;
+		height: 330px;
 		& img {
 			position: absolute;
 			top: 0;
@@ -58,225 +91,164 @@
 		}
 	}
 }
-.aplication_block_middle_placement_photo_link {
-	position: absolute;
-	right: 44px;
-	bottom: 32px;
-	background-color: rgba(35, 101, 200, 0.5);
-	border-radius: 50%;
-	padding: 20px 22px;
-	& .my_svg {
-		width: 46px;
-		height: 46px;
-		fill: #fff;
+.aplication_block_middle_placement_map {
+	flex: 1 1 50%;
+}
+.aplication_block_middle_inner {
+	display: flex;
+	flex-wrap: wrap;
+}
+.aplication_block_middle_inner-left {
+	flex: 1 1 auto;
+}
+.aplication_block_middle_inner-right {
+	position: relative;
+	padding-left: 38px;
+	flex: 1 1 60%;
+	&:before {
+		content: "";
+		width: 1px;
+		display: block;
+		background-color: #f4f5f9;
+		position: absolute;
+		height: 130%;
+		top: -32px;
+		left: 0;
+	}
+	& .aplication_block_middle_inner-right_hint-advice {
+		padding-top: 60px;
 	}
 }
-.aplication_block_middle_placement_map {
-	flex: 1 1 auto;
+.link__accept {
+	background-color: #6bc886;
+	border-color: #6bc886;
+	color: #fff;
+	margin-right: 12px;
+	@extend .rp__btn;
+	&:hover {
+		opacity: .8;
+		color: #fff;
+	}
+}
+.link__decline {
+	background-color: #c75050;
+	border-color: #c75050;
+	color: #fff;
+	@extend .rp__btn;
+	&:hover {
+		opacity: .8;
+		color: #fff;
+	}
 }
 .aplication_block_middle_address {
 	display: flex;
 	flex-direction: column;
-	margin: 60px 15px 48px 55px;
+	margin-bottom: 32px;
 	& .main__address {
-		font-size: 40px;
-		font-family: $fourth-font;
+		font-size: 22px;
 	}
 	& .sub__address {
-		font-size: 25px;
-		font-family: $third-font;
+		font-size: 14px;
 		color: #9597a1;
 	}
 }
 .aplication_block_middle_price {
-	font-size: 30px;
-	font-family: $fourth-font;
-	margin-left: 55px;
+	font-size: 15px;
 }
 .aplication_block_middle_features {
 	display: flex;
 	flex-wrap: wrap;
-	margin: 67px 15px 20px 55px;
-	font-family: $fourth-font;
-	font-size: 26px;
+	margin: 35px 0px 20px 0px;
+	font-size: 14px;
+	color: #c5c7ce;
 }
 .aplication_block_middle_features_block {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-right: 70px;
+	margin-right: 40px;
 }
 .aplication_block_middle_features_icon {
 	padding: 18px;
-	border-radius: 50%;
-	background-color: #f4f5f9;
+	border-radius: 6px;
+	background-color: #fff;
     display: inline-block;
     position: relative;
     margin-bottom: 16px;
+    box-shadow: 0 3px 12px 0 #cdcfd8;
 	& .my_svg {
-		width: 64px;
-		height: 64px;
-		fill: #c1c3d0;
+		width: 32px;
+		height: 32px;
+		fill: #cdcfd8;
 	}
 	& sup {
-		font-size: 26px;
+		font-size: 13px;
 		font-family: $fourth-font;
-		background-color: #f4511e;
+		background-color: #c75050;
 		border-radius: 50%;
-		width: 43px;
-		height: 43px;
+		width: 25px;
+		height: 25px;
 		color: #fff;
 		display: block;
 		text-align: center;
-		line-height: 1.6;
+		line-height: 1.85;
 		position: absolute;
 		top: -8px;
 		right: -8px;
 	}
 }
-.aplication_chat {
-	flex: 1 1 835px;
-	display: flex;
-	flex-direction: column;
-}
-.aplication_chat_header,
-.aplication_chat_footer {
-	flex: 0 0 auto;
-	font-family: $fourth-font;
-}
-.aplication_chat_middle {
-	flex: 1 0 auto;
-	display: flex;
-	flex-direction: column;
-	font-size: 24px;
-	& div {
-		font-family: $fourth-font;
-	}
-	& .aplication_chat_middle_date {
-		font-size: 17px;
-		color: #b6b9c6;
-	}
-}
-.aplication_chat_header {
-	display: flex;
-	align-items: center;
-	color: #b6b9c6;
-	font-size: 26px;
-	border-bottom: 2px solid #e8e9f1;
-	padding: 26px 40px;
-	& .aplication_chat_header_icon {
-		display: inline-block;
-		margin-right: 19px;
-		& .my_svg {
-			width: 42px;
-			height: 42px;
-			fill: #b6b9c6;
-		}
-	}
-}
-.aplication_chat_middle_interlocutor {
-	align-self: flex-start;
-	background-color: #f9fafc;
-	padding: 20px;
-	margin: 20px 70px;
-	position: relative;
-	&:before {
-		content: '';
-		display: block;
-		position: absolute;
-		top: 50%;
-		left: -29px;
-		margin-top: -15px;
-		border: 15px solid transparent;	
-		border-right: 15px solid #f9fafc;
-	}
-}
-.aplication_chat_middle_autor {
-	align-self: flex-end;
-	background-color: #eaf2fe;
-	padding: 20px;
-	margin: 20px 70px;
-	position: relative;
-	&:before {
-		content: '';
-		display: block;
-		position: absolute;
-		top: 50%;
-		right: -29px;
-		margin-top: -15px;
-		border: 15px solid transparent;	
-		border-left: 15px solid #eaf2fe;
-	}
-}
-.aplication_chat_footer {
-	display: flex;
-	border-top: 2px solid #e8e9f1;
-	& input[type="text"] {
-		flex: 1 1 auto;
-		border: none;
-		font-family: $fourth-font;
-		font-size: 24px;
-		padding: 0 35px;
-		&:hover,
-		&:focus {
-			outline: none;
-		}
-	}
-	& a {
-		font-size: 0;
-		width: 91px;
-		height: 91px;
-		border-left: 2px solid #e8e9f1;
-		position: relative;
-		display: inline-block;
-		& .my_svg {
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			right: 0;
-			left: 0;
-			margin: auto;
-		}
-		&.aplication_chat_footer_attachment {
-			& .my_svg {
-				width: 24px;
-				height: 24px;
-				fill: #b9bcc9;
-			}
-		}
-		&.aplication_chat_footer_send {
-			background-color: #2dc787;
-			& .my_svg {
-				width: 32px;
-				height: 32px;
-				fill: #fff;
-			}
-		}
-	}
-}
-.aplication_block_footer {
-	margin: 86px 15px 65px 55px;
-}
 .aplication_block_footer_link-view {
+	margin-right: 15px;
+	background-color: #f4f5f9;
+	border-color: #f4f5f9;
+	color: #b6bac9;
 	@extend .rp__btn;
-	margin-right: 34px;
-	border-color: #e9ebf4;
-	color: #c9ccd7;
-    background: linear-gradient(to top, #f9fafd, #fff, #fff);
 	&:hover {
-		background: #33dd97;
-        border-color: #2dc888;
-        color: #fff;
+		opacity: .8;
+		color: #b6bac9;
 	}
 }
 .aplication_block_footer_link-withdraw {
 	@extend .rp__btn;
-	border-color: #e03737;
+	background-color: #c75050;
+	border-color: #c75050;
 	color: #fff;
-    background: #e94040;
+	@extend .rp__btn;
 	&:hover {
-		background: #fff;
-        border-color: #e9ebf4;
-        color: #e03737;
+		opacity: .8;
+		color: #fff;
 	}
+}
+.aplication_block_middle_inner-right_status {
+	padding-bottom: 40px;
+	position: relative;
+	& i {
+		float: left;
+		margin-right: 19px;
+		& .my_svg {
+			width: 42px;
+			height: 42px;
+			fill: #6bc886;
+		}
+	}
+	& p {
+		font-size: 18px;
+	}
+	& span {
+		font-size: 13px;
+		color: #b9bcc5;
+	}
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 105%;
+		background-color: #f4f5f9;
+		height: 1px;
+		bottom: 0;
+		left: -38px;
+	}
+}
+.aplication_block_middle_inner-right_status_links {
+	margin-top: 20px;
 }

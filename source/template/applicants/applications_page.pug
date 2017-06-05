@@ -4,197 +4,271 @@
 			.aplication_block_header_number
 				| Application number: 
 				span 11422 submitted on 01/03/17
-			.aplication_block_header_status.aplication_block_header_status-pending
+			.aplication_block_header_status
 				| Application status:
-				span.status
+				span.status.status__accepted
 					i.status-icon
-						//+use("hourglass")
-						//+use("correct-symbol")
-						+use("cross-remove-sign")
-					| Pending
-		.aplication_block_middle
-			.aplication_block_middle_placement
-				.aplication_block_middle_placement_photo
-					img(src="assets/img/items/item_1.jpg")
-					a(href="#").aplication_block_middle_placement_photo_link
-						i.aplication_block_middle_placement_photo_link_icon
-							+use('photo-frame')
-				.aplication_block_middle_placement_map
-					include ../properties/google_map
-			.aplication_block_middle_address
-				span.main__address
-					| 249/1095 Karangahape Road
-				span.sub__address
-					| North Shore, Auckland
-			.aplication_block_middle_price
-				| $350.00 per week
-			.aplication_block_middle_features
-				.aplication_block_middle_features_block
-					i.aplication_block_middle_features_icon
-						+use("big-mattress")
-						sup 2
-					| Bedrooms
-				.aplication_block_middle_features_block
-					i.aplication_block_middle_features_icon
-						+use("shower-water-running")
-						sup 2
-					| Bathrooms
-				.aplication_block_middle_features_block
-					i.aplication_block_middle_features_icon
-						+use("garage")
-						sup 1
-					| Car Space
-		.aplication_block_footer
-			a(href="#").aplication_block_footer_link-view view application
-			a(href="#").aplication_block_footer_link-withdraw withdraw application
-	.aplication_chat
-		.aplication_chat_header
-			i.aplication_chat_header_icon
-				+use("messages")
-			| Chat with property owner
-		.aplication_chat_middle
-			.aplication_chat_middle_interlocutor
-				| Hello, do you need my service? 
-				.aplication_chat_middle_date 30.11.2016    21:00
-			.aplication_chat_middle_autor
-				| Hi! Very tempting, I'll write you later
-				.aplication_chat_middle_date 30.11.2016    21:00
-			.aplication_chat_middle_interlocutor
-				| Okay
-				.aplication_chat_middle_date 30.11.2016    21:00
-		.aplication_chat_footer
-			input(type="text", placeholder="Type your message here...").aplication_chat_footer_input
-			a(href="#").aplication_chat_footer_attachment 
-				+use("attachment")
-				| attachment
-			a(href="#").aplication_chat_footer_send
-				+use("send-message-button")
-				| send message
-
-.aplication
-	.aplication_block
-		.aplication_block_header
-			.aplication_block_header_number
-				| Application number: 
-				span 11422 submitted on 01/03/17
-			.aplication_block_header_status.aplication_block_header_status-pending
-				| Application status:
-				span.status
-					i.status-icon
-						//+use("hourglass")
 						+use("correct-symbol")
-						//+use("cross-remove-sign")
-					| Pending
+					| Accepted
 		.aplication_block_middle
 			.aplication_block_middle_placement
 				.aplication_block_middle_placement_photo
 					img(src="assets/img/items/item_1.jpg")
-					a(href="#").aplication_block_middle_placement_photo_link
-						i.aplication_block_middle_placement_photo_link_icon
-							+use('photo-frame')
 				.aplication_block_middle_placement_map
 					include ../properties/google_map
-			.aplication_block_middle_address
-				span.main__address
-					| 249/1095 Karangahape Road
-				span.sub__address
-					| North Shore, Auckland
-			.aplication_block_middle_price
-				| $350.00 per week
-			.aplication_block_middle_features
-				.aplication_block_middle_features_block
-					i.aplication_block_middle_features_icon
-						+use("big-mattress")
-						sup 2
-					| Bedrooms
-				.aplication_block_middle_features_block
-					i.aplication_block_middle_features_icon
-						+use("shower-water-running")
-						sup 2
-					| Bathrooms
-				.aplication_block_middle_features_block
-					i.aplication_block_middle_features_icon
-						+use("garage")
-						sup 1
-					| Car Space
-		.aplication_block_footer
-			a(href="#").aplication_block_footer_link-view view application
-			a(href="#").aplication_block_footer_link-withdraw withdraw application
-	.aplication_chat
-		.aplication_chat_header
+			.aplication_block_middle_inner
+				.aplication_block_middle_inner-left
+					.aplication_block_middle_address
+						span.main__address
+							| 249/1095 Karangahape Road
+						span.sub__address
+							| North Shore, Auckland
+					.aplication_block_middle_price
+						| $350.00 per week
+					.aplication_block_middle_features
+						.aplication_block_middle_features_block
+							i.aplication_block_middle_features_icon
+								+use("big-mattress")
+								sup 2
+							| Bedrooms
+						.aplication_block_middle_features_block
+							i.aplication_block_middle_features_icon
+								+use("shower-water-running")
+								sup 2
+							| Bathrooms
+						.aplication_block_middle_features_block
+							i.aplication_block_middle_features_icon
+								+use("garage")
+								sup 1
+							| Car Space
+					.aplication_block_middle_links
+						a(href="#").aplication_block_footer_link-view view application	
+				.aplication_block_middle_inner-right
+					.aplication_block_middle_inner-right_status
+						.aplication_block_middle_inner-right_status_txt
+							i
+								+use("checked")
+							p
+								| Congratulations, your application has been accepted.
+							span Would you like to proceed with this rental?
+						.aplication_block_middle_inner-right_status_links
+							a(href='#').link__accept
+								| Accept
+							a(href='#').link__decline
+								| decline
+					.aplication_block_middle_inner-right_hint-advice
+						p
+							span.reports-finances_block_advice_title
+								| Hint 
+								br
+								| &
+								br
+								| Advice
+							span.reports-finances_block_advice_text
+								| Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+	.tenanant-chat_left_block_chat-inner
+		.tenanant-chat_left_block_chat-inner_header
 			i.aplication_chat_header_icon
 				+use("messages")
 			| Chat with property owner
-		.aplication_chat_middle
-		.aplication_chat_footer
-			input(type="text", placeholder="Type your message here...").aplication_chat_footer_input
-			a(href="#").aplication_chat_footer_attachment 
+		.tenanant-chat_left_block_chat-inner_middle
+			
+		.tenanant-chat_left_block_chat-inner_footer
+			input(type="text", placeholder="Type your message here...").tenanant-chat_left_block_chat-inner_footer_input
+			a(href="#аттачьми по полной").tenanant-chat_left_block_chat-inner_footer_attachment
 				+use("attachment")
-				| attachment
-			a(href="#").aplication_chat_footer_send
+			a(href="#").tenanant-chat_left_block_chat-inner_footer_send
 				+use("send-message-button")
-				| send message
-
 .aplication
 	.aplication_block
 		.aplication_block_header
 			.aplication_block_header_number
 				| Application number: 
 				span 11422 submitted on 01/03/17
-			.aplication_block_header_status.aplication_block_header_status-pending
+			.aplication_block_header_status
 				| Application status:
-				span.status
+				span.status.status__declined
+					i.status-icon
+						+use("cross-remove-sign")
+					| Declined
+		.aplication_block_middle
+			.aplication_block_middle_placement
+				.aplication_block_middle_placement_photo
+					img(src="assets/img/items/item_1.jpg")
+				.aplication_block_middle_placement_map
+					include ../properties/google_map
+			.aplication_block_middle_inner
+				.aplication_block_middle_inner-left
+					.aplication_block_middle_address
+						span.main__address
+							| 249/1095 Karangahape Road
+						span.sub__address
+							| North Shore, Auckland
+					.aplication_block_middle_price
+						| $350.00 per week
+					.aplication_block_middle_features
+						.aplication_block_middle_features_block
+							i.aplication_block_middle_features_icon
+								+use("big-mattress")
+								sup 2
+							| Bedrooms
+						.aplication_block_middle_features_block
+							i.aplication_block_middle_features_icon
+								+use("shower-water-running")
+								sup 2
+							| Bathrooms
+						.aplication_block_middle_features_block
+							i.aplication_block_middle_features_icon
+								+use("garage")
+								sup 1
+							| Car Space
+					.aplication_block_middle_links
+						a(href="#").aplication_block_footer_link-view view application
+	.tenanant-chat_left_block_chat-inner
+		.tenanant-chat_left_block_chat-inner_header
+			i.aplication_chat_header_icon
+				+use("messages")
+			| Chat with property owner
+		.tenanant-chat_left_block_chat-inner_middle#divChatHistory
+			.tenanant-chat_left_block_chat-inner_middle_interlocutor
+				| Can I please get a payment extension?
+				.aplication_chat_middle_date 30.11.2016    21:00
+			.tenanant-chat_left_block_chat-inner_middle_autor
+				| Sure, I can do until the 2nd Aug, OK!?
+				.aplication_chat_middle_date 30.11.2016    21:00
+			.tenanant-chat_left_block_chat-inner_middle_payment
+				i.tenanant-chat_left_block_chat-inner_middle_payment_icon
+					+use("coins")
+				.tenanant-chat_left_block_chat-inner_middle_payment_block
+					p Doro Persch paid $2,200.00
+					.aplication_chat_middle_date 30.11.2016   21:00
+			.tenanant-chat_left_block_chat-inner_middle_autor
+				| Thank’s for the payment)) just in time!
+				.aplication_chat_middle_date 30.11.2016    21:00
+			.tenanant-chat_left_block_chat-inner_middle_maintenance-request
+				i.tenanant-chat_left_block_chat-inner_middle_maintenance-request_icon
+					+use("tools")
+				.tenanant-chat_left_block_chat-inner_middle_maintenance-request_block
+					p Maintenance Request - 
+						span Sink Pipes
+					.aplication_chat_middle_date 30.11.2016   21:00
+				a(href="#").tenanant-chat_left_block_chat-inner_middle_maintenance-request_link
+					| View Details
+			.tenanant-chat_left_block_chat-inner_middle_interlocutor
+				| I’d like to get this fixed ASAP please.
+				.aplication_chat_middle_date 30.11.2016    21:00
+			.tenanant-chat_left_block_chat-inner_middle_attachment
+				.tenanant-chat_left_block_chat-inner_middle_attachment_inner
+					i.tenanant-chat_left_block_chat-inner_middle_attachment_icon
+						+use("pdf")
+					.tenanant-chat_left_block_chat-inner_middle_attachment_block
+						p.tenanant-chat_left_block_chat-inner_middle_attachment_name
+							| Test PDF Attachment
+						p.tenanant-chat_left_block_chat-inner_middle_attachment_type
+							| PDF
+					.tenanant-chat_left_block_chat-inner_middle_attachment_links
+						a(href="#").tenanant-chat_left_block_chat-inner_middle_attachment_link
+							i.tenanant-chat_left_block_chat-inner_middle_attachment_link_icon
+								+use("eye")
+						a(href="#").tenanant-chat_left_block_chat-inner_middle_attachment_link
+							i.tenanant-chat_left_block_chat-inner_middle_attachment_link_icon
+								+use("export")
+			.tenanant-chat_left_block_chat-inner_middle_attachment
+				.tenanant-chat_left_block_chat-inner_middle_attachment_inner
+					i.tenanant-chat_left_block_chat-inner_middle_attachment_icon
+						+use("file")
+					.tenanant-chat_left_block_chat-inner_middle_attachment_block
+						p.tenanant-chat_left_block_chat-inner_middle_attachment_name
+							| File Attachment MP3 RAR VIDEO etc
+						p.tenanant-chat_left_block_chat-inner_middle_attachment_type
+							| File
+					.tenanant-chat_left_block_chat-inner_middle_attachment_links
+						a(href="#").tenanant-chat_left_block_chat-inner_middle_attachment_link
+							i.tenanant-chat_left_block_chat-inner_middle_attachment_link_icon
+								+use("eye")
+						a(href="#").tenanant-chat_left_block_chat-inner_middle_attachment_link
+							i.tenanant-chat_left_block_chat-inner_middle_attachment_link_icon
+								+use("export")
+			.tenanant-chat_left_block_chat-inner_middle_attachment
+				.tenanant-chat_left_block_chat-inner_middle_attachment_inner
+					i.tenanant-chat_left_block_chat-inner_middle_attachment_icon
+						+use("png")
+					.tenanant-chat_left_block_chat-inner_middle_attachment_block
+						p.tenanant-chat_left_block_chat-inner_middle_attachment_name
+							| Image Attachment
+						p.tenanant-chat_left_block_chat-inner_middle_attachment_type
+							| PNG
+					.tenanant-chat_left_block_chat-inner_middle_attachment_links
+						a(href="#").tenanant-chat_left_block_chat-inner_middle_attachment_link
+							i.tenanant-chat_left_block_chat-inner_middle_attachment_link_icon
+								+use("eye")
+						a(href="#").tenanant-chat_left_block_chat-inner_middle_attachment_link
+							i.tenanant-chat_left_block_chat-inner_middle_attachment_link_icon
+								+use("export")
+					.tenanant-chat_left_block_chat-inner_middle_attachment_image_block
+						img(src="/assets/img/items/tenanant_chat.png")
+		.tenanant-chat_left_block_chat-inner_footer
+			input(type="text", placeholder="Type your message here...").tenanant-chat_left_block_chat-inner_footer_input
+			a(href="#аттачьми по полной").tenanant-chat_left_block_chat-inner_footer_attachment
+				+use("attachment")
+			a(href="#").tenanant-chat_left_block_chat-inner_footer_send
+				+use("send-message-button")
+.aplication
+	.aplication_block
+		.aplication_block_header
+			.aplication_block_header_number
+				| Application number: 
+				span 11422 submitted on 01/03/17
+			.aplication_block_header_status
+				| Application status:
+				span.status.status__pending
 					i.status-icon
 						+use("hourglass")
-						//+use("correct-symbol")
-						//+use("cross-remove-sign")
 					| Pending
 		.aplication_block_middle
 			.aplication_block_middle_placement
 				.aplication_block_middle_placement_photo
 					img(src="assets/img/items/item_1.jpg")
-					a(href="#").aplication_block_middle_placement_photo_link
-						i.aplication_block_middle_placement_photo_link_icon
-							+use('photo-frame')
 				.aplication_block_middle_placement_map
 					include ../properties/google_map
-			.aplication_block_middle_address
-				span.main__address
-					| 249/1095 Karangahape Road
-				span.sub__address
-					| North Shore, Auckland
-			.aplication_block_middle_price
-				| $350.00 per week
-			.aplication_block_middle_features
-				.aplication_block_middle_features_block
-					i.aplication_block_middle_features_icon
-						+use("big-mattress")
-						sup 2
-					| Bedrooms
-				.aplication_block_middle_features_block
-					i.aplication_block_middle_features_icon
-						+use("shower-water-running")
-						sup 2
-					| Bathrooms
-				.aplication_block_middle_features_block
-					i.aplication_block_middle_features_icon
-						+use("garage")
-						sup 1
-					| Car Space
-		.aplication_block_footer
-			a(href="#").aplication_block_footer_link-view view application
-			a(href="#").aplication_block_footer_link-withdraw withdraw application
-	.aplication_chat
-		.aplication_chat_header
+			.aplication_block_middle_inner
+				.aplication_block_middle_inner-left
+					.aplication_block_middle_address
+						span.main__address
+							| 249/1095 Karangahape Road
+						span.sub__address
+							| North Shore, Auckland
+					.aplication_block_middle_price
+						| $350.00 per week
+					.aplication_block_middle_features
+						.aplication_block_middle_features_block
+							i.aplication_block_middle_features_icon
+								+use("big-mattress")
+								sup 2
+							| Bedrooms
+						.aplication_block_middle_features_block
+							i.aplication_block_middle_features_icon
+								+use("shower-water-running")
+								sup 2
+							| Bathrooms
+						.aplication_block_middle_features_block
+							i.aplication_block_middle_features_icon
+								+use("garage")
+								sup 1
+							| Car Space
+					.aplication_bloc_middle_links
+						a(href="#").aplication_block_footer_link-view view application
+						a(href="#").aplication_block_footer_link-withdraw withdraw application
+	.tenanant-chat_left_block_chat-inner
+		.tenanant-chat_left_block_chat-inner_header
 			i.aplication_chat_header_icon
 				+use("messages")
 			| Chat with property owner
-		.aplication_chat_middle
-		.aplication_chat_footer
-			input(type="text", placeholder="Type your message here...").aplication_chat_footer_input
-			a(href="#").aplication_chat_footer_attachment 
+		.tenanant-chat_left_block_chat-inner_middle
+			
+		.tenanant-chat_left_block_chat-inner_footer
+			input(type="text", placeholder="Type your message here...").tenanant-chat_left_block_chat-inner_footer_input
+			a(href="#аттачьми по полной").tenanant-chat_left_block_chat-inner_footer_attachment
 				+use("attachment")
-				| attachment
-			a(href="#").aplication_chat_footer_send
+			a(href="#").tenanant-chat_left_block_chat-inner_footer_send
 				+use("send-message-button")
-				| send message
