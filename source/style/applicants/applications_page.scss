@@ -4,10 +4,10 @@
 	border-radius: 6px;
 	margin-bottom: 43px;
 	overflow: hidden;
-	& .tenanant-chat_left_block_chat-inner_middle {
+	& .tenant-chat_left_block_chat-inner_middle {
 		height: 420px;
 	}	
-	& .tenanant-chat_left_block_chat-inner_header {
+	& .tenant-chat_left_block_chat-inner_header {
 		display: flex;
 		align-items: center;
 		background-color: #979aa7;
@@ -25,7 +25,6 @@
 }
 .aplication_block {
 	flex: 1 1 1392px;
-	border-right: 1px solid #e8e9f1;
 	padding: 0 40px 45px 35px;
 }
 .aplication_block_header {

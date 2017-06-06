@@ -1,29 +1,28 @@
-.tennant-chat {
+.tenant-chat {
 	display: flex;
-	& .tenanant-chat_right {
+	& .tenant-chat_right {
 		flex: 0 1 280px;
 		margin-left: 20px;
 		display: inline-flex;
 		flex-direction: column;
 		justify-content: space-between;
 	}
-	& .tenanant-chat_left {
-		flex: 1 1 auto;
-		border-radius: 6px;
+	& .tenant-chat_left {
+		flex: 0 1 310px;
+		min-width: 290px;
+		border-radius: 6px 0 0 6px;
 	}
-	& .tenanant-chat_left {
+	& .tenant-chat_left {
 		background-color: #fff;
 	}
 }
-.tenanant-chat_left_block {
-	display: flex;
+.tenant-chat_left_block {
 	height: 100%;
 }
-.tenanant-chat_left_block_search {
-	flex: 0 1 310px;
+.tenant-chat_left_block_search {
 	border-right: 1px solid #e8e9f1;
 }
-.tenanant-chat_left_block_search_middle_result {
+.tenant-chat_left_block_search_middle_result {
 	text-align: center;
 	border-bottom: 1px solid #e8e9f1;
 	position: relative;
@@ -42,7 +41,7 @@
     	}
     }
 }
-.tenanant-chat_left_block_search_middle_image {
+.tenant-chat_left_block_search_middle_image {
 	width: 155px;
 	height: 155px;
 	overflow: hidden;
@@ -60,7 +59,7 @@
 		margin: auto; 
 	}
 }
-.tenanant-chat_left_block_search_middle_name {
+.tenant-chat_left_block_search_middle_name {
 	font-size: 32px;
 	font-family: $fourth-font;
 	margin-bottom: 15px;
@@ -87,39 +86,47 @@
 	    }
 	}
 }
-.tenanant-chat_left_block_search_middle_address,
-.tenanant-chat_left_block_search_middle_phone {
+.tenant-chat_left_block_search_middle_address,
+.tenant-chat_left_block_search_middle_phone {
 	font-size: 23px;
 	margin-bottom: 15px;
 	color: #7078a6;
 }
-.tenanant-chat_left_block_search_middle_date {
+.tenant-chat_left_block_search_middle_date {
 	color: #b1b5bf;
 	margin: 30px auto 80px;
 }
-.tenanant-chat_left_block_chat-inner_middle,
-.tenanant-chat_left_block_chat-inner {
+.tenant-chat_left_block_chat-inner_middle,
+.tenant-chat_left_block_chat-inner {
 	display: flex;
 	flex-direction: column;
 	flex: 1 1 auto;
+	background-color: #fff;
 	//height: 83vh;
 }
-.tenanant-chat_left_block_chat-inner_middle {
+.tenant-chat_left_block_chat-inner {
+	border-radius: 0 6px 6px 0;
+    overflow: hidden;
+    flex: 1 1 auto;
+    border-left: 1px solid #e8e9f1;
+    min-width: 380px;
+}
+.tenant-chat_left_block_chat-inner_middle {
 	height: 680px;
 }
-.tenanant-chat_left_block_chat-inner_middle .aplication_chat_middle_date {
+.tenant-chat_left_block_chat-inner_middle .aplication_chat_middle_date {
 	font-size: 10.6px;
 }
-.tenanant-chat_left_block_chat-inner_header,
-.tenanant-chat_left_block_chat-inner_footer {
+.tenant-chat_left_block_chat-inner_header,
+.tenant-chat_left_block_chat-inner_footer {
 	flex: 0 0 auto;
 	display: inline-flex;
 	justify-content: flex-end;
 }
-.tenanant-chat_left_block_chat-inner_footer {
+.tenant-chat_left_block_chat-inner_footer {
 	border-top: 1px solid #e8e9f1;
 }
-.tenanant-chat_left_block_chat-inner_middle_interlocutor {
+.tenant-chat_left_block_chat-inner_middle_interlocutor {
 	align-self: flex-start;
 	background-color: #fdf3e2;
 	padding: 13px;
@@ -140,7 +147,7 @@
 		color: #d5c8b2;
 	}
 }
-.tenanant-chat_left_block_chat-inner_middle_autor {
+.tenant-chat_left_block_chat-inner_middle_autor {
 	align-self: flex-end;
 	background-color: #f5f7fe;
 	padding: 13px;
@@ -161,8 +168,8 @@
 		color: #b6b9c6;
 	}	
 }
-.tenanant-chat_left_block_chat-inner_middle_maintenance-request_icon,
-.tenanant-chat_left_block_chat-inner_middle_payment_icon {
+.tenant-chat_left_block_chat-inner_middle_maintenance-request_icon,
+.tenant-chat_left_block_chat-inner_middle_payment_icon {
 	display: inline-block;
 	padding: 12px;
 	border-radius: 50%;
@@ -173,18 +180,18 @@
 		height: 33px;
 	}
 }
-.tenanant-chat_left_block_chat-inner_middle_maintenance-request_icon {
+.tenant-chat_left_block_chat-inner_middle_maintenance-request_icon {
 	& .my_svg {
 		fill: #546e7a;
 	}
 }
-.tenanant-chat_left_block_chat-inner_middle_payment_icon {
+.tenant-chat_left_block_chat-inner_middle_payment_icon {
 	& .my_svg {
 		fill: #3dce6d;
 	}
 }
-.tenanant-chat_left_block_chat-inner_middle_payment,
-.tenanant-chat_left_block_chat-inner_middle_maintenance-request{
+.tenant-chat_left_block_chat-inner_middle_payment,
+.tenant-chat_left_block_chat-inner_middle_maintenance-request{
 	margin: 25px 5% 0;
     display: -webkit-box;
     align-items: center;
@@ -197,7 +204,7 @@
     	font-size: 10.62px;
     }
 }
-.tenanant-chat_left_block_chat-inner_middle_payment {
+.tenant-chat_left_block_chat-inner_middle_payment {
 	background-color: #edfbf2;
 	& .aplication_chat_middle_date {
     	color: #a6d8b7;
@@ -207,7 +214,7 @@
 		font-family: $fourth-font;
 	}
 }
-.tenanant-chat_left_block_chat-inner_middle_maintenance-request {
+.tenant-chat_left_block_chat-inner_middle_maintenance-request {
 	background-color: #f1fbff;
 	& .aplication_chat_middle_date {
     	color: #bbc6cb;
@@ -216,11 +223,11 @@
 		color: #546e7a;
 	}
 }
-.tenanant-chat_left_block_chat-inner_middle_maintenance-request_block {
+.tenant-chat_left_block_chat-inner_middle_maintenance-request_block {
 	flex: 1 1 auto;
 } 
-.tenanant-chat_left_block_chat-inner_middle_payment_link,
-.tenanant-chat_left_block_chat-inner_middle_maintenance-request_link {
+.tenant-chat_left_block_chat-inner_middle_payment_link,
+.tenant-chat_left_block_chat-inner_middle_maintenance-request_link {
 	font-size: 10.62px;
 	color: #fff;
 	font-family: $fourth-font;
@@ -233,13 +240,13 @@
     	opacity: .8;
     }
 }
-.tenanant-chat_left_block_chat-inner_middle_payment_link {
+.tenant-chat_left_block_chat-inner_middle_payment_link {
 	background-color: #3dce6d;
 }
-.tenanant-chat_left_block_chat-inner_middle_maintenance-request_link {
+.tenant-chat_left_block_chat-inner_middle_maintenance-request_link {
 	background-color: #546e7a;
 }
-.tenanant-chat_left_block_chat-inner_footer_send {
+.tenant-chat_left_block_chat-inner_footer_send {
 	display: inline-block;
 	background-color: #2dc787;
 	border-radius: 50%;
@@ -252,7 +259,7 @@
 		fill: #fff;
 	}
 }
-.tenanant-chat_left_block_chat-inner_middle_attachment {
+.tenant-chat_left_block_chat-inner_middle_attachment {
     padding: 13px;
 	margin: 25px 5% 0;
     position: relative;
@@ -260,24 +267,24 @@
     border: 1px solid #e8e9f1;
     display: -webkit-box;
 }
-.tenanant-chat_left_block_chat-inner_middle_attachment_inner {
+.tenant-chat_left_block_chat-inner_middle_attachment_inner {
 	display: flex;
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
 }
-.tenanant-chat_left_block_chat-inner_middle_attachment_block {
+.tenant-chat_left_block_chat-inner_middle_attachment_block {
 	flex: 1 1 50%;
 	& p {
 		margin: 0;
 		padding: 0;
 	}
 }
-.tenanant-chat_left_block_chat-inner_middle_attachment_type {
+.tenant-chat_left_block_chat-inner_middle_attachment_type {
 	font-size: 12px;
 	color: #cdd0db;
 }
-.tenanant-chat_left_block_chat-inner_middle_attachment_icon {
+.tenant-chat_left_block_chat-inner_middle_attachment_icon {
 	margin-right: 15px;
 	& .my_svg {
 		width: 31px;
@@ -285,17 +292,17 @@
 		fill: #d7dae6;
 	}
 }
-.tenanant-chat_left_block_chat-inner_middle_attachment_link {
+.tenant-chat_left_block_chat-inner_middle_attachment_link {
 	margin-left: 20px;
 }
-.tenanant-chat_left_block_chat-inner_middle_attachment_link_icon {
+.tenant-chat_left_block_chat-inner_middle_attachment_link_icon {
 	& .my_svg {
 		width: 16px;
 		height: 16px;
 		fill: #d7dae6;
 	}
 }
-.tenanant-chat_left_block_chat-inner_middle_attachment_image_block {
+.tenant-chat_left_block_chat-inner_middle_attachment_image_block {
 	flex: 1 1 50%;
 	margin-top: 15px;
 	position: relative;
@@ -311,7 +318,7 @@
 		width: 100%;
 	}
 }
-.tenanant-chat_left_block_chat-inner_footer_attachment {
+.tenant-chat_left_block_chat-inner_footer_attachment {
 	display: block;
 	font-size: 0;
 	border-radius: 50%;
@@ -326,7 +333,7 @@
 		fill: #b7bac7;
 	}
 }
-.tenanant-chat_left_block_chat-inner_footer_input {
+.tenant-chat_left_block_chat-inner_footer_input {
 	outline: none;
 	border: none;
 	flex: 1 1 auto;
@@ -338,7 +345,7 @@
 
 
 
-.tenanant-chat_right {
+.tenant-chat_right {
 	text-align: center;
 	& .invoices_history_list {
 		flex-direction: column;
@@ -415,14 +422,14 @@
 	    text-align: right!important;
 	}
 }
-.tenanant-chat_right_links-block {
+.tenant-chat_right_links-block {
 	padding: 32px 27px 5px;
 	position: relative;
 	z-index: 2;
 	border-radius: 6px;
 	background-color: #fff;
 }
-.tenanant-chat_right_status {
+.tenant-chat_right_status {
 	font-size: 21px;
 	text-transform: uppercase;
 	color: #2ec28c;
@@ -441,12 +448,12 @@
 		margin-right: 15px;
 	}
 }
-.tenanant-chat_right_shedule-title {
+.tenant-chat_right_shedule-title {
 	font-size: 28px;
 	font-family: $fourth-font;
 	margin-bottom: 48px;
 }
-.tenanant-chat_right_links-block_link {
+.tenant-chat_right_links-block_link {
 	font-size: 13px;
 	text-transform: uppercase;
 	color: #b1b1c0;
@@ -474,13 +481,13 @@
 		color: #b1b1c0;
 	}
 }
-.tenanant-chat_right_help-block {
+.tenant-chat_right_help-block {
 	background-color: #fff;
 	border-radius: 6px;
 	padding: 40px 30px;
 	margin-top: 25px;
 }
-.tenanant-chat_right_help-block_icon {
+.tenant-chat_right_help-block_icon {
 	background-color: #f4f5f9;
 	overflow: hidden;
 	border-radius: 50%;
@@ -491,17 +498,17 @@
 		fill: #d6d9e2;
 	}
 }
-.tenanant-chat_right_help-block_title {
+.tenant-chat_right_help-block_title {
 	font-size: 18px;
 	padding-top: 30px;
 	padding-bottom: 30px;
 }
-.tenanant-chat_right_help-block_preview {
+.tenant-chat_right_help-block_preview {
 	font-size: 13px;
 	color: #888a93;
     line-height: 1.64;
 }
-.tenanant-chat_right_help-block_link {
+.tenant-chat_right_help-block_link {
 	@extend .rp__btn;
 	margin-top: 20px;
 	color: #fff;
@@ -512,7 +519,7 @@
 		color: #fff;
 	}
 }
-.tenanant-chat_right_help-block_slider {
+.tenant-chat_right_help-block_slider {
 	width: 215px;
 }
 .owl-slider_help_pager {
@@ -539,27 +546,30 @@
 	}
 }
 
-.tenanant-chat_middle {
+.tenant-chat_middle {
 	position: relative;
-	flex: 0 1 375px;
-	border-radius: 6px;
+	flex: 1 1 auto;
+	display: inline-flex;
+}
+.tenant-chat_middle_inner {
 	background-color: #fff;
 	margin-left: 20px;
 	padding: 32px 27px;
+	border-radius: 6px;
 }
-.tenanant-chat_middle_map {
+.tenant-chat_middle_map {
 	border-radius: 6px;
 	overflow: hidden;
 }
-.tenanant-chat_middle_address {
+.tenant-chat_middle_address {
 	font-size: 18px;
 	margin-top: 15px;
 }
-.tenanant-chat_middle_status {
+.tenant-chat_middle_status {
 	display: flex;
 	align-items: center;
 }
-.tenanant-chat_middle_status_link {
+.tenant-chat_middle_status_link {
 	@extend .rp__btn;
 	background-color: #8190c5;
 	border-color: #8190c5;
@@ -570,7 +580,7 @@
 	}
 	margin-right: 20px;
 }
-.tenanant-chat_middle_status_current {
+.tenant-chat_middle_status_current {
 	font-size: 13px;
 	color: #2ec28c;
 	&:before {
@@ -584,8 +594,8 @@
 		margin-right: 7px;  
 	}
 }
-.tenanant-chat_middle_tenants_title,
-.tenanant-chat_middle_roommates_title {
+.tenant-chat_middle_tenants_title,
+.tenant-chat_middle_roommates_title {
 	font-size: 15.35px;
 	padding: 30px 0;
 	& span {
@@ -593,10 +603,10 @@
 		padding-left: 5px;
 	}
 }
-.tenanant-chat_middle_tenants_title,
-.tenanant-chat_middle_roommates_title,
-.tenanant-chat_middle_tenants_slider,
-.tenanant-chat_middle_roommates_slider {
+.tenant-chat_middle_tenants_title,
+.tenant-chat_middle_roommates_title,
+.tenant-chat_middle_tenants_slider,
+.tenant-chat_middle_roommates_slider {
 	position: relative;
 	width: 321px;
 	&:after {
@@ -609,11 +619,11 @@
 		position: absolute;
 	}
 }
-.tenanant-chat_middle_tenants_slider_item {
+.tenant-chat_middle_tenants_slider_item {
 	text-align: center;
 	font-size: 15.35px;
 	font-family: $fourth-font;
-	& .tenanant-chat_middle_tenants_slider_item_img {
+	& .tenant-chat_middle_tenants_slider_item_img {
 		overflow: hidden;
 		position: relative;
 		border-radius: 50%;
@@ -638,10 +648,10 @@
 		}
 	}
 }
-.tenanant-chat_middle_tenants_slider_item {
+.tenant-chat_middle_tenants_slider_item {
 	padding-bottom: 40px;
 }
-.tenanant-chat_middle_roommates_slider_item {
+.tenant-chat_middle_roommates_slider_item {
 	background-color: #f4f5f9;
 	border-radius: 6px;
 	margin: 15px 0;
@@ -650,7 +660,7 @@
 	display: flex;
 	align-items: center;
 }
-.tenanant-chat_middle_roommates_slider_img {
+.tenant-chat_middle_roommates_slider_img {
 	overflow: hidden;
 	background-color: #fff;
 	border-radius: 50%;
@@ -672,7 +682,7 @@
 		margin: auto;
 	}
 }
-.tenanant-chat_middle_table {
+.tenant-chat_middle_table {
 	width: 100%;
 	margin-top: 150px;
 	& th {
@@ -727,4 +737,4 @@
 		right: -27px;
 	}
 }
-/*!tennant-chat*/
+/*!tenant-chat*/

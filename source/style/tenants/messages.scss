@@ -1,5 +1,5 @@
-.tenanant-chat_left.tennant-chat_left_landlord {
-	& .tenanant-chat_left_block_search_middle_result {
+.tenant-chat_left.tenant-chat_left_landlord {
+	& .tenant-chat_left_block_search_middle_result {
 		font-size: 12.06px;
 		padding: 25px 20px;
 		& div {
@@ -8,7 +8,7 @@
 			text-align: left;
 		}
 	}
-	& .tenanant-chat_left_block_search_middle_image {
+	& .tenant-chat_left_block_search_middle_image {
 		width: 48px;
 		height: 48px;
 	    float: left;
@@ -21,7 +21,7 @@
         line-height: 2.7;
         font-family: $fourth-font;
 	}
-	& .tenanant-chat_left_block_search_middle_name {
+	& .tenant-chat_left_block_search_middle_name {
 		font-size: 15.35px;
 		& sup {
 			display: none;
@@ -30,12 +30,12 @@
 			line-height: 20px;
 		}
 	}
-	& .tenanant-chat_left_block_search_middle_address, 
-	& .tenanant-chat_left_block_search_middle_phone {
+	& .tenant-chat_left_block_search_middle_address, 
+	& .tenant-chat_left_block_search_middle_phone {
 		font-size: 12.06px;
 	}
 }
-.tenanant-chat_left_block_search_header {
+.tenant-chat_left_block_search_header {
 	& .personal__menu-list {
 		justify-content: center;
 		padding-top: 15px;

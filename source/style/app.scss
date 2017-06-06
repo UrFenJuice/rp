@@ -39,6 +39,13 @@ h1 {
 	line-height: 1.5;
 	margin: 0;
 }
+input::-ms-clear {
+   display: none;
+}
+::-ms-clear {
+  width : 0;
+  height: 0;
+}
 .rp__container {
 	/*debug*/
 	//@include sgs-change('debug', true);
