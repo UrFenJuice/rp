@@ -89,10 +89,16 @@ i {
 	overflow: auto;
 	height: 94vh;
 	flex: 1 1 auto;
+	@include breakpoint(320px) {
+		margin-left: 81px;
+	}
+	@include breakpoint(1280px) {
+		margin-left: 0;
+	}
 }
 .main__content {
 	overflow: hidden;
-	padding: 53px 130px 20px 53px!important;
+	padding: 28.5px 130px 20px 28.5px!important;
 }
 .link_show_me {
 	position: fixed;

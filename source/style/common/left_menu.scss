@@ -1,26 +1,26 @@
 .left__menu_item-link_icon_dashboard {
-	fill: rgba(255, 180, 63, 1);
+	fill: rgba(61, 179, 158, 1);
 }
 .left__menu_item-link_icon_properties {
-	fill: rgba(80, 158, 221, 1);
+	fill: rgba(100, 167, 220, 1);
 }
 .left__menu_item-link_icon_tenants {
-	fill: rgba(114, 194, 117, 1);
+	fill: rgba(162, 212, 91, 1);
 }
 .left__menu_item-link_icon_messages {
-	fill: rgba(235, 208, 88, 1);
+	fill: rgba(173, 109, 209, 1);
 }
 .left__menu_item-link_icon_maintenance {
-	fill: rgba(84, 110, 122, 1);
+	fill: rgba(222, 201, 104, 1);
 }
 .left__menu_item-link_icon_listings {
-	fill: rgba(87, 136, 208, 1);
+	fill: rgba(123, 180, 213, 1);
 }
 .left__menu_item-link_icon_applications {
-	fill: rgba(229, 170, 23, 1);
+	fill: rgba(236, 192, 81, 1);
 }
 .left__menu_item-link_icon_finances {
-	fill: rgba(193, 199, 221, 1);
+	fill: rgba(209, 225, 101, 1);
 }
 .left__menu_item-link_icon_reports {
 	fill: rgba(219, 120, 154, 1);
@@ -31,31 +31,32 @@
 .left__menu_item-link_icon_inspection {
 	fill: rgba(57, 43, 164, 1);
 }
+.left__menu_item-link_icon_intelligence {
+	fill: rgba(149, 168, 236, 1);
+}
 .left__menu_item-link_icon_help {
-	fill: rgba(222, 119, 111, 1);
+	fill: rgba(157, 171, 193, 1);
 }
 /*!left menu icons*/
 .left__menu_item-link_icon {
-    margin-left: 11.3%;
-	margin-right: 16px;
+    margin-left: 31px;
+	margin-right: 20px;
 	& .my_svg {
-		width: 19px;
-		height: 19px;
+		width: 16px;
+		height: 16px;
 	}
 }
 .left-sidebar {
 	overflow: hidden;
-	//flex: 0 0 235px;
 	height: 94vh;
-	//width: 235px;
-	width: 185px;
-	flex: 0 0 185px;
+	background-color: #fff;
 }
 .left__menu {
 	height: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
+	padding-top: 10px
 }
 .left__menu_item {
 	position: relative;
@@ -87,78 +88,78 @@
 			width: 3px;
 		}
 	}
-	font-size: 14px;
-	padding: 21px 0;
+	font-size: 13px;
+	padding: 19.5px 0;
 }
 .bg_dashboard {
 	&:hover,
 	&.active{
-		background-color: rgba(255, 180, 63, 0.1);
+		background-color: rgba(61, 179, 158, .1);
 		&:after {
-			background-color: rgba(255, 180, 63, 1);
+			background-color: rgba(61, 179, 158, 1);
 		}
 	}
 }
 .bg_properties {
 	&:hover,
 	&.active{
-		background-color: rgba(80, 158, 221, 0.1);
+		background-color: rgba(100, 167, 220, .1);
 		&:after {
-			background-color: rgba(80, 158, 221, 1);
+			background-color: rgba(100, 167, 220, 1);
 		}
 	}
 }
 .bg_tenants {
 	&:hover,
 	&.active{
-		background-color: rgba(114, 194, 117, 0.1);
+		background-color: rgba(162, 212, 91, .1);
 		&:after {
-			background-color: rgb(114, 194, 117);
+			background-color: rgba(162, 212, 91, 1);
 		}
 	}
 }
 .bg_messages {
 	&:hover,
 	&.active{
-		background-color: rgba(235, 208, 88, 0.1);
+		background-color: rgba(173, 109, 209, .1);
 		&:after {
-			background-color: rgb(235, 208, 88);
+			background-color: rgba(173, 109, 209, 1);
 		}
 	}
 }
 .bg_maintenance {
 	&:hover,
 	&.active{
-		background-color: rgba(84, 110, 122, 0.1);
+		background-color: rgba(222, 201, 104, 0.1);
 		&:after {
-			background-color: rgba(84, 110, 122, 1);
+			background-color: rgba(222, 201, 104, 1);
 		}
 	}
 }
 .bg_listings {
 	&:hover,
 	&.active{
-		background-color: rgba(87, 136, 208, 0.1);
+		background-color: rgba(123, 180, 213, 0.1);
 		&:after {
-			background-color: rgba(87, 136, 208, 1);
+			background-color: rgba(123, 180, 213, 1);
 		}
 	}
 }
 .bg_applications {
 	&:hover,
 	&.active{
-		background-color: rgba(229, 170, 23, 0.1);
+		background-color: rgba(236, 192, 81, 0.1);
 		&:after {
-			background-color: rgba(229, 170, 23, 1);
+			background-color: rgba(236, 192, 81, 1);
 		}
 	}
 }
 .bg_finances {
 	&:hover,
 	&.active{
-		background-color: rgba(193, 199, 221, 0.1);
+		background-color: rgba(209, 225, 101, 0.1);
 		&:after {
-			background-color: rgba(193, 199, 221, 1);
+			background-color: rgba(209, 225, 101, 1);
 		}
 	}
 }
@@ -189,13 +190,49 @@
 		}
 	}
 }
+.bg_intelligence {
+	&:hover,
+	&.active{
+		background-color: rgba(149, 168, 236, .1);
+		&:after {
+			background-color: rgba(149, 168, 236, 1);
+		}
+	}
+}
 .bg_help {
 	&:hover,
 	&.active{
-		background-color: rgba(222, 119, 111, .1);
+		background-color: rgba(157, 171, 193, .1);
 		&:after {
-			background-color: rgba(222, 119, 111, 1);
+			background-color: rgba(157, 171, 193, 1);
 		}
+	}
+}
+
+.swipe {
+ 	width: 81px;
+	flex: 0 0 81px;
+	transition: width 0.3s, flex 0.3s;
+	z-index: 999;
+	& .company__name,
+	& .left__menu_item-link_name {
+		display: none;
+		transition: display 1s ease;
+	}
+	&.active,
+	&:hover {
+		width: 213px;
+		flex: 0 0 213px;
+		& .company__name,
+		& .left__menu_item-link_name {
+			display: block;
+		}
+	}
+    @include breakpoint(320px) {
+		position: absolute!important;
+	}
+	@include breakpoint(1280px) {
+		position: relative!important;
 	}
 }
 /*!left_menu*/

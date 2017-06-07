@@ -3,6 +3,15 @@ jQuery(function($){
         svg4everybody(); //полифил для свг
         jQuery('.rp__content, .left-sidebar').scrollbar();
 
+        var $menu = $(".swipe");
+        $menu.hover(
+        function(){
+            $menu.addClass('active');
+        },
+        function(){
+            $menu.removeClass('active');
+        });
+
 
         var chatHeight = 0;
         $( "#divChatHistory > div" ).each(function( index ) {
