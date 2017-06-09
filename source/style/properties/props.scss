@@ -3,23 +3,27 @@
     flex-flow: row wrap;
     padding: 0;
     margin: 0;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 .properties__block_list-item {
-	flex: 0 1 auto;
-	background-color: #fff;
-	@include breakpoint(900px) {
-		width: 604px;
-		margin-bottom: 33px;
+	background-color: #f4f5f9;
+	border-radius: 6px;
+	padding: 17px;
+	margin-right: 20px;
+	@include breakpoint(320px) {
+		flex: 1 1 auto;
+		margin-bottom: 23px;
 	}
 	@include breakpoint(1170px) {
-		width: 453px;
-		margin-bottom: 33px;
+		width: 463px;
+		flex: 0 0 463px;
 	}
 }
 .properties__block_list-item_image {
 	position: relative;
-	height: 216px;
+	height: 250px;
+	border-radius: 6px;
+	overflow: hidden;
 	& .properties__block_list-item_image-wrapper {
 		display: block;
 		height: 100%;
@@ -27,7 +31,8 @@
     	position: relative;
 	}
 	& img {
-		width: 100%;
+		//width: 100%;
+		height: 100%;
 		position: absolute;
 		top: 0;
 		bottom: 0;
@@ -36,54 +41,51 @@
 		margin: auto;
 	}
 	& .rp__show_more {
+		position: absolute;
+		right: 13px;
+		bottom: 212px;
 		color: #cdcfd7;
 		background-color: #fff;
 		display: block;
-		border-radius: 6px;
+		border-radius: 50%;
 		text-align: center;
 	    line-height: 0.44;
 	    cursor: pointer;
-	    position: relative;
     	width: 26px;
 		height: 26px;
 		font-size: 26px;
 	    &:hover {
 	    	background-color: #f4f5f9;
-	    	border-radius: 6px 6px 0 0;
+	    	border-radius: 50% 50% 0 0;
 	    }
 	}
 	& .rp__details {
-		background: linear-gradient(to top, $green-element, $green-element, $green-element);
-		border-color: #2dc888;
+		background-color: #81c75b;
 		color: #fff;
-		margin-right: 10px;
 		&:hover {
-			color: #c9ccd7;
-			border-color: #e9ebf4;
-    		background: linear-gradient(to top, #f9fafd, #fff, #fff);
+			color: #fff;
+			opacity: .9;
 		}
-		@extend .rp__btn;
+		@extend .rp__btn_sm;
 	}
 }
 .properties__block_list-item_image-footer {
 	position: absolute;
-	bottom: 2px;
+	bottom: 0px;
 	width: 100%;
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(60, 65, 83, 0.7);
 	display: flex;
 	align-items: center;
-	padding-top: 15px;
-	padding-bottom: 15px;
-	padding-right: 18px;
-	padding-left: 27px;
+	padding-top: 11.5px;
+	padding-bottom: 11.5px;
+	padding-right: 12px;
+	padding-left: 14px;
 }
 .properties__block_list-item_info {
 	position: relative;
 	& .properties__block_list-item_info-status_board {
-		padding-right: 18px;
-		padding-left: 27px;
-		padding-top: 14px;
-		padding-bottom: 14px;
+		padding: 11.5px 12px 11.5px 15px;
+		border-radius: 6px;
 	}
 	& a,
 	& span {
@@ -91,25 +93,22 @@
 	}
 }
 .properties__block_list-item_info-status_board-sub {
-	color: #c3c6d1;
 	margin: 0;
 }
 .properties__block_list-item_info-address {
 	display: flex;
 	flex-direction: column;
-	width: 68%;
+	width: 66%;
 	& .sub__address {
-		font-family: $third-font;
-		color: #9597a1;
+		color: #fff;
 	}
 	& .main__address {
-		font-size: 17.12px;
+		font-size: 15.3px;
 		display: inline-block;
 		color: #fff;
 	}
 	& .sub__address {
-		font-size: 10.7px;
-		padding: 4px 0;
+		font-size: 10.52px;
 		display: inline-block;
 	}
 }
@@ -118,8 +117,8 @@
 	flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
-	border-bottom: 2px solid $background-content-color;
-	height: 110px;
+	height: 150px;
+    padding: 7.5px 0;
 }
 .properties__block_list-item_info-status_board {
 	text-transform: uppercase;
@@ -128,58 +127,51 @@
 	flex-wrap: wrap;
 	margin: auto;
 	width: 100%;
+	color: #fff;
+	fill: #fff;
+	font-size: 12.43px;
 	& a {
 		display: flex;
 		align-items: center;
 	}
 	&.status__up-to-date {
-		color: $green-text;
-		fill: $green-text;
+		background-color: $green-text;
 		& .properties__block_list-item_info-status_link a {
-			background-color: $green-text;
+			color: $green-text;
 		}
 	}
 	&.status__in-arrears {
-		color: $red-text;
-		fill: $red-text;
+		background-color: $red-text;
 		& .properties__block_list-item_info-status_link a {
-			background-color: $red-text;
+			color: $red-text;
 		}
 	}
-	& #advertise_prop,
-	&.status__advertise-property {
-		color: #912db2;
-		fill: #912db2;
-		& .properties__block_list-item_info-status_link a {
-			background-color: #912db2;
-		}
-	}
-	& #active-listing,
+	&.status__acive-listing #active-listing,
 	&.status__acive-listing {
-		color: $logotype-color;
-		fill: $logotype-color;
+		background-color: $logotype-color;
 		& .properties__block_list-item_info-status_link a {
-			background-color: $logotype-color;
+			color: $logotype-color;
+		}
+	}
+	&.status__no-acive-listing {
+		background-color: #a6bfe4;
+		& .properties__block_list-item_info-status_link a {
+			color: #a6bfe4;
 		}
 	}
 	&.status__property-vacant {
-		color: #a1a5b7;
-		fill: #a1a5b7;
+		background-color: #babcc7;
 		& .properties__block_list-item_info-status_link a {
-			background-color: #a1a5b7;
+			color: #babcc7;
 		}
 	}
-	font-size: 9.85px;
 	& .my_svg {
-		width: 24px;
-		height: 24px;
-	}
-	&:nth-child(n+2) {
-		border-top: 2px solid $background-content-color;
+		width: 20px;
+		height: 20px;
 	}
 }
 .properties__block_list-item_info-status_icon {
-	margin-right: 4px;
+	margin-right: 10px;
 }
 .rental_content .properties__block_list-item_info-status_board {
 	position: absolute;
@@ -192,10 +184,13 @@
 }
 .properties__block_list-item_info-status_link {
 	text-transform: uppercase;
+	font-size: 10.16px;
+	font-size: $fourth-font;
 	& a {
 		border-radius: 6px;
 		margin-left: 17px;
-		padding: 5px 10px;
+		padding: 8px 10px;
+		background-color: #fff;
 	}
 	& .my_svg {
 		width: 14px;
@@ -237,7 +232,6 @@
 			fill: #fff;
 		}
 	}
-	font-size: 9.85px;
 	&:hover {
 		text-decoration: none;
 		a {
@@ -249,33 +243,30 @@
 .properties__block_list-item_info-status_link-icon {
 	margin-right: 7px;
 }
-.properties__block_list-item_info-footer {
-	height: 135px;
-	padding: 0 14px;
-}
 .properties__block_list-item_info-lists {
 	display: flex;
     flex-flow: row wrap;
+    background-color: #fff;
+    border-radius: 6px;
 }
 .properties__block_list-item_info-lists-item {
 	position: relative;
 	&:nth-child(2n+1) {
 		width: 47.5%;
 	}
-	padding: 21px 13px 23px 13px;
-	margin-bottom: -23px;
+	padding: 15px 13px;
 	@include breakpoint(1170px) {
 	    &:nth-child(2n+2) {
 			flex: 1 1 auto;
 		}
 	}
 	transition: box-shadow 0.3s;
-	&:hover .properties__block_list-item_info-lists_link{
+/* 	&:hover .properties__block_list-item_info-lists_link{
 		color: #a0a4b4;
 		& .my_svg {
 			fill: #a0a4b4!important;
 		}
-	}
+	} */
 	&.active {
 		box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.11);
 		&:after {
@@ -375,18 +366,17 @@
 	}
 }
 .properties__block_list-item_info-lists_link {
-	color: #000;
+	color: #9fa2af;
 	display: flex;
 	align-items: center;
 	position: relative;
-	font-size: 11.13px;
-	& i {
-		fill: #cccfd9;
-		margin-right: 7px;
-		& .my_svg {
-			width: 14px;
-			height: 14px;
-		}
+	font-size: 12.43px;
+	font-family: $fourth-font;
+	& .my_svg {
+		width: 18px;
+		height: 18px;
+		fill: #d3d5de;
+		margin-right: 10px;
 	}
 	& .arrow__down {
 		position: absolute;
@@ -395,12 +385,11 @@
 	}
 	& #arrow_down {
 		fill: #CCCFD9;
-		width: 13px;
-		height: 7px;
+		width: 11px;
+		height: 11px;
 	}
 }
 .properties__block_list-item_info-lists_link-block_name {
-	font-family: $fourth-font;
 	padding-bottom: 7px;
 }
 .rp__show_more:hover {
@@ -455,10 +444,46 @@
 		background-color: #f3f4f8;
 	}
 }
+.properties__block_list-item_info-footer {
+	height: 134px;
+}
 .properties__block-table_header {
 	display: none;
 	transition: display 1s;
 }
+
+.hint_advice_icon {
+	display: block;
+	& .my_svg {
+		width: 114px;
+		height: 114px;
+		fill: #e9ebf1;
+		margin: 53px auto 45px;
+		display: block;
+	}
+}
+.hint_advice_title {
+	text-align: center;
+	font-size: 18px;
+}
+.hint_advice_text {
+	font-size: 13px;
+	color: #888a93;
+	margin: 30px 10px; 
+}
+.hint_advice_link {
+	background-color: #81c75b;
+	color: #fff;
+	&:hover {
+		color: #fff;
+		opacity: .9;
+	}
+	@extend .rp__btn_sm;
+	width: 102px;
+	display: block;
+	margin: 0 auto;
+}
+
 /*!props*/
 
 /*props-table*/
@@ -466,13 +491,14 @@
 	box-shadow: 0px 0px 40px -13px rgba(0, 0, 0, 0.5);
 	border-radius: 6px;
 	overflow: hidden;
+	& .hint_advice,
 	& .properties__block_list-item_info-lists_link-block_name,
 	& .properties__block_list-item_info-status_board-sub,
 	& .rp__details,
 	& .rp__show_more,
 	& i,
 	& .my_svg {
-		display: none;
+		display: none!important;
 		visibility: hidden;
 	}
 	& .properties__block-table_header {
@@ -491,6 +517,7 @@
 	}
 	& .properties__block_list-item {
 		width: 100%;
+		flex: 1 1 100%;
 		margin: 0;
 		padding: 20px 15px;
 		display: flex;

@@ -219,8 +219,7 @@
 		display: none;
 		transition: display 1s ease;
 	}
-	&.active,
-	&:hover {
+	&.active {
 		width: 213px;
 		flex: 0 0 213px;
 		& .company__name,

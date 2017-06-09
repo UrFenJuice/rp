@@ -7,6 +7,7 @@ module.exports = [
   './node_modules/bootstrap/dist/js/bootstrap.min.js',
   './node_modules/bootstrap-select/dist/js/bootstrap-select.min.js',
   './node_modules/chart.js/dist/Chart.min.js',
-  './node_modules/owl.carousel/dist/owl.carousel.min.js'
+  './node_modules/owl.carousel/dist/owl.carousel.min.js',
+  './node_modules/jquery-touchswipe/jquery.touchSwipe.min.js'
   //'./node_modules/flexibility/flexibility.js'
 ];

@@ -4,7 +4,19 @@ jQuery(function($){
         jQuery('.rp__content, .left-sidebar').scrollbar();
 
         var $menu = $(".swipe");
-        $menu.hover(
+        $menu.swipe({
+            swipeStatus:function(event, phase, direction, distance, duration, fingers)
+                {
+                    if (phase=="move" && direction =="right") {
+                         $menu.addClass('active');
+                         return false;
+                    }
+                    if (phase=="move" && direction =="left") {
+                         $menu.removeClass('active');
+                         return false;
+                    }
+                }
+        }).hover(
         function(){
             $menu.addClass('active');
         },
