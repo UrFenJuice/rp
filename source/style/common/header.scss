@@ -104,17 +104,11 @@
 .header__user_avatar {
 	border-radius: 50%;
 	overflow: hidden;
-	width: 30px;
-	height: 30px;
+	width: 34px;
+	height: 34px;
 	& img {
-		max-width: 30px;
+		max-width: 34px;
 		height: auto;
-	}
-}
-.header__user_login {
-	background-color: #888c9b;
-	& .header__user_login_name {
-		color: #fff; 
 	}
 }
 .header__user_login_link {

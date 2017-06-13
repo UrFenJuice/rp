@@ -232,6 +232,12 @@
 	}
 	@include breakpoint(1280px) {
 		position: relative!important;
+		width: 213px;
+		flex: 0 0 213px;
+		& .company__name,
+		& .left__menu_item-link_name {
+			display: block;
+		}
 	}
 }
 /*!left_menu*/
