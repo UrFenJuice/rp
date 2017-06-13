@@ -9,7 +9,7 @@ block variables
 - var svg = "assets/img/sprite.svg" 
 
 mixin use(name)
-    svg.my_svg(role="img", id=name)
+    svg.my_svg(role="img", class="icon_"+name)
         use(xlink:href=svg+"#"+name)
 
 doctype html
