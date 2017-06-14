@@ -378,6 +378,28 @@ jQuery(function($){
 
         //!doughnutchart
         //!charts
+        function LockContainer(containerId) {
+            var container = $('#' + containerId);
+            if (container.hasClass('local__preloader')==false)
+            {
+                container.addClass('local__preloader');
+                container.append($('.preloader__inner').html());
+            }
+            else
+            {
+                container.removeClass('local__preloader');
+                container.remove($('.preloader__inner').html());
+            }               
+        }
+      
+
+        setTimeout(function () {
+            LockContainer('testim');
+        }, 4000);
+
+        setTimeout(function () {
+            LockContainer('testim');
+        }, 10000);
     });
 })
 function e(e, t) {

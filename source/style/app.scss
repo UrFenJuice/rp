@@ -122,6 +122,17 @@ i {
 		height: 15px;
 	}
 }
+.local__preloader.local__preloader.local__preloader {
+	position: relative;
+	overflow: hidden;
+	& .preloader {
+		display: block!important;
+		background-color: rgba(255, 255, 255, 0.95);
+		&__percents {
+			display: none;
+		}
+	}
+}
 
 @import 'common/header';
 
