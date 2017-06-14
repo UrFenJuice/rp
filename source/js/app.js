@@ -395,11 +395,11 @@ jQuery(function($){
 
         setTimeout(function () {
             LockContainer('testim');
-        }, 4000);
+        }, 2000);
 
         setTimeout(function () {
             LockContainer('testim');
-        }, 10000);
+        }, 8000);
     });
 })
 function e(e, t) {

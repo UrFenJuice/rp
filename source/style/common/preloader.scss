@@ -18,10 +18,28 @@
 
   &__animation {
     position: absolute;
+    @media all and (-ms-high-contrast:none){
+      background-image: url(/assets/img/preloader.gif);
+      background-repeat: no-repeat;
+      background-size: 80px;
+      background-position: 50%;
+    }
+    @supports (-ms-ime-align:auto) {
+      background-image: url(/assets/img/preloader.gif);
+      background-repeat: no-repeat;
+      background-size: 80px;
+      background-position: 50%;
+    }
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%); }
   &__svg {
+    @media all and (-ms-high-contrast:none){
+      visibility: hidden;
+    }
+    @supports (-ms-ime-align:auto) {
+      visibility: hidden;
+    }
     height: 80px;
     width: 80px; }
   &__wave {
