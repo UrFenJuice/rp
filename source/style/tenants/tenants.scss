@@ -313,17 +313,17 @@
 .tenants__block_left_item-calendar {
     position: absolute;
     top: 50%;
+    margin-top: -9.5px;
+    right: 14px;
     & .input-group-addon {
         display: inline-block;
         width: 100%;
         background-color: transparent;
+        & .my_svg {
+            width: 19px;
+            height: 19px;
+        }
     }
-    margin-top: -5px;
-    right: 10px;
-    & .my_svg {
-        width: 12px;
-        height: 12px;
-    } 
 }
 .form-group-calend .input-group {
     position: relative;
@@ -515,9 +515,10 @@ textarea.addit-textarea {
     background-color: #fff;
     position: relative;
     display: block;
-    box-shadow: 0 40px 50px -50px rgba(0, 0, 0, 0.75);
-    width: 870px;
-    &:before {
+    /* box-shadow: 0 40px 50px -50px rgba(0, 0, 0, 0.75); */
+    width: 1020px;
+    border-radius: 6px;
+/*     &:before {
         content: '';
         position: absolute;
         left: 50%;
@@ -532,12 +533,12 @@ textarea.addit-textarea {
         margin-left: -50px;
         top: -50px;
         background-size: 35px;
-    }
+    } */
 }
 .rp__pop-up_head {
     text-align: center;
-    font-size: 16.31px;
-    padding: 52px 0 20px 0;
+    font-size: 22px;
+    padding: 52px 0 46px 0;
     & .my_svg {
         display: block;
         margin: -39px auto 17px;
@@ -547,12 +548,12 @@ textarea.addit-textarea {
     }
 }
 .rp__pop-up_address {
-    font-size: 30px;
+/*     font-size: 30px;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 40px; */
 }
 .rp__pop-up_view-details {
-    display: block;
+/*     display: block;
     background-color: #2dc888;
     font-size: 22px;
     font-family: $fourth-font;
@@ -560,7 +561,7 @@ textarea.addit-textarea {
     color: #fff;
     padding: 16px 36px;
     margin: 0 auto 45px auto;
-    max-width: 230px;
+    max-width: 230px; */
 }
 .rp__pop-up_middle {
     display: flex;
@@ -575,34 +576,29 @@ textarea.addit-textarea {
 .rp__pop-up_middle_block {
     text-align: center;
     position: relative;
-    &:nth-child(1) .rp__pop-up_middle_block_btn {
-        position: absolute;
-        width: 100%;
-        left: 0;
-    }
-    flex: 0 1 370px;
-    border: 2px dashed #e7e9f2;
-    padding: 42px 53px 33px 53px;
-    margin: 0 8px 44px 8px;
-    & #popup_group {
-        width: 29px;
-        height: 39px;
-    }
-    & #popup_user {
-        width: 39px;
-        height: 39px;  
-    }
-    & #list {
-        width: 39px;
-        height: 39px;  
+    flex: 0 1 456px;
+    padding: 70px 53px 40px 53px;
+    margin: 0 9px 48px 9px;
+    border-radius: 6px;
+    & .my_svg {
+        width: 64px;
+        height: 64px;
+        fill: rgba(255, 255, 255, 0.3);
     }
     &:nth-child(1) {
+        background-color: #7381c6;
         & .rp__pop-up_middle_block_calendar {
             display: none;
         }
         & .rp__pop-up_middle_block_btn {
             bottom: 33px;
+            position: absolute;
+            width: 100%;
+            left: 0;
         }
+    }
+    &:nth-child(2) {
+        background-color: #c67573;
     }
 }
 .rp__pop-up_footer {
@@ -610,55 +606,56 @@ textarea.addit-textarea {
     margin-bottom: 50px;
 }
 .rp__pop-up_middle_block_title {
-    font-size: 13.51px;
-    padding: 17px 0;
+    font-size: 13px;
+    padding: 20px 0 8px 0;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: $fourth-font;
 }
 .rp__pop-up_middle_block_info {
-    color: #707380;
+    color: rgba(255, 255, 255, 0.5);
     line-height: 1.6;
-    font-size: 11.18px;
+    font-size: 13px;
     padding-bottom: 17px;
 }
 .rp__pop-up_middle_block_calendar {
     position: relative;
-    & .my_svg {
-        fill: #2dc888;
+    & .icon_calendar {
+        fill: #dee2ea;
+        width: 19px;
+        height: 19px;
     }
-    margin-bottom: 18px;
+    margin-bottom: 27px;
 }
 .rp__pop-up_middle_block_calendar_input {
     color: #b3b6c3;
-    border: 2px solid #e7e9f2;
     border-radius: 0;
+    border: none;
     width: 100%;
     float: none !important;
     z-index: inherit !important;
-    font-size: 10.25px;
-    padding: 9px 12px;
+    font-size: 13px;
+    padding: 17px;
 }
 .rp__pop-up_middle_block_btn_link {
     @extend .rp__btn;
-    color: #c9ccd7;
-    background: linear-gradient(to top, #f9fafd, #fff, #fff);
+    color: #fff;
+    background: #81c75b;
+    border-color: #81c75b;
     &:hover {
-        background: #33dd97;
-        border-color: #2dc888;
+        opacity: .9;
         color: #fff;
     }
 }
 .rp__pop-up_close {
     font-size: 0;
     position: absolute;
+    top: 16px;
+    right: 20px;
     & .my_svg {
-        width: 53px;
-        height: 53px;
-        fill: #dee0ea;
-    }
-    top: 17px;
-    right: 22px;
-    & .my_svg {
-        width: 25px;
-        height: 25px;
+        fill: #d2d4de;
+        width: 24px;
+        height: 24px;
     }
 }
 .modal-backdrop {

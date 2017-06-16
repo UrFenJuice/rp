@@ -7,7 +7,8 @@
 }
 .header__logo_link {
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
+	padding-left: 31px;
 	align-items: center;
 	align-content: center;
 	color: $white-text;
@@ -24,7 +25,7 @@
 }
 .company__name {
 	text-transform: uppercase;
-	padding-left: 10px;
+	padding-left: 17px;
 	letter-spacing: -0.7px;
 }
 .header__menu {

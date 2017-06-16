@@ -3,7 +3,7 @@ aside.left-sidebar.swipe
 		each item, id in main_menu_items
 			li.left__menu_item
 				//add class 'active' for activate menu item
-				a(href="#", class="bg_"+id).left__menu_item-link
+				a(href="/"+item+".html", class="bg_"+id).left__menu_item-link
 					i(class="left__menu_item-link_icon_"+id).left__menu_item-link_icon
 						+use(id)
 					.left__menu_item-link_name= item
