@@ -12,34 +12,38 @@
 				.dashboard__block_getting-started_element_block
 					h4 Add a property
 					p Add your first property to get you started. If you have multiple properties, you’ll be able to add them all at once.
-					a(href="#").dashboard__block_getting-started_element_block_link
-						| ADD Property
+					.dashboard__block_getting-started_element_block_link_inner
+						a(href="#").dashboard__block_getting-started_element_block_link
+							| ADD Property
 			.dashboard__block_getting-started_element
 				i.dashboard__block_getting-started_element_icon
 					+use("levels")
 				.dashboard__block_getting-started_element_block
 					h4 Adjust Your Rules
 					p Automate some of your decisions to save time.
-					a(href="#").dashboard__block_getting-started_element_block_link
-						| set rules
+					.dashboard__block_getting-started_element_block_link_inner
+						a(href="#").dashboard__block_getting-started_element_block_link
+							| set rules
 			.dashboard__block_getting-started_element
 				i.dashboard__block_getting-started_element_icon
 					+use("team")
 				.dashboard__block_getting-started_element_block
 					h4 Add Tenants
 					p If you already have tenants living in your rental, you’ll be able to invite them to use Rent Payments. If the property is vacant, you can create a free listing to advertise your vacancy.
-					a(href="#").dashboard__block_getting-started_element_block_link
-						| ADD tenant
-					a(href="#").dashboard__block_getting-started_element_block_link
-						| Create listing
+					.dashboard__block_getting-started_element_block_link_inner
+						a(href="#").dashboard__block_getting-started_element_block_link
+							| ADD tenant
+						a(href="#").dashboard__block_getting-started_element_block_link
+							| Create listing
 			.dashboard__block_getting-started_element
 				i.dashboard__block_getting-started_element_icon
 					+use("user-with-glasses")
 				.dashboard__block_getting-started_element_block
 					h4 Update Your Profile
 					p Add your preferred bank account for rent deposits and update your information.
-					a(href="#").dashboard__block_getting-started_element_block_link
-						| Update Profile
+					.dashboard__block_getting-started_element_block_link_inner
+						a(href="#").dashboard__block_getting-started_element_block_link
+							| Update Profile
 			.dashboard__block_getting-started_element
 				.dashboard__block_getting-started_element_video
 					iframe(width='330', height='160', src='https://www.youtube.com/embed/2CyV4Uu-skI', frameborder='0', allowfullscreen='')
@@ -48,66 +52,71 @@
 				.dashboard__block_getting-started_element_block
 					h4 Watch the Video
 					p Watch this 60 sec video to learn all the necessary tools to operate your property using Rent Payments.
-	.dashboard__block.dashboard__block_rent-receipts
-		.dashboard__block_title
-			h3 Rent Receipts
-			a(href="#").dashboard__block_title_link
-				i.dashboard__block_title_link_icon
-					+use("arrow-right")
-		.dashboard__block_middle
-			.dashboard__block_rent-receipts_left
-			.dashboard__block_rent-receipts_right
-	.dashboard__block.dashboard__block_props-listings
-		.dashboard__block_title
-			h3 Properties & Listings
-			a(href="#").dashboard__block_title_link
-				i.dashboard__block_title_link_icon
-					+use("arrow-right")
-		.dashboard__block_middle
-			.dashboard__block_props-listings_item
-				i.dashboard__block_props-listings_item_icon
-					+use("properties")
-				.dashboard__block_props-listings_item_block
-					h2 14
-					p Properties
-			.dashboard__block_props-listings_item
-				i.dashboard__block_props-listings_item_icon
-					+use("key")
-				.dashboard__block_props-listings_item_block
-					h2 5
-					p Vacant
-			.dashboard__block_props-listings_item
-				i.dashboard__block_props-listings_item_icon
-					+use("megaphone")
-				.dashboard__block_props-listings_item_block
-					h2 3
-					p Listings
-	.dashboard__block
-		.dashboard__block_title
-			h3 Weekly Receipt Forecasts
-			a(href="#").dashboard__block_title_link
-				i.dashboard__block_title_link_icon
-					+use("arrow-right")
-		.dashboard__block_middle
-	.dashboard__block.dashboard__block_applications
-		.dashboard__block_title
-			h3 Applications
-			a(href="#").dashboard__block_title_link
-				i.dashboard__block_title_link_icon
-					+use("arrow-right")
-		.dashboard__block_middle
-			.dashboard__block_applications_item
-				i.dashboard__block_applications_item_icon
-					+use("popup_group")
-				.dashboard__block_applications_item_block
-					h2 18
-					p APPLICANTS
-			.dashboard__block_applications_item
-				i.dashboard__block_applications_item_icon
-					+use("file")
-				.dashboard__block_applications_item_block
-					h2 5
-					p new APPLICAtions
+	.dashboard__block.dashboard__block_twice_block
+		.dashboard__block.dashboard__block_rent-receipts
+			.dashboard__block_title
+				h3 Rent Receipts
+				a(href="#").dashboard__block_title_link
+					i.dashboard__block_title_link_icon
+						+use("arrow-right")
+			.dashboard__block_middle
+				.dashboard__block_rent-receipts_item
+					canvas#month_doughnut_chart_1
+				.dashboard__block_rent-receipts_item
+					canvas#month_doughnut_chart_2
+		.dashboard__block.dashboard__block_weekly-receipt
+			.dashboard__block_title
+				h3 Weekly Receipt Forecasts
+				a(href="#").dashboard__block_title_link
+					i.dashboard__block_title_link_icon
+						+use("arrow-right")
+			.dashboard__block_middle
+	.dashboard__block.dashboard__block_twice_block_second
+		.dashboard__block.dashboard__block_props-listings
+			.dashboard__block_title
+				h3 Properties & Listings
+				a(href="#").dashboard__block_title_link
+					i.dashboard__block_title_link_icon
+						+use("arrow-right")
+			.dashboard__block_middle
+				.dashboard__block_props-listings_item
+					i.dashboard__block_props-listings_item_icon
+						+use("properties")
+					.dashboard__block_props-listings_item_block
+						h2 14
+						p Properties
+				.dashboard__block_props-listings_item
+					i.dashboard__block_props-listings_item_icon
+						+use("key")
+					.dashboard__block_props-listings_item_block
+						h2 5
+						p Vacant
+				.dashboard__block_props-listings_item
+					i.dashboard__block_props-listings_item_icon
+						+use("megaphone")
+					.dashboard__block_props-listings_item_block
+						h2 3
+						p Listings
+		.dashboard__block.dashboard__block_applications
+			.dashboard__block_title
+				h3 Applications
+				a(href="#").dashboard__block_title_link
+					i.dashboard__block_title_link_icon
+						+use("arrow-right")
+			.dashboard__block_middle
+				.dashboard__block_applications_item
+					i.dashboard__block_applications_item_icon
+						+use("popup_group")
+					.dashboard__block_applications_item_block
+						h2 18
+						p APPLICANTS
+				.dashboard__block_applications_item
+					i.dashboard__block_applications_item_icon
+						+use("file")
+					.dashboard__block_applications_item_block
+						h2 5
+						p new APPLICAtions
+
 	.dashboard__block.dashboard__block_arrears
 		.dashboard__block_title
 			h3 Arrears
@@ -116,13 +125,15 @@
 					+use("arrow-right")
 		.dashboard__block_middle
 			.dashboard__block_arrears_item
-				.dashboard__block_arrears_item_title
-					| 3
-				p Tenants In Arrears
+				.dashboard__block_arrears_item_inner
+					.dashboard__block_arrears_item_title
+						| 3
+					p Tenants In Arrears
 			.dashboard__block_arrears_item
-				.dashboard__block_arrears_item_title
-					| $2,550.00
-				p Arrears Total
+				.dashboard__block_arrears_item_inner
+					.dashboard__block_arrears_item_title
+						| $2,550.00
+					p Arrears Total
 	.dashboard__block.dashboard__block_maintenance
 		.dashboard__block_title
 			h3 Maintenance
