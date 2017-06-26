@@ -1,4 +1,152 @@
-.my_class(style="width: 25%;position: relative; margin: 100px auto;")
+script(type='text/javascript', src='https://cdn.polyfill.io/v2/polyfill.js?features=Intl')
+script(src='Scripts/editablegrid/editablegrid.js')
+script(src='Scripts/editablegrid/editablegrid_renderers.js')
+script(src='Scripts/editablegrid/editablegrid_editors.js')
+script(src='Scripts/editablegrid/editablegrid_validators.js')
+script(src='Scripts/editablegrid/editablegrid_utils.js')
+script(src='Scripts/editablegrid/editablegrid_charts.js')
+script(src='Scripts/Garland.js')
+script(type='text/javascript', src='Scripts/bootstrap-datetimepicker.min.js')
+div(style="background: #fff;padding: 15px;")
+	h1 Header - h1
+	br
+	h2 Header - h2
+	br
+	h3 Header - h3
+	br
+	p
+		| Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum - p
+	br
+	a(href="#").rp__btn.rp__btn_green
+		| continiu
+	p - class: rp__btn rp__btn_green
+	br
+	a(href="#").rp__btn.rp__btn_red
+		| Cancel
+	p - class: rp__btn rp__btn_red
+	br
+	a(href="#").rp__btn.rp__btn_gray
+		| add photos
+	p - class: rp__btn rp__btn_gray
+	br
+	a(href="#").rp__btn.rp__btn_lite-gray
+		| previous
+	p - class: rp__btn rp__btn_lite-gray
+	br
+
+
+	a(href="#").rp__btn_sm.rp__btn_sm_green
+		| View Details
+	p - class: rp__btn_sm rp__btn_sm_green
+	br
+	a(href="#").rp__btn_sm.rp__btn_sm_blue
+		| active listing button
+	p - class: rp__btn_sm rp__btn_sm_blue
+	br
+	a(href="#").rp__btn_sm.rp__btn_sm_gray
+		| vacant property button
+	p - class: rp__btn_sm rp__btn_sm_gray
+	br
+	a(href="#").rp__btn_sm.rp__btn_sm_red
+		| arrears button
+	p - class: rp__btn_sm rp__btn_sm_red
+	br
+	a(href="#").rp__btn_sm.rp__btn_sm_purple
+		| view all / lease
+	p - class: rp__btn_sm rp__btn_sm_purple
+	br
+	p use the same construction in buttons - like (&lt;a href="#" class="my_class"&gt;Button name&lt;/a&gt;)
+	br
+	br
+	a(href="#").rp__btn_close
+		i
+			+use("cross-in-circle")
+	p - class: rp__btn_close
+	br
+	a(href="#").rp__btn_show-all
+		i
+			+use("arrow-right")
+	p - class: rp__btn_show-all
+	br
+	a(href="#").rp__btn_more
+		i
+			+use("more")
+	p - class: rp__btn_more
+	p - inside link use svg icon, watch html! 
+	p example: 
+	p &lt;a class="rp__btn_close" href="#"&gt;
+	p &nbsp;&nbsp;&nbsp;&lt;i&gt;
+	p &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;svg class="my_svg icon_cross-in-circle" role="img"&gt;&lt;use xlink:href="assets/img/sprite.svg#cross-in-circle"&gt;&lt;/use&gt;&lt;/svg&gt;
+	p &nbsp;&nbsp;&nbsp;&lt;/i&gt;
+	p &lt;/a&gt;
+	br
+	br
+	ul.prop__menu
+		li.prop__menu_item
+			a(href="#").prop__menu_item-link
+				i
+					+use("add_property")
+				.prop__menu_item-link_name
+					| Add Property
+		li.prop__menu_item
+			a(href="#").prop__menu_item-link
+				i
+					+use("view_all")
+				.prop__menu_item-link_name
+					|View: 
+					span Grid
+		li.prop__menu_item
+			a(href="#").prop__menu_item-link
+				i
+					+use("search")
+				.prop__menu_item-link_name
+					| Search
+		li.prop__menu_item
+			a(href="#").prop__menu_item-link
+				i
+					+use("filter-results")
+				.prop__menu_item-link_name
+					| Filter: 
+					span Off
+		li.prop__menu_item
+			a(href="#").prop__menu_item-link
+				i
+					+use("calendar")
+				.prop__menu_item-link_name
+					| Select Dates
+		li.prop__menu_item
+			a(href="#").prop__menu_item-link
+				i
+					+use("left-arrow")
+				.prop__menu_item-link_name
+					| Back To
+	p - class: prop__menu_item-link
+	p - use this links in lists
+	br
+	input(type="text", placeholder="Help text").rp__input
+	p - class: rp__input
+	br
+	input(type="text", placeholder="Price").rp__input.rp__input_price
+	p - class: rp__input rp__input_price
+	br
+	.form-group
+			.input-group.date#divFirstRentDueOn
+				input(name='ctl00$MainContent$FirstRentDueOn', value='', type='text', data-bv-field="ctl00$MainContent$FirstRentDueOn").rp__input#MainContent_FirstRentDueOn
+				span.add-on.tenants__block_left_item-calendar
+					i.input-group-addon
+						svg.my_svg.icon_calendar(role='img')
+							use(xlink:href='assets/img/sprite.svg#calendar')
+
+
+script.
+	$(function () {
+	$('#divFirstRentDueOn').datetimepicker({
+	format: "MM/DD/YYYY"
+	});
+	});
+
+
+//.my_class(style="width: 25%;position: relative; margin: 100px auto;")
 	canvas#double_doughnut_chart
 	#js-legend.chart-legend
 //.my_class(style="width: 25%;position: relative; margin: 50px auto;")

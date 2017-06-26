@@ -9,22 +9,4 @@
 .prop__menu_item {
     margin-right: 45px;
 }
-.prop__menu_item-link {
-	color: $content-menu-font-color;
-	transition: 0.3s;
-	opacity: 0.5;
-	&:hover,
-	&.active {
-		opacity: 1;
-	}
-	font-size: 12.75px;
-}
-.prop__menu_item-link_icon {
-	margin-right: 9px;
-	& .my_svg {
-		fill: $content-menu-font-color;
-		width: 18px;
-		height: 18px;
-	}
-}
 /*!prop_menu*/
