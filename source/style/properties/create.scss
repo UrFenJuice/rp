@@ -167,63 +167,6 @@
 		flex: 0 1 44%;
 	}
 }
-.rp__select .open>.dropdown-toggle.btn-default {
-	color: inherit;
-	background-color: inherit;
-	border-color: #eff1f7;
-}
-.rp__select>.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
-	width: 100%;
-}
-.rp__select .dropdown-toggle {
-	display: flex;
-	width: 100%;
-	border: 2px solid #eff1f7;
-	background-color: #fff;
-	font-size: inherit;
-	border-radius: 0;
-	padding: 7px 10px 7px 5px!important;
-    & .bs-caret {
-		background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMjkgMTI5IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMjkgMTI5IiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiPgogIDxnPgogICAgPHBhdGggZD0ibTEyMS4zLDM0LjZjLTEuNi0xLjYtNC4yLTEuNi01LjgsMGwtNTEsNTEuMS01MS4xLTUxLjFjLTEuNi0xLjYtNC4yLTEuNi01LjgsMC0xLjYsMS42LTEuNiw0LjIgMCw1LjhsNTMuOSw1My45YzAuOCwwLjggMS44LDEuMiAyLjksMS4yIDEsMCAyLjEtMC40IDIuOS0xLjJsNTMuOS01My45YzEuNy0xLjYgMS43LTQuMiAwLjEtNS44eiIgZmlsbD0iI2Q5ZDlkOSIvPgogIDwvZz4KPC9zdmc+Cg==);
-		background-repeat: no-repeat;
-		width: 11px;
-		height: 11px;
-		background-size: 11px 11px;
-	}
-}
-.dropdown-menu {
-	display: none;
-	position: absolute;
-    border: 2px solid  #eff1f7;
-    background-color: #fff;
-    z-index: 9;
-    &.in {
-    	display: block;
-    }
-    & li {
-	    &:hover {
-	    	background-color: #eff1f7;
-	    }
-	    & a {
-	    	color: inherit;
-	    	padding: 0;
-	    }
-    }
-}
-.open>.dropdown-menu {
-    display: block;
-}
-.bootstrap-select>select {
-    position: absolute!important;
-    bottom: 0;
-    left: 50%;
-    display: block!important;
-    width: .5px!important;
-    height: 100%!important;
-    padding: 0!important;
-    opacity: 0!important;
-    border: none;
-}
 .create-property__block_middle-right_form-block-item_select,
 .create-property__block_middle-right_form-block-item_input {
 	@extend .rp__input;

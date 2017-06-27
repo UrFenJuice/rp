@@ -227,6 +227,93 @@ $left-menu-color: #81869a;
     padding: 9px 14px 9px 30px;
     background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMS4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ4NC4xODQgNDg0LjE4NCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDg0LjE4NCA0ODQuMTg0OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjMycHgiIGhlaWdodD0iMzJweCI+CjxnPgoJPHBhdGggZD0iTTMwOS40MywyMTkuOTQ0Yy0xOS0xMC41LTM5LjItMTguNS01OS4yLTI2LjhjLTExLjYtNC44LTIyLjctMTAuNC0zMi41LTE4LjJjLTE5LjMtMTUuNC0xNS42LTQwLjQsNy01MC4zICAgYzYuNC0yLjgsMTMuMS0zLjcsMTkuOS00LjFjMjYuMi0xLjQsNTEuMSwzLjQsNzQuOCwxNC44YzExLjgsNS43LDE1LjcsMy45LDE5LjctOC40YzQuMi0xMyw3LjctMjYuMiwxMS42LTM5LjMgICBjMi42LTguOC0wLjYtMTQuNi04LjktMTguM2MtMTUuMi02LjctMzAuOC0xMS41LTQ3LjItMTQuMWMtMjEuNC0zLjMtMjEuNC0zLjQtMjEuNS0yNC45Yy0wLjEtMzAuMy0wLjEtMzAuMy0zMC41LTMwLjMgICBjLTQuNCwwLTguOC0wLjEtMTMuMiwwYy0xNC4yLDAuNC0xNi42LDIuOS0xNywxNy4yYy0wLjIsNi40LDAsMTIuOC0wLjEsMTkuM2MtMC4xLDE5LTAuMiwxOC43LTE4LjQsMjUuM2MtNDQsMTYtNzEuMiw0Ni03NC4xLDk0ICAgYy0yLjYsNDIuNSwxOS42LDcxLjIsNTQuNSw5Mi4xYzIxLjUsMTIuOSw0NS4zLDIwLjUsNjguMSwzMC42YzguOSwzLjksMTcuNCw4LjQsMjQuOCwxNC42YzIxLjksMTguMSwxNy45LDQ4LjItOC4xLDU5LjYgICBjLTEzLjksNi4xLTI4LjYsNy42LTQzLjcsNS43Yy0yMy4zLTIuOS00NS42LTktNjYuNi0xOS45Yy0xMi4zLTYuNC0xNS45LTQuNy0yMC4xLDguNmMtMy42LDExLjUtNi44LDIzLjEtMTAsMzQuNyAgIGMtNC4zLDE1LjYtMi43LDE5LjMsMTIuMiwyNi42YzE5LDkuMiwzOS4zLDEzLjksNjAsMTcuMmMxNi4yLDIuNiwxNi43LDMuMywxNi45LDIwLjFjMC4xLDcuNiwwLjEsMTUuMywwLjIsMjIuOSAgIGMwLjEsOS42LDQuNywxNS4yLDE0LjYsMTUuNGMxMS4yLDAuMiwyMi41LDAuMiwzMy43LTAuMWM5LjItMC4yLDEzLjktNS4yLDEzLjktMTQuNWMwLTEwLjQsMC41LTIwLjksMC4xLTMxLjMgICBjLTAuNS0xMC42LDQuMS0xNiwxNC4zLTE4LjhjMjMuNS02LjQsNDMuNS0xOSw1OC45LTM3LjhDMzg2LjMzLDMyOS41NDQsMzcwLjAzLDI1My40NDQsMzA5LjQzLDIxOS45NDR6IiBmaWxsPSIjZDlkZGU2Ii8+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
 }
+
+
+.bootstrap-select {
+    &>.dropdown-toggle {
+        font-size: 13px;
+        color: #d1d3db;
+        border: 1px solid #eff1f7;
+        border-radius: 0;
+        padding: 12px 15px;
+        outline: 0;
+    }
+    font-size: 13px;
+    color: #d1d3db;
+}
+.btn.active, 
+.btn:active,
+.btn-group.open .dropdown-toggle {
+    box-shadow: none;
+}
+.bootstrap-select .dropdown-toggle.dropdown-toggle.dropdown-toggle:focus,
+.btn-default.active, 
+.btn-default:active, 
+.btn-default.active.focus, 
+.btn-default.active:focus, 
+.btn-default.active:hover, 
+.btn-default:active.focus, 
+.btn-default:active:focus, 
+.btn-default:active:hover, 
+.open>.dropdown-toggle.btn-default,
+.open>.dropdown-toggle.btn-default.focus, 
+.open>.dropdown-toggle.btn-default:focus, 
+.open>.dropdown-toggle.btn-default:hover {
+    color: #d1d3db;
+    border: 1px solid #eff1f7;
+    background-color: #fff;
+    outline: 0!important;
+}
+.dropdown-toggle .bs-caret {
+    background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMjkgMTI5IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMjkgMTI5IiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiPgogIDxnPgogICAgPHBhdGggZD0ibTEyMS4zLDM0LjZjLTEuNi0xLjYtNC4yLTEuNi01LjgsMGwtNTEsNTEuMS01MS4xLTUxLjFjLTEuNi0xLjYtNC4yLTEuNi01LjgsMC0xLjYsMS42LTEuNiw0LjIgMCw1LjhsNTMuOSw1My45YzAuOCwwLjggMS44LDEuMiAyLjksMS4yIDEsMCAyLjEtMC40IDIuOS0xLjJsNTMuOS01My45YzEuNy0xLjYgMS43LTQuMiAwLjEtNS44eiIgZmlsbD0iI2Q5ZDlkOSIvPgogIDwvZz4KPC9zdmc+Cg==);
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 12px;
+    background-size: 12px 12px;
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    margin-top: -6px;
+    transition: transform 0.3s;
+    & .caret {
+        display: none;
+    }
+}
+.bootstrap-select.open .dropdown-toggle .bs-caret {
+    transform: rotate(180deg);
+}
+.bootstrap-select .dropdown-menu {
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    border: 1px solid #eff1f7;
+    border: 1px solid #eff1f7;
+    border-top: 0;
+    box-shadow: none;
+    &>li {
+        &>a {
+            padding: 12px 15px;
+            font-size: 13px;
+            color: #d1d3db;
+            border-bottom: 1px solid #eff1f7;
+            outline: 0;
+        }
+        &:last-child {
+            &>a {
+                border-bottom: 0;
+            }
+        }
+    }
+}
+.btn-default:hover,
+.dropdown-menu>li>a:focus, 
+.dropdown-menu>li>a:hover {
+    background-color: #f6f8fb;
+}
+
+.form-group {
+    position: relative;
+}
 .add-on {
     position: absolute;
     top: 50%;
@@ -249,14 +336,16 @@ $left-menu-color: #81869a;
     padding: 0;
     border-radius: 6px;
     border: 0;
-    margin-top: 0;
+    margin-top: 45px;
     margin-bottom: 45px;
-}
-.bootstrap-datetimepicker-widget.dropdown-menu {
+    box-shadow: 0 0px 7px rgba(0,0,0,.175);
+    & li:hover {
+        background-color: transparent;
+    }
     &.pull-right {
         &:before {
             right: 50%;
-            margin-right: -19px;
+            margin-right: -20px;
         }
         &:after {
             right: 50%;
@@ -265,17 +354,95 @@ $left-menu-color: #81869a;
     }
     &.top {
         &:before {
-            border-left: 20px solid transparent;
-            border-right: 20px solid transparent;
-            border-top: 20px solid #ccc;
-            border-top-color: rgba(0, 0, 0, .1);
-            bottom: -19px;
+            border-left: 19px solid transparent;
+            border-right: 19px solid transparent;
+            border-top: 19px solid #ccc;
+            border-top-color: rgba(0, 0, 0, .06);
+            bottom: -20px;
+            left: 50%;
+            margin-left: -20px;
         }
         &:after {
             border-left: 18px solid transparent;
             border-right: 18px solid transparent;
             border-top: 18px solid white;
             bottom: -18px;
+            left: 50%;
+            margin-left: -19px;
+        }
+    }
+}
+.bootstrap-datetimepicker-widget.dropdown-menu.bottom {
+    &:before {
+        border-left: 19px solid transparent;
+        border-right: 19px solid transparent;
+        border-bottom: 19px solid #ccc;
+        border-bottom-color: rgba(0, 0, 0, .06);
+        top: -20px;
+        left: 50%;
+        margin-left: -20px;
+    }
+    &:after {
+        border-left: 18px solid transparent;
+        border-right: 18px solid transparent;
+        border-bottom: 18px solid #8190c5;
+        top: -18px;
+        left: 50%;
+        margin-left: -19px;
+    }
+}
+.table-condensed>tbody>tr>td, 
+.table-condensed>tbody>tr>th, 
+.table-condensed>tfoot>tr>td, 
+.table-condensed>tfoot>tr>th, 
+.table-condensed>thead>tr>td, 
+.table-condensed>thead>tr>th {
+    padding: 8px 11px;
+}
+.bootstrap-datetimepicker-widget table {
+    & th {
+        &.disabled,
+        &.disabled:hover {
+            color: #bababa;
+        }
+    }
+    & td {
+        &.active, 
+        &.active:hover {
+            background-color: #8190c5;
+            text-shadow: none; 
+        }
+        &.disabled, 
+        &.disabled:hover {
+            color: #bababa;
+        }
+    }
+}
+.bootstrap-datetimepicker-widget table td.today:before {
+    display: none;
+}
+.bootstrap-datetimepicker-widget table thead tr {
+    &:first-child {
+        background-color: #8190c5;
+        color: #fff;
+        & th {
+            border-radius: 0;
+            &:hover {
+                background-color: #8190c5;
+                opacity: .8;
+            }
+            &:first-child {
+                border-radius: 6px 0 0 0;
+            }
+            &:last-child {
+                border-radius: 0 6px 0 0;
+            }
+        }
+    }
+    &:nth-child(2) {
+        & th {
+            color: #8190c5;
+            font-family: $fourth-font;
         }
     }
 }

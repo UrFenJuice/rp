@@ -123,6 +123,14 @@ div(style="background: #fff;padding: 15px;")
 	p - class: prop__menu_item-link
 	p - use this links in lists
 	br
+	.form-group
+		| Test select
+		select.selectpicker.form-control(name='ctl00$MainContent$Frequency', onchange='FrequencyChange(this);', data-bv-field='ctl00$MainContent$Frequency')
+			option(selected='selected', value='1') Weekly
+			option(value='2') Fortnightly
+			option(value='4') Every three weeks
+			option(value='3') Monthly
+	br
 	input(type="text", placeholder="Help text").rp__input
 	p - class: rp__input
 	br
@@ -130,12 +138,13 @@ div(style="background: #fff;padding: 15px;")
 	p - class: rp__input rp__input_price
 	br
 	.form-group
-			.input-group.date#divFirstRentDueOn
-				input(name='ctl00$MainContent$FirstRentDueOn', value='', type='text', data-bv-field="ctl00$MainContent$FirstRentDueOn").rp__input#MainContent_FirstRentDueOn
-				span.add-on.tenants__block_left_item-calendar
-					i.input-group-addon
-						svg.my_svg.icon_calendar(role='img')
-							use(xlink:href='assets/img/sprite.svg#calendar')
+		.input-group.date#divFirstRentDueOn
+			input(name='ctl00$MainContent$FirstRentDueOn', value='', type='text', data-bv-field="ctl00$MainContent$FirstRentDueOn").rp__input#MainContent_FirstRentDueOn
+			span.add-on.tenants__block_left_item-calendar
+				i.input-group-addon
+					svg.my_svg.icon_calendar(role='img')
+						use(xlink:href='assets/img/sprite.svg#calendar')
+
 
 
 script.
