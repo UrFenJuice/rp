@@ -64,6 +64,21 @@ input::-ms-clear {
   width : 0;
   height: 0;
 }
+
+input[placeholder]          {text-overflow:ellipsis;}
+input::-moz-placeholder     {text-overflow:ellipsis;} 
+input:-moz-placeholder      {text-overflow:ellipsis;} 
+input:-ms-input-placeholder {text-overflow:ellipsis;} 
+input {
+	&::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+	&::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+	&:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+	&:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+	&:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+	&:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+	&:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+	&:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+}
 .rp__container {
 	/*debug*/
 	//@include sgs-change('debug', true);

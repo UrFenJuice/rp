@@ -33,6 +33,10 @@ div(style="background: #fff;padding: 15px;")
 		| previous
 	p - class: rp__btn rp__btn_lite-gray
 	br
+	a(href="#").rp__btn.rp__btn_white
+		| view details
+	p - class: rp__btn rp__btn_white
+	br
 
 
 	a(href="#").rp__btn_sm.rp__btn_sm_green
@@ -67,6 +71,11 @@ div(style="background: #fff;padding: 15px;")
 		i
 			+use("arrow-right")
 	p - class: rp__btn_show-all
+	br
+	a(href="#").rp__btn_more.rp__btn_more_white
+		i
+			+use("more")
+	p - class: rp__btn_more rp__btn_more_white
 	br
 	a(href="#").rp__btn_more
 		i
@@ -130,6 +139,15 @@ div(style="background: #fff;padding: 15px;")
 			option(value='2') Fortnightly
 			option(value='4') Every three weeks
 			option(value='3') Monthly
+	p &lt;div class="form-group"&gt;
+	p 	Test select
+	p 	&lt;select class="selectpicker form-control"&gt;
+	p 		&lt;option selected="selected" value="1"&gt;Weekly&lt;/option&gt;
+	p 			&lt;option value="2"&gt;Fortnightly&lt;/option&gt;
+	p 			&lt;option value="4"&gt;Every three weeks&lt;/option&gt;
+	p 			&lt;option value="3"&gt;Monthly&lt;/option&gt;
+	p 		&lt;/select&gt;
+	p &lt;/div&gt;
 	br
 	input(type="text", placeholder="Help text").rp__input
 	p - class: rp__input
@@ -144,6 +162,49 @@ div(style="background: #fff;padding: 15px;")
 				i.input-group-addon
 					svg.my_svg.icon_calendar(role='img')
 						use(xlink:href='assets/img/sprite.svg#calendar')
+	br
+	.form-group.has-feedback.has-error
+		span Weekly Rent
+		input.rp__input(type='text', value='100.0000')
+		i.form-control-feedback.bv-no-label.fa(data-bv-icon-for='ctl00$MainContent$RentCost', style='display: block;')
+		small.help-block(data-bv-validator='notEmpty', data-bv-for='ctl00$MainContent$RentCost', data-bv-result='INVALID', style='display: block;') Please enter a valid Frequency
+	br
+	br
+	input(type="text", placeholder="Help text").rp__input.rp__input_secure
+	br
+	br
+	input(type="text", placeholder="Search").rp__input.rp__input_search
+	br
+	.checkbox-cust_list
+		label
+			span.checkbox
+				input#MainContent_RefundedIfNotAccepted(type='checkbox', name='ctl00$MainContent$RefundedIfNotAccepted')
+			span.checkbox-custom-l
+	.checkbox-cust_list.checked
+		label
+			span.checkbox
+				input#MainContent_RefundedIfNotAccepted(type='checkbox', name='ctl00$MainContent$RefundedIfNotAccepted')
+			span.checkbox-custom-l
+	.radio-b
+		label
+			span.radio
+				input#MainContent_FixidTermContractExpiringOn(type='radio', name='ctl00$MainContent$Month2Month', value='FixidTermContractExpiringOn', onclick='FixedTermContractExpiringOn(true);')
+				label(for='MainContent_FixidTermContractExpiringOn') Fixid Term Contract Expiring On:
+			span.radio-custom
+	.radio-b.checked
+		label
+			span.radio
+				input#MainContent_FixidTermContractExpiringOn(type='radio', name='ctl00$MainContent$Month2Month', value='FixidTermContractExpiringOn', onclick='FixedTermContractExpiringOn(true);')
+				label(for='MainContent_FixidTermContractExpiringOn') Fixid Term Contract Expiring On:
+			span.radio-custom
+	br
+	br
+	.form-group.number
+		.inp_minus
+		input#MainContent_BedroomsNumber.rp__input.rp__input_count(name='ctl00$MainContent$BedroomsNumber', value='0', type='text', size='5', data-bv-field='ctl00$MainContent$BedroomsNumber')
+		.inp_plus
+
+
 
 
 
