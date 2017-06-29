@@ -203,7 +203,141 @@ div(style="background: #fff;padding: 15px;")
 		.inp_minus
 		input#MainContent_BedroomsNumber.rp__input.rp__input_count(name='ctl00$MainContent$BedroomsNumber', value='0', type='text', size='5', data-bv-field='ctl00$MainContent$BedroomsNumber')
 		.inp_plus
-
+	br
+	br
+	ul.add-menu.tenant__form_nav
+		li.margsumm.add-menu.tenant__form_nav_item.active.empty_line
+			a.adr-menu.add-menu.tenant__form_nav_item-link.step1(href='javascript:void(0);', onclick='garland.showStep(1)')
+				| General Info
+		li.margsumm.add-menu.tenant__form_nav_item.active
+			a.adr-menu.add-menu.tenant__form_nav_item-link.step2.current-step(href='javascript:void(0);', onclick='garland.showStep(2)')
+				| Features
+		li.margsumm.add-menu.tenant__form_nav_item
+			a.adr-menu.add-menu.tenant__form_nav_item-link.step3(href='javascript:void(0);', onclick='garland.showStep(3)')
+				| Rental Terms
+		li.margsumm.add-menu.tenant__form_nav_item
+			a.adr-menu.add-menu.tenant__form_nav_item-link.step4(href='javascript:void(0);', onclick='garland.showStep(4)')
+				| Media
+		li.margsumm.add-menu.tenant__form_nav_item
+			a.adr-menu.add-menu.tenant__form_nav_item-link.step5(href='javascript:void(0);', onclick='garland.showStep(5)')
+				| Channels
+		li.margsumm.add-menu.tenant__form_nav_item
+			a.adr-menu.add-menu.tenant__form_nav_item-link.step6(href='javascript:void(0);', onclick='garland.showStep(6)')
+				| Review
+	br
+	br
+	ul.personal__menu-list
+		li.personal__menu-list_item.active(data-class='first')
+			a.personal__menu-list_item-link(href='#') Requests
+		li.personal__menu-list_item(data-class='second')
+			a.personal__menu-list_item-link(href='#') Current Jobs
+		li.personal__menu-list_item(data-class='third')
+			a.personal__menu-list_item-link(href='#') Completed Jobs 
+		li.personal__menu-list_item(data-class='fourth')
+			a.personal__menu-list_item-link(href='#') Vendors
+	ul.personal__block-list
+		li.personal__block-list_item.personal__block-list_item-first.active
+		li.personal__block-list_item.personal__block-list_item-second
+		li.personal__block-list_item.personal__block-list_item-third
+		li.personal__block-list_item.personal__block-list_item-fourth
+	br
+	br
+	div(style="overflow: hidden;")
+		ul.invoices_history_list
+			li.invoices_history_list_item
+				a(href="#").invoices_history_list_item_link
+			li.invoices_history_list_item.invoices_history_list_item-paid.arrow
+				a(href="#").invoices_history_list_item_link
+					.invoices_history_list_item_link-sum
+						| $2,000.00
+					.invoices_history_list_item_link-date
+						| 5 Jan 2017
+					.invoices_history_list_item_link-prep
+			li.invoices_history_list_item.invoices_history_list_item-next_prepaid
+				a(href="#").invoices_history_list_item_link
+					.invoices_history_list_item_link-sum
+						| $2,000.00
+					.invoices_history_list_item_link-date
+						| 5 Jan 2017
+					.invoices_history_list_item_link-prep
+						| PREPAID
+					.invoices_history_list_item_link-details
+						table.invoices_history_list_item_link-details_table
+							thead
+								tr
+									td Rent: 
+									td $400.00
+								tr
+									td(colspan="2") For period 17.08.2016 - 21.08.2016
+								tr
+									td Invoice:
+									td $100.00
+								tr
+									td(colspan="2") Internet Services
+							tbody
+								tr
+									td Total:
+									td $500.00
+								tr
+									td Paid: 
+									td $500.00
+								tr
+									td Balance:
+									td $0.00
+			li.invoices_history_list_item.invoices_history_list_item-next_sub_prepaid
+				a(href="#").invoices_history_list_item_link
+					.invoices_history_list_item_link-sum
+						| $2,000.00
+					.invoices_history_list_item_link-date
+						| 5 Jan 2017
+					.invoices_history_list_item_link-prep
+						| $100&nbsp;PREPAID
+			li.invoices_history_list_item.invoices_history_list_item-next
+				a(href="#").invoices_history_list_item_link
+					.invoices_history_list_item_link-sum
+						| $2,000.00
+					.invoices_history_list_item_link-date
+						| 5 Jan 2017
+					.invoices_history_list_item_link-prep
+			li.invoices_history_list_item.invoices_history_list_item-sub_arrears
+				a(href="#").invoices_history_list_item_link
+					.invoices_history_list_item_link-sum
+						| $2,000.00
+					.invoices_history_list_item_link-date
+						| 5 Jan 2017
+					.invoices_history_list_item_link-prep
+						//| $100&nbsp;PREPAID
+						span $1,900 in arrears
+			li.invoices_history_list_item.invoices_history_list_item-arrears
+				a(href="#").invoices_history_list_item_link
+					.invoices_history_list_item_link-sum
+						| $2,000.00
+					.invoices_history_list_item_link-date
+						| 5 Jan 2017
+					.invoices_history_list_item_link-prep
+						span arrears
+			li.invoices_history_list_item
+				a(href="#").invoices_history_list_item_link
+	br
+	br
+	.rp__show_more
+		| ...
+		ul.show_more-small_menu
+			li.show_more-small_menu-item
+				i.show_more-small_menu-item-gear_sm
+					+use("gear")
+				a(href="#")
+					| Settings
+			li.show_more-small_menu-item
+				i.show_more-small_menu-item-edit_sm
+					+use("edit_sm")
+				a(href="#")
+					| Edit
+			li.show_more-small_menu-item
+				i.show_more-small_menu-item-delete_sm
+					+use("delete_sm")
+				a(href="#")
+					| Delete
 
 
 

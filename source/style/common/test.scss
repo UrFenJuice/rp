@@ -31,11 +31,11 @@
         content: '';
         display: block;
         width: 100vw;
-        background-color: #86cb88;
+        background-color: #81c75b;
         position: absolute;
         z-index: 1; 
         left: 50%;
-        height: 6px;
+        height: 4px;
     }
     & .invoices_history_list_item:nth-last-child(1) {
         &:before {
@@ -63,11 +63,11 @@
     	position: relative;
     	border-radius: 50%;
     	z-index: 2;
-        background-color: #86cb88;
-        width: 13px;
-        height: 13px;
-        margin: 12.5px auto;
-        border: 1px solid #86cb88;
+        background-color: #81c75b;
+        width: 10px;
+        height: 10px;
+        margin: 13px auto;
+        border: 1px solid #81c75b;
     }
     & .invoices_history_list_item:after,
     & .invoices_history_list_item:before {
@@ -76,13 +76,7 @@
 }
 .invoices_history_list .invoices_history_list_item-paid .invoices_history_list_item_link {
     &:before {
-        background-image: url(data:image/svg+xml;charset=utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDI2IDI2IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyNiAyNiIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCI+CiAgPHBhdGggZD0ibS4zLDE0Yy0wLjItMC4yLTAuMy0wLjUtMC4zLTAuN3MwLjEtMC41IDAuMy0wLjdsMS40LTEuNGMwLjQtMC40IDEtMC40IDEuNCwwbC4xLC4xIDUuNSw1LjljMC4yLDAuMiAwLjUsMC4yIDAuNywwbDEzLjQtMTMuOWgwLjF2LTguODgxNzhlLTE2YzAuNC0wLjQgMS0wLjQgMS40LDBsMS40LDEuNGMwLjQsMC40IDAuNCwxIDAsMS40bDAsMC0xNiwxNi42Yy0wLjIsMC4yLTAuNCwwLjMtMC43LDAuMy0wLjMsMC0wLjUtMC4xLTAuNy0wLjNsLTcuOC04LjQtLjItLjN6IiBmaWxsPSIjRkZGRkZGIi8+Cjwvc3ZnPgo=);
-        background-repeat: no-repeat;
-        background-position: 50%;
-        margin: 0 auto;
-        width: 40px;
-        height: 40px;
-        background-size: 20px;
+        
     }
 }
 .invoices_history_list .invoices_history_list_item-paid .invoices_history_list_item_link {
@@ -98,21 +92,10 @@
 .invoices_history_list .invoices_history_list_item-next_prepaid .invoices_history_list_item_link {
     &:before {
         background-color: #fff;
-        width: 10px;
-        height: 10px;
-        border: 6px solid #86cb88;
-        margin: 9px auto;
-    }
-    & .invoices_history_list_item_link-sum {
-        &:before {
-            content: '';
-            border-radius: 50%;
-            background-color: #86cb88;
-            display: block;
-            margin: 0px auto 7px auto;
-            width: 8px;
-            height: 8px;
-        }
+        width: 7px;
+        height: 7px;
+        border: 3px solid #81c75b;
+        margin: 12px auto;
     }
     & .invoices_history_list_item_link-prep {
         position: absolute;
@@ -134,14 +117,14 @@
         &:before {
             content: '';
             display: block;
-            background-image: url(data:image/svg+xml;charset=utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCIgdmlld0JveD0iMCAwIDQ1MS44NDcgNDUxLjg0NyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDUxLjg0NyA0NTEuODQ3OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBhdGggZD0iTTIyNS45MjMsMzU0LjcwNmMtOC4wOTgsMC0xNi4xOTUtMy4wOTItMjIuMzY5LTkuMjYzTDkuMjcsMTUxLjE1N2MtMTIuMzU5LTEyLjM1OS0xMi4zNTktMzIuMzk3LDAtNDQuNzUxICAgYzEyLjM1NC0xMi4zNTQsMzIuMzg4LTEyLjM1NCw0NC43NDgsMGwxNzEuOTA1LDE3MS45MTVsMTcxLjkwNi0xNzEuOTA5YzEyLjM1OS0xMi4zNTQsMzIuMzkxLTEyLjM1NCw0NC43NDQsMCAgIGMxMi4zNjUsMTIuMzU0LDEyLjM2NSwzMi4zOTIsMCw0NC43NTFMMjQ4LjI5MiwzNDUuNDQ5QzI0Mi4xMTUsMzUxLjYyMSwyMzQuMDE4LDM1NC43MDYsMjI1LjkyMywzNTQuNzA2eiIgZmlsbD0iIzJkYzg4OCIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=);
+            background-image: url(data:image/svg+xml;charset=utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAwIDI4NC45MjkgMjg0LjkyOSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjg0LjkyOSAyODQuOTI5OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBhdGggZD0iTTI4Mi4wODIsNzYuNTExbC0xNC4yNzQtMTQuMjczYy0xLjkwMi0xLjkwNi00LjA5My0yLjg1Ni02LjU3LTIuODU2Yy0yLjQ3MSwwLTQuNjYxLDAuOTUtNi41NjMsMi44NTZMMTQyLjQ2NiwxNzQuNDQxICAgTDMwLjI2Miw2Mi4yNDFjLTEuOTAzLTEuOTA2LTQuMDkzLTIuODU2LTYuNTY3LTIuODU2Yy0yLjQ3NSwwLTQuNjY1LDAuOTUtNi41NjcsMi44NTZMMi44NTYsNzYuNTE1QzAuOTUsNzguNDE3LDAsODAuNjA3LDAsODMuMDgyICAgYzAsMi40NzMsMC45NTMsNC42NjMsMi44NTYsNi41NjVsMTMzLjA0MywxMzMuMDQ2YzEuOTAyLDEuOTAzLDQuMDkzLDIuODU0LDYuNTY3LDIuODU0czQuNjYxLTAuOTUxLDYuNTYyLTIuODU0TDI4Mi4wODIsODkuNjQ3ICAgYzEuOTAyLTEuOTAzLDIuODQ3LTQuMDkzLDIuODQ3LTYuNTY1QzI4NC45MjksODAuNjA3LDI4My45ODQsNzguNDE3LDI4Mi4wODIsNzYuNTExeiIgZmlsbD0iIzgxYzc1YiIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=);
             background-repeat: no-repeat;
             margin: auto;
             position: relative;
-            top: -9px;
-            background-size: 13px;
-            width: 13px;
-            height: 13px;
+            background-size: 8px;
+            width: 8px;
+            height: 8px;
+            top: 6px;
         }
     }
 }
@@ -157,56 +140,21 @@
 .invoices_history_list .invoices_history_list_item-arrears .invoices_history_list_item_link,
 .invoices_history_list .invoices_history_list_item-sub_arrears .invoices_history_list_item_link {
     &:before {
-        width: 10px;
-        height: 10px;
-        border: 6px solid #86cb88;
-        margin: 9px auto;
-    } 
-    & .invoices_history_list_item_link-sum {
-        &:before {
-            content: '';
-            border-radius: 50%;
-            background-color: #f4f5f9;
-            display: block;
-            margin: 0px auto 7px auto;
-            width: 8px;
-            height: 8px;
-        }
+        width: 7px;
+        height: 7px;
+        border: 3px solid #81c75b;
+        margin: 12px auto;
     }
 }
 
 .invoices_history_list  .invoices_history_list_item-next .invoices_history_list_item_link {
      &:before {
         background-color: #fff;
-        width: 10px;
-        height: 10px;
-        border: 6px solid #f4f5f9;
-        margin: 9px auto;
-    } 
-    & .invoices_history_list_item_link-sum {
-        &:before {
-            content: '';
-            border-radius: 50%;
-            background-color: #f4f5f9;
-            display: block;
-            margin: 0px auto 7px auto;
-            width: 8px;
-            height: 8px;
-        }
-    }   
-}
-.invoices_history_list .invoices_history_list_item-paid .invoices_history_list_item_link {
-    & .invoices_history_list_item_link-sum {
-        &:before {
-            content: '';
-            border-radius: 50%;
-            background-color: transparent;
-            display: block;
-            margin: 0px auto 7px auto;
-            width: 8px;
-            height: 8px;
-        }
-    }
+        width: 7px;
+        height: 7px;
+        border: 3px solid #f4f5f9;
+        margin: 12px auto;
+    }  
 }
 .invoices_history_list .invoices_history_list_item-sub_arrears .invoices_history_list_item_link {
     &:before {
@@ -215,9 +163,6 @@
     }
     & .invoices_history_list_item_link-sum {
         color: #f6c374;
-        &:before {
-            background-color: transparent;
-        }
     }
     & .invoices_history_list_item_link-prep {
         position: absolute;
@@ -237,9 +182,6 @@
     }
     & .invoices_history_list_item_link-sum {
         color: #f6c374;
-        &:before {
-            background-color: transparent;
-        }
     }
     & .invoices_history_list_item_link-prep {
         position: absolute;
@@ -262,24 +204,22 @@
 }
 .invoices_history_list_item_link-sum {
     text-align: center;
-    font-family: $fourth-font;
     margin-bottom: 5px;
 }
 .invoices_history_list_item_link-date {
     text-align: center;
-    font-family: $fourth-font;
-    color: #cccfda; 
+    color: #888a93; 
 }
 .invoices_history_list_item_link-prep {
-    font-family: $second-font;
+    font-family: $fourth-font;
     color: #9ea1af;
     text-transform: uppercase;
     display: flex;
     flex-direction: column;
     display: block;
     & span {
-        font-size: 19px;
-        font-family: $second-font;
+        font-size: 10px;
+        font-family: $fourth-font;
     }
 }
 .invoices_history_list_item_link:hover {
@@ -327,7 +267,7 @@
     }
     & tbody tr {
         &:nth-child(1) {
-            color: #86cb88;
+            color: #81c75b;
         }
     }
     & td[colspan="2"] {
@@ -341,15 +281,16 @@
     }
 }
 .invoices_history_list_item_link-sum {
-    font-size: 17.74px;
+    font-size: 13px;
+    color: #81c75b;
 }
 .invoices_history_list_item_link-date {
-    font-size: 13.89px;
+    font-size: 11px;
 }
 .invoices_history_list_item_link-prep {
-    font-size: 14px;
+    font-size: 10px;
     & span {
-        font-size: 14px;
+        font-size: 10px;
     }
 }
 

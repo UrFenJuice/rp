@@ -64,9 +64,10 @@
     & .tenant__form_nav_item {
         position: relative;
         list-style: none;
+        font-size: 13px;
         &:before,
         &:after {
-            top: 4px;
+            top: 9px;
             box-sizing: content-box;
             content: '';
             display: block;
@@ -87,6 +88,7 @@
         &:nth-last-child(1) {
             &:after {
                 z-index: 2;
+                background-color: #fff;
             }
         }
         &:nth-child(1):before {
@@ -103,21 +105,27 @@
             &:before{
                 background-color: #81c75b;
             }
+            & a {
+                color: #81c75b;
+            }
         }
     }
     & .tenant__form_nav_item-link {
+        transition: color 0.3s;
         &:before {
             content: '';
             display: block;
             position: relative;
             border-radius: 20px;
             z-index: 3;
-            width: 7px;
-            height: 7px;
+            width: 14px;
+            height: 14px;
             border: 2px solid #c8cad4;
             background-color: #fff;
             box-sizing: content-box;
-            margin: 0 auto 5px auto;
+            margin: 0 auto 16px auto;
+            transition: border 0.3s;
+            transition: background-color 0.3s;
         }
         &:hover,
         &.current-step {
@@ -125,7 +133,7 @@
                 border-color: #81c75b;
                 background-color: #81c75b;
             }
-            color: #000;
+            color: #000!important;
         }
         &:focus {
             text-decoration: none;
