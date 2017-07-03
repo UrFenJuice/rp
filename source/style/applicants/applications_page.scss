@@ -119,25 +119,13 @@
 	}
 }
 .link__accept {
-	background-color: #6bc886;
-	border-color: #6bc886;
-	color: #fff;
 	margin-right: 12px;
 	@extend .rp__btn;
-	&:hover {
-		opacity: .8;
-		color: #fff;
-	}
+	@extend .rp__btn_green;
 }
 .link__decline {
-	background-color: #c75050;
-	border-color: #c75050;
-	color: #fff;
 	@extend .rp__btn;
-	&:hover {
-		opacity: .8;
-		color: #fff;
-	}
+	@extend .rp__btn_red;
 }
 .aplication_block_middle_address {
 	display: flex;
@@ -198,25 +186,12 @@
 }
 .aplication_block_footer_link-view {
 	margin-right: 15px;
-	background-color: #f4f5f9;
-	border-color: #f4f5f9;
-	color: #b6bac9;
 	@extend .rp__btn;
-	&:hover {
-		opacity: .8;
-		color: #b6bac9;
-	}
+	@extend .rp__btn_lite-gray;
 }
 .aplication_block_footer_link-withdraw {
 	@extend .rp__btn;
-	background-color: #c75050;
-	border-color: #c75050;
-	color: #fff;
-	@extend .rp__btn;
-	&:hover {
-		opacity: .8;
-		color: #fff;
-	}
+	@extend .rp__btn_red;
 }
 .aplication_block_middle_inner-right_status {
 	padding-bottom: 40px;

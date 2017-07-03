@@ -98,15 +98,11 @@
 		flex: 1 1 auto;
 	}
 	& .dashboard__block_getting-started_element_block_link {
-		background-color: #72c275;
-		color: #fff;
 		margin-right: 14px;
 		position: relative;
 		bottom: 0;
 		@extend .rp__btn_sm;
-		&:hover {
-			opacity: .8;
-		}
+		@extend .rp__btn_sm_green;
 	}
 }
 

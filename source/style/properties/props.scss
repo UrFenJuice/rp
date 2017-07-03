@@ -46,13 +46,8 @@
 		bottom: 212px;
 	}
 	& .rp__details {
-		background-color: #81c75b;
-		color: #fff;
-		&:hover {
-			color: #fff;
-			opacity: .9;
-		}
 		@extend .rp__btn_sm;
+		@extend .rp__btn_sm_green;
 	}
 }
 .properties__block_list-item_image-footer {
@@ -401,13 +396,8 @@
 	margin: 30px 10px; 
 }
 .hint_advice_link {
-	background-color: #81c75b;
-	color: #fff;
-	&:hover {
-		color: #fff;
-		opacity: .9;
-	}
 	@extend .rp__btn_sm;
+	@extend .rp__btn_sm_green;
 	width: 102px;
 	display: block;
 	margin: 0 auto;

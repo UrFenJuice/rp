@@ -179,34 +179,17 @@
     margin-top: 30px;
 }
 .tenants__block_footer_add_link {
-    color:  #c3c6d4;
     @extend .rp__btn;
-    border: 2px solid #eaedf5;
-    &:hover {
-        background-color: #eaedf5;
-        color: #fff;
-    }
+    @extend .rp__btn_white;
 }
 .tenants__block-link_prev {
     @extend .rp__btn;
-    background-color: #e9ebf1;
-    color: #b6bac9;
-    &:hover {
-        opacity: .8;
-        color: #b6bac9;
-    }
+    @extend .rp__btn_lite-gray;
 }
 .tenants__block-link_prev_confirm,
 .tenants__block-link_continue {
 	@extend .rp__btn;
-	color: #fff;
-    background-color: #81c75b;
-    border-color: #81c75b;
-	&:hover {
-        background-color: #fff;
-        color: #c9ccd7;
-        border-color: #e9ebf4;
-    }
+    @extend .rp__btn_green;
 }
 .tenants__block_left_input {
     @extend .rp__input;
@@ -495,13 +478,7 @@ textarea.addit-textarea {
 }
 .rp__pop-up_middle_block_btn_link {
     @extend .rp__btn;
-    color: #fff;
-    background: #81c75b;
-    border-color: #81c75b;
-    &:hover {
-        opacity: .9;
-        color: #fff;
-    }
+    @extend .rp__btn_green;
 }
 .rp__pop-up_close {
     font-size: 0;

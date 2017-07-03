@@ -242,24 +242,12 @@
 }
 .download_ledger {
 	@extend .rp__btn;
-	color: #b6bac9;
-	background-color: #f4f5f9;
-	border-color: #f4f5f9;
+	@extend .rp__btn_gray;
 	margin-right: 20px;
-	&:hover {
-		color: #b6bac9;
-		opacity: .8;
-	}
 }
 .make_payment {
 	@extend .rp__btn;
-	color: #fff;
-	background-color: #86cb88;
-	border-color: #86cb88;
-	&:hover {
-		color: #fff;
-		opacity: .8;
-	}
+	@extend .rp__btn_green;
 }
 .reports-finances_block_middle_chart {
 	position: relative;

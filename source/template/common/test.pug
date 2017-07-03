@@ -244,16 +244,57 @@ div(style="background: #fff;padding: 15px;")
 	br
 	div(style="overflow: hidden;")
 		ul.invoices_history_list
-			li.invoices_history_list_item
-				a(href="#").invoices_history_list_item_link
-			li.invoices_history_list_item.invoices_history_list_item-paid.arrow
+			li.invoices_history_list_item.invoices_history_list_item-paid
 				a(href="#").invoices_history_list_item_link
 					.invoices_history_list_item_link-sum
 						| $2,000.00
 					.invoices_history_list_item_link-date
 						| 5 Jan 2017
 					.invoices_history_list_item_link-prep
-			li.invoices_history_list_item.invoices_history_list_item-next_prepaid
+			li.invoices_history_list_item.invoices_history_list_item-next_sub_prepaid.arrow
+				a(href="#").invoices_history_list_item_link
+					.invoices_history_list_item_link-sum
+						| $2,000.00
+					.invoices_history_list_item_link-date
+						| 5 Jan 2017
+					.invoices_history_list_item_link-prep
+						| $100&nbsp;PREPAID
+						p Next Payment Due
+			li.invoices_history_list_item.invoices_history_list_item-arrears.arrow
+				a(href="#").invoices_history_list_item_link
+					.invoices_history_list_item_link-sum
+						| $2,000.00
+					.invoices_history_list_item_link-date
+						| 5 Jan 2017
+					.invoices_history_list_item_link-prep
+						| arrears
+						p Next Payment Due
+			li.invoices_history_list_item.invoices_history_list_item-pending.arrow
+				a(href="#").invoices_history_list_item_link
+					.invoices_history_list_item_link-sum
+						| $2,000.00
+					.invoices_history_list_item_link-date
+						| 5 Jan 2017
+					.invoices_history_list_item_link-prep
+						p Next Payment Due
+			li.invoices_history_list_item.invoices_history_list_item-pending-arrears.arrow
+				a(href="#").invoices_history_list_item_link
+					.invoices_history_list_item_link-sum
+						| $2,000.00
+					.invoices_history_list_item_link-date
+						| 5 Jan 2017
+					.invoices_history_list_item_link-prep
+						| test
+						p test
+			li.invoices_history_list_item.invoices_history_list_item-next
+				a(href="#").invoices_history_list_item_link
+					.invoices_history_list_item_link-sum
+						| $2,000.00
+					.invoices_history_list_item_link-date
+						| 5 Jan 2017
+					.invoices_history_list_item_link-prep
+
+			li.invoices_history_list_item.invoices_history_list_item-next_prepaid.arrow
 				a(href="#").invoices_history_list_item_link
 					.invoices_history_list_item_link-sum
 						| $2,000.00
@@ -269,11 +310,6 @@ div(style="background: #fff;padding: 15px;")
 									td $400.00
 								tr
 									td(colspan="2") For period 17.08.2016 - 21.08.2016
-								tr
-									td Invoice:
-									td $100.00
-								tr
-									td(colspan="2") Internet Services
 							tbody
 								tr
 									td Total:
@@ -282,9 +318,48 @@ div(style="background: #fff;padding: 15px;")
 									td Paid: 
 									td $500.00
 								tr
+									td Processing:
+									td $1,000.00
+								tr
+									td(colspan="2") Total processing $3,000.00 
+								tr
 									td Balance:
 									td $0.00
-			li.invoices_history_list_item.invoices_history_list_item-next_sub_prepaid
+			li.invoices_history_list_item.invoices_history_list_item-sub_arrears.arrow
+				a(href="#").invoices_history_list_item_link
+					.invoices_history_list_item_link-sum
+						| $2,000.00
+					.invoices_history_list_item_link-date
+						| 5 Jan 2017
+					.invoices_history_list_item_link-prep
+						| $1,900 in arrears
+			
+		br
+		br
+		br
+		br
+		br
+		br
+		br
+		br
+		br
+		br
+		br
+		br
+		br
+		br
+		br
+		br
+	div(style="overflow: hidden;")
+		ul.invoices_history_list_vertical.invoices_history_list
+			li.invoices_history_list_item.invoices_history_list_item-paid
+				a(href="#").invoices_history_list_item_link
+					.invoices_history_list_item_link-sum
+						| $2,000.00
+					.invoices_history_list_item_link-date
+						| 5 Jan 2017
+					.invoices_history_list_item_link-prep
+			li.invoices_history_list_item.invoices_history_list_item-next_sub_prepaid.arrow
 				a(href="#").invoices_history_list_item_link
 					.invoices_history_list_item_link-sum
 						| $2,000.00
@@ -292,34 +367,98 @@ div(style="background: #fff;padding: 15px;")
 						| 5 Jan 2017
 					.invoices_history_list_item_link-prep
 						| $100&nbsp;PREPAID
-			li.invoices_history_list_item.invoices_history_list_item-next
+						p Next Payment Due
+			//li.invoices_history_list_item.invoices_history_list_item-arrears.arrow
 				a(href="#").invoices_history_list_item_link
 					.invoices_history_list_item_link-sum
 						| $2,000.00
 					.invoices_history_list_item_link-date
 						| 5 Jan 2017
 					.invoices_history_list_item_link-prep
-			li.invoices_history_list_item.invoices_history_list_item-sub_arrears
+						| arrears
+						p Next Payment Due
+			//li.invoices_history_list_item.invoices_history_list_item-pending.arrow
 				a(href="#").invoices_history_list_item_link
 					.invoices_history_list_item_link-sum
 						| $2,000.00
 					.invoices_history_list_item_link-date
 						| 5 Jan 2017
 					.invoices_history_list_item_link-prep
-						//| $100&nbsp;PREPAID
-						span $1,900 in arrears
-			li.invoices_history_list_item.invoices_history_list_item-arrears
+						p Next Payment Due
+			//li.invoices_history_list_item.invoices_history_list_item-pending-arrears.arrow
 				a(href="#").invoices_history_list_item_link
 					.invoices_history_list_item_link-sum
 						| $2,000.00
 					.invoices_history_list_item_link-date
 						| 5 Jan 2017
 					.invoices_history_list_item_link-prep
-						span arrears
-			li.invoices_history_list_item
+						| test
+						p test
+			//li.invoices_history_list_item.invoices_history_list_item-next
 				a(href="#").invoices_history_list_item_link
-	br
-	br
+					.invoices_history_list_item_link-sum
+						| $2,000.00
+					.invoices_history_list_item_link-date
+						| 5 Jan 2017
+					.invoices_history_list_item_link-prep
+
+			li.invoices_history_list_item.invoices_history_list_item-next_prepaid.arrow
+				a(href="#").invoices_history_list_item_link
+					.invoices_history_list_item_link-sum
+						| $2,000.00
+					.invoices_history_list_item_link-date
+						| 5 Jan 2017
+					.invoices_history_list_item_link-prep
+						| PREPAID
+						p Next Payment Due
+					.invoices_history_list_item_link-details
+						table.invoices_history_list_item_link-details_table
+							thead
+								tr
+									td Rent: 
+									td $400.00
+								tr
+									td(colspan="2") For period 17.08.2016 - 21.08.2016
+							tbody
+								tr
+									td Total:
+									td $500.00
+								tr
+									td Paid: 
+									td $500.00
+								tr
+									td Processing:
+									td $1,000.00
+								tr
+									td(colspan="2") Total processing $3,000.00 
+								tr
+									td Balance:
+									td $0.00
+			li.invoices_history_list_item.invoices_history_list_item-sub_arrears.arrow
+				a(href="#").invoices_history_list_item_link
+					.invoices_history_list_item_link-sum
+						| $2,000.00
+					.invoices_history_list_item_link-date
+						| 5 Jan 2017
+					.invoices_history_list_item_link-prep
+						| $1,900 in arrears
+						p Next Payment Due
+		br
+		br
+		br
+		br
+		br
+		br
+		br
+		br
+		br
+		br
+		br
+		br
+		br
+		br
+		br
+		br
 	.rp__show_more
 		| ...
 		ul.show_more-small_menu
@@ -338,8 +477,17 @@ div(style="background: #fff;padding: 15px;")
 					+use("delete_sm")
 				a(href="#")
 					| Delete
-
-
+	br
+	br
+	<img class="avatar" src="assets/img/avatar.png" alt="avatar">
+	br
+	br
+	.add_avatar_block
+		img(src='')
+	br
+	br
+	.avatar_block
+		| JD
 
 
 script.
@@ -358,81 +506,6 @@ script.
 	#js-legend.chart-legend
 //.my_class(style="width: 100%;")
 	canvas#bar_chart
-//ul.invoices_history_list
-	li.invoices_history_list_item
-		a(href="#").invoices_history_list_item_link
-	li.invoices_history_list_item.invoices_history_list_item-paid.arrow
-		a(href="#").invoices_history_list_item_link
-			.invoices_history_list_item_link-sum
-				| $2,000.00
-			.invoices_history_list_item_link-date
-				| 5 Jan 2017
-			.invoices_history_list_item_link-prep
-	li.invoices_history_list_item.invoices_history_list_item-next_prepaid.arrow
-		a(href="#").invoices_history_list_item_link
-			.invoices_history_list_item_link-sum
-				| $2,000.00
-			.invoices_history_list_item_link-date
-				| 5 Jan 2017
-			.invoices_history_list_item_link-prep
-				| PREPAID
-			.invoices_history_list_item_link-details
-				table.invoices_history_list_item_link-details_table
-					thead
-						tr
-							td Rent: 
-							td $400.00
-						tr
-							td(colspan="2") For period 17.08.2016 - 21.08.2016
-						tr
-							td Invoice:
-							td $100.00
-						tr
-							td(colspan="2") Internet Services
-					tbody
-						tr
-							td Total:
-							td $500.00
-						tr
-							td Paid: 
-							td $500.00
-						tr
-							td Balance:
-							td $0.00
-	li.invoices_history_list_item.invoices_history_list_item-next_sub_prepaid.arrow
-		a(href="#").invoices_history_list_item_link
-			.invoices_history_list_item_link-sum
-				| $2,000.00
-			.invoices_history_list_item_link-date
-				| 5 Jan 2017
-			.invoices_history_list_item_link-prep
-				| $100&nbsp;PREPAID
-	li.invoices_history_list_item.invoices_history_list_item-next.arrow
-		a(href="#").invoices_history_list_item_link
-			.invoices_history_list_item_link-sum
-				| $2,000.00
-			.invoices_history_list_item_link-date
-				| 5 Jan 2017
-			.invoices_history_list_item_link-prep
-	li.invoices_history_list_item.invoices_history_list_item-sub_arrears.arrow
-		a(href="#").invoices_history_list_item_link
-			.invoices_history_list_item_link-sum
-				| $2,000.00
-			.invoices_history_list_item_link-date
-				| 5 Jan 2017
-			.invoices_history_list_item_link-prep
-				//| $100&nbsp;PREPAID
-				span $1,900 in arrears
-	li.invoices_history_list_item.invoices_history_list_item-arrears.arrow
-		a(href="#").invoices_history_list_item_link
-			.invoices_history_list_item_link-sum
-				| $2,000.00
-			.invoices_history_list_item_link-date
-				| 5 Jan 2017
-			.invoices_history_list_item_link-prep
-				span arrears
-	li.invoices_history_list_item
-		a(href="#").invoices_history_list_item_link
 
 //.rp__pop-up_inner
 	.rp__pop-up

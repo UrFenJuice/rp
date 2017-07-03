@@ -1,26 +1,12 @@
 .create-property__cancel {
-	border-color: #e03737;
-	color: #fff;
-    background: #e94040;
-	&:hover {
-		background: #fff;
-        border-color: #e9ebf4;
-        color: #e03737;
-	}
 	@extend .rp__btn;
+	@extend .rp__btn_red;
 	margin-top: 5px;
 	margin-bottom: 25px;
 }
 .create-property__block_footer-create_link {
-	color: #fff;
-	background-color: $green-element;
-	border-color: #2dc888;
-	&:hover {
-		background-color: #fff;
-		color: #c9ccd7;
-		border-color: #e9ebf4;
-	}
 	@extend .rp__btn;
+	@extend .rp__btn_green;
 	margin-bottom: 30px;
 }
 .create-property__block {
@@ -124,9 +110,8 @@
 	color: #e2574c;
 }
 .create-property__block_middle-left_link-upload {
-	color: #d3d5e0;
-	border: 2px solid #eceef3;
 	@extend .rp__btn;
+	@extend .rp__btn_lite-gray;
 	margin: 20px 0 10px;
 }
 .create-property__block_middle-left_instruction {

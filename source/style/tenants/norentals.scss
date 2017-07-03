@@ -33,15 +33,8 @@
 	    }
 	}
 	& .tenant__invite_block_link {
-		color: #fff;
-		background-color: $green-element;
-		border-color: #2dc888;
 	    display: table;
-		&:hover {
-			background-color: #fff;
-			color: #c9ccd7;
-			border-color: #e9ebf4;
-		}
 		@extend .rp__btn;
+		@extend .rp__btn_green;
 	}
 }

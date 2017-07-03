@@ -108,13 +108,7 @@
 }
 .finances__block_tenant_btn-block_link {
 	@extend .rp__btn;
-    color: #b6bac9;
-    background-color: #f4f5f9;
-    border-color: #f4f5f9;
-    max-height: 43px;
-	&:hover {
-        color: #c8cbd6;
-	}
+    @extend .rp__btn_gray;
 	margin-right: 11px;
 }
 .finances__block_tenant_btn-block_link_last {
