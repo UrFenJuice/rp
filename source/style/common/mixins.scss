@@ -264,6 +264,7 @@ $left-menu-color: #81869a;
     outline: none;
     font-size: 13px;
     padding: 13px 14px;
+    margin-bottom: 21px;
     @include placeholder(#d1d3db);
 }
 .rp__input_price {
@@ -333,7 +334,6 @@ $left-menu-color: #81869a;
         font-family: $fourth-font;
         color: #c75b5b;
         text-transform: uppercase;
-        display: block;
         margin-bottom: 10px;
     }
     & input[type="text"],
@@ -343,11 +343,12 @@ $left-menu-color: #81869a;
 }
 .help-block {
     font-size: 12px;
-    position: relative;
+    position: absolute;
     width: 100%;
     color: #c75b5b;
     margin-top: 6px;
     margin-bottom: 0;
+    bottom: 0;
 }
 
 
@@ -439,7 +440,7 @@ $left-menu-color: #81869a;
 .add-on {
     position: absolute;
     top: 50%;
-    margin-top: -9.5px;
+    margin-top: -21px;
     right: 11px;
     cursor: pointer;
     & .input-group-addon {
@@ -583,6 +584,9 @@ $left-menu-color: #81869a;
     height: 23px;
     margin: 0;
     cursor: pointer;
+    & label {
+        margin-bottom: 15px;
+    }
 }
 .checked .radio-custom:before,
 .checked .checkbox-custom-l:before,
@@ -611,6 +615,16 @@ $left-menu-color: #81869a;
 .label {
     display: inline-block;
     vertical-align: middle;
+    font-weight: normal;
+}
+.label {
+    font-size: 13px;
+    color: #5e626b;
+    padding: 0 0 0 10px;
+}
+.radio label, 
+.checkbox label {
+    display: none!important;
 }
 
 .rp__show_more {
