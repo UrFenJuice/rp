@@ -376,74 +376,46 @@
 
 //attachment
 .attachments__block_tabs_inner {
-	display: flex;
-    justify-content: space-between;
-	flex-flow: row wrap;
-	padding: 50px 70px 0px 70px;
+	padding: 0 43px;
 }
 .attachments__block_item {
-	border: 2px solid #eff1f7;
-	padding: 40px 25px 40px 40px;
-	flex: 0 1 48%;
+	border-radius: 7px;
 	display: flex;
-	align-items: center;
 	justify-content: space-between;
-	margin-bottom: 70px;
-	& .my_svg {
-		width: 32px;
-		height: 32px;
-		fill: #c2c5d3;
-	}
+    align-items: center;
+    padding: 18px 25px 18px 21px;
+    margin-bottom: 18px;
+}
+.attachments__block_item-excel {
+	background-color: #e0f6e6;
+}
+.attachments__block_item-doc {
+	background-color: #e6f4f7;
+}
+.attachments__block_item-pdf {
+	background-color: #f7e6e9;
+}
+.attachments__block_item_info_name {
+	font-size: 15px;
+	color: #000;
+}
+.attachments__block_item_info_file-type {
+	font-size: 13px;
+	text-transform: uppercase;
+	color: rgba(0, 0, 0, 0.2);
 }
 .attachments__block_item_link {
-	display: inline-block;
-	&:hover {
-		& .my_svg {
-			fill: #e0e2ee;
-		}
+	margin-left: 19px;
+}
+.attachments__block_item_links {
+	& .my_svg {
+		width: 17px;
+		height: 17px;
+		fill: rgba(0, 0, 0, 0.2);
 	}
-}
-.attachments__block_item_link_icon {
-	display: inline-block;
-	padding: 0 20px;
-}
-.attachments__block_item_info {
-	width: 70%;
-}
-.attachments__block_item_info_name {
-	font-size: 28px;
-}
-.attachments__block_item_info_additionally {
-	font-size: 24px;
-	color: #c2c5d3;
-	display: flex;
-}
-.attachments__block_item_info_name {
-	margin-bottom: 10px;
-}
-.attachments__block_item_info_additionally_date {
-	margin-right: 40px;
 }
 .attachments__block_upload-link {
 	@extend .rp__btn;
-	border-color: #4ed19b;
-    background: linear-gradient(to top, #30d28f, #33dc96, #33dd97);
-    color: #fff;
-    display: flex;
-    align-items: center;
-    max-width: 300px;
-    justify-content: center;
-    margin: 0 auto 78px auto;
-	& .my_svg {
-		width: 32px;
-		height: 32px;
-		fill: #fff;
-		margin-right: 15px;
-	}
-	&:hover {
-		border-color: #9dc56d;
-		background: linear-gradient(to top, #30d390, #2dc988, #9dc56d);
-		color: #fff;
-	}
+	@extend .rp__btn_green;
 }
 //!attachment

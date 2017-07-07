@@ -151,6 +151,7 @@
 	position: absolute;
 	top: 5px;
 	right: -1px;
+	z-index: 3;
 	& .personal__block-list_item_personal_middle_avatar-add-icon {
 		display: inline-block;
 		border-radius: 50%;
